@@ -1,0 +1,1072 @@
+[
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Default UCL",
+    "description": "Default UCL circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Default UNamur",
+    "description": "Default UNamur circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Default USL-B",
+    "description": "Default USL-B circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation - PRS - Default",
+    "description": "Circulation - PRS - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/8"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/13"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/28"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/37"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation - ETD/EXT - Default",
+    "description": "Circulation - ETD/EXT - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 14,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+            {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/8"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/13"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/28"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/37"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/8"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/13"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/28"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/37"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation UNamur - PRS - Default",
+    "description": "Circulation UNamur - PRS - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/14"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/15"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/16"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/24"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/25"
+        }
+      },      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/26"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation UNamur - ETD/EXT - Default",
+    "description": "Circulation UNamur - ETD/EXT - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 14,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/14"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/15"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/16"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/24"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/25"
+        }
+      },      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/26"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/14"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/15"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/16"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/24"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/25"
+        }
+      },      
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/26"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation USL-B - PRS - Default",
+    "description": "Circulation USL-B - PRS - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 28,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 14,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/27"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/29"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/32"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/35"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "Circulation USL-B - ETD/EXT - Default",
+    "description": "Circulation USL-B - ETD/EXT - Default",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 14,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 5,
+    "number_of_days_after_due_date": 3,
+    "policy_library_level": false,
+    "is_default": false, 
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/27"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/29"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/32"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/35"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/27"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/29"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/32"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/35"
+        }
+      }
+    ]
+  },
+{
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "No checkout",
+    "description": "No checkout.",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/1"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/12"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/12"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/9"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/12"
+        }
+      }
+    ]
+  },
+{
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "No checkout UNamur",
+    "description": "No checkout UNamur",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/2"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/19"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/20"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/21"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/23"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/19"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/20"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/21"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/23"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/19"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/20"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/21"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/23"
+        }
+      }
+    ]
+  },
+{
+    "$schema": "http://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json",
+    "name": "No checkout USL-B",
+    "description": "No checkout USL-B",
+    "organisation": {
+      "$ref": "https://ils.bib.uclouvain.be/api/organisations/3"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/30"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/33"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/30"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/33"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/30"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.bib.uclouvain.be/api/item_types/33"
+        }
+      }
+    ]
+  }
+]

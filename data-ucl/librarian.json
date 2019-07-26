@@ -1,0 +1,56 @@
+[
+  {
+    "$schema": "https://ils.bib.uclouvain.be/schema/patrons/patron-v0.0.1.json",
+    "birth_date": "1989-05-14",
+    "city": "Louvain-la-Neuve",
+    "email": "fabrizio.tinti@uclouvain.be",
+    "first_name": "Fabrizio",
+    "roles": [
+      "librarian"
+    ],
+    "last_name": "Tinti",
+    "library": {
+      "$ref": "https://ils.bib.uclouvain.be/api/libraries/7"
+    },
+    "password": "fanti",
+    "phone": "+3210473828",
+    "postal_code": "1348",
+    "street": "Grand Place, 45"
+  },
+  {
+    "$schema": "https://ils.bib.uclouvain.be/schema/patrons/patron-v0.0.1.json",
+    "birth_date": "1989-05-14",
+    "city": "Louvain-la-Neuve",
+    "email": "joelle.dosimont@uclouvain.be",
+    "first_name": "Joëlle",
+    "roles": [
+      "librarian"
+    ],
+    "last_name": "Dosimont",
+    "library": {
+      "$ref": "https://ils.bib.uclouvain.be/api/libraries/10"
+    },
+    "password": "bolduc",
+    "phone": "+3210473828",
+    "postal_code": "1348",
+    "street": "Grand Place, 45"
+  },
+  {
+    "$schema": "https://ils.bib.uclouvain.be/schema/patrons/patron-v0.0.1.json",
+    "birth_date": "1989-05-14",
+    "city": "Louvain-la-Neuve",
+    "email": "charles-henri.nyns@uclouvain.be",
+    "first_name": "Charles-Henri",
+    "roles": [
+      "librarian"
+    ],
+    "last_name": "Nyns",
+    "library": {
+      "$ref": "https://ils.bib.uclouvain.be/api/libraries/10"
+    },
+    "password": "bill",
+    "phone": "+3210473828",
+    "postal_code": "1348",
+    "street": "Grand Place, 45"
+  }
+]

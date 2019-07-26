@@ -166,10 +166,9 @@ SECURITY_LOGIN_USER_TEMPLATE = 'rero_ils/login_user.html'
 # Email configuration
 # ===================
 #: Email address for support.
-SUPPORT_EMAIL = "software@rero.ch"
+SUPPORT_EMAIL = 'bibsys@uclouvain.be'
 #: Disable email sending by default.
-MAIL_SUPPRESS_SEND = True
-
+MAIL_SUPPRESS_SEND = False 
 # Assets
 # ======
 #: Static files collection method (defaults to copying files).
@@ -179,15 +178,18 @@ MAIL_SUPPRESS_SEND = True
 # ========
 #: Email address used as sender of account registration emails.
 SECURITY_EMAIL_SENDER = SUPPORT_EMAIL
+EMAIL_SENDER = SUPPORT_EMAIL
 #: Email subject for account registration emails.
 SECURITY_EMAIL_SUBJECT_REGISTER = _("Welcome to RERO-ILS!")
 #: Redis session storage URL.
 ACCOUNTS_SESSION_REDIS_URL = 'redis://localhost:6379/1'
+ACCOUNTS_USE_CELERY = True
+#: Use celery for account
 # Disable User Profiles
 USERPROFILES = False
 # make security blueprints available to the REST API
 ACCOUNTS_REGISTER_BLUEPRINT = True
-
+USER_ENABLE_EMAIL = True
 
 # Celery configuration
 # ====================
@@ -241,7 +243,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 # JSONSchemas
 # ===========
 #: Hostname used in URLs for local JSONSchemas.
-JSONSCHEMAS_HOST = 'ils.rero.ch'
+JSONSCHEMAS_HOST = 'ils.bib.uclouvain.be'
 JSONSCHEMAS_ENDPOINT = '/schema'
 
 # Flask configuration
@@ -289,16 +291,16 @@ APP_DEFAULT_SECURE_HEADERS = {
     'session_cookie_http_only': True,
 }
 #: Sets cookie with the secure flag by default
-SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False 
 #: Since HAProxy and Nginx route all requests no matter the host header
 #: provided, the allowed hosts variable is set to localhost. In production it
 #: should be set to the correct host and it is strongly recommended to only
 #: route correct hosts to the application.
-APP_ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+APP_ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ils.bib.uclouvain.be']
 
 # OAI-PMH
 # =======
-OAISERVER_ID_PREFIX = 'oai:ils.rero.ch:'
+OAISERVER_ID_PREFIX = 'oai:ils.bib.uclouvain.be:'
 
 # Debug
 # =====
@@ -899,13 +901,13 @@ RERO_ILS_BABEL_TRANSLATE_JSON_KEYS = [
     '403',
 ]
 
-RERO_ILS_APP_BASE_URL = 'https://ils.rero.ch'
+RERO_ILS_APP_BASE_URL = 'https://ils.bib.uclouvain.be'
 
 RERO_ILS_PERMALINK_RERO_URL = 'http://data.rero.ch/01-{identifier}'
 RERO_ILS_PERMALINK_BNF_URL = 'http://catalogue.bnf.fr/ark:/12148/{identifier}'
 
 #: RERO_ILS MEF specificconfigurations.
-RERO_ILS_MEF_HOST = 'mef.rero.ch'
+RERO_ILS_MEF_HOST = 'mef.test.rero.ch'
 RERO_ILS_MEF_URL = 'https://{host}/api/mef/'.format(host=RERO_ILS_MEF_HOST)
 RERO_ILS_MEF_RESULT_SIZE = 100
 

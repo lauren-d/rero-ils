@@ -20,7 +20,7 @@
       "description": "Schema to validate item records against.",
       "type": "string",
       "minLength": 9,
-      "default": "https://ils.rero.ch/schema/items/item-v0.0.1.json"
+      "default": "https://ils.bib.uclouvain.be/schema/items/item-v0.0.1.json"
     },
     "pid": {
       "title": "Item ID",
@@ -31,13 +31,13 @@
       "title": "Barcode",
       "description": "Barcode of the item.",
       "type": "string",
-      "minLength": 4
+      "minLength": 1
     },
     "call_number": {
       "title": "Call number",
       "description": "Call number of the item.",
       "type": "string",
-      "minLength": 4
+      "minLength": 1
     },
     "location": {
       "title": "Location",
@@ -46,7 +46,7 @@
         "$ref": {
           "title": "Location URI",
           "type": "string",
-          "pattern": "^https://ils.rero.ch/api/locations/.+?$"
+          "pattern": "^https://ils.bib.uclouvain.be/api/locations/.+?$"
         }
       }
     },
@@ -57,8 +57,8 @@
         "$ref": {
           "title": "Document URI",
           "type": "string",
-          "pattern": "^https://ils.rero.ch/api/documents/.+?$",
-          "default": "https://ils.rero.ch/api/documents/"
+          "pattern": "^https://ils.bib.uclouvain.be/api/documents/.+?$",
+          "default": "https://ils.bib.uclouvain.be/api/documents/"
         }
       }
     },
@@ -70,7 +70,7 @@
         "$ref": {
           "title": "Item Type URI",
           "type": "string",
-          "pattern": "^https://ils.rero.ch/api/item_types/.+?$"
+          "pattern": "^https://ils.bib.uclouvain.be/api/item_types/.+?$"
         }
       }
     },

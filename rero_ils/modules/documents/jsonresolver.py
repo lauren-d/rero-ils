@@ -30,7 +30,7 @@ from flask import current_app
 from invenio_pidstore.models import PersistentIdentifier, PIDStatus
 
 
-@jsonresolver.route('/api/documents/<pid>', host='ils.rero.ch')
+@jsonresolver.route('/api/documents/<pid>', host='ils.bib.uclouvain.be')
 def document_resolver(pid):
     """Document resolver."""
     persistent_id = PersistentIdentifier.get('doc', pid)

@@ -167,10 +167,10 @@ def create_random_item(
     if randint(0, 5) == 0 and missing > 0:
         status = ItemStatus.MISSING
         missing -= 1
-    url_api = 'https://ils.rero.ch/api/{doc_type}/{pid}'
+    url_api = 'https://ils.bib.uclouvain.be/api/{doc_type}/{pid}'
     org = random.choice(list(locations_pids.keys()))
     item = {
-        # '$schema': 'https://ils.rero.ch/schema/items/item-v0.0.1.json',
+        # '$schema': 'https://ils.bib.uclouvain.be/schema/items/item-v0.0.1.json',
         'barcode': str(10000000000 + item_pid),
         'call_number': str(item_pid).zfill(5),
         'status': status,

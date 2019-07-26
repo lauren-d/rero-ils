@@ -29,7 +29,7 @@ import jsonresolver
 from invenio_pidstore.models import PersistentIdentifier, PIDStatus
 
 
-@jsonresolver.route('/api/locations/<pid>', host='ils.rero.ch')
+@jsonresolver.route('/api/locations/<pid>', host='ils.bib.uclouvain.be')
 def location_resolver(pid):
     """Location resolver."""
     persistent_id = PersistentIdentifier.get('loc', pid)
