@@ -503,6 +503,11 @@
             ],
             "version": "==1.0.1"
         },
+        "invenio-chamo-harvester": {
+            "editable": true,
+            "git": "https://gitlab.sisg.ucl.ac.be/bibsys/invenio-chamo-harvester.git",
+            "ref": "fc7c951eaf9af20a83286c87377f7a0ab0c0b107"
+        },
         "invenio-circulation": {
             "git": "https://github.com/inveniosoftware/invenio-circulation.git",
             "ref": "764434a7fb8f087678565ff8f746b4526216fe4c"

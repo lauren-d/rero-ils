@@ -1,207 +1,227 @@
-[
-  {
-    "type": "fieldset",
-    "title": "Identifiers",
-    "items": [
-      {
-        "key": "identifiedBy",
-        "notitle": true,
-        "description": "",
-        "add": "new identifier",
-        "style": {
-          "add": "btn-link"
-        },
-        "type": "array",
-        "items": [
-          {
-            "key": "identifiedBy[].type",
-            "type": "select"
-          },
-          {
-            "key": "identifiedBy[].value"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "key": "title",
-    "htmlClass": "rero21-required"
-  },
-  {
-    "type": "fieldset",
-    "title": "Author(s)",
-    "items": [
-      {
-        "key": "authors",
-        "notitle": true,
-        "description": "",
-        "add": "new author",
-        "style": {
-          "add": "btn-link"
-        },
-        "type": "array",
-        "items": [
-          {
-            "key": "authors[].type",
-            "type": "radiobuttons",
-            "notitle": true,
-            "description": "",
-            "condition": {
-              "functionBody": "{var author = model.authors[arrayIndices[0]]; return author.$ref === undefined && author.name === undefined && author.date === undefined &&  author.qualifier === undefined;}"
-            },
-            "titleMap": [
-              {
-                "value": "person",
-                "name": "Person"
-              },
-              {
-                "value": "organisation",
-                "name": "Organisation"
-              }
-            ],
-            "style": {
-              "selected": "btn-success",
-              "unselected": "btn-light"
-            }
-          },
-          {
-            "key": "authors[].$ref",
-            "title": "Name of Person",
-            "condition": {
-              "functionBody": "{var author = model.authors[arrayIndices[0]]; return author.type === 'person';}"
-            },
-            "type": "refAuthority"
-          },
-          {
-            "title": "Name of Organisation",
-            "key": "authors[].name",
-            "description": "",
-            "condition": {
-              "functionBody": "{return model.authors[arrayIndices[0]].type === 'organisation';}"
-            }
-          },
-          {
-            "key": "authors[].date",
-            "title": "Date of birth - date of death",
-            "description": "",
-            "condition": {
-              "functionBody": "{return model.authors[arrayIndices[0]].$ref === undefined && model.authors[arrayIndices[0]].type === 'person';}"
-            }
-          },
-          {
-            "key": "authors[].qualifier",
-            "title": "Title and other designation associated with person",
-            "description": "",
-            "condition": {
-              "functionBody": "{return model.authors[arrayIndices[0]].$ref === undefined && model.authors[arrayIndices[0]].type === 'person';}"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "fieldset",
-    "title": "Language(s) of the resource",
-    "items": [
-      {
-        "key": "language",
-        "notitle": true,
-        "description": "",
-        "add": "new language",
-        "style": {
-          "add": "btn-link"
-        },
-        "type": "array",
-        "validationMessage": {
-          "402": "<span class=\"text-danger\">Language value should be unique!</span>"
-        },
-        "items": [
-          {
-            "key": "language[].value",
-            "notitle": true,
-            "description": "",
-            "htmlClass": "rero21-required",
-            "titleMap": [
-              {
-                "value": "ara",
-                "name": "Arabic"
-              },
-              {
-                "value": "chi",
-                "name": "Chinese"
-              },
-              {
-                "value": "eng",
-                "name": "English"
-              },
-              {
-                "value": "fre",
-                "name": "French"
-              },
-              {
-                "value": "ger",
-                "name": "German"
-              },
-              {
-                "value": "heb",
-                "name": "Hebrew"
-              },
-              {
-                "value": "ita",
-                "name": "Italian"
-              },
-              {
-                "value": "jpn",
-                "name": "Japanese"
-              },
-              {
-                "value": "lat",
-                "name": "Latin"
-              },
-              {
-                "value": "por",
-                "name": "Portuguese"
-              },
-              {
-                "value": "rus",
-                "name": "Russian"
-              },
-              {
-                "value": "spa",
-                "name": "Spanish"
-              }
-            ]
-          },
-          {
-            "key": "language[].type",
-            "notitle": true,
-            "description": "",
-            "htmlClass": "rero21-required"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "fieldset",
-    "title": "Date of publication",
-    "items": [
-      {
-        "key": "publicationYear",
-        "notitle": true,
-        "type": "integer"
-      },
-      {
-        "key": "freeFormedPublicationDate",
-        "condition": "model.publicationYear"
-      }
-    ]
-  },
-  {
-    "key": "type",
-    "title": "Document type",
-    "description": "Type of the document"
-  }
+[{
+		"type": "fieldset",
+		"title": "Identifiers",
+		"items": [{
+			"key": "identifiedBy",
+			"notitle": true,
+			"description": "",
+			"add": "new identifier",
+			"style": {
+				"add": "btn-link"
+			},
+			"type": "array",
+			"items": [{
+					"key": "identifiedBy[].type",
+					"type": "select"
+				},
+				{
+					"key": "identifiedBy[].value"
+				}
+			]
+		}]
+	},
+	{
+		"key": "title",
+		"htmlClass": "rero21-required"
+	},
+	{
+		"type": "fieldset",
+		"title": "Author(s)",
+		"items": [{
+			"key": "authors",
+			"notitle": true,
+			"description": "",
+			"add": "new author",
+			"style": {
+				"add": "btn-link"
+			},
+			"type": "array",
+			"items": [{
+					"key": "authors[].type",
+					"type": "radiobuttons",
+					"notitle": true,
+					"description": "",
+					"condition": {
+						"functionBody": "{var author = model.authors[arrayIndices[0]]; return author.$ref === undefined && author.name === undefined && author.date === undefined &&  author.qualifier === undefined;}"
+					},
+					"titleMap": [{
+							"value": "person",
+							"name": "Person"
+						},
+						{
+							"value": "organisation",
+							"name": "Organisation"
+						}
+					],
+					"style": {
+						"selected": "btn-success",
+						"unselected": "btn-light"
+					}
+				},
+				{
+					"key": "authors[].$ref",
+					"title": "Name of Person",
+					"condition": {
+						"functionBody": "{var author = model.authors[arrayIndices[0]]; return author.type === 'person';}"
+					},
+					"type": "refAuthority"
+				},
+				{
+					"title": "Name of Organisation",
+					"key": "authors[].name",
+					"description": "",
+					"condition": {
+						"functionBody": "{return model.authors[arrayIndices[0]].type === 'organisation';}"
+					}
+				},
+				{
+					"key": "authors[].date",
+					"title": "Date of birth - date of death",
+					"description": "",
+					"condition": {
+						"functionBody": "{return model.authors[arrayIndices[0]].$ref === undefined && model.authors[arrayIndices[0]].type === 'person';}"
+					}
+				},
+				{
+					"key": "authors[].qualifier",
+					"title": "Title and other designation associated with person",
+					"description": "",
+					"condition": {
+						"functionBody": "{return model.authors[arrayIndices[0]].$ref === undefined && model.authors[arrayIndices[0]].type === 'person';}"
+					}
+				}
+			]
+		}]
+	},
+	{
+		"type": "fieldset",
+		"title": "Language(s) of the resource",
+		"items": [{
+			"key": "language",
+			"notitle": true,
+			"description": "",
+			"add": "new language",
+			"style": {
+				"add": "btn-link"
+			},
+			"type": "array",
+			"validationMessage": {
+				"402": "<span class=\"text-danger\">Language value should be unique!</span>"
+			},
+			"items": [{
+					"key": "language[].value",
+					"notitle": true,
+					"description": "",
+					"htmlClass": "rero21-required",
+					"titleMap": [{
+							"value": "ara",
+							"name": "Arabic"
+						},
+						{
+							"value": "chi",
+							"name": "Chinese"
+						},
+						{
+							"value": "eng",
+							"name": "English"
+						},
+						{
+							"value": "fre",
+							"name": "French"
+						},
+						{
+							"value": "ger",
+							"name": "German"
+						},
+						{
+							"value": "heb",
+							"name": "Hebrew"
+						}
+					]
+				},
+				{
+					"key": "languages[].language",
+					"notitle": true,
+					"description": "",
+					"htmlClass": "rero21-required",
+					"titleMap": [{
+							"value": "ara",
+							"name": "Arabic"
+						},
+						{
+							"value": "chi",
+							"name": "Chinese"
+						},
+						{
+							"value": "eng",
+							"name": "English"
+						},
+						{
+							"value": "fre",
+							"name": "French"
+						},
+						{
+							"value": "ger",
+							"name": "German"
+						},
+						{
+							"value": "heb",
+							"name": "Hebrew"
+						},
+						{
+							"value": "ita",
+							"name": "Italian"
+						},
+						{
+							"value": "jpn",
+							"name": "Japanese"
+						},
+						{
+							"value": "lat",
+							"name": "Latin"
+						},
+						{
+							"value": "por",
+							"name": "Portuguese"
+						},
+						{
+							"value": "rus",
+							"name": "Russian"
+						},
+						{
+							"value": "spa",
+							"name": "Spanish"
+						},
+						{
+							"value": "und",
+							"name": "Undefined"
+						}
+					]
+				},
+				{
+					"key": "language[].type",
+					"notitle": true,
+					"description": "",
+					"htmlClass": "rero21-required"
+				}
+			]
+		}]
+	}, {
+		"type": "fieldset",
+		"title": "Date of publication",
+		"items": [{
+				"key": "publicationYear",
+				"notitle": true,
+				"type": "integer"
+			},
+			{
+				"key": "freeFormedPublicationDate",
+				"condition": "model.publicationYear"
+			}
+		]
+	}, {
+		"key": "type",
+		"title": "Document type",
+		"description": "Type of the document"
+	}
 ]

@@ -17,7 +17,7 @@
       "description": "Schema to validate circulation policies records against.",
       "type": "string",
       "minLength": 9,
-      "default": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json"
+      "default": "https://ils.bib.uclouvain.be/schema/circ_policies/circ_policy-v0.0.1.json"
     },
     "pid": {
       "title": "Circulation policy ID",
@@ -42,7 +42,7 @@
         "$ref": {
           "title": "Organisation URI",
           "type": "string",
-          "pattern": "^https://ils.rero.ch/api/organisations/.*?$"
+          "pattern": "^https://ils.bib.uclouvain.be/api/organisations/.*?$"
         }
       }
     },
@@ -115,7 +115,7 @@
           "$ref": {
             "title": "Library URI",
             "type": "string",
-            "pattern": "^https://ils.rero.ch/api/libraries/.*?$"
+            "pattern": "^https://ils.bib.uclouvain.be/api/libraries/.*?$"
           }
         }
       }
@@ -142,7 +142,7 @@
               "$ref": {
                 "title": "Patron type URI",
                 "type": "string",
-                "pattern": "^https://ils.rero.ch/api/patron_types/.*?$"
+                "pattern": "^https://ils.bib.uclouvain.be/api/patron_types/.*?$"
               }
             }
           },
@@ -157,7 +157,7 @@
               "$ref": {
                 "title": "Item type URI",
                 "type": "string",
-                "pattern": "^https://ils.rero.ch/api/item_types/.*?$"
+                "pattern": "^https://ils.bib.uclouvain.be/api/item_types/.*?$"
               }
             }
           }

@@ -15,7 +15,7 @@
       "title": "Schema",
       "description": "Schema to validate document against.",
       "type": "string",
-      "default": "https://ils.rero.ch/schema/documents/document-v0.0.1.json"
+      "default": "https://ils.bib.uclouvain.be/schema/documents/document-v0.0.1.json"
     },
     "pid": {
       "title": "Document ID",
@@ -87,6 +87,9 @@
             "title": "Language value",
             "description": "Language value.",
             "type": "string",
+            "default": "und",
+            "validationMessage": "Required. Language of the resource, primary or not.",
+
             "enum": [
               "fre",
               "ger",
@@ -99,7 +102,8 @@
               "heb",
               "jpn",
               "por",
-              "rus"
+              "rus",
+              "und"
             ]
           }
         }

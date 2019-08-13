@@ -22,7 +22,7 @@ import jsonresolver
 from invenio_pidstore.models import PersistentIdentifier, PIDStatus
 
 
-@jsonresolver.route('/api/patrons/<pid>', host='ils.rero.ch')
+@jsonresolver.route('/api/patrons/<pid>', host='ils.bib.uclouvain.be')
 def patron_resolver(pid):
     """Patron resolver."""
     persistent_id = PersistentIdentifier.get('ptrn', pid)

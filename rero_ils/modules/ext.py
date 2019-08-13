@@ -96,6 +96,7 @@ class REROILSAPP(object):
         before_record_index.connect(enrich_patron_data)
         before_record_index.connect(enrich_location_data)
         before_record_index.connect(enrich_notification_data)
+        #before_record_index.connect(mef_person_update)
 
         item_at_desk.connect(listener_item_at_desk)
 

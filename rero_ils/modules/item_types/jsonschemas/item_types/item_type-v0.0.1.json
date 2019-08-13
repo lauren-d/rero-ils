@@ -16,7 +16,7 @@
       "description": "Schema to validate item_type records against.",
       "type": "string",
       "minLength": 9,
-      "default": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json"
+      "default": "https://ils.bib.uclouvin.be/schema/item_types/item_type-v0.0.1.json"
     },
     "pid": {
       "title": "ItemType ID.",

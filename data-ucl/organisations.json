@@ -1,0 +1,17 @@
+[
+        {
+		"$schema": "https://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+		"address": "Place de l'université 1, 1348 Louvain-la-Neuve",
+		"name": "UCLouvain"
+	},
+	{
+		"$schema": "https://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+		"address": "Rue Grandgagnage 19, 5000 Namur",
+		"name": "UNamur"
+	},
+	{
+		"$schema": "https://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+		"address": "Boulevard du Jardin Botanique 43, 1000 Bruxelles",
+		"name": "USaint-Louis"
+	}
+]
