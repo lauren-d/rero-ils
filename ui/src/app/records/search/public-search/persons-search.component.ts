@@ -1,3 +1,22 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { combineLatest } from 'rxjs';
@@ -20,6 +39,7 @@ import { map } from 'rxjs/operators';
   styles: []
 })
 export class PersonsSearchComponent implements OnInit {
+  public viewCode = undefined;
   public recordType = 'persons';
   public query = '';
   public nPerPage = 10;
@@ -33,10 +53,14 @@ export class PersonsSearchComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    combineLatest(this.route.params, this.route.queryParamMap)
-    .pipe(map(results => ({params: results[0], query: results[1]})))
+    combineLatest(
+      this.route.params,
+      this.route.queryParamMap
+    ).pipe(map(results => ({
+      params: results[0],
+      query: results[1]
+    })))
     .subscribe(results => {
-      const params = results.params;
       const urlQuery = results.query;
       this.aggFilters = [];
       // parse url

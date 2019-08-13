@@ -1,27 +1,19 @@
-
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO_ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO_ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO_ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO_ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Default configuration for rero-ils.
 
@@ -52,6 +44,7 @@ from invenio_search import RecordsSearch
 
 from rero_ils.modules.api import IlsRecordIndexer
 from rero_ils.modules.loans.api import Loan
+from rero_ils.modules.organisations.api import Organisation
 from rero_ils.utils import get_agg_config
 
 from .modules.circ_policies.api import CircPolicy
@@ -127,6 +120,8 @@ SECURITY_RESET_PASSWORD_TEMPLATE = 'rero_ils/reset_password.html'
 THEME_ERROR_TEMPLATE = 'rero_ils/page_error.html'
 #: Template for tombstone page.
 RECORDS_UI_TOMBSTONE_TEMPLATE = "rero_ils/tombstone.html"
+
+RERO_ILS_THEME_SEARCH_ENDPOINT = '/search/documents'
 
 # Logings
 # =======
@@ -365,7 +360,7 @@ RECORDS_REST_ENDPOINTS = dict(
         # ),
         default_media_type='application/json',
         max_result_window=5000000,
-        search_factory_imp='rero_ils.query:search_factory',
+        search_factory_imp='rero_ils.query:document_search_factory',
         read_permission_factory_imp=allow_all,
         list_permission_factory_imp=allow_all
     ),
@@ -692,10 +687,15 @@ RECORDS_REST_ENDPOINTS = dict(
 
 SEARCH_UI_SEARCH_INDEX = 'documents'
 
+# Default view code for all organisations view
+# TODO: Should be taken into angular
+RERO_ILS_SEARCH_GLOBAL_VIEW_CODE = 'global'
+
 RERO_ILS_APP_CONFIG_FACETS = {
     'doc': {
         'order': [
             'document_type',
+            'organisation',
             'library',
             'author__en',
             'author__fr',
@@ -732,68 +732,52 @@ RERO_ILS_AGGREGATION_SIZE = {
     'documents': 50
 }
 
-RECORDS_REST_FACETS = {
-    'documents': dict(
+RECORDS_REST_FACETS = dict(
+    documents=dict(
         aggs=dict(
-            document_type=partial(
-                get_agg_config,
-                index_name='documents',
-                field='type'
+            # The organisation or library facet is defined
+            # dynamically during the query (query.py)
+            document_type=dict(
+                terms=dict(field='type')
             ),
-            library=partial(
-                get_agg_config,
-                index_name='documents',
-                field='items.library_pid'
+            author__en=dict(
+                terms=dict(field='facet_authors_en')
             ),
-            author__en=partial(
-                get_agg_config,
-                index_name='documents',
-                field='facet_authors_en'
+            author__fr=dict(
+                terms=dict(field='facet_authors_fr')
             ),
-            author__fr=partial(
-                get_agg_config,
-                index_name='documents',
-                field='facet_authors_fr'
+            author__de=dict(
+                terms=dict(field='facet_authors_de')
             ),
-            author__de=partial(
-                get_agg_config,
-                index_name='documents',
-                field='facet_authors_de'
+            author__it=dict(
+                terms=dict(field='facet_authors_it')
             ),
-            author__it=partial(
-                get_agg_config,
-                index_name='documents',
-                field='facet_authors_it'
+            language=dict(
+                terms=dict(field='language.value')
             ),
-            language=partial(
-                get_agg_config,
-                index_name='documents',
-                field='languages.language'
+            subject=dict(
+                terms=dict(field='facet_subjects')
             ),
-            subject=partial(
-                get_agg_config,
-                index_name='documents',
-                field='facet_subjects'
-            ),
-            status=partial(
-                get_agg_config,
-                index_name='items.status',
-                field='items.status'
+            status=dict(
+                terms=dict(field='items.status')
             )
         ),
         filters={
             _('document_type'): terms_filter('type'),
-            _('library'): terms_filter('items.library_pid'),
+            _('organisation'): terms_filter(
+                'items.organisation.organisation_pid'
+            ),
+            _('library'): terms_filter('items.organisation.library_pid'),
             _('author__en'): terms_filter('facet_authors_en'),
             _('author__fr'): terms_filter('facet_authors_fr'),
             _('author__de'): terms_filter('facet_authors_de'),
             _('author__it'): terms_filter('facet_authors_it'),
-            _('language'): terms_filter('languages.language'),
+            _('language'): terms_filter('language.value'),
             _('subject'): terms_filter('facet_subjects'),
             _('status'): terms_filter('items.status'),
-        },
+        }
     ),
-    'patrons': dict(
+    patrons=dict(
         aggs=dict(
             roles=dict(terms=dict(field='roles'))
         ),
@@ -801,7 +785,7 @@ RECORDS_REST_FACETS = {
             _('roles'): terms_filter('roles')
         },
     ),
-    'persons': dict(
+    persons=dict(
         aggs=dict(
             sources=dict(terms=dict(field='sources'))
         ),
@@ -809,7 +793,7 @@ RECORDS_REST_FACETS = {
             _('sources'): terms_filter('sources')
         }
     )
-}
+)
 
 # Elasticsearch fields boosting by index
 RERO_ILS_QUERY_BOOSTING = {
@@ -864,7 +848,7 @@ for index in indexes:
 RECORDS_UI_ENDPOINTS = {
     'doc': dict(
         pid_type='doc',
-        route='/documents/<pid_value>',
+        route='/<string:viewcode>/documents/<pid_value>',
         template='rero_ils/detailed_view_documents.html',
         record_class='rero_ils.modules.documents.api:Document',
         view_imp='rero_ils.modules.documents.views.doc_item_view_method',
@@ -872,14 +856,14 @@ RECORDS_UI_ENDPOINTS = {
     ),
     'doc_export': dict(
         pid_type='doc',
-        route='/documents/<pid_value>/export/<format>',
+        route='/<string:viewcode>/documents/<pid_value>/export/<format>',
         view_imp='invenio_records_ui.views.export',
         template='rero_ils/export_documents.html',
         record_class='rero_ils.modules.documents.api:Document',
     ),
     'item': dict(
         pid_type='item',
-        route='/items/<pid_value>',
+        route='/<string:viewcode>/items/<pid_value>',
         template='rero_ils/detailed_view_items.html',
         view_imp='rero_ils.modules.items.views.item_view_method',
         record_class='rero_ils.modules.items.api:Item',

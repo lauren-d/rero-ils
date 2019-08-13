@@ -1,3 +1,22 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, debounceTime } from 'rxjs/operators';
@@ -34,6 +53,7 @@ export class RecordsService {
   }
 
   getRecords(
+    view: string,
     record_type: string,
     page: number = 1,
     size: number = 10,
@@ -43,7 +63,7 @@ export class RecordsService {
     sort?,
     displayScore?
   ) {
-    let url = `/api/${record_type}/?page=${page}&size=${size}&q=${query}`;
+    let url = `/api/${record_type}/?page=${page}&size=${size}&q=${query}&view=${view}`;
     if (filters.length) {
       url = url + '&' + filters.join('&');
     }
@@ -66,9 +86,13 @@ export class RecordsService {
     record_type: string,
     field: string,
     query: string,
+    view: string = '',
     mime_type: string = 'application/json'
   ) {
-    const url = `/api/${record_type}/?q=${field}:${query}&size=5`;
+    let url = `/api/${record_type}/?q=${field}:${query}&size=5`;
+    if (view !== '') {
+      url += `&view=${view}`;
+    }
     return this.http.get<any>(url, this.httpOptions(mime_type)).pipe(
       catchError(e => {
         if (e.status === 404) {

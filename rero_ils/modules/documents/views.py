@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Blueprint used for loading templates."""
 
@@ -32,14 +25,18 @@ import sys
 from functools import wraps
 from urllib.request import urlopen
 
+import pycountry
 import requests
 import six
+from babel import Locale
 from dojson.contrib.marc21.utils import create_record, split_stream
 from flask import Blueprint, abort, current_app, jsonify, render_template, \
     request
 from flask_babelex import gettext as _
 from flask_login import current_user
 from invenio_records_ui.signals import record_viewed
+
+from rero_ils.modules.documents.utils import document_items_filter
 
 from .api import Document
 from .dojson.contrib.unimarctojson import unimarctojson
@@ -69,11 +66,18 @@ def doc_item_view_method(pid, record, template=None, **kwargs):
         Item.get_record_by_pid(item_pid)
         for item_pid in Item.get_items_pid_by_document_pid(pid.pid_value)
     ]
+    viewcode = kwargs['viewcode']
+    # Item(s) filter
+    if viewcode != current_app.config.get('RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'):
+        org_pid = Organisation.get_record_by_viewcode(viewcode)['pid']
+        items = document_items_filter(org_pid, items)
+
     return render_template(
         template,
         pid=pid,
         record=record,
-        items=items
+        items=items,
+        viewcode=viewcode
     )
 
 
@@ -222,7 +226,7 @@ def localized_data_name(data, language):
 
 
 @blueprint.app_template_filter()
-def authors_format(pid, language):
+def authors_format(pid, language, viewcode):
     """Format authors for template."""
     doc = Document.get_record_by_pid(pid)
     doc = doc.replace_refs()
@@ -240,7 +244,8 @@ def authors_format(pid, language):
         mef_pid = author.get('pid')
         if mef_pid:
             # add link <a href="url">link text</a>
-            line = '<a href="/persons/{pid}">{text}</a>'.format(
+            line = '<a href="/{viewcode}/persons/{pid}">{text}</a>'.format(
+                viewcode=viewcode,
                 pid=mef_pid,
                 text=', '.join(line)
             )
@@ -323,3 +328,50 @@ def item_status_text(item, format='medium', locale='en'):
             if item.status == ItemStatus.IN_TRANSIT:
                 text += ' ({0})'.format(_(ItemStatus.IN_TRANSIT))
     return text
+
+
+@blueprint.app_template_filter()
+def identifiedby_format(identifiedby):
+    """Format identifiedby for template."""
+    output = []
+    for identifier in identifiedby:
+        status = identifier.get('status')
+        id_type = identifier.get('type')
+        if not status and id_type != 'bf:Local':
+            if id_type.find(':') != -1:
+                id_type = id_type.split(':')[1]
+            output.append({'type': id_type, 'value': identifier.get('value')})
+    return output
+
+
+@blueprint.app_template_filter()
+def document_isbn(identifiedby):
+    """Returns document isbn."""
+    for identifier in identifiedby:
+        if identifier.get('type') == 'bf:Isbn':
+            return {'isbn': identifier.get('value')}
+    return {}
+
+
+@blueprint.app_template_filter()
+def language_format(langs_list, language_interface):
+    """Converts language code to langauge name.
+
+    langs_list: a code or a list of language codes
+    language_interface: the code of the language of the interface
+    Returns a comma separated list of language names.
+    """
+    output = []
+    if isinstance(langs_list, str):
+        langs_list = [{'type': 'bf:Language', 'value': langs_list}]
+    for lang in langs_list:
+        try:
+            lang_name = pycountry.languages.get(
+                bibliographic=lang.get('value')).alpha_2
+        except:
+            lang_name = pycountry.languages.get(
+                alpha_3=lang.get('value')).alpha_2
+        lang_display = Locale(lang_name).get_language_name(
+            language_interface).lower()
+        output.append(lang_display)
+    return ", ".join(output)

@@ -1,3 +1,22 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { AbstractControl } from '@angular/forms';
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { JsonSchemaFormService } from 'angular6-json-schema-form';
@@ -98,7 +117,7 @@ export class RefAuthorityComponent implements OnInit, OnDestroy {
       return of([]);
     }
     const esQuery = `%5C*.preferred_name_for_person:'${query}'`;
-    return this.recordsService.getRecords('mef', 1, 10, esQuery).pipe(
+    return this.recordsService.getRecords('global', 'mef', 1, 10, esQuery).pipe(
       map(results => {
         const names = [{
           name: query,

@@ -87,10 +87,13 @@
         "type": {
           "type": "keyword"
         },
-        "languages": {
+        "language": {
           "type": "object",
           "properties": {
-            "language": {
+            "type": {
+              "type": "keyword"
+            },
+            "value": {
               "type": "keyword"
             }
           }
@@ -293,17 +296,29 @@
             }
           }
         },
-        "identifiers": {
+        "identifiedBy": {
           "type": "object",
           "properties": {
-            "reroID": {
+            "type": {
               "type": "keyword"
             },
-            "bnfID": {
+            "source": {
               "type": "keyword"
             },
-            "isbn": {
+            "value": {
               "type": "keyword"
+            },
+            "note": {
+              "type": "text"
+            },
+            "qualifier": {
+              "type": "keyword"
+            },
+            "acquisitionsTerms": {
+              "type": "text"
+            },
+            "status": {
+              "type": "text"
             }
           }
         },
@@ -345,15 +360,29 @@
             "call_number": {
               "type": "keyword"
             },
-            "library_pid": {
-              "type": "keyword"
-            },
             "status": {
               "type": "keyword"
+            },
+            "organisation": {
+              "type": "object",
+              "properties": {
+                "organisation_pid": {
+                  "type": "keyword"
+                },
+                "library_pid": {
+                  "type": "keyword"
+                },
+                "organisation_library": {
+                  "type": "keyword"
+                }
+              }
             }
           }
         },
         "available": {
+          "type": "boolean"
+        },
+        "harvested": {
           "type": "boolean"
         },
         "_created": {

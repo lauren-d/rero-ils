@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """DOJSON transiformation for ebooks module tests."""
 
@@ -42,9 +35,12 @@ def test_marc21_to_isbn_ebooks():
     """
     marc21json = create_record(marc21xml)
     data = marc21.do(marc21json)
-    assert data.get('identifiers') == {
-        'isbn': '9782812933868'
-    }
+    assert data.get('identifiedBy') == [
+        {
+            'type': 'bf:Isbn',
+            'value': '9782812933868'
+        }
+    ]
 
     marc21xml = """
     <record>
@@ -55,7 +51,7 @@ def test_marc21_to_isbn_ebooks():
     """
     marc21json = create_record(marc21xml)
     data = marc21.do(marc21json)
-    assert not data.get('identifiers')
+    assert not data.get('identifiedBy')
 
 
 def test_marc21_to_languages_ebooks():
@@ -75,7 +71,7 @@ def test_marc21_to_languages_ebooks():
     """
     marc21json = create_record(marc21xml)
     data = marc21.do(marc21json)
-    assert data.get('languages') == [{'language': 'fre'}]
+    assert data.get('language') == [{'type': 'bf:Language', 'value': 'fre'}]
 
 
 def test_marc21_to_type_ebooks():
@@ -103,8 +99,12 @@ def test_marc21_to_identifier_reroID():
     """
     marc21json = create_record(marc21xml)
     data = marc21.do(marc21json)
-    identifiers = data.get('identifiers', {})
-    assert identifiers.get('reroID') == 'cantook-EDEN496624'
+    identifiers = data.get('identifiedBy', [])
+    print(identifiers)
+    assert identifiers[0] == {
+        'type': 'bf:Local',
+        'value': 'cantook-EDEN496624'
+    }
 
 
 def test_marc21_to_title():

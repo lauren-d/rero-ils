@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """API for manipulating items."""
 
@@ -30,8 +23,8 @@ from functools import partial, wraps
 from flask import current_app
 from invenio_circulation.api import get_loan_for_item, \
     patron_has_active_loan_on_item
-from invenio_circulation.errors import CirculationException, \
-    MissingRequiredParameterError, NoValidTransitionAvailableError
+from invenio_circulation.errors import MissingRequiredParameterError, \
+    NoValidTransitionAvailableError
 from invenio_circulation.proxies import current_circulation
 from invenio_circulation.search.api import search_by_pid
 from invenio_i18n.ext import current_i18n
@@ -47,6 +40,7 @@ from ..loans.api import Loan, LoanAction, get_last_transaction_loc_for_item, \
     get_request_by_item_pid_by_patron_pid
 from ..locations.api import Location
 from ..minters import id_minter
+from ..organisations.api import Organisation
 from ..patrons.api import Patron, current_patron
 from ..providers import Provider
 from ..transactions.api import CircTransaction
@@ -343,6 +337,10 @@ class Item(IlsRecord):
                     item_pid not in returned_item_pids:
                 returned_item_pids.append(item_pid)
                 yield item, loan
+
+    def get_organisation(self):
+        """Shortcut to the organisation of the item location."""
+        return self.get_library().get_organisation()
 
     def get_library(self):
         """Shortcut to the library of the item location."""
@@ -752,3 +750,9 @@ class Item(IlsRecord):
         """Get organisation pid for item."""
         library = Library.get_record_by_pid(self.library_pid)
         return library.organisation_pid
+
+    @property
+    def organisation_view(self):
+        """Get Organisation view for item."""
+        organisation = Organisation.get_record_by_pid(self.organisation_pid)
+        return organisation['view_code']

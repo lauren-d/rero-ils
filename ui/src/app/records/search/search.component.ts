@@ -1,6 +1,25 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { Component, OnInit, Input } from '@angular/core';
 import { RecordsService } from '../records.service';
-import { _ } from '@app/core';
+import { _, OrganisationViewService } from '@app/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
@@ -143,7 +162,8 @@ export class SearchComponent implements OnInit {
     protected route: ActivatedRoute,
     protected router: Router,
     private translate: TranslateService,
-    private toastService: ToastrService
+    private toastService: ToastrService,
+    private organisationView: OrganisationViewService
    ) {}
 
   ngOnInit() {
@@ -167,6 +187,7 @@ export class SearchComponent implements OnInit {
       sort = this.sort;
     }
     this.recordsService.getRecords(
+      this.organisationView.getViewCode(),
       this.recordType,
       this.currentPage,
       this.nPerPage,
@@ -197,17 +218,19 @@ export class SearchComponent implements OnInit {
           order = Object.keys(data.aggregations);
         }
         for (const agg of order) {
-          const agg_value  = data.aggregations[agg];
-          agg_value.title = agg;
-          agg_value.name = agg;
-          const agg_split = agg.split('__');
-          if (agg_split.length === 2) {
-            if (this.language === agg_split[1]) {
-              agg_value.name = agg_split[0];
+          if (agg in data.aggregations) {
+            const agg_value  = data.aggregations[agg];
+            agg_value.title = agg;
+            agg_value.name = agg;
+            const agg_split = agg.split('__');
+            if (agg_split.length === 2) {
+              if (this.language === agg_split[1]) {
+                agg_value.name = agg_split[0];
+                this.aggregations.push(agg_value);
+              }
+            } else {
               this.aggregations.push(agg_value);
             }
-          } else {
-            this.aggregations.push(agg_value);
           }
         }
 

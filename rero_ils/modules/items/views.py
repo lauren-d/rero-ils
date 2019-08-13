@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Blueprint used for loading templates."""
 
@@ -64,13 +57,12 @@ def item_view_method(pid, record, template=None, **kwargs):
     item_type = ItemType.get_record_by_pid(item['item_type']['pid'])
     return render_template(
         template, pid=pid, record=record, document=document, location=location,
-        library=library, item_type=item_type)
+        library=library, item_type=item_type, viewcode=kwargs['viewcode'])
 
 
 blueprint = Blueprint(
     'item',
     __name__,
-    url_prefix='/item',
     template_folder='templates',
     static_folder='static',
 )
@@ -100,11 +92,12 @@ def jsonify_error(func):
     return decorated_view
 
 
-@blueprint.route('/request/<item_pid>/<pickup_location_pid>',
-                 methods=['GET'])
+@blueprint.route(
+    '/<string:viewcode>/item/request/<item_pid>/<pickup_location_pid>',
+    methods=['GET'])
 @check_authentication_for_request
 @jsonify_error
-def patron_request(item_pid=None, pickup_location_pid=None):
+def patron_request(viewcode, item_pid=None, pickup_location_pid=None):
     """HTTP GET request for Item request action...
 
     required_parameters: item_pid_value, location
@@ -120,5 +113,8 @@ def patron_request(item_pid=None, pickup_location_pid=None):
     )
     flash(_('The item %s has been requested.' % item_pid), 'success')
     document_pid = item.replace_refs().get('document', {}).get('pid')
-    return redirect(
-        url_for("invenio_records_ui.doc", pid_value=document_pid))
+    return redirect(url_for(
+        'invenio_records_ui.doc',
+        viewcode=viewcode,
+        pid_value=document_pid
+    ))
