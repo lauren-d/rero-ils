@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API items."""
 
@@ -79,7 +73,7 @@ def test_checkout_no_loan_given(client, librarian_martigny_no_email,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('pid')
 
     from rero_ils.modules.patrons.views import  \
         get_patron_from_checkout_item_pid
@@ -101,7 +95,7 @@ def test_checkout_no_loan_given(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -146,14 +140,14 @@ def test_item_misc(client, librarian_martigny_no_email, lib_martigny,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('pid')
 
     res = client.post(
         url_for('api_item.validate_request'),
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -181,7 +175,7 @@ def test_item_misc(client, librarian_martigny_no_email, lib_martigny,
             dict(
                 item_pid=item.pid,
                 patron_pid=patron.pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -204,7 +198,7 @@ def test_item_misc(client, librarian_martigny_no_email, lib_martigny,
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -249,14 +243,14 @@ def test_automatic_checkin(client, librarian_martigny_no_email, lib_martigny,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('pid')
 
     res = client.post(
         url_for('api_item.validate_request'),
         data=json.dumps(
             dict(
                 item_pid=item_lib_martigny.pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_public_martigny.pid
             )
         ),
@@ -273,7 +267,7 @@ def test_automatic_checkin(client, librarian_martigny_no_email, lib_martigny,
     record, actions = item.automatic_checkin()
     assert 'receive' in actions
 
-    item.cancel_loan(loan_pid=loan_pid)
+    item.cancel_loan(pid=loan_pid)
     assert item.status == ItemStatus.ON_SHELF
 
 
@@ -305,14 +299,14 @@ def test_auto_checkin_else(client, librarian_martigny_no_email, lib_martigny,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.REQUEST].get('pid')
 
     res = client.post(
         url_for('api_item.validate_request'),
         data=json.dumps(
             dict(
                 item_pid=item_lib_martigny.pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_public_martigny.pid
             )
         ),
@@ -326,7 +320,7 @@ def test_auto_checkin_else(client, librarian_martigny_no_email, lib_martigny,
     record, actions = item.automatic_checkin()
     assert actions == {'no': None}
 
-    item.cancel_loan(loan_pid=loan_pid)
+    item.cancel_loan(pid=loan_pid)
     assert item.status == ItemStatus.ON_SHELF
 
 
@@ -365,7 +359,7 @@ def test_item_different_actions(client, librarian_martigny_no_email,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('pid')
 
     record = Item.get_record_by_pid(item_lib_martigny.pid)
 
@@ -384,7 +378,7 @@ def test_item_different_actions(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid='does not exist',
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_public_saxon.pid
             )
         ),
@@ -397,7 +391,7 @@ def test_item_different_actions(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_lib_martigny.pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_public_saxon.pid
             )
         ),
@@ -405,10 +399,10 @@ def test_item_different_actions(client, librarian_martigny_no_email,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKIN].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKIN].get('pid')
 
     from rero_ils.modules.items.api_views import prior_checkout_actions
-    data = {'loan_pid': loan_pid}
+    data = {'pid': loan_pid}
     return_data = prior_checkout_actions(item_lib_martigny, data)
     assert return_data == {}
 

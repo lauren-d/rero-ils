@@ -1,6 +1,25 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { Component, OnInit, Input } from '@angular/core';
 import { RecordsService } from '../records.service';
-import { _ } from '@app/core';
+import { _, OrganisationViewService } from '@app/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
@@ -74,6 +93,18 @@ export class SearchComponent implements OnInit {
   private _currentPage = 1;
 
   @Input()
+  set displayScore(value) {
+    if (value !== undefined) {
+      this._displayScore = value;
+      this.getRecords();
+    }
+  }
+  get displayScore() {
+    return this._displayScore;
+  }
+  private _displayScore = 0;
+
+  @Input()
   set aggFilters(value) {
     if (value !== undefined) {
       this._aggFilters = value;
@@ -125,12 +156,14 @@ export class SearchComponent implements OnInit {
   public language = null;
   public permissions = null;
   onInitDone = false;
+
   constructor(
     protected recordsService: RecordsService,
     protected route: ActivatedRoute,
     protected router: Router,
     private translate: TranslateService,
-    private toastService: ToastrService
+    private toastService: ToastrService,
+    private organisationView: OrganisationViewService
    ) {}
 
   ngOnInit() {
@@ -154,13 +187,15 @@ export class SearchComponent implements OnInit {
       sort = this.sort;
     }
     this.recordsService.getRecords(
+      this.organisationView.getViewCode(),
       this.recordType,
       this.currentPage,
       this.nPerPage,
       this.query,
       this.searchMime,
       this.aggFilters,
-      sort
+      sort,
+      this.displayScore
     ).subscribe(data => {
       if (data === null) {
         this.notFound = true;
@@ -183,17 +218,19 @@ export class SearchComponent implements OnInit {
           order = Object.keys(data.aggregations);
         }
         for (const agg of order) {
-          const agg_value  = data.aggregations[agg];
-          agg_value.title = agg;
-          agg_value.name = agg;
-          const agg_split = agg.split('__');
-          if (agg_split.length === 2) {
-            if (this.language === agg_split[1]) {
-              agg_value.name = agg_split[0];
+          if (agg in data.aggregations) {
+            const agg_value  = data.aggregations[agg];
+            agg_value.title = agg;
+            agg_value.name = agg;
+            const agg_split = agg.split('__');
+            if (agg_split.length === 2) {
+              if (this.language === agg_split[1]) {
+                agg_value.name = agg_split[0];
+                this.aggregations.push(agg_value);
+              }
+            } else {
               this.aggregations.push(agg_value);
             }
-          } else {
-            this.aggregations.push(agg_value);
           }
         }
 
@@ -219,6 +256,9 @@ export class SearchComponent implements OnInit {
       page: this.currentPage,
       q: this.query
     };
+    if (this.displayScore) {
+      queryParams['display_score'] = this.displayScore;
+    }
     const filters = {};
     for (const filter of this.aggFilters) {
       const [key, value] = filter.split('=');
@@ -251,35 +291,6 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  aggFilter(term, value) {
-    const filterValue = `${term}=${value}`;
-    if (this.isFiltered(term, value)) {
-      this.aggFilters = this.aggFilters.filter(val => val !== filterValue);
-    } else {
-      this.aggFilters.push(filterValue);
-    }
-    this.updateRoute();
-  }
-
-  isFiltered(term, value?) {
-    if (value) {
-      const filterValue = `${term}=${value}`;
-      return this.aggFilters.some(val => filterValue === val);
-    } else {
-      return this.aggFilters.some(val => term === val.split('=')[0]);
-    }
-  }
-
-  startOpen(title: string) {
-    if (this.isFiltered(title)) {
-      return true;
-    }
-    if (this.aggsSettings.expand.some(value => value === title)) {
-      return true;
-    }
-    return false;
-  }
-
   hasPermissionToCreate() {
     if (this.permissions
         && this.permissions.cannot_create
@@ -287,5 +298,21 @@ export class SearchComponent implements OnInit {
       return false;
     }
     return true;
+  }
+
+  removeAggFilter(event: any) {
+    this.aggFilters = this.aggFilters.filter(
+      val => val !== this.formatFilterValue(event)
+    );
+    this.updateRoute();
+  }
+
+  addAggFilter(event: any) {
+    this.aggFilters.push(this.formatFilterValue(event));
+    this.updateRoute();
+  }
+
+  formatFilterValue(object: {term: string, value: string}) {
+    return `${object.term}=${object.value}`;
   }
 }

@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """API for manipulating items."""
 
@@ -30,8 +23,8 @@ from functools import partial, wraps
 from flask import current_app
 from invenio_circulation.api import get_loan_for_item, \
     patron_has_active_loan_on_item
-from invenio_circulation.errors import CirculationException, \
-    NoValidTransitionAvailable
+from invenio_circulation.errors import MissingRequiredParameterError, \
+    NoValidTransitionAvailableError
 from invenio_circulation.proxies import current_circulation
 from invenio_circulation.search.api import search_by_pid
 from invenio_i18n.ext import current_i18n
@@ -47,6 +40,7 @@ from ..loans.api import Loan, LoanAction, get_last_transaction_loc_for_item, \
     get_request_by_item_pid_by_patron_pid
 from ..locations.api import Location
 from ..minters import id_minter
+from ..organisations.api import Organisation
 from ..patrons.api import Patron, current_patron
 from ..providers import Provider
 from ..transactions.api import CircTransaction
@@ -111,12 +105,12 @@ def add_loans_parameters_and_flush_indexes(function):
         loan = None
         web_request = False
         patron_pid = kwargs.get('patron_pid')
-        loan_pid = kwargs.get('loan_pid')
+        loan_pid = kwargs.get('pid')
         # TODO: include in invenio-circulation
         if function.__name__ == 'request' and \
                 not kwargs.get('pickup_location_pid'):
-            raise CirculationException(
-                "Pickup Location PID not specified")
+            raise MissingRequiredParameterError(
+                description="Parameter 'pickup_location_pid' is required")
 
         if loan_pid:
             loan = Loan.get_record_by_pid(loan_pid)
@@ -126,13 +120,13 @@ def add_loans_parameters_and_flush_indexes(function):
                 web_request = True
             # create or get a loan
             if not patron_pid:
-                raise CirculationException(
-                    "Patron PID not specified")
+                raise MissingRequiredParameterError(
+                    description="Parameter 'patron_pid' is required")
             if function.__name__ == 'checkout':
                 request = get_request_by_item_pid_by_patron_pid(
                     item_pid=item.pid, patron_pid=patron_pid)
                 if request:
-                    loan = Loan.get_record_by_pid(request.get('loan_pid'))
+                    loan = Loan.get_record_by_pid(request.get('pid'))
 
             if not loan:
                 data = {
@@ -141,13 +135,13 @@ def add_loans_parameters_and_flush_indexes(function):
                 }
                 loan = Loan.create(data, dbcommit=True, reindex=True)
         else:
-            raise CirculationException(
-                "Loan PID not specified")
+            raise MissingRequiredParameterError(
+                description="Parameter 'pid' is required")
 
         # set missing parameters
         kwargs['item_pid'] = item.pid
         kwargs['patron_pid'] = loan.get('patron_pid')
-        kwargs['loan_pid'] = loan.get('loan_pid')
+        kwargs['pid'] = loan.pid
         kwargs.setdefault(
             'transaction_date', datetime.now(timezone.utc).isoformat())
         if not kwargs.get('transaction_user_pid'):
@@ -183,6 +177,7 @@ class Item(IlsRecord):
     minter = item_id_minter
     fetcher = item_id_fetcher
     provider = ItemProvider
+    indexer = ItemsIndexer
 
     statuses = {
         'ITEM_ON_LOAN': 'on_loan',
@@ -231,18 +226,18 @@ class Item(IlsRecord):
     def get_loans_by_item_pid(cls, item_pid):
         """Return any loan loans for item."""
         results = current_circulation.loan_search.filter(
-            'term', item_pid=item_pid).source(includes='loan_pid').scan()
+            'term', item_pid=item_pid).source(includes='pid').scan()
         for loan in results:
-            yield Loan.get_record_by_pid(loan.loan_pid)
+            yield Loan.get_record_by_pid(loan.pid)
 
     @classmethod
     def get_loan_pid_with_item_on_loan(cls, item_pid):
         """Returns loan pid for checked out item."""
         search = search_by_pid(
             item_pid=item_pid, filter_states=['ITEM_ON_LOAN'])
-        results = search.source(['loan_pid']).scan()
+        results = search.source(['pid']).scan()
         try:
-            return next(results).loan_pid
+            return next(results).pid
         except StopIteration:
             return None
 
@@ -253,9 +248,9 @@ class Item(IlsRecord):
             item_pid=item_pid, filter_states=[
                 "ITEM_IN_TRANSIT_FOR_PICKUP",
                 "ITEM_IN_TRANSIT_TO_HOUSE"])
-        results = search.source(['loan_pid']).scan()
+        results = search.source(['pid']).scan()
         try:
-            return next(results).loan_pid
+            return next(results).pid
         except StopIteration:
             return None
 
@@ -278,14 +273,14 @@ class Item(IlsRecord):
             raise Exception('Invalid Library PID')
 
         results = current_circulation.loan_search\
-            .source(['loan_pid'])\
+            .source(['pid'])\
             .params(preserve_order=True)\
             .filter('term', state='PENDING')\
             .filter('term', library_pid=library_pid)\
             .sort({'transaction_date': {'order': 'asc'}})\
             .scan()
         for loan in results:
-            yield Loan.get_record_by_pid(loan.loan_pid)
+            yield Loan.get_record_by_pid(loan.pid)
 
     @classmethod
     def get_checked_out_loans(cls, patron_pid):
@@ -295,14 +290,14 @@ class Item(IlsRecord):
         if not patron:
             raise InvalidRecordID('Invalid Patron PID')
         results = current_circulation.loan_search\
-            .source(['loan_pid'])\
+            .source(['pid'])\
             .params(preserve_order=True)\
             .filter('term', state='ITEM_ON_LOAN')\
             .filter('term', patron_pid=patron_pid)\
             .sort({'transaction_date': {'order': 'asc'}})\
             .scan()
         for loan in results:
-            yield Loan.get_record_by_pid(loan.loan_pid)
+            yield Loan.get_record_by_pid(loan.pid)
 
     @classmethod
     def get_checked_out_items(cls, patron_pid):
@@ -325,10 +320,10 @@ class Item(IlsRecord):
                 'ITEM_AT_DESK',
                 'ITEM_IN_TRANSIT_FOR_PICKUP'
             ]).params(preserve_order=True)\
-            .source(['loan_pid'])\
+            .source(['pid'])\
             .sort({'transaction_date': {'order': 'asc'}})
         for result in search.scan():
-            yield Loan.get_record_by_pid(result.loan_pid)
+            yield Loan.get_record_by_pid(result.pid)
 
     @classmethod
     def get_requests_to_validate(cls, library_pid):
@@ -342,6 +337,10 @@ class Item(IlsRecord):
                     item_pid not in returned_item_pids:
                 returned_item_pids.append(item_pid)
                 yield item, loan
+
+    def get_organisation(self):
+        """Shortcut to the organisation of the item location."""
+        return self.get_library().get_organisation()
 
     def get_library(self):
         """Shortcut to the library of the item location."""
@@ -397,7 +396,7 @@ class Item(IlsRecord):
         of the last loan.
         """
         loan_location_pid = get_last_transaction_loc_for_item(self.pid)
-        if loan_location_pid:
+        if loan_location_pid and Location.get_record_by_pid(loan_location_pid):
             return loan_location_pid
         return self.location_pid
 
@@ -481,13 +480,6 @@ class Item(IlsRecord):
         # else:
         #     actions.add('lose')
         return actions
-
-    def reindex(self, forceindex=False):
-        """Reindex record."""
-        if forceindex:
-            ItemsIndexer(version_type="external_gte").index(self)
-        else:
-            ItemsIndexer().index(self)
 
     def status_update(self, dbcommit=False, reindex=False, forceindex=False):
         """Update item status."""
@@ -630,15 +622,12 @@ class Item(IlsRecord):
         requests = self.number_of_requests()
         if requests:
             request = next(self.get_requests())
-            requested_loan = Loan.get_record_by_pid(request.get('loan_pid'))
+            requested_loan = Loan.get_record_by_pid(request.get('pid'))
             pickup_location_pid = requested_loan.get('pickup_location_pid')
             if self.last_location_pid == pickup_location_pid:
                 if loan.is_active:
-                    item, cancel_action = self.cancel_loan(
-                        loan_pid=loan.get('loan_pid'))
-                    actions.update(cancel_action)
+                    item, cancel_action = self.cancel_loan(pid=loan.pid)
             item, validate_action = self.validate_request(**request)
-            actions.update(validate_action)
         return self, actions
 
     @add_loans_parameters_and_flush_indexes
@@ -670,7 +659,7 @@ class Item(IlsRecord):
         """Apply circ transactions for item."""
         if self.status == ItemStatus.ON_LOAN:
             loan_pid = self.get_loan_pid_with_item_on_loan(self.pid)
-            return self.checkin(loan_pid=loan_pid)
+            return self.checkin(pid=loan_pid)
 
         elif self.status == ItemStatus.IN_TRANSIT:
             do_receive = False
@@ -686,7 +675,7 @@ class Item(IlsRecord):
                     == transaction_location_pid:
                 do_receive = True
             if do_receive:
-                return self.receive(loan_pid=loan_pid)
+                return self.receive(pid=loan_pid)
             return self, {
                 LoanAction.NO: None
             }
@@ -705,10 +694,10 @@ class Item(IlsRecord):
         """
         # cancel all actions if it is possible
         for loan in self.get_loans_by_item_pid(self.pid):
-            loan_pid = loan['loan_pid']
+            loan_pid = loan['pid']
             try:
-                self.cancel_loan(loan_pid=loan_pid)
-            except NoValidTransitionAvailable:
+                self.cancel_loan(pid=loan_pid)
+            except NoValidTransitionAvailableError:
                 pass
         self['status'] = ItemStatus.MISSING
         self.status_update(dbcommit=True, reindex=True, forceindex=True)
@@ -760,3 +749,9 @@ class Item(IlsRecord):
         """Get organisation pid for item."""
         library = Library.get_record_by_pid(self.library_pid)
         return library.organisation_pid
+
+    @property
+    def organisation_view(self):
+        """Get Organisation view for item."""
+        organisation = Organisation.get_record_by_pid(self.organisation_pid)
+        return organisation['view_code']

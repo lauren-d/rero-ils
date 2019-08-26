@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API libraries."""
 
@@ -94,8 +88,7 @@ def test_libraries_get(client, lib_martigny):
 
 @mock.patch('invenio_records_rest.views.verify_record_permission',
             mock.MagicMock(return_value=VerifyRecordPermissionPatch))
-def test_libraries_post_put_delete(client, org_martigny, lib_martigny_data,
-                                   json_header):
+def test_libraries_post_put_delete(client, lib_martigny_data, json_header):
     """Test record retrieval."""
     item_url = url_for('invenio_records_rest.lib_item', pid_value='1')
     post_url = url_for('invenio_records_rest.lib_list')
@@ -155,12 +148,12 @@ def test_libraries_post_put_delete(client, org_martigny, lib_martigny_data,
     assert res.status_code == 410
 
 
-def test_library_no_pickup(client, lib_sion, loc_restricted_sion):
+def test_library_no_pickup(lib_sion):
     """Test library with no pick_up location."""
     assert not lib_sion.get_pickup_location_pid()
 
 
-def test_library_never_open(client, lib_sion, lib_martigny):
+def test_library_never_open(lib_sion):
     """Test library with no opening hours."""
     assert lib_sion._has_is_open()
     assert lib_sion.next_open()
@@ -177,40 +170,40 @@ def test_library_never_open(client, lib_sion, lib_martigny):
         assert lib_sion.next_open()
 
 
-def test_library_exceptions(client, lib_martigny):
+def test_library_exceptions(lib_martigny):
     """Test library exceptions."""
     assert lib_martigny._has_is_open()
     assert lib_martigny.next_open()
-    assert not lib_martigny.is_open(date=parser.parse('2018-12-15'))
-    assert not lib_martigny.is_open(date=parser.parse('2019-01-06'))
+    assert lib_martigny.is_open(date=parser.parse('2018-12-15'))
+    assert lib_martigny.is_open(date=parser.parse('2019-01-05'))
+    assert not lib_martigny.is_open(date=parser.parse('2019-08-01'))
 
     exception_dates = lib_martigny.get('exception_dates')
     exception_open_false = lib_martigny._has_exception(
-            _open=False,
-            date=parser.parse('2019-01-06'),
-            exception_dates=exception_dates,
-            day_only=False
+        _open=False,
+        date=parser.parse('2019-01-06'),
+        exception_dates=exception_dates,
+        day_only=False
     )
     exception_open_true = lib_martigny._has_exception(
-            _open=True,
-            date=parser.parse('2019-01-06'),
-            exception_dates=exception_dates,
-            day_only=False
+        _open=True,
+        date=parser.parse('2019-01-06'),
+        exception_dates=exception_dates,
+        day_only=False
     )
-    # One of these asserts should fail, this to demonstrate the bug documented
-    # in https://github.com/rero/rero-ils/issues/263
-    assert not exception_open_false
+
+    assert exception_open_false
     assert not exception_open_true
 
     assert not lib_martigny._has_exception(
-            _open=True,
-            date=parser.parse('2019-08-01'),
-            exception_dates=exception_dates,
-            day_only=False
+        _open=True,
+        date=parser.parse('2019-08-01'),
+        exception_dates=exception_dates,
+        day_only=False
     )
 
 
-def test_library_can_delete(client, lib_martigny, librarian_martigny_no_email,
+def test_library_can_delete(lib_martigny, librarian_martigny_no_email,
                             loc_public_martigny):
     """Test can delete a library."""
     links = lib_martigny.get_links_to_me()
@@ -245,7 +238,7 @@ def test_filtered_libraries_get(
     assert data['hits']['total'] == 1
 
 
-def test_library_secure_api(client, json_header, lib_martigny,
+def test_library_secure_api(client, lib_martigny,
                             librarian_martigny_no_email,
                             librarian_sion_no_email):
     """Test library secure api access."""
@@ -327,9 +320,7 @@ def test_library_secure_api_update(client, lib_fully,
 
 def test_library_secure_api_delete(client, lib_fully,
                                    librarian_martigny_no_email,
-                                   librarian_sion_no_email,
-                                   lib_fully_data,
-                                   json_header):
+                                   librarian_sion_no_email):
     """Test library secure api delete."""
     # Martigny
     login_user_via_session(client, librarian_martigny_no_email.user)

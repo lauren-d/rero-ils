@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of Invenio.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# Invenio is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# Invenio is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with Invenio; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """rero-ils MARC21 model definition."""
 
@@ -31,6 +24,14 @@ import requests
 from dojson import Overdo, utils
 
 marc21tojson = Overdo()
+
+
+def list_of_langs(data):
+    """Construct list of language codes from data."""
+    lang_codes = []
+    for lang_data in data:
+        lang_codes.append(lang_data.get('value'))
+    return lang_codes
 
 
 def remove_punctuation(data):
@@ -165,47 +166,49 @@ def marc21_to_titlesProper(self, key, value):
     return value.get('a')
 
 
-@marc21tojson.over('languages', '^008')
+@marc21tojson.over('language', '^008')
 @utils.ignore_value
-def marc21_to_languages(self, key, value):
+def marc21_to_language(self, key, value):
     """Get languages.
 
     languages: 008 and 041 [$a, repetitive]
     """
-    language = value.strip()[35:38]
-    to_return = [{'language': language}]
-    return to_return
+    language = self.get('language', [])
+    lang_codes = list_of_langs(language)
+    # check len(value) to avoid getting char[35:38] if data is invalid
+    if len(value) > 38:
+        lang_value = value.strip()[35:38]
+        if re.search(r'^[a-z]{3}$', lang_value):
+            if lang_value not in lang_codes:
+                lang = {
+                    'value': lang_value,
+                    'type': 'bf:Language'
+                }
+                language.append(lang)
+    return language or None
 
 
-@marc21tojson.over('translatedFrom', '^041..')
+@marc21tojson.over('language', '^041..')
 @utils.ignore_value
 def marc21_to_translatedFrom(self, key, value):
     """Get translatedFrom.
 
-    translatedFrom: 041 [$h repetitive]
-    languages: 008 and 041 [$a, repetitive]
+    languages: 041 [$a, repetitive]
+    if language properties is already set form 008
+    it will be replaced with those present in 041
     """
-    languages = self.get('languages', [])
-    unique_lang = []
-    if languages != []:
-        unique_lang.append(languages[0]['language'])
-
-    language = value.get('a')
-    if language:
-        for lang in utils.force_list(language):
-            if lang not in unique_lang:
-                unique_lang.append(lang)
-
-    languages = []
-    for lang in unique_lang:
-        languages.append({'language': lang})
-
-    self['languages'] = languages
-    translated = value.get('h')
-    if translated:
-        return list(utils.force_list(translated))
-    else:
-        return None
+    language = self.get('language', [])
+    lang_codes = list_of_langs(language)
+    subfield_a = value.get('a')
+    if subfield_a:
+        for lang_value in utils.force_list(subfield_a):
+            if lang_value not in lang_codes:
+                lang = {
+                    'value': lang_value.strip(),
+                    'type': 'bf:Language'
+                }
+            language.append(lang)
+    return language or None
 
 
 @marc21tojson.over('authors', '[17][01]0..')
@@ -358,31 +361,257 @@ def marc21_to_abstracts(self, key, value):
     return ', '.join(utils.force_list(value.get('a')))
 
 
-@marc21tojson.over('identifiers', '^020..')
+@marc21tojson.over('identifiedBy', '^020..')
 @utils.ignore_value
-def marc21_to_identifier_isbn(self, key, value):
-    """Get identifier isbn.
+def marc21_to_identifiedBy_from_field_020(self, key, value):
+    """Get identifier from field 020."""
+    def build_identifier_from(subfield_data, status=None):
+        subfield_data = subfield_data.strip()
+        identifier = {'value': subfield_data}
+        subfield_c = value.get('c', '').strip()
+        if subfield_c:
+            identifier['acquisitionsTerms'] = subfield_c
+        if value.get('q'):  # $q is repetitive
+            identifier['qualifier'] = \
+                ', '.join(utils.force_list(value.get('q')))
 
-    identifiers:isbn: 020$a
-    """
-    if value.get('a'):
-        identifiers = self.get('identifiers', {})
-        identifiers['isbn'] = value.get('a')
-        return identifiers
-    else:
-        return None
+        match = re.search(r'^(.+?)\s*\((.*)\)$', subfield_data)
+        if match:
+            # match.group(2) : parentheses content
+            identifier['qualifier'] = ', '.join(
+                filter(
+                    None,
+                    [match.group(2), identifier.get('qualifier', '')]
+                )
+            )
+            # value without parenthesis and parentheses content
+            identifier['value'] = match.group(1)
+        if status:
+            identifier['status'] = status
+        identifier['type'] = 'bf:Isbn'
+        identifiedBy.append(identifier)
+
+    identifiedBy = self.get('identifiedBy', [])
+    subfield_a = value.get('a')
+    if subfield_a:
+        build_identifier_from(subfield_a)
+    subfield_z = value.get('z')
+    if subfield_z:
+        build_identifier_from(subfield_z, status='invalid or cancelled')
+    return identifiedBy or None
 
 
-@marc21tojson.over('identifiers', '^035..')
+@marc21tojson.over('identifiedBy', '^022..')
 @utils.ignore_value
-def marc21_to_identifier_reroID(self, key, value):
-    """Get identifier reroId.
+def marc21_to_identifiedBy_from_field_022(self, key, value):
+    """Get identifier from field 022."""
+    status_for = {
+        'm': 'cancelled',
+        'y': 'invalid'
+    }
+    type_for = {
+        'a': 'bf:Issn',
+        'l': 'bf:IssnL',
+        'm': 'bf:IssnL',
+        'y': 'bf:Issn'
+    }
 
-    identifiers:reroID: 035$a
-    """
-    identifiers = self.get('identifiers', {})
-    identifiers['reroID'] = value.get('a')
-    return identifiers
+    identifiedBy = self.get('identifiedBy', [])
+    for subfield_code in ['a', 'l', 'm', 'y']:
+        subfield_data = value.get(subfield_code, '').strip()
+        if subfield_data:
+            identifier = {}
+            identifier['type'] = type_for[subfield_code]
+            identifier['value'] = subfield_data
+            if subfield_code in status_for:
+                identifier['status'] = status_for[subfield_code]
+            identifiedBy.append(identifier)
+    return identifiedBy or None
+
+
+@marc21tojson.over('identifiedBy', '^024..')
+@utils.ignore_value
+def marc21_to_identifiedBy_from_field_024(self, key, value):
+    """Get identifier from field 024."""
+    def populate_acquisitionsTerms_note_qualifier(identifier):
+        subfield_c = value.get('c', '').strip()
+        if subfield_c:
+            identifier['acquisitionsTerms'] = subfield_c
+        subfield_d = value.get('d', '').strip()
+        if subfield_d:
+            identifier['note'] = subfield_d
+        if value.get('q'):  # $q is repetitive
+            identifier['qualifier'] = \
+                ', '.join(utils.force_list(value.get('q')))
+
+    subfield_2_regexp = {
+        'doi': {
+            'type': 'bf:Doi'
+        },
+        'urn': {
+            'type': 'bf:Urn'
+        },
+        'nipo': {
+            'type': 'bf:Local',
+            'source': 'NIPO'
+        },
+        'danacode': {
+            'type': 'bf:Local',
+            'source': 'danacode'
+        },
+        'vd18': {
+            'type': 'bf:Local',
+            'source': 'vd18'
+        },
+        'gtin-14': {
+            'type': 'bf:Gtin14Number'
+        }
+    }
+
+    type_for_ind1 = {
+        '0': {'type': 'bf:Isrc'},
+        '1': {'type': 'bf:Upc'},
+        '2': {
+            'pattern': r'^(M|9790|979-0)',
+            'matching_type': 'bf:Ismn'
+        },
+        '3': {
+            'pattern': r'^97',
+            'matching_type': 'bf:Ean'
+        },
+        '8': {
+            # 33 chars example: 0000-0002-A3B1-0000-0-0000-0000-2
+            'pattern': r'^(.{24}|.{26}|(.{4}-){4}.-(.{4}\-){2}.)$',
+            'matching_type': 'bf:Isan'
+        }
+    }
+
+    identifier = {}
+    subfield_a = value.get('a', '').strip()
+    subfield_2 = value.get('2', '').strip()
+    if subfield_a:
+        if re.search(r'permalink\.snl\.ch', subfield_a):
+            identifier.update({
+                'value': subfield_a,
+                'type': 'uri',
+                'source': 'SNL'
+            })
+        elif re.search(r'bnf\.fr/ark', subfield_a):
+            identifier.update({
+                'value': subfield_a,
+                'type': 'uri',
+                'source': 'BNF'
+            })
+        elif subfield_2:
+            identifier['value'] = subfield_a
+            populate_acquisitionsTerms_note_qualifier(identifier)
+            for pattern in subfield_2_regexp:
+                if re.search(pattern, subfield_2, re.IGNORECASE):
+                    identifier.update(subfield_2_regexp[pattern])
+        else:  # without subfield $2
+            ind1 = key[3]  # indicateur_1
+            if ind1 in ('0', '1', '2', '3', '8'):
+                populate_acquisitionsTerms_note_qualifier(identifier)
+                match = re.search(r'^(.+?)\s*\((.*)\)$', subfield_a)
+                if match:
+                    # match.group(2) : parentheses content
+                    identifier['qualifier'] = ', '.join(
+                        filter(
+                            None,
+                            [match.group(2), identifier.get('qualifier', '')]
+                        )
+                    )
+                    # value without parenthesis and parentheses content
+                    identifier['value'] = match.group(1)
+                else:
+                    identifier['value'] = subfield_a
+                if 'type' in type_for_ind1[ind1]:  # ind1 0,1
+                    identifier['type'] = type_for_ind1[ind1]['type']
+                else:  # ind1 in (2, 3, 8)
+                    data = subfield_a
+                    if ind1 == '8':
+                        data = identifier['value']
+                    if re.search(type_for_ind1[ind1]['pattern'], data):
+                        identifier['type'] = \
+                            type_for_ind1[ind1]['matching_type']
+                    else:
+                        identifier['type'] = 'bf:Identifier'
+            else:  # ind1 not in (0, 1, 2, 3, 8)
+                identifier.update({
+                    'value': subfield_a,
+                    'type': 'bf:Identifier'
+                })
+        identifiedBy = self.get('identifiedBy', [])
+        identifiedBy.append(identifier)
+    return identifiedBy or None
+
+
+@marc21tojson.over('identifiedBy', '^028..')
+@utils.ignore_value
+def marc21_to_identifiedBy_from_field_028(self, key, value):
+    """Get identifier from field 028."""
+    type_for_ind1 = {
+        '0': 'bf:AudioIssueNumber',
+        '1': 'bf:MatrixNumber',
+        '2': 'bf:MusicPlate',
+        '3': 'bf:MusicPublisherNumber',
+        '4': 'bf:VideoRecordingNumber',
+        '5': 'bf:PublisherNumber',
+        '6': 'bf:MusicDistributorNumber'
+    }
+
+    identifier = {}
+    subfield_a = value.get('a', '').strip()
+    if subfield_a:
+        identifier['value'] = subfield_a
+        if value.get('q'):  # $q is repetitive
+            identifier['qualifier'] = \
+                ', '.join(utils.force_list(value.get('q')))
+        subfield_b = value.get('b', '').strip()
+        if subfield_b:
+            identifier['source'] = subfield_b
+        # key[3] is the indicateur_1
+        identifier['type'] = type_for_ind1.get(key[3], 'bf:Identifier')
+        identifiedBy = self.get('identifiedBy', [])
+        identifiedBy.append(identifier)
+    return identifiedBy or None
+
+
+@marc21tojson.over('identifiedBy', '^035..')
+@utils.ignore_value
+def marc21_to_identifiedBy_from_field_035(self, key, value):
+    """Get identifier from field 035."""
+    subfield_a = value.get('a', '').strip()
+    if subfield_a:
+        identifier = {
+            'value': subfield_a,
+            'type': 'bf:Local',
+            'source': 'RERO'
+        }
+        identifiedBy = self.get('identifiedBy', [])
+        identifiedBy.append(identifier)
+    return identifiedBy or None
+
+
+@marc21tojson.over('identifiedBy', '^930..')
+@utils.ignore_value
+def marc21_to_identifiedBy_from_field_930(self, key, value):
+    """Get identifier from field 930."""
+    subfield_a = value.get('a', '').strip()
+    if subfield_a:
+        identifier = {}
+        match = re.search(r'^\((.+?)\)\s*(.*)$', subfield_a)
+        if match:
+            # match.group(1) : parentheses content
+            identifier['source'] = match.group(1)
+            # value without parenthesis and parentheses content
+            identifier['value'] = match.group(2)
+        else:
+            identifier['value'] = subfield_a
+        identifier['type'] = 'bf:Local'
+        identifiedBy = self.get('identifiedBy', [])
+        identifiedBy.append(identifier)
+    return identifiedBy or None
 
 
 @marc21tojson.over('notes', '^500..')

@@ -1,9 +1,28 @@
-import { Component, Input } from '@angular/core';
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+import { Component, Input, OnInit } from '@angular/core';
 import { BriefView } from './brief-view';
 import { RecordsService } from '../../records.service';
 import { TranslateService } from '@ngx-translate/core';
 
-import { _, } from '@app/core';
+import { _, OrganisationViewService, } from '@app/core';
 
 
 @Component({
@@ -17,7 +36,9 @@ import { _, } from '@app/core';
       </figure>
     </div>
     <div class="card-body w-100 py-0">
-      <h4 class="card-title mb-1"><a target="_self" href="/documents/{{ record.metadata.pid }}">{{ record.metadata.title }}</a></h4>
+      <h4 class="card-title mb-1">
+        <a target="_self" href="/{{ viewCode }}/documents/{{ record.metadata.pid }}">{{ record.metadata.title }}</a>
+      </h4>
       <article class="card-text">
         <!-- author -->
         <ul class="list-inline mb-0" *ngIf="record.metadata.authors && record.metadata.authors.length > 0">
@@ -27,7 +48,7 @@ import { _, } from '@app/core';
               {{ author.qualifier ? author.qualifier : '' }}
               {{ author.date ? author.date : '' }}
             </span>
-            <a *ngIf="author.pid" href="/persons/{{ author.pid }}">
+            <a *ngIf="author.pid" href="/{{ viewCode }}/persons/{{ author.pid }}">
               {{ authorName(author) }}
               {{ author.qualifier ? author.qualifier : '' }}
               {{ author.date ? author.date : '' }}
@@ -60,9 +81,18 @@ import { _, } from '@app/core';
           <span translate *ngIf="record.metadata.available">available</span>
           <span translate *ngIf="!record.metadata.available">not available</span>
         </div>
+        <div *ngIf="record.explanation">
+          <a class="badge badge-info collapsed"
+              data-toggle="collapse" href="#{{'score'+record.metadata.pid }}"
+              aria-expanded="false">
+              score: {{ record.explanation.value }}
+          </a>
+          <pre class="collapse border border-secondary mt-1" id="{{'score'+record.metadata.pid }}">{{record.explanation|json}}</pre>
+        </div>
       </article>
     </div>
-  </article>`,
+</article>
+`,
   styles: [`
 .thumb-brief
   img {
@@ -76,9 +106,15 @@ import { _, } from '@app/core';
       max-width: 48px;
     }
   }
+
+pre {
+  white-space: pre-wrap;
+  max-height: 300px;
+  font-size: 0.7em;
+}
 `]
 })
-export class PublicDocumentsBriefViewComponent implements BriefView {
+export class PublicDocumentsBriefViewComponent implements OnInit, BriefView {
   @Input()
   set record(value) {
     if (value !== undefined) {
@@ -86,8 +122,13 @@ export class PublicDocumentsBriefViewComponent implements BriefView {
       this.coverUrl = `/static/images/icon_${value.metadata.type}.png`;
       if (value.metadata.cover_art) {
         this.coverUrl = value.metadata.cover_art;
-      } else if (value.metadata.identifiers) {
-        const isbn = value.metadata.identifiers.isbn;
+      } else if (value.metadata.identifiedBy) {
+        let isbn;
+        for (const identifier of value.metadata.identifiedBy) {
+          if (identifier.type === 'bf:Isbn') {
+            isbn = identifier.value;
+          }
+        }
         if (isbn) {
           this.getCover(isbn);
         }
@@ -102,10 +143,17 @@ export class PublicDocumentsBriefViewComponent implements BriefView {
 
   coverUrl: string;
 
+  public viewCode = undefined;
+
   constructor(
     private recordsService: RecordsService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private organisationView: OrganisationViewService
   ) {}
+
+  ngOnInit() {
+    this.viewCode = this.organisationView.getViewCode();
+  }
 
   authorName(author) {
     const name_index = `name_${this.translate.currentLang}`;

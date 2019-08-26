@@ -1,35 +1,30 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2019 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """API for manipulating Notifications."""
 
 from __future__ import absolute_import, print_function
 
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
 from functools import partial
 
+import ciso8601
+from flask import current_app
 from invenio_search.api import RecordsSearch
 
 from .dispatcher import Dispatcher
@@ -37,6 +32,7 @@ from .models import NotificationIdentifier, NotificationMetadata
 from ..api import IlsRecord
 from ..documents.api import Document
 from ..fetchers import id_fetcher
+from ..libraries.api import Library
 from ..locations.api import Location
 from ..minters import id_minter
 from ..patrons.api import Patron
@@ -84,6 +80,7 @@ class Notification(IlsRecord):
 
     def replace_pids_and_refs(self):
         """Dumps data."""
+        from ..items.api import Item
         try:
             self.init_loan()
             data = deepcopy(self.replace_refs())
@@ -91,6 +88,7 @@ class Notification(IlsRecord):
             data['loan']['item'] = self.item.replace_refs().dumps()
             # del(data['loan']['item_pid'])
             data['loan']['patron'] = self.patron.replace_refs().dumps()
+            # language = data['loan']['patron']['communication_language']
             # del(data['loan']['patron_pid'])
             data['loan']['transaction_user'] = \
                 self.transaction_user.replace_refs().dumps()
@@ -103,8 +101,49 @@ class Notification(IlsRecord):
                 data['loan']['pickup_location'] = \
                     pickup_location.replace_refs().dumps()
                 # del(data['loan']['pickup_location_pid'])
-            data['loan']['document'] = self.document.replace_refs().dumps()
+                library_pid = data['loan']['pickup_location']['library']['pid']
+                library = Library.get_record_by_pid(library_pid)
+                data['loan']['pickup_location']['library'] = library
+                data['loan']['library'] = library
+                keep_until = datetime.now() + timedelta(days=10)
+                next_open = library.next_open(keep_until)
+                # language = data['loan']['patron']['communication_language']
+                next_open = next_open.strftime("%d.%m.%Y")
+                data['loan']['next_open'] = next_open
+            else:
+                data['loan']['pickup_location'] = \
+                    self.transaction_location.replace_refs().dumps()
+                item_pid = data['loan']['item_pid']
+                library = Item.get_record_by_pid(item_pid).get_library()
+                data['loan']['library'] = library
+
+            document = self.document.replace_refs().dumps()
+            data['loan']['document'] = document
+            authors = document.get('authors', '')
+            if authors:
+                author = authors[0].get('name', '')
+                if not author:
+                    mef_list = ['name_fr', 'name_de', 'name_it', 'name_en']
+                    for a_name in mef_list:
+                        if authors[0].get(a_name, ''):
+                            author = authors[0].get(a_name)
+                            break
+                data['loan']['author'] = author
+            end_date = data.get('loan').get('end_date')
+            if end_date:
+                end_date = ciso8601.parse_datetime_as_naive(end_date)
+                data['loan']['end_date'] = end_date.strftime("%d.%m.%Y")
             # del(data['loan']['document_pid'])
+
+            # create a link to patron profile
+            patron = Patron.get_record_by_pid(data['loan']['patron']['pid'])
+            view_code = patron.get_organisation().get('code')
+            base_url = current_app.config.get('RERO_ILS_APP_BASE_URL')
+            url_api = '{base_url}/{view_code}/patrons/profile'
+            profile_url = url_api.format(
+                base_url=base_url, view_code=view_code)
+            data['loan']['profile_url'] = profile_url
+
             return data
         except Exception as e:
             raise(e)
@@ -198,7 +237,7 @@ class Notification(IlsRecord):
 def get_availability_notification(loan):
     """Returns availability notification from loan."""
     results = NotificationsSearch().filter(
-        'term', loan__pid=loan.get('loan_pid')
+        'term', loan__pid=loan.pid
         ).filter('term', notification_type='availability').source().scan()
     try:
         pid = next(results).pid
@@ -210,7 +249,7 @@ def get_availability_notification(loan):
 def get_recall_notification(loan):
     """Returns availability notification from loan."""
     results = NotificationsSearch().filter(
-        'term', loan__pid=loan.get('loan_pid')
+        'term', loan__pid=loan.pid
         ).filter('term', notification_type='recall').source().scan()
     try:
         pid = next(results).pid
@@ -222,7 +261,7 @@ def get_recall_notification(loan):
 def number_of_reminders_sent(loan):
     """Get the number of overdue notifications sent for the given loan."""
     results = NotificationsSearch().filter(
-        'term', loan__pid=loan.get('loan_pid')
+        'term', loan__pid=loan.pid
         ).filter('term', notification_type='overdue').source().scan()
     try:
         pid = next(results).pid

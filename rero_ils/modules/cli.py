@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Click command-line utilities."""
 
@@ -39,8 +32,9 @@ from flask_security.confirmable import confirm_user
 from invenio_accounts.cli import commit, users
 from invenio_pidstore.models import PersistentIdentifier
 from invenio_records.api import Record
+from invenio_records_rest.utils import obj_or_import_string
 from invenio_search.cli import es_version_check
-from invenio_search.proxies import current_search, current_search_client
+from invenio_search.proxies import current_search
 from werkzeug.local import LocalProxy
 
 from .items.cli import create_items, reindex_items
@@ -183,3 +177,51 @@ def init(force):
             length=current_search.number_of_indexes) as bar:
         for name, response in bar:
             bar.label = name
+
+
+@click.command('create')
+@click.option('-v', '--verbose', 'verbose', is_flag=True, default=True)
+@click.option('-c', '--dbcommit', 'dbcommit', is_flag=True, default=True)
+@click.option('-r', '--reindex', 'reindex', is_flag=True, default=False)
+@click.option('-s', '--schema', 'schema', default=None)
+@click.option('-p', '--pid_type', 'pid_type', default=None)
+@click.argument('infile', type=click.File('r'), default=sys.stdin)
+@with_appcontext
+def create(infile, pid_type, schema, verbose, dbcommit, reindex):
+    """Load REROILS record.
+
+    infile: Json file
+    reindex: reindex record by record
+    dbcommit: commit record to database
+    pid_type: record type
+    schema: recoord schema
+    """
+    click.secho(
+        'Loading {pid_type} records from {file_name}.'.format(
+            pid_type=pid_type,
+            file_name=infile.name
+        ),
+        fg='green'
+    )
+    record_class = obj_or_import_string(
+        current_app.config
+        .get('RECORDS_REST_ENDPOINTS')
+        .get(pid_type).get('record_class', Record))
+    data = json.load(infile)
+    count = 0
+    for record in data:
+        count += 1
+        if schema:
+            record['$schema'] = schema
+        rec = record_class.create(record, dbcommit=dbcommit, reindex=reindex)
+        if verbose:
+            click.echo(
+                '{count: <8} {pid_type} created {id}'.format(
+                    count=count,
+                    pid_type=pid_type,
+                    id=rec.id
+                )
+            )
+
+
+fixtures.add_command(create)

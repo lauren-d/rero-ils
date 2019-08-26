@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Click command-line interface for item record management."""
 
@@ -101,8 +94,11 @@ def create_loans(infile, verbose):
 def print_message(barcode, item_barcode, transaction_type):
     """Print confirmation message."""
     click.echo(
-        '\t {transaction_type} created for patron {barcode} and item \
-         {item_barcode}'.format(
+        (
+            '\t'
+            '{transaction_type} created for patron {barcode} '
+            'and item {item_barcode}'
+        ).format(
             transaction_type=transaction_type,
             barcode=barcode, item_barcode=item_barcode
         )
@@ -127,11 +123,11 @@ def create_loan(barcode, transaction_type, loanable_items):
     )
     if transaction_type == 'extended':
         loan = get_loan_for_item(item.pid)
-        loan_pid = loan['loan_pid']
+        loan_pid = loan.get('pid')
         user_pid, user_location = \
             get_random_librarian_and_transaction_location(patron)
         item.extend_loan(
-            loan_pid=loan_pid,
+            pid=loan_pid,
             patron_pid=patron.pid,
             transaction_location_pid=user_location,
             transaction_user_pid=user_pid,

@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API notifications."""
 
@@ -107,7 +101,7 @@ def test_notification_secure_api(client, json_header,
     notif = deepcopy(dummy_notification)
     notif_data = {
         'loan_url': 'https://ils.rero.ch/api/loans/',
-        'pid': loan_validated_martigny.get('loan_pid')
+        'pid': loan_validated_martigny.get('pid')
     }
     loan_ref = '{loan_url}{pid}'.format(**notif_data)
     notif['loan'] = {"$ref": loan_ref}
@@ -234,7 +228,7 @@ def test_notifications_post_put_delete(
     del record['pid']
     notif_data = {
         'loan_url': 'https://ils.rero.ch/api/loans/',
-        'pid': loan_validated_martigny.get('loan_pid')
+        'pid': loan_validated_martigny.get('pid')
     }
     loan_ref = '{loan_url}{pid}'.format(**notif_data)
     record['loan'] = {"$ref": loan_ref}
@@ -333,7 +327,7 @@ def test_recall_notification(client, patron_martigny_no_email,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('pid')
     loan = Loan.get_record_by_pid(loan_pid)
 
     assert not loan.is_notified(notification_type='recall')
@@ -356,7 +350,7 @@ def test_recall_notification(client, patron_martigny_no_email,
     assert loan.is_notified(notification_type='recall')
 
     notification = get_recall_notification(loan)
-    assert notification.loan_pid == loan.get('loan_pid')
+    assert notification.loan_pid == loan.pid
 
     assert not loan.is_notified(notification_type='availability')
     assert not get_availability_notification(loan)
@@ -369,7 +363,7 @@ def test_availability_notification(
     loan = loan_validated_martigny
     assert loan.is_notified(notification_type='availability')
     notification = get_availability_notification(loan_validated_martigny)
-    assert notification.loan_pid == loan_validated_martigny.get('loan_pid')
+    assert notification.loan_pid == loan_validated_martigny.get('pid')
     assert notification.item_pid == item2_lib_martigny.pid
     assert notification.patron_pid == patron_martigny_no_email.pid
 

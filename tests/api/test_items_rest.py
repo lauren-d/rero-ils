@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API items."""
 
@@ -245,7 +239,7 @@ def test_items_simple_checkout(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_LOAN
     assert actions.get(LoanAction.CHECKOUT)
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     item = Item.get_record_by_pid(item_pid)
     assert item.is_loaned_to_patron(patron_martigny_no_email.get('barcode'))
     assert not item.available
@@ -265,7 +259,7 @@ def test_items_simple_checkout(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -328,7 +322,7 @@ def test_checkout_default_policy(client, lib_martigny,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan.get('loan_pid')
+                pid=loan.get('pid')
             )
         ),
         content_type='application/json',
@@ -379,7 +373,7 @@ def test_checkout_library_level_policy(client, lib_martigny,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan.get('loan_pid')
+                pid=loan.get('pid')
             )
         ),
         content_type='application/json',
@@ -430,7 +424,7 @@ def test_checkout_organisation_policy(client, lib_martigny,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan.get('loan_pid')
+                pid=loan.get('pid')
             )
         ),
         content_type='application/json',
@@ -473,7 +467,7 @@ def test_items_requests(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_SHELF
     assert actions.get(LoanAction.REQUEST)
-    loan_pid = actions[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = actions[LoanAction.REQUEST].get('pid')
     item = Item.get_record_by_pid(item_pid)
     assert item.patron_request_rank(patron.get('barcode')) == 1
     assert item.is_requested_by_patron(patron.get('barcode'))
@@ -484,7 +478,7 @@ def test_items_requests(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -501,7 +495,7 @@ def test_items_requests(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -531,7 +525,7 @@ def test_items_requests(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_SHELF
     assert actions.get(LoanAction.REQUEST)
-    loan_pid = actions[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = actions[LoanAction.REQUEST].get('pid')
 
     # get requests to validate
     res = client.get(
@@ -553,7 +547,7 @@ def test_items_requests(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -571,7 +565,7 @@ def test_items_requests(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -588,7 +582,7 @@ def test_items_requests(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -630,7 +624,7 @@ def test_items_cancel_request(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_SHELF
     assert actions.get(LoanAction.REQUEST)
-    loan_pid = actions[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = actions[LoanAction.REQUEST].get('pid')
 
     # cancel request
     res = client.post(
@@ -638,7 +632,7 @@ def test_items_cancel_request(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -676,7 +670,7 @@ def test_items_extend(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     assert not item.get_extension_count()
 
     # extend loan
@@ -685,7 +679,7 @@ def test_items_extend(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -698,13 +692,19 @@ def test_items_extend(client, librarian_martigny_no_email,
     assert actions.get(LoanAction.EXTEND)
     assert item.get_extension_count() == 1
 
+    # test renewal due date hour
+    extended_loan = Loan.get_record_by_pid(loan_pid)
+    end_date = ciso8601.parse_datetime(
+        extended_loan.get('end_date')).astimezone()
+    assert end_date.minute == 59 and end_date.hour == 23
+
     # second extenion
     res = client.post(
         url_for('api_item.extend_loan'),
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -717,7 +717,7 @@ def test_items_extend(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -797,7 +797,7 @@ def test_items_lose(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
 
     # checkin
     res = client.post(
@@ -805,7 +805,7 @@ def test_items_lose(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -844,7 +844,7 @@ def test_items_receive(client, librarian_martigny_no_email,
     assert item_data.get('status') == ItemStatus.ON_LOAN
     assert actions.get(LoanAction.CHECKOUT)
     assert item.is_loaned_to_patron(patron_martigny_no_email.get('barcode'))
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
 
     # checkin
     res = client.post(
@@ -852,7 +852,7 @@ def test_items_receive(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid='fake'
             )
         ),
@@ -871,7 +871,7 @@ def test_items_receive(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -939,7 +939,7 @@ def test_items_automatic_checkin(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
 
     # checkin
     res = client.post(
@@ -947,7 +947,7 @@ def test_items_automatic_checkin(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid='fake'
             )
         ),
@@ -1030,7 +1030,7 @@ def test_items_no_extend(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     assert not item.get_extension_count()
 
     circ_policy_short_martigny['number_renewals'] = 0
@@ -1047,7 +1047,7 @@ def test_items_no_extend(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1069,7 +1069,7 @@ def test_items_no_extend(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1170,14 +1170,14 @@ def test_extend_possible_actions(client, item_lib_martigny,
     actions = data.get('hits').get('hits')[0].get('item').get('actions')
     assert 'extend_loan' not in actions
     assert 'checkin' in actions
-    loan_pid = data.get('hits').get('hits')[0].get('loan').get('loan_pid')
+    loan_pid = data.get('hits').get('hits')[0].get('loan').get('pid')
     # reset used objects
     res = client.post(
         url_for('api_item.checkin'),
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1276,7 +1276,7 @@ def test_items_extend_rejected(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     loan = Loan.get_record_by_pid(loan_pid)
     assert not item.get_extension_count()
 
@@ -1301,7 +1301,7 @@ def test_items_extend_rejected(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1324,7 +1324,7 @@ def test_items_extend_rejected(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1358,7 +1358,7 @@ def test_items_extend_end_date(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     loan = Loan.get_record_by_pid(loan_pid)
     assert not item.get_extension_count()
 
@@ -1366,7 +1366,7 @@ def test_items_extend_end_date(client, librarian_martigny_no_email,
     renewal_duration_policy = circ_policy_short_martigny['renewal_duration']
     renewal_duration = get_extension_params(
         loan=loan, parameter_name='duration_default')
-    assert renewal_duration_policy <= renewal_duration
+    assert renewal_duration_policy <= renewal_duration.days
 
     # extend loan
     res = client.post(
@@ -1374,7 +1374,7 @@ def test_items_extend_end_date(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1383,11 +1383,11 @@ def test_items_extend_end_date(client, librarian_martigny_no_email,
     assert res.status_code == 200
     data = get_json(res)
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.EXTEND].get('loan_pid')
+    loan_pid = actions[LoanAction.EXTEND].get('pid')
     loan = Loan.get_record_by_pid(loan_pid)
     end_date = loan.get('end_date')
     current_date = datetime.now()
-    calc_date = current_date + timedelta(days=renewal_duration)
+    calc_date = current_date + renewal_duration
     assert (
         calc_date.strftime('%Y-%m-%d') == ciso8601.parse_datetime_as_naive(
             end_date).strftime('%Y-%m-%d')
@@ -1399,7 +1399,7 @@ def test_items_extend_end_date(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1438,7 +1438,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_SHELF
     assert actions.get(LoanAction.REQUEST)
-    loan_pid = actions[LoanAction.REQUEST].get('loan_pid')
+    loan_pid = actions[LoanAction.REQUEST].get('pid')
     item = Item.get_record_by_pid(item_pid)
 
     # validate (send) request
@@ -1447,7 +1447,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1479,7 +1479,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
             dict(
                 item_pid=item_pid,
                 patron_pid=patron_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -1494,7 +1494,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_restricted_martigny.pid
             )
         ),
@@ -1506,7 +1506,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.IN_TRANSIT
     assert actions.get(LoanAction.CHECKIN)
-    loan_pid = actions[LoanAction.CHECKIN].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKIN].get('pid')
     loan = actions[LoanAction.CHECKIN]
     assert loan.get('state') == 'ITEM_IN_TRANSIT_TO_HOUSE'
 
@@ -1525,7 +1525,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
     data = get_json(res)
     assert Item.get_record_by_pid(item_pid).get('status') == ItemStatus.ON_LOAN
     actions = data.get('action_applied')
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
 
     # checkin at the request location
     res = client.post(
@@ -1533,7 +1533,7 @@ def test_items_in_transit(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=location.pid
             )
         ),
@@ -1576,7 +1576,7 @@ def test_multiple_loans_on_item_error(client,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_LOAN
     assert actions.get(LoanAction.CHECKOUT)
-    loan_pid = actions[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = actions[LoanAction.CHECKOUT].get('pid')
     item = Item.get_record_by_pid(item.pid)
 
     # request by requested patron to pick at another location
@@ -1597,7 +1597,7 @@ def test_multiple_loans_on_item_error(client,
     actions = data.get('action_applied')
     assert item_data.get('status') == ItemStatus.ON_LOAN
     assert actions.get(LoanAction.REQUEST)
-    req_loan_pid = actions[LoanAction.REQUEST].get('loan_pid')
+    req_loan_pid = actions[LoanAction.REQUEST].get('pid')
     item = Item.get_record_by_pid(item.pid)
 
     # checkin at the request location
@@ -1606,7 +1606,7 @@ def test_multiple_loans_on_item_error(client,
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=loan_pid,
+                pid=loan_pid,
                 transaction_location_pid=loc_public_fully.pid
             )
         ),
@@ -1624,7 +1624,7 @@ def test_multiple_loans_on_item_error(client,
         data=json.dumps(
             dict(
                 item_pid=item.pid,
-                loan_pid=req_loan_pid
+                pid=req_loan_pid
             )
         ),
         content_type='application/json',

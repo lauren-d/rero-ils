@@ -1,27 +1,19 @@
-
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO_ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO_ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO_ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO_ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Default configuration for rero-ils.
 
@@ -52,12 +44,15 @@ from invenio_search import RecordsSearch
 
 from rero_ils.modules.api import IlsRecordIndexer
 from rero_ils.modules.loans.api import Loan
+from rero_ils.modules.organisations.api import Organisation
+from rero_ils.utils import get_agg_config
 
 from .modules.circ_policies.api import CircPolicy
 from .modules.documents.api import Document
 from .modules.item_types.api import ItemType
 from .modules.items.api import Item, ItemsIndexer
 from .modules.libraries.api import Library
+from .modules.loans.api import Loan
 from .modules.loans.utils import can_be_requested, get_default_loan_duration, \
     get_extension_params, is_item_available_for_checkout, \
     loan_satisfy_circ_policies
@@ -71,7 +66,8 @@ from .permissions import can_access_organisation_patrons_factory, \
     can_create_organisation_records_factory, \
     can_delete_organisation_records_factory, \
     can_update_organisation_records_factory, \
-    librarian_delete_permission_factory, librarian_permission_factory
+    librarian_delete_permission_factory, librarian_permission_factory, \
+    librarian_update_permission_factory
 
 
 def _(x):
@@ -124,6 +120,8 @@ SECURITY_RESET_PASSWORD_TEMPLATE = 'rero_ils/reset_password.html'
 THEME_ERROR_TEMPLATE = 'rero_ils/page_error.html'
 #: Template for tombstone page.
 RECORDS_UI_TOMBSTONE_TEMPLATE = "rero_ils/tombstone.html"
+
+RERO_ILS_THEME_SEARCH_ENDPOINT = '/search/documents'
 
 # Logings
 # =======
@@ -320,7 +318,7 @@ RECORDS_REST_DEFAULT_LIST_PERMISSION_FACTORY = librarian_permission_factory
 RECORDS_REST_DEFAULT_READ_PERMISSION_FACTORY = librarian_permission_factory
 """Default read permission factory: check if the record exists."""
 
-RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY = librarian_permission_factory
+RECORDS_REST_DEFAULT_UPDATE_PERMISSION_FACTORY = librarian_update_permission_factory
 """Default update permission factory: reject any request."""
 
 RECORDS_REST_DEFAULT_DELETE_PERMISSION_FACTORY = librarian_delete_permission_factory
@@ -362,7 +360,7 @@ RECORDS_REST_ENDPOINTS = dict(
         # ),
         default_media_type='application/json',
         max_result_window=5000000,
-        search_factory_imp='rero_ils.query:and_search_factory',
+        search_factory_imp='rero_ils.query:document_search_factory',
         read_permission_factory_imp=allow_all,
         list_permission_factory_imp=allow_all
     ),
@@ -521,7 +519,7 @@ RECORDS_REST_ENDPOINTS = dict(
         item_route='/organisations/<pid(org, record_class="rero_ils.modules.organisations.api:Organisation"):pid_value>',
         default_media_type='application/json',
         max_result_window=10000,
-        search_factory_imp='rero_ils.query:and_search_factory',
+        search_factory_imp='rero_ils.query:search_factory',
         create_permission_factory_imp=deny_all,
         update_permission_factory_imp=deny_all,
         delete_permission_factory_imp=deny_all,
@@ -614,7 +612,7 @@ RECORDS_REST_ENDPOINTS = dict(
         item_route='/persons/<pid(pers, record_class="rero_ils.modules.mef_persons.api:MefPerson"):pid_value>',
         default_media_type='application/json',
         max_result_window=10000,
-        search_factory_imp='rero_ils.query:and_search_factory',
+        search_factory_imp='rero_ils.query:search_factory',
         read_permission_factory_imp=allow_all,
         list_permission_factory_imp=allow_all,
         create_permission_factory_imp=deny_all,
@@ -689,10 +687,15 @@ RECORDS_REST_ENDPOINTS = dict(
 
 SEARCH_UI_SEARCH_INDEX = 'documents'
 
+# Default view code for all organisations view
+# TODO: Should be taken into angular
+RERO_ILS_SEARCH_GLOBAL_VIEW_CODE = 'global'
+
 RERO_ILS_APP_CONFIG_FACETS = {
     'doc': {
         'order': [
             'document_type',
+            'organisation',
             'library',
             'author__en',
             'author__fr',
@@ -703,47 +706,78 @@ RERO_ILS_APP_CONFIG_FACETS = {
             'status',
         ],
         'expand': ['document_type'],
+        'initialBucketSize': 5
     },
     'ptrn': {
         'order': [
             'roles'
         ],
-        'expand': ['roles']
+        'expand': ['roles'],
+        'initialBucketSize': 5
     },
     'pers': {
         'order': [
             'sources'
         ],
-        'expand': ['sources']
+        'expand': ['sources'],
+        'initialBucketSize': 5
     },
 }
 
-RECORDS_REST_FACETS = {
-    'documents': dict(
+# Default number of results in facet
+RERO_ILS_DEFAULT_AGGREGATION_SIZE = 50
+
+# Number of aggregation by index name
+RERO_ILS_AGGREGATION_SIZE = {
+    'documents': 50
+}
+
+RECORDS_REST_FACETS = dict(
+    documents=dict(
         aggs=dict(
-            document_type=dict(terms=dict(field='type')),
-            library=dict(terms=dict(field='items.library_pid')),
-            author__en=dict(terms=dict(field='facet_authors_en')),
-            author__fr=dict(terms=dict(field='facet_authors_fr')),
-            author__de=dict(terms=dict(field='facet_authors_de')),
-            author__it=dict(terms=dict(field='facet_authors_it')),
-            language=dict(terms=dict(field='languages.language')),
-            subject=dict(terms=dict(field='facet_subjects')),
-            status=dict(terms=dict(field='items.status'))
+            # The organisation or library facet is defined
+            # dynamically during the query (query.py)
+            document_type=dict(
+                terms=dict(field='type')
+            ),
+            author__en=dict(
+                terms=dict(field='facet_authors_en')
+            ),
+            author__fr=dict(
+                terms=dict(field='facet_authors_fr')
+            ),
+            author__de=dict(
+                terms=dict(field='facet_authors_de')
+            ),
+            author__it=dict(
+                terms=dict(field='facet_authors_it')
+            ),
+            language=dict(
+                terms=dict(field='language.value')
+            ),
+            subject=dict(
+                terms=dict(field='facet_subjects')
+            ),
+            status=dict(
+                terms=dict(field='items.status')
+            )
         ),
         filters={
             _('document_type'): terms_filter('type'),
-            _('library'): terms_filter('items.library_pid'),
+            _('organisation'): terms_filter(
+                'items.organisation.organisation_pid'
+            ),
+            _('library'): terms_filter('items.organisation.library_pid'),
             _('author__en'): terms_filter('facet_authors_en'),
             _('author__fr'): terms_filter('facet_authors_fr'),
             _('author__de'): terms_filter('facet_authors_de'),
             _('author__it'): terms_filter('facet_authors_it'),
-            _('language'): terms_filter('languages.language'),
+            _('language'): terms_filter('language.value'),
             _('subject'): terms_filter('facet_subjects'),
             _('status'): terms_filter('items.status'),
-        },
+        }
     ),
-    'patrons': dict(
+    patrons=dict(
         aggs=dict(
             roles=dict(terms=dict(field='roles'))
         ),
@@ -751,7 +785,7 @@ RECORDS_REST_FACETS = {
             _('roles'): terms_filter('roles')
         },
     ),
-    'persons': dict(
+    persons=dict(
         aggs=dict(
             sources=dict(terms=dict(field='sources'))
         ),
@@ -759,13 +793,13 @@ RECORDS_REST_FACETS = {
             _('sources'): terms_filter('sources')
         }
     )
-}
+)
 
 # Elasticsearch fields boosting by index
 RERO_ILS_QUERY_BOOSTING = {
     'documents': {
-        'title.*': 2,
-        'titlesProper.*': 2,
+        'title.*': 3,
+        'titlesProper.*': 3,
         'authors.name': 2,
         'authors.name_*': 2,
         'publicationYearText': 2,
@@ -814,7 +848,7 @@ for index in indexes:
 RECORDS_UI_ENDPOINTS = {
     'doc': dict(
         pid_type='doc',
-        route='/documents/<pid_value>',
+        route='/<string:viewcode>/documents/<pid_value>',
         template='rero_ils/detailed_view_documents.html',
         record_class='rero_ils.modules.documents.api:Document',
         view_imp='rero_ils.modules.documents.views.doc_item_view_method',
@@ -822,14 +856,14 @@ RECORDS_UI_ENDPOINTS = {
     ),
     'doc_export': dict(
         pid_type='doc',
-        route='/documents/<pid_value>/export/<format>',
+        route='/<string:viewcode>/documents/<pid_value>/export/<format>',
         view_imp='invenio_records_ui.views.export',
         template='rero_ils/export_documents.html',
         record_class='rero_ils.modules.documents.api:Document',
     ),
     'item': dict(
         pid_type='item',
-        route='/items/<pid_value>',
+        route='/<string:viewcode>/items/<pid_value>',
         template='rero_ils/detailed_view_items.html',
         view_imp='rero_ils.modules.items.views.item_view_method',
         record_class='rero_ils.modules.items.api:Item',
@@ -861,7 +895,6 @@ RECORDS_JSON_SCHEMA = {
     'notif': '/notifications/notification-v0.0.1.json',
 }
 
-
 # Login Configuration
 # ===================
 #: Allow password change by users.
@@ -884,6 +917,7 @@ SECURITY_LOGIN_WITHOUT_CONFIRMATION = False
 
 # Misc
 INDEXER_REPLACE_REFS = True
+INDEXER_RECORD_TO_INDEX = 'rero_ils.modules.indexer_utils.record_to_index'
 
 SEARCH_UI_SEARCH_API = '/api/documents/'
 
@@ -949,6 +983,9 @@ CIRCULATION_ITEM_LOCATION_RETRIEVER = Item.item_location_retriever
 CIRCULATION_DOCUMENT_RETRIEVER_FROM_ITEM = \
     Item.get_document_pid_by_item_pid
 CIRCULATION_ITEMS_RETRIEVER_FROM_DOCUMENT = Item.get_items_pid_by_document_pid
+
+CIRCULATION_DOCUMENT_EXISTS = Document.get_record_by_pid
+CIRCULATION_ITEM_REF_BUILDER = Loan.loan_build_item_ref
 
 # This is needed for absolute URL (url_for)
 # SERVER_NAME = 'localhost:5000'
@@ -1042,7 +1079,7 @@ CIRCULATION_POLICIES = dict(
     checkout=dict(
         duration_default=get_default_loan_duration,
         duration_validate=loan_satisfy_circ_policies,
-        item_available=is_item_available_for_checkout
+        item_can_circulate=is_item_available_for_checkout
     ),
     extension=dict(
         from_end_date=False,

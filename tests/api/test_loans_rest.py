@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API item_types."""
 
@@ -27,6 +21,7 @@ import json
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 
+import ciso8601
 import pytest
 from flask import url_for
 from invenio_accounts.testutils import login_user_via_session
@@ -136,6 +131,7 @@ def test_due_soon_loans(client, librarian_martigny_no_email,
     item = item_lib_martigny
     item_pid = item.pid
     patron_pid = patron_martigny_no_email.pid
+
     assert not item.is_loaned_to_patron(patron_martigny_no_email.get(
         'barcode'))
     assert item.can_delete
@@ -168,9 +164,15 @@ def test_due_soon_loans(client, librarian_martigny_no_email,
     )
     assert res.status_code == 200
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('pid')
     due_soon_loans = get_due_soon_loans()
-    assert due_soon_loans[0].get('loan_pid') == loan_pid
+    assert due_soon_loans[0].get('pid') == loan_pid
+
+    # test due date hour
+    checkout_loan = Loan.get_record_by_pid(loan_pid)
+    end_date = ciso8601.parse_datetime(
+        checkout_loan.get('end_date')).astimezone()
+    assert end_date.minute == 59 and end_date.hour == 23
 
     # checkin the item to put it back to it's original state
     res = client.post(
@@ -178,7 +180,7 @@ def test_due_soon_loans(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',
@@ -196,10 +198,6 @@ def test_overdue_loans(client, librarian_martigny_no_email,
     item = item_lib_martigny
     item_pid = item.pid
     patron_pid = patron_martigny_no_email.pid
-    assert not item.is_loaned_to_patron(patron_martigny_no_email.get(
-        'barcode'))
-    assert item.can_delete
-    assert item.available
 
     # checkout
     res = client.post(
@@ -215,7 +213,7 @@ def test_overdue_loans(client, librarian_martigny_no_email,
     assert res.status_code == 200
 
     data = get_json(res)
-    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('loan_pid')
+    loan_pid = data.get('action_applied')[LoanAction.CHECKOUT].get('pid')
     loan = Loan.get_record_by_pid(loan_pid)
     end_date = datetime.now(timezone.utc) - timedelta(days=7)
     loan['end_date'] = end_date.isoformat()
@@ -226,7 +224,7 @@ def test_overdue_loans(client, librarian_martigny_no_email,
     )
 
     overdue_loans = get_overdue_loans()
-    assert overdue_loans[0].get('loan_pid') == loan_pid
+    assert overdue_loans[0].get('pid') == loan_pid
 
     assert number_of_reminders_sent(loan) == 0
 
@@ -242,7 +240,7 @@ def test_overdue_loans(client, librarian_martigny_no_email,
         data=json.dumps(
             dict(
                 item_pid=item_pid,
-                loan_pid=loan_pid
+                pid=loan_pid
             )
         ),
         content_type='application/json',

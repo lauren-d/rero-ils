@@ -1,3 +1,22 @@
+/*
+
+RERO ILS
+Copyright (C) 2019 RERO
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 import { Component, Input, OnInit } from '@angular/core';
 import { TypeaheadMatch } from 'ngx-bootstrap';
 import { Observable, of, combineLatest } from 'rxjs';
@@ -29,6 +48,10 @@ export class AutocompleteComponent implements OnInit {
   @Input() placeholder: string;
   @Input()
   maxLengthSuggestion = 100;
+  @Input()
+  displayScore = undefined;
+  @Input()
+  viewcode = undefined;
 
   constructor(
     private recordsService: RecordsService,
@@ -46,6 +69,9 @@ export class AutocompleteComponent implements OnInit {
   ngOnInit() {
     this.route.queryParamMap.subscribe((params: any) => {
       const query = params.get('q');
+      if (params.get('display_score')) {
+        this.displayScore = params.get('display_score');
+      }
       if (query) {
         this.asyncSelected = {
           query: query,
@@ -60,7 +86,7 @@ export class AutocompleteComponent implements OnInit {
 
   getStatesAsObservable(token: string): Observable<any> {
     return combineLatest(
-      this.recordsService.getSuggests('documents', 'autocomplete_title', token),
+      this.recordsService.getSuggests('documents', 'autocomplete_title', token, this.viewcode),
       this.recordsService.getSuggests('persons', 'autocomplete_name', token)
       )
     .pipe(
@@ -125,7 +151,7 @@ export class AutocompleteComponent implements OnInit {
 
   typeaheadOnSelect(e: TypeaheadMatch): void {
     if (e.item.pid && e.item.index) {
-      window.location.href = `/${e.item.index}/${e.item.pid}`;
+      window.location.href = `/${this.viewcode}/${e.item.index}/${e.item.pid}`;
     }
   }
 }

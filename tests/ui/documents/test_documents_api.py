@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Document Record tests."""
 
@@ -61,6 +54,26 @@ def test_document_can_delete(app, document_data_tmp):
     document = Document.create(document_data_tmp, delete_pid=True)
     assert document.get_links_to_me() == {}
     assert document.can_delete
+
+
+def test_document_can_delete_harvested(app, ebook_1_data):
+    """Test can delete for harvested records."""
+    document = Document.create(ebook_1_data, delete_pid=True)
+    assert document.harvested
+    assert not document.can_delete
+
+
+def test_document_can_delete_with_loans(
+        client, item_lib_martigny, loan_pending_martigny, document):
+    """Test can delete a document."""
+    links = document.get_links_to_me()
+    assert 'items' in links
+    assert 'loans' in links
+
+    assert not document.can_delete
+
+    reasons = document.reasons_not_to_delete()
+    assert 'links' in reasons
 
 
 @mock.patch('rero_ils.modules.documents.listener.requests_get')

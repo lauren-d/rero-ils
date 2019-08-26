@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Blueprint used for loading templates."""
 
@@ -53,13 +46,12 @@ api_blueprint = Blueprint(
 blueprint = Blueprint(
     'patrons',
     __name__,
-    url_prefix='/patrons',
     template_folder='templates',
     static_folder='static',
 )
 
 
-@blueprint.route('/logged_user', methods=['GET'])
+@blueprint.route('/patrons/logged_user', methods=['GET'])
 # @check_permission
 def logged_user():
     """Current logged user informations in JSON."""
@@ -80,6 +72,8 @@ def logged_user():
     data = {
         'settings': {
             'language': current_i18n.locale.language,
+            'global_view': current_app.config.get(
+                'RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'),
             'baseUrl': current_app.config.get(
                 'RERO_ILS_APP_BASE_URL',
                 ''
@@ -94,7 +88,8 @@ def logged_user():
     return jsonify(data)
 
 
-@blueprint.route('/profile')
+@blueprint.route('/global/patrons/profile', defaults={'viewcode': 'global'})
+@blueprint.route('/<string:viewcode>/patrons/profile')
 @login_required
 @register_menu(
     blueprint,
@@ -102,7 +97,7 @@ def logged_user():
     _('%(icon)s Profile', icon='<i class="fa fa-user fa-fw"></i>'),
     visible_when=user_has_patron
 )
-def profile():
+def profile(viewcode):
     """Patron Profile Page."""
     patron = Patron.get_patron_by_user(current_user)
     if patron is None:
@@ -133,7 +128,8 @@ def profile():
         'rero_ils/patron_profile.html',
         record=patron,
         checkouts=checkouts,
-        pendings=requests
+        pendings=requests,
+        viewcode=viewcode
     )
 
 

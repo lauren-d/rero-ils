@@ -1,3 +1,21 @@
+<!--
+
+  RERO ILS
+  Copyright (C) 2019 RERO
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU Affero General Public License as published by
+  the Free Software Foundation, version 3 of the License.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
 <ng-template #customItemTemplate let-match="match" let-query="query" let-model="item" let-index="index">
   <span *ngIf="model.index === 'persons'"><i  class="fa fa-user" aria-hidden="true"></i>&nbsp;</span>
   <span [innerHtml]="model.text"></span>
@@ -25,6 +43,7 @@
   >
   <input type="hidden" name="size" value="10">
   <input type="hidden" name="page" value="1">
+  <input *ngIf="displayScore" type="hidden" name="display_score" value="{{ displayScore }}">
   <div class="input-group-append">
     <button type="submit" (click)="form.submit()" class="btn btn-light"><i class="fa fa-search"></i></button>
   </div>

@@ -1,12 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Schema for ebooks document",
+  "title": "Schema for document",
   "type": "object",
   "required": [
     "$schema",
     "pid",
     "type",
-    "title"
+    "title",
+    "language"
   ],
   "additionalProperties": false,
   "properties": {
@@ -14,7 +15,8 @@
       "title": "Schema",
       "description": "Schema to validate document against.",
       "type": "string",
-      "minLength": 7
+      "minLength": 7,
+      "default": "https://ils.rero.ch/schema/documents/document-minimal-v0.0.1.json"
     },
     "pid": {
       "title": "Document ID",
@@ -60,23 +62,32 @@
       "type": "string",
       "minLength": 3
     },
-    "languages": {
-      "title": "Languages",
+    "language": {
+      "title": "Language",
       "description": "List of languages for the resource.",
       "type": "array",
-      "uniqueItems": true,
       "minItems": 1,
       "items": {
         "type": "object",
         "required": [
-          "language"
+          "type",
+          "value"
         ],
+        "additionalProperties": false,
         "properties": {
-          "language": {
-            "title": "Language",
-            "description": "Required. Language of the resource, primary or not.",
+          "type": {
+            "title": "Type",
+            "description": "Type of the language.",
             "type": "string",
-            "validationMessage": "Required. Language of the resource, primary or not.",
+            "default": "bf:Language",
+            "enum": [
+              "bf:Language"
+            ]
+          },
+          "value": {
+            "title": "Language value",
+            "description": "Language value.",
+            "type": "string",
             "enum": [
               "fre",
               "ger",
@@ -89,8 +100,7 @@
               "heb",
               "jpn",
               "por",
-              "rus",
-              "und"
+              "rus"
             ]
           }
         }
@@ -107,37 +117,29 @@
         "validationMessage": "Should be in the ISO 639 format, with 3 characters, ie <code>eng</code> for English."
       }
     },
-    "electronic_location": {
-      "title": "Electronic Location",
-      "description": "Information needed to locate and access an electronic resource.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": [
-          "uri"
-        ],
-        "uri": {
-          "title": "Uniform Resource Identifier",
-          "description": "Uniform Resource Identifier (URI), which provides standard syntax for locating an object using existing Internet protocols.",
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
     "authors": {
       "title": "Authors",
       "description": "Author(s) of the resource. Can be either persons or organisations.",
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "required": [
-          "name",
           "type"
         ],
         "additionalProperties": false,
         "properties": {
+          "$ref": {
+            "title": "MEF person ref",
+            "type": "string",
+            "pattern": "^https://mef.rero.ch/api/mef/.*?$"
+          },
+          "pid": {
+            "title": "pid",
+            "description": "Corresponding pid of the MEF record.",
+            "type": "string",
+            "minLength": 1
+          },
           "name": {
             "title": "Name",
             "description": "Person's or organisation's name.",
@@ -285,38 +287,88 @@
         "minLength": 3
       }
     },
-    "identifiers": {
+    "identifiedBy": {
       "title": "Identifiers",
       "description": "Persistent identifiers of the resource, ie reroID and ISBN.",
-      "type": "object",
-      "additionalProperties": false,
-      "minProperties": 1,
-      "properties": {
-        "reroID": {
-          "title": "reroID",
-          "description": "Corresponding reroID of the original RERO record.",
-          "type": "string",
-          "minLength": 1
-        },
-        "bnfID": {
-          "title": "bnfID",
-          "description": "Corresponding bnfID of the original BNF record.",
-          "type": "string",
-          "minLength": 1
-        },
-        "isbn": {
-          "title": "ISBN",
-          "description": "ISBN of the resource.",
-          "type": "string",
-          "pattern": "^97[8|9][0-9]{10}$",
-          "validationMessage": "Should be a valid ISBN-13 without dashes."
-        },
-        "oai": {
-          "title": "OAI",
-          "description": "OAI identifiers of the harvested source.",
-          "type": "string",
-          "pattern": "^oai:.*",
-          "validationMessage": "Should be a valid ISBN-13 without dashes."
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "title": "Type",
+            "description": "Type of the value.",
+            "type": "string",
+            "enum": [
+              "bf:AudioIssueNumber",
+              "bf:Doi",
+              "bf:Ean",
+              "bf:Gtin14Number",
+              "bf:Identifier",
+              "bf:Isan",
+              "bf:Isbn",
+              "bf:Ismn",
+              "bf:Isrc",
+              "bf:Issn",
+              "bf:IssnL",
+              "bf:Local",
+              "bf:MatrixNumber",
+              "bf:MusicDistributorNumber",
+              "bf:MusicPlate",
+              "bf:MusicPublisherNumber",
+              "bf:PublisherNumber",
+              "bf:Upc",
+              "bf:Urn",
+              "bf:VideoRecordingNumber",
+              "uri"
+            ]
+          },
+          "value": {
+            "title": "Identifier value",
+            "description": "Identifier value.",
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "title": "Qualifier",
+            "description": "Qualifier of the identifier.",
+            "type": "string",
+            "minLength": 1
+          },
+          "qualifier": {
+            "title": "Qualifier",
+            "description": "Qualifier of the identifier.",
+            "type": "string",
+            "minLength": 1
+          },
+          "acquisitionsTerms": {
+            "title": "Acquisitions terms",
+            "description": "Acquisitions terms of the ressource.",
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "title": "Source",
+            "description": "Source of the identifier.",
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "title": "Status",
+            "description": "Status of the ISBN/ISSN identifier.",
+            "type": "string",
+            "validationMessage": "ISBN/ISSN status should be selected in the list below.",
+            "enum": [
+              "invalid",
+              "cancelled",
+              "invalid or cancelled"
+            ]
+          }
         }
       }
     },
@@ -330,16 +382,35 @@
         "minLength": 1
       }
     },
-    "available": {
-      "title": "Document availability",
-      "type": "boolean",
-      "default": false
-    },
     "cover_art": {
       "title": "Cover art",
       "description": "Vendor cover art URL.",
       "type": "string",
       "format": "uri"
+    },
+    "electronic_location": {
+      "title": "Electronic Location",
+      "description": "Information needed to locate and access an electronic resource.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "uri"
+        ],
+        "uri": {
+          "title": "Uniform Resource Identifier",
+          "description": "Uniform Resource Identifier (URI), which provides standard syntax for locating an object using existing Internet protocols.",
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "harvested": {
+      "title": "Harvested",
+      "description": "Document is harvested or not, will disable record edition or similar.",
+      "type": "boolean",
+      "default": false
     }
   }
 }

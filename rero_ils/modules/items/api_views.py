@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """Blueprint used for loading templates."""
 
@@ -124,20 +117,20 @@ def librarian_request(item, data):
 
 def prior_checkout_actions(item, data):
     """Actions executed prior to a checkout."""
-    if data.get('loan_pid'):
-        loan = Loan.get_record_by_pid(data.get('loan_pid'))
+    if data.get('pid'):
+        loan = Loan.get_record_by_pid(data.get('pid'))
         if (
             loan.get('state') == 'ITEM_IN_TRANSIT_FOR_PICKUP' and
             loan.get('patron_pid') == data.get('patron_pid')
         ):
             item.receive(**data)
         if loan.get('state') == 'ITEM_IN_TRANSIT_TO_HOUSE':
-            item.cancel_loan(loan_pid=loan.get('loan_pid'))
-            del data['loan_pid']
+            item.cancel_loan(pid=loan.get('pid'))
+            del data['pid']
     else:
         loan = get_loan_for_item(item.pid)
         if loan:
-            item.cancel_loan(loan_pid=loan.get('loan_pid'))
+            item.cancel_loan(pid=loan.get('pid'))
     return data
 
 
@@ -289,7 +282,7 @@ def item(item_barcode):
         abort(404)
     loan = get_loan_for_item(item.pid)
     if loan:
-        loan = Loan.get_record_by_pid(loan['loan_pid']).dumps_for_circulation()
+        loan = Loan.get_record_by_pid(loan.get('pid')).dumps_for_circulation()
     item_dumps = item.dumps_for_circulation()
     patron_pid = flask_request.args.get('patron_pid')
 

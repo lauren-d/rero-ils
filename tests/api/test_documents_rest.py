@@ -1,25 +1,19 @@
+# -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Tests REST API documents."""
 
@@ -65,45 +59,11 @@ def test_documents_permissions(client, document, json_header):
 
 @mock.patch('invenio_records_rest.views.verify_record_permission',
             mock.MagicMock(return_value=VerifyRecordPermissionPatch))
-def test_documents_get(client, document):
+def test_documents_facets(
+    client, document, item_lib_martigny, rero_json_header
+):
     """Test record retrieval."""
-    item_url = url_for('invenio_records_rest.doc_item', pid_value='doc1')
-
-    res = client.get(item_url)
-    assert res.status_code == 200
-
-    assert res.headers['ETag'] == '"{}"'.format(document.revision_id)
-
-    data = get_json(res)
-    assert document.dumps() == data['metadata']
-
-    # Check metadata
-    for k in ['created', 'updated', 'metadata', 'links']:
-        assert k in data
-
-    # Check self links
-    res = client.get(to_relative_url(data['links']['self']))
-    assert res.status_code == 200
-    assert data == get_json(res)
-    assert document.dumps() == data['metadata']
-
-    list_url = url_for('invenio_records_rest.doc_list')
-    res = client.get(list_url)
-    assert res.status_code == 200
-    data = get_json(res)
-    assert data['hits']['hits'][0]['metadata'] == document.replace_refs()
-
-    res = client.get(
-        url_for('api_documents.import_bnf_ean', ean='9782070541270'))
-    assert res.status_code == 401
-
-
-@mock.patch('invenio_records_rest.views.verify_record_permission',
-            mock.MagicMock(return_value=VerifyRecordPermissionPatch))
-def test_documents_facets(client, document, item_lib_martigny,
-                          rero_json_header, lib_martigny):
-    """Test record retrieval."""
-    list_url = url_for('invenio_records_rest.doc_list')
+    list_url = url_for('invenio_records_rest.doc_list', view='global')
 
     res = client.get(list_url, headers=rero_json_header)
     data = get_json(res)
@@ -111,12 +71,65 @@ def test_documents_facets(client, document, item_lib_martigny,
 
     # check all facets are present
     for facet in [
-        'document_type', 'library', 'author__en', 'author__fr', 'author__de',
-        'author__it', 'language', 'subject', 'status'
+        'document_type', 'author__en', 'author__fr',
+        'author__de', 'author__it', 'language', 'subject', 'status'
     ]:
         assert aggs[facet]
-    # check library name for display
-    assert aggs['library']['buckets'][0]['name'] == lib_martigny['name']
+
+
+@mock.patch('invenio_records_rest.views.verify_record_permission',
+            mock.MagicMock(return_value=VerifyRecordPermissionPatch))
+def test_documents_organisation_facets(
+    client, document, item_lib_martigny, rero_json_header
+):
+    """Test record retrieval."""
+    list_url = url_for('invenio_records_rest.doc_list', view='global')
+
+    res = client.get(list_url, headers=rero_json_header)
+    data = get_json(res)
+    aggs = data['aggregations']
+
+    assert 'organisation' in aggs
+
+
+@mock.patch('invenio_records_rest.views.verify_record_permission',
+            mock.MagicMock(return_value=VerifyRecordPermissionPatch))
+def test_documents_library_facets(
+    client, document, org_martigny, item_lib_martigny, rero_json_header
+):
+    """Test record retrieval."""
+    list_url = url_for('invenio_records_rest.doc_list', view='org1')
+
+    res = client.get(list_url, headers=rero_json_header)
+    data = get_json(res)
+    aggs = data['aggregations']
+
+    assert 'library' in aggs
+
+
+@mock.patch('invenio_records_rest.views.verify_record_permission',
+            mock.MagicMock(return_value=VerifyRecordPermissionPatch))
+def test_documents_items_filter(
+    client, document, org_martigny, item_lib_martigny,
+    org_sion, item_lib_sion_org2, rero_json_header
+):
+    """Test items filters for global and organisation view."""
+    list_url = url_for('invenio_records_rest.doc_list', view='global')
+    res = client.get(list_url, headers=rero_json_header)
+    items = get_json(res)['hits']['hits'][0]['metadata']['items']
+    assert len(items) == 2
+
+    list_url = url_for('invenio_records_rest.doc_list', view='org1')
+    res = client.get(list_url, headers=rero_json_header)
+    items = get_json(res)['hits']['hits'][0]['metadata']['items']
+    assert len(items) == 1
+    assert items[0]['organisation']['organisation_pid'] == 'org1'
+
+    list_url = url_for('invenio_records_rest.doc_list', view='org2')
+    res = client.get(list_url, headers=rero_json_header)
+    items = get_json(res)['hits']['hits'][0]['metadata']['items']
+    assert len(items) == 1
+    assert items[0]['organisation']['organisation_pid'] == 'org2'
 
 
 @mock.patch('invenio_records_rest.views.verify_record_permission',
@@ -179,65 +192,6 @@ def test_documents_post_put_delete(client, document_data,
 
     res = client.get(item_url)
     assert res.status_code == 410
-
-
-@mock.patch('rero_ils.modules.documents.views.login_and_librarian',
-            mock.MagicMock())
-def test_documents_import_bnf_ean(client):
-    """Test document import from bnf."""
-    res = client.get(url_for('api_documents.import_bnf_ean', ean='123'))
-    assert res.status_code == 404
-    data = get_json(res)
-    assert not data.get('metadata')
-
-    res = client.get(url_for(
-        'api_documents.import_bnf_ean', ean='9782070541270'))
-    assert res.status_code == 200
-    data = get_json(res)
-    assert data.get('metadata') == {
-        'authors': [
-            {'date': '1965-', 'name': 'Rowling, J. K.', 'type': 'person'},
-            {
-                'date': '1948-',
-                'name': 'Ménard, Jean-François',
-                'qualifier': 'romancier pour la jeunesse',
-                'type': 'person'
-            }
-        ],
-        'extent': '232 p.',
-        'formats': ['24 cm'],
-        'identifiers': {
-            'bnfID': 'cb37090396w',
-            'isbn': '9782070541270'
-        },
-        'languages': [
-            {'language': 'fre'}
-        ],
-        'otherMaterialCharacteristics': 'couv. ill. en coul.',
-        'publicationYear': 1999,
-        'publishers': [
-            {'name': ['Gallimard'], 'place': ['[Paris]']}
-        ],
-        'series': [{'name': 'Harry Potter.', 'number': '1'}],
-        'subjects': ['JnRoman'],
-        'title': "Harry Potter à l'école des sorciers",
-        'titlesProper': ['Harry Potter'],
-        'translatedFrom': ['eng'],
-        'type': 'book'
-    }
-
-
-def test_document_can_delete(client, item_lib_martigny, loan_pending_martigny,
-                             document):
-    """Test can delete a document."""
-    links = document.get_links_to_me()
-    assert 'items' in links
-    assert 'loans' in links
-
-    assert not document.can_delete
-
-    reasons = document.reasons_not_to_delete()
-    assert 'links' in reasons
 
 
 def test_document_can_request_view(client, item_lib_fully,

@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """Document JSON schema tests."""
 
@@ -95,11 +88,11 @@ def test_languages(document_schema, document_data_tmp):
     validate(document_data_tmp, document_schema)
 
     with pytest.raises(ValidationError):
-        document_data_tmp['languages'][0]['language'] = [2]
+        document_data_tmp['language'][0]['value'] = [2]
         validate(document_data_tmp, document_schema)
 
     with pytest.raises(ValidationError):
-        document_data_tmp['languages'][0]['language'] = ['gre']
+        document_data_tmp['language'][0]['value'] = ['gre']
         validate(document_data_tmp, document_schema)
 
 
@@ -289,36 +282,37 @@ def test_abstracts(document_schema, document_data_tmp):
         validate(document_data_tmp, document_schema)
 
 
-def test_identifiers(document_schema, document_data_tmp):
+def test_identifiedby(document_schema, document_data_tmp):
     """Test identifiers for jsonschemas."""
-    document_data_tmp['identifiers'] = {
-        "reroID": "R004567655",
-        "isbn": "9782082015769",
-        "bnfID": "cb350330441"
-    }
-
+    document_data_tmp['identifiedBy'] = [
+        {
+            "type": "bf:Local",
+            "source": "RERO",
+            "value": "R008745599"
+        },
+        {
+            "type": "bf:Isbn",
+            "value": "9782844267788"
+        },
+        {
+            "type": "bf:Local",
+            "source": "BNF",
+            "value": "FRBNF452959040000002"
+        },
+        {
+            "type": "uri",
+            "value": "http://catalogue.bnf.fr/ark:/12148/cb45295904f"
+        }
+    ]
     validate(document_data_tmp, document_schema)
 
     with pytest.raises(ValidationError):
-        document_data_tmp['identifiers']['reroID'] = 2
-        validate(document_data_tmp, document_schema)
+        for identifier in document_data_tmp['identifiedBy']:
+            identifier['value'] = 2
+            validate(document_data_tmp, document_schema)
 
     with pytest.raises(ValidationError):
-        document_data_tmp['identifiers']['isbn'] = 2
-        validate(document_data_tmp, document_schema)
-
-    with pytest.raises(ValidationError):
-        document_data_tmp['identifiers'] = {}
-        validate(document_data_tmp, document_schema)
-
-    document_data_tmp['identifiers'] = {
-        "bnfID": "cb350330441"
-    }
-
-    validate(document_data_tmp, document_schema)
-
-    with pytest.raises(ValidationError):
-        document_data_tmp['identifiers']['bnfID'] = 2
+        document_data_tmp['identifiedBy'] = {}
         validate(document_data_tmp, document_schema)
 
 
@@ -334,4 +328,13 @@ def test_subjects(document_schema, document_data_tmp):
 
     with pytest.raises(ValidationError):
         document_data_tmp['subjects'] = 2
+        validate(document_data_tmp, document_schema)
+
+
+def test_harvested(document_schema, document_data_tmp):
+    """Test harvested for jsonschemas."""
+    validate(document_data_tmp, document_schema)
+
+    with pytest.raises(ValidationError):
+        document_data_tmp['harvested'] = 2
         validate(document_data_tmp, document_schema)

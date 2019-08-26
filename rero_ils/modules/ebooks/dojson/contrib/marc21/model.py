@@ -1,26 +1,19 @@
 # -*- coding: utf-8 -*-
 #
-# This file is part of RERO ILS.
-# Copyright (C) 2017 RERO.
+# RERO ILS
+# Copyright (C) 2019 RERO
 #
-# RERO ILS is free software; you can redistribute it
-# and/or modify it under the terms of the GNU General Public License as
-# published by the Free Software Foundation; either version 2 of the
-# License, or (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
 #
-# RERO ILS is distributed in the hope that it will be
-# useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
 #
-# You should have received a copy of the GNU General Public License
-# along with RERO ILS; if not, write to the
-# Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
-# MA 02111-1307, USA.
-#
-# In applying this license, RERO does not
-# waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 """rero-ils MARC21 model definition."""
 
@@ -57,13 +50,14 @@ def marc21_to_languages_from_008(self, key, value):
 
     languages: 008 and 041 [$a, repetitive]
     """
-    languages = self.get('languages', [])
+    language = self.get('language', [])
+
     # put 008 language in first place
-    languages.insert(0, value.strip()[35:38])
-    return languages
+    language.insert(0, {'type': 'bf:Language', 'value': value.strip()[35:38]})
+    return language
 
 
-@marc21.over('identifiers', '^020..')
+@marc21.over('identifiedBy', '^020..')
 @utils.ignore_value
 def marc21_to_identifier_isbn(self, key, value):
     """Get identifier isbn.
@@ -72,11 +66,14 @@ def marc21_to_identifier_isbn(self, key, value):
     """
     isbn13 = EAN13(value.get('a'))
     if isbn13:
-        identifiers = self.get('identifiers', {})
-        identifiers['isbn'] = isbn13
+        identifiers = self.get('identifiedBy', [])
+        identifier = {
+            'type': 'bf:Isbn',
+            'value': isbn13
+        }
+        identifiers.append(identifier)
         return identifiers
-    else:
-        return None
+    return None
 
 
 @marc21.over('type', '^0248.$')
@@ -97,15 +94,19 @@ def marc21_to_type(self, key, value):
     return None
 
 
-@marc21.over('identifiers', '^035..')
+@marc21.over('identifiedBy', '^035..')
 @utils.ignore_value
 def marc21_to_identifier_reroID(self, key, value):
     """Get identifier reroId.
 
     identifiers:reroID: 035$a
     """
-    identifiers = self.get('identifiers', {})
-    identifiers['reroID'] = value.get('a')
+    identifiers = self.get('identifiedBy', [])
+    identifier = {
+        'type': 'bf:Local',
+        'value': value.get('a')
+    }
+    identifiers.append(identifier)
     return identifiers
 
 
@@ -117,26 +118,26 @@ def marc21_to_translatedFrom(self, key, value):
     translatedFrom: 041 [$h repetitive]
     languages: 008 and 041 [$a, repetitive]
     """
-    languages = self.get('languages', [])
+    languages = self.get('language', [])
     unique_lang = []
     if languages != []:
         for language in languages:
-            unique_lang.append(language)
+            unique_lang.append(language['value'])
 
     language = value.get('a')
     if language:
         for lang in utils.force_list(language):
             if lang not in unique_lang:
                 unique_lang.append(lang)
-                languages.append({'language': lang})
+                languages.append({'type': 'bf:Language', 'value': lang})
 
-    self['languages'] = languages
+    self['language'] = languages
 
     translated = value.get('h')
     if translated:
         return list(utils.force_list(translated))
-    else:
-        return None
+
+    return None
 
 
 @marc21.over('authors', '[17][01]0..')
