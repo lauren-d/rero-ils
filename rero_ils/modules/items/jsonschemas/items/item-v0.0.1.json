@@ -38,7 +38,7 @@
       "title": "Barcode",
       "description": "Barcode of the item.",
       "type": "string",
-      "minLength": 4,
+      "minLength": 1,
       "form": {
         "focus": true,
         "validation": {
@@ -55,7 +55,7 @@
       "title": "Call number",
       "description": "Call number of the item.",
       "type": "string",
-      "minLength": 4
+      "minLength": 1
     },
     "location": {
       "title": "Location",
