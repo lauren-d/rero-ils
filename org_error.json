@@ -1,0 +1,26 @@
+[
+  {
+    "pid": "1",
+    "$schema": "http://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+    "address": "Place de luniversit\u00e9 1, 1348 Louvain-la-Neuve",
+    "name": "UCLouvain",
+    "code": "uclouvain",
+    "default_currency": "EUR"
+  }
+  {
+    "pid": "2",
+    "$schema": "http://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+    "address": "Rue Grandgagnage 19, 5000 Namur",
+    "name": "UNamur",
+    "code": "unamur",
+    "default_currency": "EUR"
+  }
+  {
+    "pid": "3",
+    "$schema": "http://ils.bib.uclouvain.be/schema/organisations/organisation-v0.0.1.json",
+    "address": "Boulevard du Jardin Botanique 43, 1000 Bruxelles",
+    "name": "USaint-Louis",
+    "code": "uslb",
+    "default_currency": "EUR"
+  }
+]
