@@ -3,7 +3,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BDRT",
 		"email": "bibsys@uclouvain.be",
-		"name": "BDRT - Bibliothèque de droit",
+		"name": "BDRT - Droit",
+		"pid" : "1",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -90,9 +91,10 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
-		"code": "BFLT-BTEC",
+		"code": "BFLT",
 		"email": "bibsys@uclouvain.be",
-		"name": "BFLT-BTEC - Arts, Lettres et Théologie",
+		"name": "BFLT - Arts, Lettres et Théologie",
+		"pid" : "2",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -190,7 +192,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BISP",
 		"email": "bibsys@uclouvain.be",
-		"name": "BISP - Bibliothèque de philosophie",
+		"name": "BISP - Philosophie",
+		"pid" : "3",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -248,7 +251,7 @@
 		"exception_dates": [{
 			"title": "Inventaire mensuel",
 			"is_open": false,
-			"start_date": "2019-01-03",
+			"start_date": "2020-01-03",
 			"repeat": {
 				"interval": 1,
 				"period": "monthly",
@@ -263,7 +266,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BPEM",
 		"email": "bibsys@uclouvain.be",
-		"name": "BPEM - Bibliothèque de psychologie, des sciences de l'éducation et de la motricité",
+		"name": "BPEM - Psychologie, des sciences de l'éducation et de la motricité",
+		"pid" : "4",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -352,7 +356,8 @@
 		"address": "Woluwé",
 		"code": "BSS",
 		"email": "bibsys@uclouvain.be",
-		"name": "BSS - Bibliothèque des sciences de la Santé",
+		"name": "BSS - Sciences de la Santé",
+		"pid" : "5",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -441,7 +446,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BST",
 		"email": "bibsys@uclouvain.be",
-		"name": "BST - Bibliothèque des Sciences et technologies",
+		"name": "BST - Sciences et technologies",
+		"pid" : "6",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -530,7 +536,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BSPO",
 		"email": "bibsys@uclouvain.be",
-		"name": "BSPO - Bibliothèque de sciences économiques, sociales et politiques",
+		"name": "BSPO - Sciences économiques, sociales et politiques",
+		"pid" : "7",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -619,7 +626,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "CORE",
 		"email": "bibsys@uclouvain.be",
-		"name": "LIDAM - Bibliothèque CORE",
+		"name": "CORE - Center for Operations Research and Econometrics",
+		"pid" : "8",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -708,96 +716,8 @@
 		"address": "Mont-Godinne",
 		"code": "MGD",
 		"email": "bibsys@uclouvain.be",
-		"name": "MG - Bibliothèque de Mont-Godinne",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Louvain-la-Neuve",
-		"code": "SCEB",
-		"email": "bibsys@uclouvain.be",
-		"name": "SCEB - Service central des bibliothèques",
+		"name": "MG - Clinique de Mont-Godinne",
+		"pid" : "9",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -887,6 +807,7 @@
 		"code": "SB",
 		"email": "bibsys@uclouvain.be",
 		"name": "Société des Bollandistes",
+		"pid" : "10",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -976,6 +897,7 @@
 		"code": "INGI",
 		"email": "bibsys@uclouvain.be",
 		"name": "INGI",
+		"pid" : "11",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -1065,6 +987,7 @@
 		"code": "BIUL-Electronique",
 		"email": "bibsys@uclouvain.be",
 		"name": "BIUL - Electronique",
+		"pid" : "12",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -1153,7 +1076,8 @@
 		"address": "Louvain-la-Neuve",
 		"code": "BAIU",
 		"email": "bibsys@uclouvain.be",
-		"name": "BAIU - Bibliothèque d'architecture",
+		"name": "BAIU - Architecture",
+		"pid" : "13",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -1242,7 +1166,8 @@
 		"address": "Mons",
 		"code": "BIMS",
 		"email": "bibsys@uclouvain.be",
-		"name": "BIMS - Bibliothèque de Mons",
+		"name": "BIMS - Mons",
+		"pid" : "14",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -1332,6 +1257,7 @@
 		"code": "MARE",
 		"email": "bibsys@uclouvain.be",
 		"name": "MARE - Abbaye de Maredsous",
+		"pid" : "15",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -1421,6 +1347,7 @@
 		"code": "UNamur-Droit",
 		"email": "bibsys@uclouvain.be",
 		"name": "UNamur-Droit",
+		"pid" : "16",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -1510,6 +1437,7 @@
 		"code": "UNamur-BUMP",
 		"email": "bibsys@uclouvain.be",
 		"name": "UNamur-BUMP",
+		"pid" : "17",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -1599,6 +1527,7 @@
 		"code": "USLB",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Bibliothèque Saint-Louis",
+		"pid" : "18",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
@@ -1688,6 +1617,7 @@
 		"code": "USLB-Electronique",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Electronique",
+		"pid" : "19",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
@@ -1777,6 +1707,7 @@
 		"code": "CDE",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Centre d'études européennes",
+		"pid" : "20",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
@@ -1866,6 +1797,7 @@
 		"code": "MH",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Marie Haps",
+		"pid" : "21",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
