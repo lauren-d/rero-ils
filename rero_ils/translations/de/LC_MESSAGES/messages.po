@@ -7073,11 +7073,19 @@ msgstr "Kontaktdaten der Bestellung"
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:179
 msgid "Contact name"
+<<<<<<< HEAD
 msgstr "Name des Kontaktes"
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:194
 msgid "A valid postal code with a min of 4 characters."
 msgstr "Eine gültige Postleitzahl mit mindestens 4 Zeichen."
+=======
+msgstr "Name des Kontaktes "
+
+#: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:194
+msgid "A valid postal code with a min of 4 characters."
+msgstr "Erforderlich. Eine gültige Postleitzahl mit mindestens 4 Zeichen."
+>>>>>>> translations: restore and improve translations
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:229
 msgid "Currency"
@@ -7252,4 +7260,3 @@ msgstr "wurde gelöscht."
 #: rero_ils/templates/security/email/reset_instructions.html:21
 msgid "Click here to reset your password"
 msgstr "Hier klicken um Passwort zurückzusetzen."
-

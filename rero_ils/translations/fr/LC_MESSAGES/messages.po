@@ -2,7 +2,7 @@
 # Copyright (C) 2020 RERO
 # This file is distributed under the same license as the rero-ils project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-# 
+#
 # Translators:
 # Bertrand Zuchuat, 2019
 # Aly Badr <aly.badr@rero.ch>, 2019
@@ -7256,7 +7256,3 @@ msgstr "a été supprimé."
 #: rero_ils/templates/security/email/reset_instructions.html:21
 msgid "Click here to reset your password"
 msgstr "Cliquez ici pour réinitialiser votre mot de passe"
-<<<<<<< HEAD
-=======
-
->>>>>>> permissions: update and delete permissions api for records
