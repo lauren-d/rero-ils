@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the rero-ils project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 #
+
 msgid ""
 msgstr ""
 "Project-Id-Version: rero-ils 0.6.1\n"
