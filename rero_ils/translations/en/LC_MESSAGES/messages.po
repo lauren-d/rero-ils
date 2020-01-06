@@ -7238,4 +7238,3 @@ msgstr "has been deleted."
 #: rero_ils/templates/security/email/reset_instructions.html:21
 msgid "Click here to reset your password"
 msgstr "Click here to reset your password"
-
