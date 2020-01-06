@@ -2,7 +2,7 @@
 # Copyright (C) 2020 RERO
 # This file is distributed under the same license as the rero-ils project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-# 
+#
 # Translators:
 # Bertrand Zuchuat, 2019
 # Nicolas Labat <n-labat@hotmail.com>, 2019
@@ -13,7 +13,7 @@
 # Nicolas Prongué <n.prongue@outlook.com>, 2020
 # MarionRERO <marion.davis@rero.ch>, 2020
 # iGor milhit <igor.milhit@rero.ch>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: rero-ils 0.5.2\n"
@@ -7077,7 +7077,11 @@ msgstr "Kontaktdaten der Bestellung"
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:179
 msgid "Contact name"
+<<<<<<< HEAD
 msgstr "Name des Kontaktes"
+=======
+msgstr "Name des Kontaktes "
+>>>>>>> translations: restore and improve translations
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:194
 msgid "A valid postal code with a min of 4 characters."
