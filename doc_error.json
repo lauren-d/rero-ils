@@ -1,0 +1,1684 @@
+[
+  {
+    "type": "book",
+    "pid": "120",
+    "language": [
+      {
+        "value": "eng",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9780949324788",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R267652960",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/27141063"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28128728"
+      }
+    ],
+    "title": "Conservation biology for the Australian environment",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Chipping Norton"
+              }
+            ],
+            "country": "at"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Surrey Beatty"
+              }
+            ]
+          }
+        ],
+        "date": "1998",
+        "startDate": "1998"
+      }
+    ],
+    "extent": "X, 380 p.",
+    "otherMaterialCharacteristics": "ill.",
+    "formats": [
+      "30 cm"
+    ],
+    "subjects": [
+      "Nature",
+      "Protection",
+      "Australie"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "124",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R008349734",
+        "type": "bf:Local",
+        "source": "RERO"
+      },
+      {
+        "source": "OCoLC",
+        "value": "ocn495356174",
+        "type": "bf:Local"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28309350"
+      }
+    ],
+    "title": "Message du Mar\u00e9chal P\u00e9tain, chef de l'Etat : 12 Aout 1941",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Aurillac"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Impr. moderne"
+              }
+            ]
+          }
+        ],
+        "date": "[1941?]",
+        "startDate": "1941",
+        "note": "Date(s) incertaine(s) ou inconnue(s)"
+      }
+    ],
+    "extent": "14 p.",
+    "formats": [
+      "In-8"
+    ],
+    "notes": [
+      "[L\u00e9gion fran\u00e7aise des combattants. Union d\u00e9partementale d\u00e9partemental Cantal]",
+      "La couverture porte : \"La L\u00e9gion demeure, en zone libre, le meilleur instrument de la R\u00e9volution mondiale.\""
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "132",
+    "language": [
+      {
+        "value": "ita",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9788835946755",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R270112460",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28453770"
+      }
+    ],
+    "title": "Le organizzazioni internazionali : politica, economie, societ\u00e0 : dizionario",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Roma"
+              }
+            ],
+            "country": "it"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Libri dell'altritalia"
+              }
+            ]
+          }
+        ],
+        "date": "1999",
+        "startDate": "1999"
+      }
+    ],
+    "extent": "143 p.",
+    "formats": [
+      "18 cm"
+    ],
+    "subjects": [
+      "Organisations internationales",
+      "[dictionnaire]"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "136",
+    "language": [
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9783825245276",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R008391688",
+        "type": "bf:Local",
+        "source": "RERO"
+      },
+      {
+        "source": "IDS-BSBE",
+        "value": "006484934",
+        "type": "bf:Local"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/30596941"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/15016691"
+      }
+    ],
+    "title": "Basiswissen deutsche Gegenwartssprache",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "T\u00fcbingen"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "A. Francke Verlag"
+              }
+            ]
+          }
+        ],
+        "date": "2017",
+        "startDate": "2017"
+      }
+    ],
+    "extent": "351 S.",
+    "otherMaterialCharacteristics": "zahlr. Darstellungen und Tabellen",
+    "series": [
+      {
+        "name": "utb",
+        "number": "2704"
+      }
+    ],
+    "subjects": [
+      "Syntaxe",
+      "Locutions",
+      "Flexion (linguistique)",
+      "Formation des mots",
+      "Langue parl\u00e9e",
+      "S\u00e9mantique",
+      "Phonologie",
+      "Phon\u00e9tique",
+      "\u00c9criture",
+      "Pragmatique",
+      "Grammaire",
+      "Stylistique",
+      "Allemand (langue)"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "143",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782012371002",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R006035422",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/12940059"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/13751587"
+      }
+    ],
+    "title": "Elever b\u00e9b\u00e9 : de la naissance \u00e0 six ans",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Hachette"
+              }
+            ]
+          }
+        ],
+        "date": "2005",
+        "startDate": "2005"
+      }
+    ],
+    "extent": "765 p.",
+    "otherMaterialCharacteristics": "ill.",
+    "formats": [
+      "27 cm"
+    ],
+    "series": [
+      {
+        "name": "Hachette. Pratique"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "article",
+    "pid": "146",
+    "language": [
+      {
+        "value": "eng",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R005939923",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/16862853"
+      }
+    ],
+    "title": "The great trade collapse : what caused it and what does it mean?",
+    "notes": [
+      "Ressource en ligne consult\u00e9e le 28.02.2011"
+    ],
+    "is_part_of": "Great trade collapse : causes, consequences and prospects",
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "159",
+    "language": [
+      {
+        "value": "eng",
+        "type": "bf:Language"
+      },
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9789052016344",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R006108121",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "title": "Resurgence in Jane Urquhart's oeuvre",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Bruxelles"
+              }
+            ],
+            "country": "be"
+          },
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "New York"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "P.I.E. Peter Lang"
+              }
+            ]
+          }
+        ],
+        "date": "2010",
+        "startDate": "2010"
+      }
+    ],
+    "extent": "228 p.",
+    "series": [
+      {
+        "name": "Canadian studies",
+        "number": "no. 21"
+      }
+    ],
+    "notes": [
+      "\"This volume was inspired by the 48th Conference of Professors of English at the University of Orl\u00e9ans (May 16-18, 2008).\""
+    ],
+    "abstracts": [
+      "\"This groundbreaking volume of critical essays revolving around the concept of resurgence maps the modes of conservation, transformation, and invention of the literary, visual, and cultural expressions which Jane Urquhart's singular voice has brought about on the Canadian but also international scene. Taking resurgence as the informing principle of investigation, the volume as a whole focuses on the rewriting and reconstruction of the past, on the modalities of its resurfacing or of its erasure. It raises questions about the explicit or implicit ideological repercussions of such concealment and disclosure, such rupture and resilience. Through the prism of this concept, through surveys, close textual scrutiny and comparative analyses, the book explores Urquhart's discursive practices, the way they hinge on intertextuality or citation, at the same time as upon intratextuality or self-citation. It brings to the fore the extratextual and metatextual quality of her writing together with the transmediality, the transcoding or intersemioticity which characterize the interaction between literature and the visual arts in her fictional and poetic works.\""
+    ],
+    "subjects": [
+      "Urquhart, Jane",
+      "Continuity in literature",
+      "Landscapes in literature",
+      "Memory in literature",
+      "Place (Philosophy) in literature",
+      "Return in literature",
+      "Setting (Literature)"
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/8147042"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/13227121"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "162",
+    "language": [
+      {
+        "value": "lat",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9783775203005",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "0069759",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/5996920"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/4935674"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/1504277"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/19613116"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/12216899"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/10465189"
+      }
+    ],
+    "title": "Die Schriften des Alexander von Roes und des Engelbert von Admont",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Stuttgart [etc.]"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "A. Hiersemann [etc.]"
+              }
+            ]
+          }
+        ],
+        "date": "1958-2016",
+        "startDate": "1958",
+        "endDate": "2016"
+      }
+    ],
+    "extent": "3 vol.",
+    "formats": [
+      "27 cm"
+    ],
+    "series": [
+      {
+        "name": "Monumenta Germaniae historica. Staatsschriften des spaeteren Mittelalters",
+        "number": "Bd. 1"
+      }
+    ],
+    "subjects": [
+      "Alexander",
+      "Engelbert",
+      "Alexander",
+      "[\u00c9ditions]"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "168",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782226192042",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R006039421",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/31496132"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/3709224"
+      }
+    ],
+    "title": "Joni et Vatanen : aventures",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Albin Michel"
+              }
+            ]
+          }
+        ],
+        "date": "2009",
+        "startDate": "2009"
+      }
+    ],
+    "formats": [
+      "24 cm"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "score",
+    "pid": "177",
+    "language": [
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "qualifier": "Kritischer Bericht",
+        "value": "9790201858135",
+        "type": "bf:Ismn"
+      },
+      {
+        "value": "HN 5813",
+        "qualifier": "Kritischer Bericht",
+        "type": "bf:MusicPublisherNumber"
+      },
+      {
+        "value": "0383205",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/29029144"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/301829"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/24849485"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/10834197"
+      }
+    ],
+    "title": "Werke : oratorio 1775/1784 / Joseph Haydn ; Dichtung von Giovanni Gastone Boccherini ; hrsg. von Ernst Fritz Schmid ; kristischer Bericht verf. von Friederike M\u00fchle",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "M\u00fcnchen"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Duisburg"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "G. Henle"
+              }
+            ]
+          }
+        ],
+        "date": "1963-2018",
+        "startDate": "1963",
+        "endDate": "2018"
+      }
+    ],
+    "extent": "1 partition en 2 vol. (610 p.) +",
+    "notes": [
+      "[Hob. XXI : 1]"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "179",
+    "language": [
+      {
+        "value": "eng",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9780080433707",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R267682860",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "title": "Language acquisition : knowledge, representation and processing",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Amsterdam ; Lausanne [etc.]"
+              }
+            ],
+            "canton": [
+              "vd"
+            ],
+            "country": "sz"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "North-Holland"
+              }
+            ]
+          }
+        ],
+        "date": "1999",
+        "startDate": "1999"
+      }
+    ],
+    "extent": "263 p.",
+    "formats": [
+      "25 cm"
+    ],
+    "notes": [
+      "Conference held in Edinburgh in April 1997"
+    ],
+    "subjects": [
+      "Langues",
+      "\u00c9tude et enseignement",
+      "[Actes de congr\u00e8s]"
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/2867818"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "183",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782856290835",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R271362960",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/23888278"
+      }
+    ],
+    "title": "M\u00e9triques d'Einstein asymptotiquement sym\u00e9triques",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Soci\u00e9t\u00e9 math\u00e9matique de France"
+              }
+            ]
+          }
+        ],
+        "date": "2000",
+        "startDate": "2000"
+      }
+    ],
+    "extent": "109 p.",
+    "otherMaterialCharacteristics": "ill.",
+    "formats": [
+      "24 cm"
+    ],
+    "series": [
+      {
+        "name": "Ast\u00e9risque",
+        "number": "265"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "186",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782278040223",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R267002360",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "title": "Libre \u00e9change 2.",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Hatier-Didier"
+              }
+            ]
+          }
+        ],
+        "date": "1997",
+        "startDate": "1997"
+      }
+    ],
+    "extent": "271 p.",
+    "otherMaterialCharacteristics": "ill.",
+    "formats": [
+      "28 cm"
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/24976106"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/1507624"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "191",
+    "language": [
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R008647727",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/30976396"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/11981084"
+      }
+    ],
+    "title": "Die Gestapo : Herrschaft und Terror im Dritten Reich",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "M\u00fcnchen"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "C.H. Beck"
+              }
+            ]
+          }
+        ],
+        "date": "2017",
+        "startDate": "2017"
+      }
+    ],
+    "extent": "252 S.",
+    "series": [
+      {
+        "name": "Beck'sche Reihe",
+        "number": "1856"
+      }
+    ],
+    "subjects": [
+      "Allemagne.",
+      "1933-1945"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "193",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R006038122",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/17051766"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/6779408"
+      }
+    ],
+    "title": "L'oeil de b\u00e9zoard",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Nathan"
+              }
+            ]
+          }
+        ],
+        "date": "2008",
+        "startDate": "2008"
+      }
+    ],
+    "extent": "282 p.",
+    "formats": [
+      "18 cm"
+    ],
+    "series": [
+      {
+        "name": "Les mal\u00e9fices d'Halequin / Marc Cantin, Jean-Emmanuel Vermot-Desroches",
+        "number": "1"
+      },
+      {
+        "name": "Nathan poche. 11 ans et plus",
+        "number": "170"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "194",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782070548521",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R006032625",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/11033629"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/19305668"
+      }
+    ],
+    "title": "Les Bizardos r\u00eavent de dinosaures",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Gallimard"
+              }
+            ]
+          }
+        ],
+        "date": "2002",
+        "startDate": "2002"
+      }
+    ],
+    "formats": [
+      "23 cm"
+    ],
+    "series": [
+      {
+        "name": "Folio benjamin",
+        "number": "37"
+      }
+    ],
+    "abstracts": [
+      "Dans le confortable lit de la sombre cave d'une haute maison qui se dresse dans une sombre rue, trois squelettes r\u00eavent qu'ils sont poursuivis par de terrifiants dinosaures..."
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "208",
+    "language": [
+      {
+        "value": "spa",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9788488252487",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "NIPO 503-04-004-2",
+        "type": "bf:Local",
+        "source": "NIPO"
+      },
+      {
+        "value": "R008088815",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "title": "Actas de los congresos de la Asociaci\u00f3n Internacional de Hispanistas",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "[Alcal\u00e1 de Henares (Madrid)]"
+              }
+            ],
+            "country": "sp"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Instituto Cervantes"
+              }
+            ]
+          }
+        ],
+        "date": "[2004]",
+        "startDate": "2004"
+      }
+    ],
+    "extent": "1 disco (CD-ROM)",
+    "formats": [
+      "12 cm"
+    ],
+    "notes": [
+      "\"Actas I-X (Oxford, 1962, Barcelona, 1989)\"--Etiqueta",
+      "Adobe Reader 6.0",
+      "T\u00edt. tomado de la pantalla del t\u00edtulo"
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/23666146"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/16653101"
+      },
+      {
+        "type": "organisation",
+        "name": "Asociaci\u00f3n internacional de hispanistas"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "209",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      },
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9783938821299",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "9783938821299",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R004411790",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "title": "Stefan Banz - laugh. I nearly died : installations 1992-2006",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Biel/Bienne"
+              }
+            ],
+            "canton": [
+              "be"
+            ],
+            "country": "sz"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Centre PasquArt"
+              }
+            ]
+          },
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "N\u00fcrnberg"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Verlag f\u00fcr Moderne Kunst"
+              }
+            ]
+          },
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Manchester"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "distrib. in the United Kingdom : Cornerhouse Publications [etc.]"
+              }
+            ]
+          }
+        ],
+        "date": "[2006]",
+        "startDate": "2006"
+      }
+    ],
+    "copyrightDate": [
+      "\u00a9 2006"
+    ],
+    "extent": "119 S.",
+    "otherMaterialCharacteristics": "Ill.",
+    "formats": [
+      "23 cm"
+    ],
+    "notes": [
+      "Ouvrage bilingue fran\u00e7ais et allemand \u00e9dit\u00e9 \u00e0 l'occasion de l'exposition pr\u00e9sent\u00e9e au Centre PasquART, Bienne, du 22 janvier au 19 mars 2006"
+    ],
+    "subjects": [
+      "Banz, St\u00e9phane",
+      "1992-2006",
+      "[Catalogues d'exposition]"
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/22710315"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/11104919"
+      },
+      {
+        "type": "organisation",
+        "name": "Centre PasquART (Bienne)"
+      }
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "222",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R006107928",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/29023780"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/3336290"
+      }
+    ],
+    "title": "Une arch\u00e9ologie du toucher",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Ed. Seuil"
+              }
+            ]
+          }
+        ],
+        "date": "2011",
+        "startDate": "2011"
+      }
+    ],
+    "extent": "416 p.",
+    "series": [
+      {
+        "name": "La Librairie du XXIe si\u00e8cle"
+      }
+    ],
+    "notes": [
+      "Traduit de: The inner touch"
+    ],
+    "subjects": [
+      "perception sensorielle",
+      "Toucher",
+      "Philosophie",
+      "Sens et sensations"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "article",
+    "pid": "225",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "R006421229",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/30458955"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/1203404"
+      }
+    ],
+    "title": "Qui a vu un meuble d'Alexandre Mayer ? : un \u00e9b\u00e9niste souabe en Bas-Valais : 1670-1710",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "[Lieu de publication non identifi\u00e9]"
+              }
+            ],
+            "country": "xx"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "[Nos monuments d'art et d'histoire]"
+              }
+            ]
+          }
+        ],
+        "date": "[1983?]",
+        "startDate": "1983"
+      }
+    ],
+    "extent": "P. 323-331",
+    "notes": [
+      "Photocopies",
+      "Texte publi\u00e9 pour les 70 ans d'Andr\u00e9 Donnet dans: \"Nos monuments d'art et d'histoire\", 1983, Ann\u00e9e 34, no 3, p. 322-331"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "230",
+    "language": [
+      {
+        "value": "fre",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9782901428466",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "9782879002415",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "2235426",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28219171"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/18302255"
+      }
+    ],
+    "title": "Quatre-vingts dessins de Bourdelle",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Paris"
+              }
+            ],
+            "country": "fr"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Mus\u00e9e Rodin"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Paris-Mus\u00e9es"
+              }
+            ]
+          }
+        ],
+        "date": "1996",
+        "startDate": "1996"
+      }
+    ],
+    "extent": "1 portefeuille ([4] p., 80 f. de pl.)",
+    "formats": [
+      "34 cm"
+    ],
+    "subjects": [
+      "Bourdelle, Antoine",
+      "Dessin"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "score",
+    "pid": "240",
+    "language": [
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "qualifier": "kritischer Bericht, kartoniert",
+        "value": "M006546565",
+        "type": "bf:Ismn"
+      },
+      {
+        "value": "BA 4561",
+        "type": "bf:MusicPublisherNumber"
+      },
+      {
+        "value": "0209683",
+        "type": "bf:Local",
+        "source": "RERO"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28126503"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/28772505"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/24575644"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/14428249"
+      }
+    ],
+    "title": "Neue Ausgabe s\u00e4mtlicher Werke",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Kassel"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Basel"
+              }
+            ]
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "B\u00e4renreiter"
+              }
+            ]
+          }
+        ],
+        "date": "1971-2003",
+        "startDate": "1971",
+        "endDate": "2003"
+      }
+    ],
+    "extent": "1 partition (XVIII, 125 p.)",
+    "formats": [
+      "33 cm +"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+  {
+    "type": "book",
+    "pid": "241",
+    "language": [
+      {
+        "value": "ger",
+        "type": "bf:Language"
+      }
+    ],
+    "identifiedBy": [
+      {
+        "value": "9783522302975",
+        "type": "bf:Isbn"
+      },
+      {
+        "value": "R008485826",
+        "type": "bf:Local",
+        "source": "RERO"
+      },
+      {
+        "source": "IDS-BSBE",
+        "value": "006239311",
+        "type": "bf:Local"
+      }
+    ],
+    "authors": [
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/1655768"
+      },
+      {
+        "type": "person",
+        "$ref": "https://mef.rero.ch/api/mef/22471170"
+      }
+    ],
+    "title": "Die Pfingsterz\u00e4hlung",
+    "provisionActivity": [
+      {
+        "type": "bf:Publication",
+        "statement": [
+          {
+            "type": "bf:Place",
+            "label": [
+              {
+                "value": "Stuttgart"
+              }
+            ],
+            "country": "gw"
+          },
+          {
+            "type": "bf:Agent",
+            "label": [
+              {
+                "value": "Gabriel Verlag"
+              }
+            ]
+          }
+        ],
+        "date": "2014",
+        "startDate": "2014"
+      }
+    ],
+    "extent": "32 S.",
+    "notes": [
+      "Zielpublikum: Kinder und Jugendliche"
+    ],
+    "$schema": "http://ils.rero.ch/schema/documents/document-v0.0.1.json"
+  }
+]
