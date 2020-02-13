@@ -1,0 +1,167 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+#
+# RERO ILS
+# Copyright (C) 2019 RERO
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+DATA_PATH=$(pipenv --where)/data-ucl
+
+# Parameters description:
+#  --create_items_holdings_small:
+#       used for create only the items and holdings files for the 'small' documents file
+#  --create_items_holdings_big:
+#       used for create only the items and holdings files for the 'big' documents file
+#  --deployment:
+#       used for deploy the 'big' files
+
+RED='\033[0;31m'
+GREEN='\033[0;0;32m'
+NC='\033[0m' # No Color
+
+display_error_message () {
+	echo -e "${RED}$1${NC}" 1>&2
+}
+
+display_success_message () {
+    echo -e "${GREEN}$1${NC}" 1>&2
+}
+
+EMPTY_INSTANCE=false
+DEPLOYMENT=false
+CREATE_ITEMS_HOLDINGS_SMALL=false
+CREATE_ITEMS_HOLDINGS_BIG=false
+STOP_EXECUTION=true
+
+# options may be followed by one colon to indicate they have a required argument
+if ! options=$(getopt -o dsb -l deployment,create_items_holdings_small,create_items_holdings_big,data_path: -- "$@")
+then
+    # something went wrong, getopt will put out an error message for us
+    exit 1
+fi
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+    -e|--empty) EMPTY_INSTANCE=true ;;
+    -d|--deployment) DEPLOYMENT=true ;;
+    -s|--create_items_holdings_small) CREATE_ITEMS_HOLDINGS_SMALL=true ;;
+    -b|--create_items_holdings_big) CREATE_ITEMS_HOLDINGS_BIG=true ;;
+    -c|--continue) STOP_EXECUTION=false ;;
+    -D|--data_path) DATA_PATH=$2 ;;
+    (--) shift; break;;
+    (-*) display_error_message "$0: error - unrecognized option $1"; exit 1;;
+    (*) break;;
+    esac
+    shift
+done
+
+
+if [ ! -d $DATA_PATH ]; then
+    display_error_message "Error - data path does not exist: $DATA_PATH"
+    exit 1
+fi
+
+if $CREATE_ITEMS_HOLDINGS_SMALL && $CREATE_ITEMS_HOLDINGS_BIG
+then
+    display_error_message "Error - chose option for 'small' or 'big' documents generation"
+    exit 1
+fi
+
+if $CREATE_ITEMS_HOLDINGS_SMALL || $CREATE_ITEMS_HOLDINGS_BIG
+then
+    if $DEPLOYMENT
+    then
+        display_error_message "Error - chose deployment option only"
+        exit 1
+    fi
+fi
+
+if $CREATE_ITEMS_HOLDINGS_BIG
+then
+    # set DEPLOYMENT to true in order to use big documents file
+    DEPLOYMENT=true
+fi
+
+# Purge celery
+pipenv run celery purge -A invenio_app.celery -f
+# Clean redis
+pipenv run invenio shell --no-term-title -c "import redis; redis.StrictRedis.from_url(app.config['CACHE_REDIS_URL']).flushall(); print('Cache cleared')"
+pipenv run invenio db destroy --yes-i-know
+pipenv run invenio db init create
+pipenv run invenio index queue purge delete
+set -e
+pipenv run invenio index destroy --force --yes-i-know
+# Override index init to load templates before mapping
+pipenv run invenio utils init --force
+# pipenv run invenio index init --force
+pipenv run invenio index queue init
+# Delete invenio_circulations index
+pipenv run invenio index delete loans-loan-v1.0.0 --force --yes-i-know
+
+# Create admin role to restrict access
+pipenv run invenio roles create admin
+pipenv run invenio access allow superuser-access role admin
+
+# create new user
+pipenv run invenio users create -a admin@rero.ch --password administrator
+
+# confirm users
+pipenv run invenio users confirm admin@rero.ch
+
+# create roles
+pipenv run invenio roles create -d "Admins Group" admins
+pipenv run invenio roles create -d "Super Users Group" superusers
+
+# create a role for users qualified as a patron
+pipenv run invenio roles create -d "Patron" patron
+
+# create a role for users qualified as a staff library
+pipenv run invenio roles create -d "Librarian" librarian
+
+# create a role for users qualified as a System librarian
+pipenv run invenio roles create -d "System Librarian" system_librarian
+
+# grant accesses to action roles
+pipenv run invenio access allow admin-access role admins
+pipenv run invenio access allow superuser-access role superusers
+
+# grant roles to users
+pipenv run invenio roles add admin@rero.ch admins
+pipenv run invenio roles add admin@rero.ch superusers
+
+pipenv run invenio fixtures create --pid_type org ../data-ucl/organisations.json 
+pipenv run invenio utils reindex -t org --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type lib ../data-ucl/libraries.json 
+pipenv run invenio utils reindex -t lib --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type loc ../data-ucl/locations.json 
+pipenv run invenio utils reindex -t loc --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type itty ../data-ucl/item_types.json 
+pipenv run invenio utils reindex -t itty --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type ptty ../data-ucl/patron_types.json 
+pipenv run invenio utils reindex -t ptty --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type cipo ../data-ucl/circulation_policies.json 
+pipenv run invenio utils reindex -t cipo --yes-i-know --no-info
+
+pipenv run invenio fixtures import_users ../data-ucl/users.json
+
+pipenv run invenio roles add bibsys@uclouvain.be superusers
+
+# create vendors
+pipenv run invenio fixtures create --pid_type vndr ../data-ucl/vendors.json --append
+pipenv run invenio utils reindex -t vndr --yes-i-know --no-info
+
+
+pipenv run invenio utils runindex --raise-on-error
+
