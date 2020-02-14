@@ -1,7 +1,7 @@
 [{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Books",
-		"description": "Books",
+		"name": "Livre",
+		"description": "Livre",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -9,8 +9,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Serials non circulating",
-		"description": "Serials non circulating",
+		"name": "Revue non-empruntable",
+		"description": "Revue non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -18,8 +18,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Thesis non circulating",
-		"description": "Thesis non circulating",
+		"name": "Thèse non-empruntable",
+		"description": "Thèse non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -27,8 +27,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Video",
-		"description": "Video",
+		"name": "Vidéo",
+		"description": "Vidéo",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -54,8 +54,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "books non circulating",
-		"description": "books non circulating",
+		"name": "Livre non-empruntable",
+		"description": "Livre non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -63,8 +63,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "serials",
-		"description": "serials",
+		"name": "Revue",
+		"description": "Revue",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -72,8 +72,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "thesis",
-		"description": "thesis",
+		"name": "Thèse",
+		"description": "Thèse",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -81,8 +81,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "visual non circulating",
-		"description": "visual non circulating",
+		"name": "Vidéo non-empruntable",
+		"description": "Vidéo non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -90,8 +90,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Audio non circulating",
-		"description": "Audio non circulating",
+		"name": "Audio non-empruntable",
+		"description": "Audio non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -99,8 +99,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "CD-ROM non circulating",
-		"description": "CD-ROM non circulating",
+		"name": "CD-ROM non-empruntable",
+		"description": "CD-ROM non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -108,8 +108,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Books- reserve",
-		"description": "Books- reserve",
+		"name": "Réserve",
+		"description": "Réserve",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -216,8 +216,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Livres  Cours",
-		"description": "Livres  Cours",
+		"name": "Livres Cours",
+		"description": "Livres Cours",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -252,8 +252,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Périodiques",
-		"description": "Périodiques",
+		"name": "Revue",
+		"description": "Revue",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
@@ -261,8 +261,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "Périodiques non empruntables",
-		"description": "Périodiques non empruntables",
+		"name": "Revue non empruntables",
+		"description": "Revue non empruntables",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/3"
 		},
@@ -324,8 +324,8 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
-		"name": "test",
-		"description": "test",
+		"name": "Test",
+		"description": "Test",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},

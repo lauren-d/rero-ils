@@ -370,18 +370,10 @@
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
-		"code": "SCEB",
-		"name": "SCEB - Service central des bibliothèques",
-		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/10"
-		}
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"code": "SB",
 		"name": "Société des Bollandistes",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/11"
+			"$ref": "https://ils.rero.ch/api/libraries/10"
 		}
 	},
 	{
@@ -389,7 +381,7 @@
 		"code": "INGI",
 		"name": "INGI",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/12"
+			"$ref": "https://ils.rero.ch/api/libraries/11"
 		}
 	},
 	{
@@ -397,7 +389,7 @@
 		"code": "BIUL-Electronique",
 		"name": "BIUL - Electronique",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/13"
+			"$ref": "https://ils.rero.ch/api/libraries/12"
 		}
 	},
 	{
@@ -405,7 +397,7 @@
 		"code": "BAIU-Bruxelles",
 		"name": "BAIU - Bruxelles",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/14"
+			"$ref": "https://ils.rero.ch/api/libraries/13"
 		},
 		"is_pickup": true,
 		"pickup_name": "BAIU - Bruxelles"
@@ -415,7 +407,7 @@
 		"code": "BAIU-LLN",
 		"name": "BAIU - LLN",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/14"
+			"$ref": "https://ils.rero.ch/api/libraries/13"
 		},
 		"is_pickup": true,
 		"pickup_name": "BAIU - LLN"
@@ -425,7 +417,7 @@
 		"code": "BAIU-Tournai",
 		"name": "BAIU - Tournai",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/14"
+			"$ref": "https://ils.rero.ch/api/libraries/13"
 		},
 		"is_pickup": true,
 		"pickup_name": "BAIU - Tournai"
@@ -435,7 +427,7 @@
 		"code": "BAIU-Bruxelles-Réserve",
 		"name": "BAIU - Bruxelles - Réserve",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/14"
+			"$ref": "https://ils.rero.ch/api/libraries/13"
 		}
 	},
 	{
@@ -443,7 +435,7 @@
 		"code": "BIMS",
 		"name": "BIMS - Bibliothèque",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/15"
+			"$ref": "https://ils.rero.ch/api/libraries/14"
 		},
 		"is_pickup": true,
 		"pickup_name": "BIMS - Bibliothèque"
@@ -453,7 +445,7 @@
 		"code": "BIMS-Electronique",
 		"name": "BIMS - Electronique",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/15"
+			"$ref": "https://ils.rero.ch/api/libraries/14"
 		}
 	},
 	{
@@ -461,7 +453,7 @@
 		"code": "BIMS-Réserve",
 		"name": "BIMS - Réserve",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/15"
+			"$ref": "https://ils.rero.ch/api/libraries/14"
 		}
 	},
 	{
@@ -469,7 +461,7 @@
 		"code": "MARE",
 		"name": "MARE - Abbaye de Maredsous",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/16"
+			"$ref": "https://ils.rero.ch/api/libraries/15"
 		}
 	},
 	{
@@ -477,7 +469,7 @@
 		"code": "UNamur-Electronique",
 		"name": "UNamur - Electronique",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -485,7 +477,7 @@
 		"code": "Droit-Bibliothèque",
 		"name": "Droit - Bibliothèque",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/17"
+			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
 	},
 	{
@@ -493,7 +485,7 @@
 		"code": "Droit-CRIDS",
 		"name": "Droit - CRIDS",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/17"
+			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
 	},
 	{
@@ -501,7 +493,7 @@
 		"code": "Droit-DFLS",
 		"name": "Droit - DFLS",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/17"
+			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
 	},
 	{
@@ -509,7 +501,7 @@
 		"code": "Droit-Cours",
 		"name": "Droit - Cours",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/17"
+			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
 	},
 	{
@@ -517,7 +509,7 @@
 		"code": "BUMP-AD",
 		"name": "BUMP - Accès direct",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		},
 		"is_pickup": true,
 		"pickup_name": "BUMP - Accès direct"
@@ -527,7 +519,7 @@
 		"code": "BUMP-Magasin",
 		"name": "BUMP - Magasin",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -535,7 +527,7 @@
 		"code": "BUMP-RP",
 		"name": "BUMP - Réserve précieuse",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -543,7 +535,7 @@
 		"code": "BUMP-PA",
 		"name": "BUMP - Publications académiques",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -551,7 +543,7 @@
 		"code": "BUMP-Grafé",
 		"name": "BUMP - Magasin (Grafé)",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -559,7 +551,7 @@
 		"code": "Département",
 		"name": "Département",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -567,7 +559,7 @@
 		"code": "BUMP-Cours",
 		"name": "BUMP - Cours",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/18"
+			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
 	},
 	{
@@ -575,7 +567,7 @@
 		"code": "USLB-Bibliothèque",
 		"name": "USLB - Bibliothèque",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/19"
+			"$ref": "https://ils.rero.ch/api/libraries/18"
 		},
 		"is_pickup": true,
 		"pickup_name": "USLB - Bibliothèque"
@@ -585,7 +577,7 @@
 		"code": "USLB-Botanique",
 		"name": "USLB - Magasin Botanique",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/19"
+			"$ref": "https://ils.rero.ch/api/libraries/18"
 		}
 	},
 	{
@@ -593,7 +585,7 @@
 		"code": "USLB-Ommegang",
 		"name": "USLB - Magasin Ommegang",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/19"
+			"$ref": "https://ils.rero.ch/api/libraries/18"
 		}
 	},
 	{
@@ -601,7 +593,7 @@
 		"code": "USLB-Electronique",
 		"name": "USLB - Electronique",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/20"
+			"$ref": "https://ils.rero.ch/api/libraries/19"
 		}
 	},
 	{
@@ -609,7 +601,7 @@
 		"code": "USLB-CDE",
 		"name": "USLB - Centre d'études européennes",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/21"
+			"$ref": "https://ils.rero.ch/api/libraries/20"
 		}
 	},
 	{
@@ -617,7 +609,7 @@
 		"code": "USLB-MH",
 		"name": "USLB - Marie Haps",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/22"
+			"$ref": "https://ils.rero.ch/api/libraries/21"
 		}
 	},
 	{
@@ -625,7 +617,7 @@
 		"code": "Testothèque",
 		"name": "Testothèque",
 		"library": {
-			"$ref": "https://ils.rero.ch/api/libraries/23"
+			"$ref": "https://ils.rero.ch/api/libraries/22"
 		}
 	}
 ]

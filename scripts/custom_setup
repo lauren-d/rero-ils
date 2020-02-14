@@ -159,9 +159,8 @@ pipenv run invenio fixtures import_users ../data-ucl/users.json
 pipenv run invenio roles add bibsys@uclouvain.be superusers
 
 # create vendors
-info_msg "Acquisition vendors:"
-eval ${PREFIX} invenio fixtures create --pid_type vndr ../data-ucl/vendors2.json --append
-eval ${PREFIX} invenio utils reindex -t vndr --yes-i-know --no-info
+pipenv run invenio fixtures create --pid_type vndr ../data-ucl/vendors2.json --append
+pipenv run invenio utils reindex -t vndr --yes-i-know --no-info
 
 
 pipenv run invenio utils runindex --raise-on-error

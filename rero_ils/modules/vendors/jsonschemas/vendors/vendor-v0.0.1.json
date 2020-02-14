@@ -72,6 +72,9 @@
         "fre",
         "eng",
         "ita",
+        "esp",
+        "spa",
+        "dut",
         "ger"
       ],
       "form": {
@@ -142,8 +145,7 @@
         "phone": {
           "title": "Phone number",
           "description": "Phone number with the international prefix, without spaces.",
-          "type": "string",
-          "pattern": "^\\+[0-9]*$"
+          "type": "string"
         },
         "email": {
           "title": "Email",
@@ -231,6 +233,9 @@
       "enum": [
         "CHF",
         "EUR",
+        "GBP",
+        "CAD",
+        "AUD",
         "USD"
       ],
       "default": "CHF",
