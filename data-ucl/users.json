@@ -449,7 +449,7 @@
              "librarian","patron"
        ],
        "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
+           "$ref": "https://ils.rero.ch/api/libraries/23"
        },
        "patron_type": {
            "$ref": "https://ils.rero.ch/api/patron_types/1"
@@ -1571,7 +1571,7 @@
              "librarian","patron"
        ],
        "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
+           "$ref": "https://ils.rero.ch/api/libraries/23"
        },
        "patron_type": {
            "$ref": "https://ils.rero.ch/api/patron_types/1"
@@ -1835,7 +1835,7 @@
              "librarian","patron"
        ],
        "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
+           "$ref": "https://ils.rero.ch/api/libraries/23"
        },
        "patron_type": {
            "$ref": "https://ils.rero.ch/api/patron_types/1"

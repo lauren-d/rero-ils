@@ -1,6 +1,7 @@
 [{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "1",
 		"code": "BDRT",
 		"email": "bibsys@uclouvain.be",
 		"name": "BDRT - Bibliothèque de droit",
@@ -90,9 +91,10 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "2",
 		"code": "BALT",
 		"email": "bibsys@uclouvain.be",
-		"name": "BALT - Bibliothèques des arts, des lettres et de la Théologie",
+		"name": "BALT - Bibliothèques des arts, des lettres et de la théologie",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -156,7 +158,7 @@
 			{
 				"title": "8 f\u00e9vrier apr\u00e8s-midi",
 				"is_open": false,
-				"start_date": "2019-02-08",
+				"start_date": "2020-02-08",
 				"times": [{
 					"start_time": "12:00",
 					"end_time": "18:00"
@@ -165,7 +167,7 @@
 			{
 				"title": "Dimanche du livre",
 				"is_open": true,
-				"start_date": "2019-05-24T10:00:00.000Z",
+				"start_date": "2020-05-24T10:00:00.000Z",
 				"times": [{
 					"start_time": "10:00",
 					"end_time": "16:00"
@@ -174,7 +176,7 @@
 			{
 				"title": "1er ao\u00fbt",
 				"is_open": false,
-				"start_date": "2019-08-01",
+				"start_date": "2020-08-01",
 				"repeat": {
 					"interval": 1,
 					"period": "yearly",
@@ -188,6 +190,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "3",
 		"code": "BISP",
 		"email": "bibsys@uclouvain.be",
 		"name": "BISP - Bibliothèque de philosophie",
@@ -248,7 +251,7 @@
 		"exception_dates": [{
 			"title": "Inventaire mensuel",
 			"is_open": false,
-			"start_date": "2019-01-03",
+			"start_date": "2020-01-03",
 			"repeat": {
 				"interval": 1,
 				"period": "monthly",
@@ -261,6 +264,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "4",
 		"code": "BPEM",
 		"email": "bibsys@uclouvain.be",
 		"name": "BPEM - Bibliothèque de psychologie, des sciences de l'éducation et de la motricité",
@@ -321,8 +325,8 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-15"
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
 			},
 			{
 				"title": "Vacances de Carnaval",
@@ -333,7 +337,7 @@
 			{
 				"title": "Assembl\u00e9e annuelle",
 				"is_open": true,
-				"start_date": "2019-09-15",
+				"start_date": "2020-09-15",
 				"times": [{
 					"start_time": "14:00",
 					"end_time": "16:00"
@@ -342,14 +346,15 @@
 			{
 				"title": "Vacances d'\u00e9t\u00e9",
 				"is_open": false,
-				"start_date": "2019-07-01",
-				"end_date": "2019-08-22"
+				"start_date": "2020-07-01",
+				"end_date": "2020-08-22"
 			}
 		]
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Woluwé",
+		"pid" : "5",
 		"code": "BSS",
 		"email": "bibsys@uclouvain.be",
 		"name": "BSS - Bibliothèque des sciences de la Santé",
@@ -439,6 +444,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "6",
 		"code": "BST",
 		"email": "bibsys@uclouvain.be",
 		"name": "BST - Bibliothèque des Sciences et technologies",
@@ -528,6 +534,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "7",
 		"code": "BSPO",
 		"email": "bibsys@uclouvain.be",
 		"name": "BSPO - Bibliothèque de sciences économiques, sociales et politiques",
@@ -617,6 +624,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "8",
 		"code": "CORE",
 		"email": "bibsys@uclouvain.be",
 		"name": "LIDAM - Bibliothèque CORE",
@@ -706,6 +714,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Mont-Godinne",
+		"pid" : "9",
 		"code": "MGD",
 		"email": "bibsys@uclouvain.be",
 		"name": "MG - Bibliothèque de Mont-Godinne",
@@ -795,6 +804,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Bruxelles",
+		"pid" : "10",
 		"code": "SB",
 		"email": "bibsys@uclouvain.be",
 		"name": "Société des Bollandistes",
@@ -884,6 +894,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "11",
 		"code": "INGI",
 		"email": "bibsys@uclouvain.be",
 		"name": "INGI",
@@ -973,6 +984,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "12",
 		"code": "BIUL-Electronique",
 		"email": "bibsys@uclouvain.be",
 		"name": "BIUL - Electronique",
@@ -1062,6 +1074,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "13",
 		"code": "BAIU",
 		"email": "bibsys@uclouvain.be",
 		"name": "BAIU - Bibliothèque d'architecture",
@@ -1151,6 +1164,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Mons",
+		"pid" : "14",
 		"code": "BIMS",
 		"email": "bibsys@uclouvain.be",
 		"name": "BIMS - Bibliothèque de Mons",
@@ -1240,6 +1254,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Maredsous",
+		"pid" : "15",
 		"code": "MARE",
 		"email": "bibsys@uclouvain.be",
 		"name": "MARE - Abbaye de Maredsous",
@@ -1329,6 +1344,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Namur",
+		"pid" : "16",
 		"code": "UNamur-Droit",
 		"email": "bibsys@uclouvain.be",
 		"name": "UNamur-Droit",
@@ -1418,6 +1434,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Namur",
+		"pid" : "17",
 		"code": "UNamur-BUMP",
 		"email": "bibsys@uclouvain.be",
 		"name": "UNamur-BUMP",
@@ -1507,6 +1524,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Bruxelles",
+		"pid" : "18",
 		"code": "USLB",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Bibliothèque Saint-Louis",
@@ -1596,6 +1614,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Bruxelles",
+		"pid" : "19",
 		"code": "USLB-Electronique",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Electronique",
@@ -1685,6 +1704,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Bruxelles",
+		"pid" : "20",
 		"code": "CDE",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Centre d'études européennes",
@@ -1774,6 +1794,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Bruxelles",
+		"pid" : "21",
 		"code": "MH",
 		"email": "bibsys@uclouvain.be",
 		"name": "USLB - Marie Haps",
@@ -1863,6 +1884,7 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "22",
 		"code": "Testothèque",
 		"email": "bibsys@uclouvain.be",
 		"name": "Testothèque",
@@ -1923,8 +1945,8 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-15"
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
 			},
 			{
 				"title": "Vacances de Carnaval",
@@ -1935,7 +1957,7 @@
 			{
 				"title": "Assembl\u00e9e annuelle",
 				"is_open": true,
-				"start_date": "2019-09-15",
+				"start_date": "2020-09-15",
 				"times": [{
 					"start_time": "14:00",
 					"end_time": "16:00"
@@ -1946,6 +1968,96 @@
 				"is_open": false,
 				"start_date": "2019-07-01",
 				"end_date": "2019-08-22"
+			}
+		]
+	},
+        {
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "23",
+		"code": "BMAG",
+		"email": "bibsys@uclouvain.be",
+		"name": "BMAG - Réserve",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "Assembl\u00e9e annuelle",
+				"is_open": true,
+				"start_date": "2020-09-15",
+				"times": [{
+					"start_time": "14:00",
+					"end_time": "16:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-01",
+				"end_date": "2020-08-22"
 			}
 		]
 	}
