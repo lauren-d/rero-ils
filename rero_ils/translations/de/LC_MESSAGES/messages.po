@@ -7913,11 +7913,7 @@ msgstr "Kontaktdaten der Bestellung"
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:179
 msgid "Contact name"
-<<<<<<< HEAD
 msgstr "Name des Kontaktes"
-=======
-msgstr "Name des Kontaktes "
->>>>>>> translations: restore and improve translations
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:180
 msgid "Name of the vendor contact person."

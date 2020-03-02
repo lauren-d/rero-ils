@@ -1,10 +1,10 @@
 [{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "1",
 		"code": "BDRT",
 		"email": "bibsys@uclouvain.be",
 		"name": "BDRT - Droit",
-		"pid" : "1",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -62,19 +62,19 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
 			},
 			{
 				"title": "Vacances de Carnaval",
 				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
 			},
 			{
 				"title": "1er mai",
 				"is_open": false,
-				"start_date": "2019-05-01",
+				"start_date": "2020-05-01",
 				"times": [{
 					"start_time": "07:00",
 					"end_time": "19:00"
@@ -83,18 +83,18 @@
 			{
 				"title": "Vacances d'\u00e9t\u00e9",
 				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
 			}
 		]
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "2",
 		"code": "BFLT",
 		"email": "bibsys@uclouvain.be",
-		"name": "BFLT - Arts, Lettres et Théologie",
-		"pid" : "2",
+		"name": "BFLT - Arts, lettres et théologie ",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -152,13 +152,13 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
 			},
 			{
 				"title": "8 f\u00e9vrier apr\u00e8s-midi",
 				"is_open": false,
-				"start_date": "2019-02-08",
+				"start_date": "2020-02-08",
 				"times": [{
 					"start_time": "12:00",
 					"end_time": "18:00"
@@ -167,7 +167,7 @@
 			{
 				"title": "Dimanche du livre",
 				"is_open": true,
-				"start_date": "2019-05-24T10:00:00.000Z",
+				"start_date": "2020-05-24T10:00:00.000Z",
 				"times": [{
 					"start_time": "10:00",
 					"end_time": "16:00"
@@ -176,7 +176,7 @@
 			{
 				"title": "1er ao\u00fbt",
 				"is_open": false,
-				"start_date": "2019-08-01",
+				"start_date": "2020-08-01",
 				"repeat": {
 					"interval": 1,
 					"period": "yearly",
@@ -190,10 +190,10 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "3",
 		"code": "BISP",
 		"email": "bibsys@uclouvain.be",
 		"name": "BISP - Philosophie",
-		"pid" : "3",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -264,10 +264,10 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
+		"pid" : "4",
 		"code": "BPEM",
 		"email": "bibsys@uclouvain.be",
-		"name": "BPEM - Psychologie, des sciences de l'éducation et de la motricité",
-		"pid" : "4",
+		"name": "BPEM - Psychologie, sciences de l'éducation et de la motricité",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -325,19 +325,1597 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-15"
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
 			},
 			{
 				"title": "Vacances de Carnaval",
 				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
 			},
 			{
 				"title": "Assembl\u00e9e annuelle",
 				"is_open": true,
-				"start_date": "2019-09-15",
+				"start_date": "2020-09-15",
+				"times": [{
+					"start_time": "14:00",
+					"end_time": "16:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-01",
+				"end_date": "2020-08-22"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Woluwé",
+		"pid" : "5",
+		"code": "BSS",
+		"email": "bibsys@uclouvain.be",
+		"name": "BSS - Sciences de la Santé",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "6",
+		"code": "BST",
+		"email": "bibsys@uclouvain.be",
+		"name": "BST - Sciences et technologies",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "7",
+		"code": "BSPO",
+		"email": "bibsys@uclouvain.be",
+		"name": "BSPO - Sciences économiques, sociales et politiques",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "8",
+		"code": "CORE",
+		"email": "bibsys@uclouvain.be",
+		"name": "LIDAM - Operations Research and Econometrics",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Mont-Godinne",
+		"pid" : "9",
+		"code": "MGD",
+		"email": "bibsys@uclouvain.be",
+		"name": "MG - Mont-Godinne",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "10",
+		"code": "SB",
+		"email": "bibsys@uclouvain.be",
+		"name": "Société des Bollandistes",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "11",
+		"code": "INGI",
+		"email": "bibsys@uclouvain.be",
+		"name": "INGI - Ingénierie informatique",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "12",
+		"code": "BIUL-Electronique",
+		"email": "bibsys@uclouvain.be",
+		"name": "BIUL - Electronique",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "sunday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			}
+		],
+		"exception_dates": []
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "13",
+		"code": "BAIU-BXL",
+		"email": "bibsys@uclouvain.be",
+		"name": "BAIU - Architecture Bruxelles",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Mons",
+		"pid" : "14",
+		"code": "BIMS",
+		"email": "bibsys@uclouvain.be",
+		"name": "BIMS - Mons",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Maredsous",
+		"pid" : "15",
+		"code": "MARE",
+		"email": "bibsys@uclouvain.be",
+		"name": "MARE - Abbaye de Maredsous",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Namur",
+		"pid" : "16",
+		"code": "UNamur-Droit",
+		"email": "bibsys@uclouvain.be",
+		"name": "UNamur - Droit",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Namur",
+		"pid" : "17",
+		"code": "UNamur-BUMP",
+		"email": "bibsys@uclouvain.be",
+		"name": "UNamur - BUMP",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "18",
+		"code": "USLB",
+		"email": "bibsys@uclouvain.be",
+		"name": "USLB - Saint-Louis",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "19",
+		"code": "USLB-Electronique",
+		"email": "bibsys@uclouvain.be",
+		"name": "USLB - Electronique",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			},
+			{
+				"day": "sunday",
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
+			}
+		],
+		"exception_dates": []
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "20",
+		"code": "CDE",
+		"email": "bibsys@uclouvain.be",
+		"name": "USLB - Centre d'études européennes",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Bruxelles",
+		"pid" : "21",
+		"code": "MH",
+		"email": "bibsys@uclouvain.be",
+		"name": "USLB - Marie Haps",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "20:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "1er mai",
+				"is_open": false,
+				"start_date": "2020-05-01",
+				"times": [{
+					"start_time": "07:00",
+					"end_time": "19:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
+			}
+		]
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Louvain-la-Neuve",
+		"pid" : "22",
+		"code": "Testothèque",
+		"email": "bibsys@uclouvain.be",
+		"name": "Testothèque",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "Assembl\u00e9e annuelle",
+				"is_open": true,
+				"start_date": "2020-09-15",
 				"times": [{
 					"start_time": "14:00",
 					"end_time": "16:00"
@@ -351,103 +1929,103 @@
 			}
 		]
 	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Woluwé",
-		"code": "BSS",
-		"email": "bibsys@uclouvain.be",
-		"name": "BSS - Sciences de la Santé",
-		"pid" : "5",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
+        {
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
-		"code": "BST",
+		"pid" : "23",
+		"code": "BMAG",
 		"email": "bibsys@uclouvain.be",
-		"name": "BST - Sciences et technologies",
-		"pid" : "6",
+		"name": "BMAG - Réserve",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"opening_hours": [{
+				"day": "monday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "tuesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "wednesday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "thursday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "friday",
+				"is_open": true,
+				"times": [{
+					"start_time": "08:00",
+					"end_time": "18:00"
+				}]
+			},
+			{
+				"day": "saturday",
+				"is_open": false,
+				"times": []
+			},
+			{
+				"day": "sunday",
+				"is_open": false,
+				"times": []
+			}
+		],
+		"exception_dates": [{
+				"title": "Vacances de No\u00ebl",
+				"is_open": false,
+				"start_date": "2019-12-22",
+				"end_date": "2020-01-02"
+			},
+			{
+				"title": "Vacances de Carnaval",
+				"is_open": false,
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
+			},
+			{
+				"title": "Assembl\u00e9e annuelle",
+				"is_open": true,
+				"start_date": "2020-09-15",
+				"times": [{
+					"start_time": "14:00",
+					"end_time": "16:00"
+				}]
+			},
+			{
+				"title": "Vacances d'\u00e9t\u00e9",
+				"is_open": false,
+				"start_date": "2020-07-01",
+				"end_date": "2020-08-22"
+			}
+		]
+	},
+        {
+		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
+		"address": "Tournai",
+		"pid" : "24",
+		"code": "BAIU-TOURNAI",
+		"email": "bibsys@uclouvain.be",
+		"name": "BAIU - Architecture Tournai",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -505,19 +2083,19 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
 			},
 			{
 				"title": "Vacances de Carnaval",
 				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
 			},
 			{
 				"title": "1er mai",
 				"is_open": false,
-				"start_date": "2019-05-01",
+				"start_date": "2020-05-01",
 				"times": [{
 					"start_time": "07:00",
 					"end_time": "19:00"
@@ -526,18 +2104,18 @@
 			{
 				"title": "Vacances d'\u00e9t\u00e9",
 				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
 			}
 		]
 	},
-	{
+        {
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Louvain-la-Neuve",
-		"code": "BSPO",
+		"pid" : "25",
+		"code": "BAIU-LLN",
 		"email": "bibsys@uclouvain.be",
-		"name": "BSPO - Sciences économiques, sociales et politiques",
-		"pid" : "7",
+		"name": "BAIU - Architecture Louvain-la-Neuve",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -595,19 +2173,19 @@
 		"exception_dates": [{
 				"title": "Vacances de No\u00ebl",
 				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
+				"start_date": "2020-12-23",
+				"end_date": "2021-01-04"
 			},
 			{
 				"title": "Vacances de Carnaval",
 				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
+				"start_date": "2020-02-24",
+				"end_date": "2020-02-28"
 			},
 			{
 				"title": "1er mai",
 				"is_open": false,
-				"start_date": "2019-05-01",
+				"start_date": "2020-05-01",
 				"times": [{
 					"start_time": "07:00",
 					"end_time": "19:00"
@@ -616,738 +2194,18 @@
 			{
 				"title": "Vacances d'\u00e9t\u00e9",
 				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Louvain-la-Neuve",
-		"code": "CORE",
-		"email": "bibsys@uclouvain.be",
-		"name": "CORE - Center for Operations Research and Econometrics",
-		"pid" : "8",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Mont-Godinne",
-		"code": "MGD",
-		"email": "bibsys@uclouvain.be",
-		"name": "MG - Clinique de Mont-Godinne",
-		"pid" : "9",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Bruxelles",
-		"code": "SB",
-		"email": "bibsys@uclouvain.be",
-		"name": "Société des Bollandistes",
-		"pid" : "10",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Louvain-la-Neuve",
-		"code": "INGI",
-		"email": "bibsys@uclouvain.be",
-		"name": "INGI",
-		"pid" : "11",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Louvain-la-Neuve",
-		"code": "BIUL-Electronique",
-		"email": "bibsys@uclouvain.be",
-		"name": "BIUL - Electronique",
-		"pid" : "12",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Louvain-la-Neuve",
-		"code": "BAIU",
-		"email": "bibsys@uclouvain.be",
-		"name": "BAIU - Architecture",
-		"pid" : "13",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Mons",
-		"code": "BIMS",
-		"email": "bibsys@uclouvain.be",
-		"name": "BIMS - Mons",
-		"pid" : "14",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Maredsous",
-		"code": "MARE",
-		"email": "bibsys@uclouvain.be",
-		"name": "MARE - Abbaye de Maredsous",
-		"pid" : "15",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/1"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
+				"start_date": "2020-07-15",
+				"end_date": "2020-08-15"
 			}
 		]
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
 		"address": "Namur",
-		"code": "UNamur-Droit",
+		"pid" : "26",
+		"code": "UNamur-Electronique",
 		"email": "bibsys@uclouvain.be",
-		"name": "UNamur-Droit",
-		"pid" : "16",
+		"name": "UNamur - Electronique",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -1355,531 +2213,59 @@
 				"day": "monday",
 				"is_open": true,
 				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
+					"start_time": "00:01",
+					"end_time": "23:59"
 				}]
 			},
 			{
 				"day": "tuesday",
 				"is_open": true,
 				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
+					"start_time": "00:01",
+					"end_time": "23:59"
 				}]
 			},
 			{
 				"day": "wednesday",
 				"is_open": true,
 				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
+					"start_time": "00:01",
+					"end_time": "23:59"
 				}]
 			},
 			{
 				"day": "thursday",
 				"is_open": true,
 				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
+					"start_time": "00:01",
+					"end_time": "23:59"
 				}]
 			},
 			{
 				"day": "friday",
 				"is_open": true,
 				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
+					"start_time": "00:01",
+					"end_time": "23:59"
 				}]
 			},
 			{
 				"day": "saturday",
-				"is_open": false,
-				"times": []
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
 			},
 			{
 				"day": "sunday",
-				"is_open": false,
-				"times": []
+				"is_open": true,
+				"times": [{
+					"start_time": "00:01",
+					"end_time": "23:59"
+				}]
 			}
 		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Namur",
-		"code": "UNamur-BUMP",
-		"email": "bibsys@uclouvain.be",
-		"name": "UNamur-BUMP",
-		"pid" : "17",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/2"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Bruxelles",
-		"code": "USLB",
-		"email": "bibsys@uclouvain.be",
-		"name": "USLB - Bibliothèque Saint-Louis",
-		"pid" : "18",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/3"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Bruxelles",
-		"code": "USLB-Electronique",
-		"email": "bibsys@uclouvain.be",
-		"name": "USLB - Electronique",
-		"pid" : "19",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/3"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Bruxelles",
-		"code": "CDE",
-		"email": "bibsys@uclouvain.be",
-		"name": "USLB - Centre d'études européennes",
-		"pid" : "20",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/3"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
-	},
-	{
-		"$schema": "https://ils.rero.ch/schema/libraries/library-v0.0.1.json",
-		"address": "Bruxelles",
-		"code": "MH",
-		"email": "bibsys@uclouvain.be",
-		"name": "USLB - Marie Haps",
-		"pid" : "21",
-		"organisation": {
-			"$ref": "https://ils.rero.ch/api/organisations/3"
-		},
-		"opening_hours": [{
-				"day": "monday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "tuesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "wednesday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "thursday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "friday",
-				"is_open": true,
-				"times": [{
-					"start_time": "08:00",
-					"end_time": "20:00"
-				}]
-			},
-			{
-				"day": "saturday",
-				"is_open": false,
-				"times": []
-			},
-			{
-				"day": "sunday",
-				"is_open": false,
-				"times": []
-			}
-		],
-		"exception_dates": [{
-				"title": "Vacances de No\u00ebl",
-				"is_open": false,
-				"start_date": "2018-12-22",
-				"end_date": "2019-01-06"
-			},
-			{
-				"title": "Vacances de Carnaval",
-				"is_open": false,
-				"start_date": "2019-03-01",
-				"end_date": "2019-03-11"
-			},
-			{
-				"title": "1er mai",
-				"is_open": false,
-				"start_date": "2019-05-01",
-				"times": [{
-					"start_time": "07:00",
-					"end_time": "19:00"
-				}]
-			},
-			{
-				"title": "Vacances d'\u00e9t\u00e9",
-				"is_open": false,
-				"start_date": "2019-07-15",
-				"end_date": "2019-08-15"
-			}
-		]
+		"exception_dates": []
 	}
-
 ]

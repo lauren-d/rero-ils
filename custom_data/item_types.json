@@ -31,8 +31,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "4",
-		"name": "Video",
-		"description": "Video",
+		"name": "Vidéo",
+		"description": "Vidéo",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -91,8 +91,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "10",
-		"name": "Video non-empruntable",
-		"description": "Video non-empruntable",
+		"name": "Vidéo non-empruntable",
+		"description": "Vidéo non-empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -121,8 +121,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "13",
-		"name": "Livre réserve",
-		"description": "Livre réserve",
+		"name": "Réserve",
+		"description": "Réserve",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -136,33 +136,33 @@
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
-		"type": "standard"
+                "type": "standard"
 	},
-	{
+        {
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "15",
-		"name": "Livre en prêt interne",
-		"description": "Livre en prêt interne",
+		"name": "Books in-house",
+		"description": "Books in-house",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
-		"type": "standard"
+                "type": "standard"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "16",
-		"name": "test",
-		"description": "test",
+		"name": "Test",
+		"description": "Test Psycho",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
-		"type": "standard"
+                "type": "standard"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "17",
-		"name": "Livre",
-		"description": "Livre",
+		"name": "Livre empruntable",
+		"description": "Livre empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -171,8 +171,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "18",
-		"name": "Revue",
-		"description": "Revue",
+		"name": "Revue empruntable",
+		"description": "Revue empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -181,8 +181,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "19",
-		"name": "Mémoire",
-		"description": "Mémoire",
+		"name": "Mémoire empruntable",
+		"description": "Mémoire empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -191,8 +191,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "20",
-		"name": "Thèse",
-		"description": "Thèse",
+		"name": "Thèse empruntable",
+		"description": "Thèse empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -201,8 +201,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "21",
-		"name": "Autre support",
-		"description": "Autre support",
+		"name": "Autre support empruntable",
+		"description": "Autre support empruntable",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -261,8 +261,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "27",
-		"name": "Livre en réserve",
-		"description": "Livre en réserve",
+		"name": "Reserve",
+		"description": "Reserve",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -271,8 +271,8 @@
 	{
 		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
 		"pid" : "28",
-		"name": "Livre en séminaire",
-		"description": "Livre en séminaire",
+		"name": "Livres Cours",
+		"description": "Livres Cours",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/2"
 		},
@@ -369,3 +369,4 @@
 		"type": "standard"
 	}
 ]
+
