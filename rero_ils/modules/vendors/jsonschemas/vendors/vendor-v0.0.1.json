@@ -71,6 +71,9 @@
       "enum": [
         "fre",
         "eng",
+        "esp",
+        "spa",
+        "dut",
         "ita",
         "ger"
       ],
@@ -142,8 +145,7 @@
         "phone": {
           "title": "Phone number",
           "description": "Phone number with the international prefix, without spaces.",
-          "type": "string",
-          "pattern": "^\\+[0-9]*$"
+          "type": "string"
         },
         "email": {
           "title": "Email",
@@ -231,9 +233,12 @@
       "enum": [
         "CHF",
         "EUR",
+        "GBP",
+        "CAD",
+        "AUD",
         "USD"
       ],
-      "default": "CHF",
+      "default": "EUR",
       "pattern": "^[A-Z]{3}$"
     },
     "vat_rate": {

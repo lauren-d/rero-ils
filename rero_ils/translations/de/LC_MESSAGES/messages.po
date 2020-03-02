@@ -7278,11 +7278,7 @@ msgstr "Kontaktdaten der Bestellung"
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:179
 msgid "Contact name"
-<<<<<<< HEAD
 msgstr "Name des Kontaktes"
-=======
-msgstr "Name des Kontaktes "
->>>>>>> translations: restore and improve translations
 
 #: rero_ils/modules/vendors/jsonschemas/vendors/vendor-v0.0.1.json:194
 msgid "A valid postal code with a min of 4 characters."
