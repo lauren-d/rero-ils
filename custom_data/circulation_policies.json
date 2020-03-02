@@ -59,8 +59,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "4",
-    "name": "Circulation - PRS",
-    "description": "Circulation - PRS",
+    "name": "Personnel UCL",
+    "description": "Personnel UCL",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     },
@@ -136,8 +136,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "5",
-    "name": "Circulation - ETD/EXT",
-    "description": "Circulation - ETD/EXT",
+    "name": "Etudiant/Extérieur",
+    "description": "Etudiant/Extérieur",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     },
@@ -269,8 +269,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "6",
-    "name": "Circulation UNamur - PRS",
-    "description": "Circulation UNamur - PRS",
+    "name": "Personnel UNamur",
+    "description": "Personnel UNamur",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/2"
     },
@@ -329,8 +329,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "7",
-    "name": "Circulation UNamur - ETD/EXT",
-    "description": "Circulation UNamur - ETD/EXT",
+    "name": "Etudiant/Exterieur UNamur",
+    "description": "Etudiant/Exterieur UNamur",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/2"
     },
@@ -429,8 +429,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "8",
-    "name": "Circulation USL-B - PRS",
-    "description": "Circulation USL-B - PRS",
+    "name": "Personnel USL-B",
+    "description": "Personnel USL-B",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/3"
     },
@@ -474,8 +474,8 @@
   {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "9",
-    "name": "Circulation USL-B - ETD/EXT",
-    "description": "Circulation USL-B - ETD/EXT",
+    "name": "Etudiant/Extérieur USL-B",
+    "description": "Etudiant/Extérieur USL-B",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/3"
     },
@@ -543,8 +543,8 @@
 {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "10",
-    "name": "No checkout",
-    "description": "No checkout.",
+    "name": "Non empruntable UCL",
+    "description": "Non empruntable UCL",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     },
@@ -726,8 +726,8 @@
 {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "11",
-    "name": "No checkout UNamur",
-    "description": "No checkout UNamur",
+    "name": "Non empruntable UNamur",
+    "description": "Non empruntable UNamur",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/2"
     },
@@ -861,8 +861,8 @@
 {
     "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
     "pid" : "12",
-    "name": "No checkout USL-B",
-    "description": "No checkout USL-B",
+    "name": "Non empruntable USL-B",
+    "description": "Non empruntable USL-B",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/3"
     },
@@ -922,3 +922,4 @@
     ]
   }
 ]
+
