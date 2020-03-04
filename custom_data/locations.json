@@ -99,9 +99,7 @@
 		"name": "Bibliothèque du Centre d'études théâtrales",
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
-		},
-		"is_pickup": true,
-		"pickup_name": "BFLT-BCET - Centre d'études théâtrales"
+		}
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
