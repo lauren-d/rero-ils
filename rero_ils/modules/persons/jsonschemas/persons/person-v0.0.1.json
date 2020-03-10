@@ -78,7 +78,7 @@
       "type": "object"
     },
     "idref": {
-      "title": "IdRef authorities",
+      "title": "IDREF authorities",
       "type": "object"
     }
   }

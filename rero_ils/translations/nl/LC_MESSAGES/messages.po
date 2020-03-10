@@ -204,7 +204,14 @@ msgstr "Deutsch"
 msgid "ui_language_it"
 msgstr "Italiano"
 
-#: rero_ils/manual_translations.txt:46
+#: rero_ils/manual_translations.txt:50
+msgid "ui_language_nl"
+msgstr "Nederlands"
+
+#: rero_ils/manual_translations.txt:51
+msgid "ui_language_es"
+msgstr "Español"
+
 msgid "bf:Publication"
 msgstr "Publicatie"
 
@@ -8100,4 +8107,3 @@ msgstr "Klik hier om uw wachtwoord opnieuw in te stellen"
 
 #~ msgid "Formats"
 #~ msgstr ""
-

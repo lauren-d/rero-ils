@@ -73,7 +73,7 @@ class Person(IlsRecord):
         ref_split = ref.split('/')
         ref_type = ref_split[-2]
         ref_pid = ref_split[-1]
-        db.session.begin_nested()
+
         if ref_type == 'mef':
             pers = cls.get_record_by_pid(ref_pid)
         else:
@@ -100,7 +100,7 @@ class Person(IlsRecord):
                     del metadata['$schema']
                 # we have to commit because create
                 # uses db.session.begin_nested
-                pers = cls.create(metadata, dbcommit=True)
+                pers = cls.create(metadata, dbcommit=True, reindex=True)
             except Exception as err:
                 db.session.rollback()
                 current_app.logger.error('Get MEF record: {type}:{pid}'.format(
@@ -109,9 +109,6 @@ class Person(IlsRecord):
                 ))
                 current_app.logger.error(err)
                 return None
-        db.session.commit()
-        if pers:
-            pers.reindex()
         return pers
 
     def dumps_for_document(self):
