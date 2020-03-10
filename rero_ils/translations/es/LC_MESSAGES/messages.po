@@ -222,6 +222,14 @@ msgstr "Deutsch"
 msgid "ui_language_it"
 msgstr "Italiano"
 
+#: rero_ils/manual_translations.txt:50
+msgid "ui_language_nl"
+msgstr "Nederlands"
+
+#: rero_ils/manual_translations.txt:51
+msgid "ui_language_es"
+msgstr "Español"
+
 #: rero_ils/manual_translations.txt:52
 #: rero_ils/modules/documents/jsonschemas/documents/document-minimal-v0.0.1_src.json:389
 #: rero_ils/modules/documents/jsonschemas/documents/document-v0.0.1_src.json:389

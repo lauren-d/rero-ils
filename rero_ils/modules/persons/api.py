@@ -66,7 +66,6 @@ class Person(IlsRecord):
     def get_record_by_mef_pid(cls, pid):
         """Get record using MEF REST API."""
         try:
-            db.session.begin_nested()
             rec = cls.get_record_by_pid(pid)
             if not rec:
                 # No data found: request on MEF URL
@@ -75,26 +74,16 @@ class Person(IlsRecord):
                 metadata = data.get('metadata')
                 if '$schema' in metadata:
                     del metadata['$schema']
-                rec = cls.create(metadata, dbcommit=True)
+                rec = cls.create(metadata, 
+                    dbcommit=True,
+                    reindex=True)
         except Exception as err:
             db.session.rollback()
             current_app.logger.error('ERROR get MEF record: {pid}'.format(
                 pid=pid
             ))
             return None
-        db.session.commit()
-        rec.reindex()
-        return rec
-
-        rec = cls.get_record_by_pid(pid)
-        if not rec:
-            # No data found: request on MEF URL
-            data = cls._get_mef_record(pid)
-            # Register MEF person
-            metadata = data.get('metadata')
-            if '$schema' in metadata:
-                del metadata['$schema']
-            rec = cls.create(metadata, dbcommit=True)
+        
         return rec
 
     def dumps_for_document(self):
