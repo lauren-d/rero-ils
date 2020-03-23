@@ -34,7 +34,7 @@
       "type": "array",
       "uniqueItems": true,
       "minItems": 1,
-      "maxItems": 3,
+      "maxItems": 4,
       "items": {
         "type": "string",
         "enum": [

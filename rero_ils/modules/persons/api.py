@@ -74,14 +74,20 @@ class Person(IlsRecord):
                 metadata = data.get('metadata')
                 if '$schema' in metadata:
                     del metadata['$schema']
+                if metadata['idref']:
+                    sources = metadata.get(
+                        'sources',[])
+                    sources.append('idref')
+                    metadata['sources'] = sources
                 rec = cls.create(metadata, 
                     dbcommit=True,
                     reindex=True)
         except Exception as err:
             db.session.rollback()
-            current_app.logger.error('ERROR get MEF record: {pid}'.format(
+            current_app.logger.error('Get MEF record: {pid}'.format(
                 pid=pid
             ))
+            current_app.logger.error(err)
             return None
         
         return rec
