@@ -1056,7 +1056,7 @@
 		"pid" : "13",
 		"code": "BAIU-BXL",
 		"email": "bibsys@uclouvain.be",
-		"name": "BAIU - Architecture Bruxelles",
+		"name": "BAIU - Arts et Architecture (Bruxelles)",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -2025,7 +2025,7 @@
 		"pid" : "24",
 		"code": "BAIU-TOURNAI",
 		"email": "bibsys@uclouvain.be",
-		"name": "BAIU - Architecture Tournai",
+		"name": "BAIU - Arts & Architecture (Tournai)",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
@@ -2115,7 +2115,7 @@
 		"pid" : "25",
 		"code": "BAIU-LLN",
 		"email": "bibsys@uclouvain.be",
-		"name": "BAIU - Architecture Louvain-la-Neuve",
+		"name": "BAIU - Arts & Architecture (Louvain-la-Neuve)",
 		"organisation": {
 			"$ref": "https://ils.rero.ch/api/organisations/1"
 		},
