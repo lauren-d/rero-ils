@@ -18,6 +18,7 @@
 """Signals connector for Document."""
 
 from flask import current_app
+
 from ..documents.api import DocumentsSearch
 from ..holdings.api import Holding, HoldingsSearch
 from ..items.api import ItemsSearch

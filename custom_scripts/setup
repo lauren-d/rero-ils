@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-DATA_PATH=$(pipenv --where)/custom_data
+DATA_PATH=./custom_data
 
 # Parameters description:
 #  --create_items_holdings_small:
@@ -92,26 +92,9 @@ ENABLE_WARNINGS=${ENABLE_WARNINGS:=true}
 # Displays program name
 msg "PROGRAM: ${PROGRAM}"
 
-# PIPENV is a mandatory condition to launch this program!
-check_virtualenv() {
-  # real_prefix exists: no doubt, you're in a Virtual Environment!
-  REAL_PREFIX=`python -c "import sys; print(1) if hasattr(sys, 'real_prefix') else print(0)"`
-  if [ "${REAL_PREFIX}" == 1 ]; then
-    return 1
-  fi
-  # Sometimes (in Docker i.e.), real_prefix doesn't exist. We found another way
-  # sys.base_prefix should be different from sys.prefix
-  PREFIX_DIFFERENT=`python -c "import sys; print(sys.base_prefix != sys.prefix)"`
-  if [ "${PREFIX_DIFFERENT}" == "True" ]; then
-    return 1
-  fi
-  return 0
-}
-
-check_virtualenv
-is_virtualenv="$?"
-if [ "${is_virtualenv}" != "1" ]; then
-  error_msg+exit "Error - Launch this script via pipenv command:\n\tpipenv run setup"
+# POETRY is a mandatory condition to launch this program!
+if [[ -z "${VIRTUAL_ENV}" ]]; then
+  error_msg+exit "Error - Launch this script via poetry command:\n\tpoetry run ${PROGRAM}"
 fi
 
 # options may be followed by one colon to indicate they have a required argument
@@ -142,7 +125,7 @@ do
     shift
 done
 
-if [ ! -d ${DATA_PATH} ]; then
+if [[ ! -d "${DATA_PATH}" ]]; then
     error_msg+exit "Error - data path does not exist: ${DATA_PATH}"
 fi
 
@@ -169,24 +152,25 @@ if ! ${ENABLE_WARNINGS}
 then
     # Disables different warnings from used applications
     # --------------------------------------------------
-    # avoid 'There are .env of .flaskenv' messages
-    export FLASK_SKIP_DOTENV=1
     # avoid Python deprecation warnings
     export PYTHONWARNINGS="ignore::DeprecationWarning"
 fi
 
 # Purge celery
 info_msg "Purge celery"
-celery purge -A invenio_app.celery -f
+celery purge -A rero_ils.celery -f
 # Clean redis
 info_msg "Clean redis"
 eval "${PREFIX} invenio shell --no-term-title -c \"import redis; redis.StrictRedis.from_url(app.config['CACHE_REDIS_URL']).flushall(); print('Cache cleared')\""
+eval ${PREFIX} invenio scheduler init -r
+
 eval ${PREFIX} invenio db destroy --yes-i-know
 eval ${PREFIX} invenio db init create
 eval ${PREFIX} invenio index queue purge delete
 set -e
 eval ${PREFIX} invenio index destroy --force --yes-i-know
 # Override index init to load templates before mapping
+# TODO: check if invenio index init --force works (to delete utils init --force)
 info_msg "Override index init to load templates before mapping"
 eval ${PREFIX} invenio utils init --force
 # eval ${PREFIX} invenio index init --force
@@ -201,10 +185,7 @@ then
     mkdir -p tmp
     invenio utils dump_es_mappings -o tmp/mapping_before_setup.txt
 fi
-
-# eval ${PREFIX} invenio index init --force
 eval ${PREFIX} invenio chamo queue init
-
 # Create admin role to restrict access
 info_msg "Create admin role to restrict access"
 eval ${PREFIX} invenio roles create admin
@@ -213,10 +194,12 @@ eval ${PREFIX} invenio access allow superuser-access role admin
 # create new user
 info_msg "Create new admin user"
 eval ${PREFIX} invenio users create -a admin@rero.ch --password administrator
+eval ${PREFIX} invenio users create -a editor@rero.ch --password editor
 
 # confirm users
 info_msg "Confirm admin creation"
 eval ${PREFIX} invenio users confirm admin@rero.ch
+eval ${PREFIX} invenio users confirm editor@rero.ch
 
 # create roles
 info_msg "Create roles: admin, patron, librarian and system librarian"
@@ -231,6 +214,9 @@ eval "${PREFIX} invenio roles create -d 'Librarian' librarian"
 # create a role for users qualified as a System librarian
 eval "${PREFIX} invenio roles create -d 'System Librarian' system_librarian"
 
+# create a role for users qualified as a System librarian
+eval "${PREFIX} invenio roles create -d 'Documentation Editor' editor"
+
 # grant accesses to action roles
 info_msg "Grant access to action roles (admins, superusers)"
 eval ${PREFIX} invenio access allow admin-access role admins
@@ -240,6 +226,7 @@ eval ${PREFIX} invenio access allow superuser-access role superusers
 info_msg "Grant roles to users"
 eval ${PREFIX} invenio roles add admin@rero.ch admins
 eval ${PREFIX} invenio roles add admin@rero.ch superusers
+eval ${PREFIX} invenio roles add editor@rero.ch editor
 
 # Generate fixtures
 info_msg "Generate fixtures:"
@@ -288,5 +275,8 @@ eval ${PREFIX} invenio utils reindex -t budg --yes-i-know --no-info
 #eval ${PREFIX} invenio fixtures create --pid_type acac ${DATA_PATH}/acq_accounts.json --append
 #eval ${PREFIX} invenio utils reindex -t acac --yes-i-know --no-info
 
-# run indexing
 eval ${PREFIX} invenio utils runindex --raise-on-error
+
+date
+success_msg "Perfect ${PROGRAM}! See you soon…"
+exit 0

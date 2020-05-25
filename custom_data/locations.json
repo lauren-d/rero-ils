@@ -1,8 +1,10 @@
-[{
+[
+        {
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"pid" : "1",
 		"code": "BDRT-Bibliothèque",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/1"
 		},
@@ -14,6 +16,7 @@
 		"pid" : "2",
 		"code": "BDRT-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/1"
 		}
@@ -23,6 +26,7 @@
 		"pid" : "3",
 		"code": "BDRT-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/1"
 		}
@@ -32,6 +36,7 @@
 		"pid" : "4",
 		"code": "BDRT-FA",
 		"name": "Fonds ancien",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/1"
 		}
@@ -41,6 +46,7 @@
 		"pid" : "5",
 		"code": "BFLT",
 		"name": "Bibliothèque des arts et des lettres",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		},
@@ -52,6 +58,7 @@
 		"pid" : "6",
 		"code": "BFLT-BJOF",
 		"name": "Publications officielles et journaux",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -61,15 +68,19 @@
 		"pid" : "7",
 		"code": "BMAG",
 		"name": "Réserve patrimoniale",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/23"
-		}
+    },
+    "is_pickup": true,
+		"pickup_name": "BMAG - Bibliopôle"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"pid" : "8",
 		"code": "BTEC",
 		"name": "Bibliothèque de théologie",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -79,6 +90,7 @@
 		"pid" : "9",
 		"code": "BFLT-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -88,6 +100,7 @@
 		"pid" : "10",
 		"code": "BMAG-RP",
 		"name": "Réserve précieuse",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/23"
 		}
@@ -97,6 +110,7 @@
 		"pid" : "11",
 		"code": "BFLT-BCET",
 		"name": "Bibliothèque du Centre d'études théâtrales",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -106,6 +120,7 @@
 		"pid" : "12",
 		"code": "BFLT-ARCA",
 		"name": "Archives du monde catholique",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -115,6 +130,7 @@
 		"pid" : "13",
 		"code": "BFLT-Musée",
 		"name": "Musée",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
@@ -124,6 +140,7 @@
 		"pid" : "14",
 		"code": "BISP-Bibliothèque",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/3"
 		},
@@ -135,6 +152,7 @@
 		"pid" : "15",
 		"code": "BISP-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/3"
 		}
@@ -144,6 +162,7 @@
 		"pid" : "16",
 		"code": "BISP-BLON",
 		"name": "Centre d'Archives Maurice Blondel",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/3"
 		}
@@ -153,6 +172,7 @@
 		"pid" : "17",
 		"code": "BISP-FMH",
 		"name": "Fonds Michel Henry",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/3"
 		}
@@ -162,6 +182,7 @@
 		"pid" : "18",
 		"code": "BPEM",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		},
@@ -173,6 +194,7 @@
 		"pid" : "19",
 		"code": "BPEM-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		}
@@ -182,6 +204,7 @@
 		"pid" : "20",
 		"code": "BPEM-FOPA",
 		"name": "FOPA",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		}
@@ -191,6 +214,7 @@
 		"pid" : "21",
 		"code": "BPEM-CIO",
 		"name": "CIO",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		}
@@ -200,6 +224,7 @@
 		"pid" : "22",
 		"code": "BPEM-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		}
@@ -209,6 +234,7 @@
 		"pid" : "23",
 		"code": "BPEM-Reserve-Coubertin",
 		"name": "Réserve Coubertin",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/4"
 		}
@@ -218,6 +244,7 @@
 		"pid" : "24",
 		"code": "BSS",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/5"
 		},
@@ -229,6 +256,7 @@
 		"pid" : "25",
 		"code": "CHPM",
 		"name": "Centre d'études d'histoire de la pharmacie et du médicament",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/5"
 		}
@@ -238,6 +266,7 @@
 		"pid" : "26",
 		"code": "BSS-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/5"
 		}
@@ -247,6 +276,7 @@
 		"pid" : "27",
 		"code": "SEDOC",
 		"name": "SEDOC",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/5"
 		}
@@ -256,6 +286,7 @@
 		"pid" : "28",
 		"code": "BSS-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/5"
 		}
@@ -265,6 +296,7 @@
 		"pid" : "29",
 		"code": "BST",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		},
@@ -276,6 +308,7 @@
 		"pid" : "30",
 		"code": "BST-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -285,6 +318,7 @@
 		"pid" : "31",
 		"code": "BST-BDH",
 		"name": "Bibliothèque de Hemptinne",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -294,6 +328,7 @@
 		"pid" : "32",
 		"code": "BST-ECRU",
 		"name": "ECRU",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -303,6 +338,7 @@
 		"pid" : "33",
 		"code": "BST-Unités",
 		"name": "Bibliothèques locales",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -312,6 +348,7 @@
 		"pid" : "34",
 		"code": "BST-BAPA",
 		"name": "BAPA",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -321,6 +358,7 @@
 		"pid" : "35",
 		"code": "BST-ELIA-ECAV",
 		"name": "ELIA - ECAV",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -330,6 +368,7 @@
 		"pid" : "36",
 		"code": "BST-ELIA-POPS",
 		"name": "ELIA - POPS",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/6"
 		}
@@ -339,6 +378,7 @@
 		"pid" : "37",
 		"code": "BSPO",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/7"
 		},
@@ -350,6 +390,7 @@
 		"pid" : "38",
 		"code": "BSPO-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/7"
 		}
@@ -359,6 +400,7 @@
 		"pid" : "39",
 		"code": "BSPO-IRES",
 		"name": "IRES",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/7"
 		}
@@ -368,6 +410,7 @@
 		"pid" : "41",
 		"code": "LIDAM",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/8"
 		}
@@ -377,6 +420,7 @@
 		"pid" : "42",
 		"code": "MGD",
 		"name": "Bibliothèque",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/9"
 		}
@@ -386,6 +430,7 @@
 		"pid" : "43",
 		"code": "SB",
 		"name": "Bibliothèque",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/10"
 		}
@@ -395,6 +440,7 @@
 		"pid" : "44",
 		"code": "INGI",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/11"
 		}
@@ -404,6 +450,7 @@
 		"pid" : "45",
 		"code": "BIUL-Electronique",
 		"name": "Online",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/12"
 		},
@@ -414,39 +461,43 @@
 		"pid" : "46",
 		"code": "BAIU-Bruxelles",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/13"
 		},
 		"is_pickup": true,
-		"pickup_name": "BAIU - Architecture Bruxelles"
+		"pickup_name": "BAIU - Arts & Architecture (Bruxelles)"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"pid" : "47",
 		"code": "BAIU-LLN",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/25"
 		},
 		"is_pickup": true,
-		"pickup_name": "BAIU - Architecture LLN"
+		"pickup_name": "BAIU - Arts & Architecture (LLN)"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"pid" : "48",
 		"code": "BAIU-Tournai",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/24"
 		},
 		"is_pickup": true,
-		"pickup_name": "BAIU - Architecture Tournai"
+		"pickup_name": "BAIU - Arts & Architecture (Tournai)"
 	},
 	{
 		"$schema": "https://ils.rero.ch/schema/locations/location-v0.0.1.json",
 		"pid" : "49",
 		"code": "BAIU-Bruxelles-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/13"
 		}
@@ -456,6 +507,7 @@
 		"pid" : "50",
 		"code": "BIMS",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/14"
 		},
@@ -467,6 +519,7 @@
 		"pid" : "52",
 		"code": "BIMS-Réserve",
 		"name": "Réserve",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/14"
 		}
@@ -476,6 +529,7 @@
 		"pid" : "53",
 		"code": "MARE",
 		"name": "Bibliothèque",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/15"
 		}
@@ -485,6 +539,7 @@
 		"pid" : "54",
 		"code": "UNamur-Electronique",
 		"name": "Online",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/26"
 		},
@@ -495,6 +550,7 @@
 		"pid" : "55",
 		"code": "Droit-Bibliothèque",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
@@ -504,6 +560,7 @@
 		"pid" : "56",
 		"code": "Droit-CRIDS",
 		"name": "CRIDS",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
@@ -513,6 +570,7 @@
 		"pid" : "57",
 		"code": "Droit-DFLS",
 		"name": "DFLS",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
@@ -522,6 +580,7 @@
 		"pid" : "58",
 		"code": "Droit-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/16"
 		}
@@ -531,6 +590,7 @@
 		"pid" : "59",
 		"code": "BUMP-AD",
 		"name": "Accès direct",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		},
@@ -542,6 +602,7 @@
 		"pid" : "60",
 		"code": "BUMP-Magasin",
 		"name": "Magasin",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -551,6 +612,7 @@
 		"pid" : "61",
 		"code": "BUMP-RP",
 		"name": "Réserve précieuse",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -560,6 +622,7 @@
 		"pid" : "62",
 		"code": "BUMP-PA",
 		"name": "Publications académiques",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -569,6 +632,7 @@
 		"pid" : "63",
 		"code": "BUMP-Grafé",
 		"name": "Magasin (Grafé)",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -578,6 +642,7 @@
 		"pid" : "64",
 		"code": "Département",
 		"name": "Département",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -587,6 +652,7 @@
 		"pid" : "65",
 		"code": "BUMP-Cours",
 		"name": "Cours",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/17"
 		}
@@ -596,6 +662,7 @@
 		"pid" : "66",
 		"code": "USLB-Bibliothèque",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/18"
 		},
@@ -607,6 +674,7 @@
 		"pid" : "67",
 		"code": "USLB-Botanique",
 		"name": "Magasin Botanique",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/18"
 		}
@@ -616,6 +684,7 @@
 		"pid" : "68",
 		"code": "USLB-Ommegang",
 		"name": "Magasin Ommegang",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/18"
 		}
@@ -625,6 +694,7 @@
 		"pid" : "69",
 		"code": "USLB-Electronique",
 		"name": "Online",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/19"
 		},
@@ -635,6 +705,7 @@
 		"pid" : "70",
 		"code": "USLB-CDE",
 		"name": "Centre d'études européennes",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/20"
 		}
@@ -644,6 +715,7 @@
 		"pid" : "71",
 		"code": "USLB-MH",
 		"name": "Marie Haps",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/21"
 		}
@@ -653,6 +725,7 @@
 		"pid" : "72",
 		"code": "Testothèque",
 		"name": "Bibliothèque",
+		"allow_request" : true,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/22"
 		}
@@ -662,6 +735,7 @@
 		"pid" : "73",
 		"code": "BFLT-ARCV",
 		"name": "Service des Archives",
+		"allow_request" : false,
 		"library": {
 			"$ref": "https://ils.rero.ch/api/libraries/2"
 		}
