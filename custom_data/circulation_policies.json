@@ -13,7 +13,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": true
   },
@@ -31,7 +31,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": true
   },
@@ -49,7 +49,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": true
   },
@@ -67,7 +67,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -143,11 +143,11 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
-      {
+            {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -211,7 +211,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -280,7 +280,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "is_default": false,
     "settings": [
       {
@@ -340,7 +340,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "is_default": false,
     "settings": [
       {
@@ -400,7 +400,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "is_default": false,
     "settings": [
       {
@@ -459,7 +459,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -519,7 +519,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -579,7 +579,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2,
+    "reminder_fee_amount": 2.0,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
