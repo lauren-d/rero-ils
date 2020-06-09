@@ -1,0 +1,372 @@
+[{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "1",
+		"name": "Livre",
+		"description": "Livre",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "2",
+		"name": "Revue non-empruntable",
+		"description": "Revue non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "3",
+		"name": "Thèse non-empruntable",
+		"description": "Thèse non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "4",
+		"name": "Vidéo",
+		"description": "Vidéo",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "5",
+		"name": "Audio",
+		"description": "Audio",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "6",
+		"name": "CD-ROM",
+		"description": "CD-ROM",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "7",
+		"name": "Livre non-empruntable",
+		"description": "Livre non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "8",
+		"name": "Revue",
+		"description": "Revue",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "9",
+		"name": "Thèse",
+		"description": "Thèse",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "10",
+		"name": "Vidéo non-empruntable",
+		"description": "Vidéo non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "11",
+		"name": "Audio non-empruntable",
+		"description": "Audio non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "12",
+		"name": "CD-ROM non-empruntable",
+		"description": "CD-ROM non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "13",
+		"name": "Réserve",
+		"description": "Réserve",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "14",
+		"name": "Prêt longue durée",
+		"description": "Prêt longue durée",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+                "type": "standard"
+	},
+        {
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "15",
+		"name": "Books in-house",
+		"description": "Books in-house",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+                "type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "16",
+		"name": "Test",
+		"description": "Test Psycho",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/1"
+		},
+                "type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "17",
+		"name": "Livre empruntable",
+		"description": "Livre empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "18",
+		"name": "Revue empruntable",
+		"description": "Revue empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "19",
+		"name": "Mémoire empruntable",
+		"description": "Mémoire empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "20",
+		"name": "Thèse empruntable",
+		"description": "Thèse empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "21",
+		"name": "Autre support empruntable",
+		"description": "Autre support empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "22",
+		"name": "Livre non-empruntable",
+		"description": "Livre non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "23",
+		"name": "Revue non-empruntable",
+		"description": "Revue non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "24",
+		"name": "Mémoire non-empruntable",
+		"description": "Mémoire non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "25",
+		"name": "Thèse non-empruntable",
+		"description": "Thèse non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "26",
+		"name": "Autre support non-empruntable",
+		"description": "Autre support non-empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "27",
+		"name": "Reserve",
+		"description": "Reserve",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "28",
+		"name": "Livres Cours",
+		"description": "Livres Cours",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "29",
+		"name": "Livre usuel empruntable",
+		"description": "Livre usuel empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/2"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "30",
+		"name": "Référence",
+		"description": "Référence",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "31",
+		"name": "Revue",
+		"description": "Revue",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "32",
+		"name": "Revue non empruntable",
+		"description": "Revue non empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "33",
+		"name": "Prêt normal",
+		"description": "Prêt normal",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "34",
+		"name": "Travaux de Droit",
+		"description": "Travaux de Droit",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "35",
+		"name": "Réserve",
+		"description": "Réserve",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "36",
+		"name": "Consignation",
+		"description": "Consignation",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	},
+	{
+		"$schema": "https://ils.rero.ch/schema/item_types/item_type-v0.0.1.json",
+		"pid" : "37",
+		"name": "Référence empruntable",
+		"description": "Référence empruntable",
+		"organisation": {
+			"$ref": "https://ils.rero.ch/api/organisations/3"
+		},
+		"type": "standard"
+	}
+]
+

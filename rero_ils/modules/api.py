@@ -402,10 +402,10 @@ class IlsRecordsIndexer(RecordIndexer):
     def index(self, record):
         """Indexing a record."""
         return_value = super(IlsRecordsIndexer, self).index(record)
-        index_name, doc_type = current_record_to_index(record)
+        # index_name, doc_type = current_record_to_index(record)
         # TODO: Do we need to flush everytime the ES index?
         # Tests depends on this at the moment.
-        current_search.flush_and_refresh(index_name)
+        # current_search.flush_and_refresh(index_name)
         return return_value
 
     def delete(self, record):

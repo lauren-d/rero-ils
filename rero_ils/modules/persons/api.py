@@ -102,6 +102,8 @@ class Person(IlsRecord):
                 # we have to commit because create
                 # uses db.session.begin_nested
                 pers = cls.create(metadata, dbcommit=True)
+                if pers:
+                    pers.reindex()
             except Exception as err:
                 db.session.rollback()
                 current_app.logger.error('Get MEF record: {type}:{pid}'.format(
@@ -111,8 +113,6 @@ class Person(IlsRecord):
                 current_app.logger.error(err)
                 return None
         db.session.commit()
-        if pers:
-            pers.reindex()
         return pers
 
     def dumps_for_document(self):

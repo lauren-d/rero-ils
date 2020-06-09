@@ -895,7 +895,8 @@ class ReroIlsMarc21Overdo(ReroIlsOverdo):
         fields_044 = self.get_fields(tag='044')
         if fields_044:
             field_044 = fields_044[0]
-            cantons_codes = self.get_subfields(field_044, 'c')
+            if self.get_subfields(field_044, 'a'):
+                self.country = self.get_subfields(field_044, 'a')[0]
             for cantons_codes in self.get_subfields(field_044, 'c'):
                 try:
                     canton = cantons_codes.split('-')[1].strip()
@@ -910,7 +911,8 @@ class ReroIlsMarc21Overdo(ReroIlsOverdo):
                                 self.rero_id, cantons_codes)
             if self.cantons:
                 self.country = 'sz'
-        else:
+
+        if not self.country:
             try:
                 self.country = self.field_008_data[15:18].rstrip()
             except Exception as err:
@@ -1107,7 +1109,7 @@ class ReroIlsMarc21Overdo(ReroIlsOverdo):
                     part_name_code='p'
                 )
 
-                subfield_selection = {'a', 'n', 'p'}
+                subfield_selection = {'a', 'b', 'n', 'p'}
                 for blob_key, blob_value in items:
                     if blob_key in subfield_selection:
                         if blob_key == 'a':
@@ -1118,14 +1120,18 @@ class ReroIlsMarc21Overdo(ReroIlsOverdo):
                                     build_value_with_alternate_graphic(
                                         '246', blob_key, subfield_a_part,
                                         index, link, ',.', ':;/-=')
-                                if value_data:
-                                    if part_index == 0:
-                                        variant_data['type'] = \
-                                            'bf:VariantTitle'
-                                        variant_data['mainTitle'] = value_data
-                                    else:
-                                        variant_data['subtitle'] = value_data
-                                    part_index += 1
+                                if part_index == 0:
+                                    variant_data['type'] = 'bf:VariantTitle'
+                                    variant_data['mainTitle'] = value_data
+                                else:
+                                    variant_data['subtitle'] = value_data
+                                part_index += 1
+                        elif blob_key == 'b':
+                            value_data = self. \
+                                build_value_with_alternate_graphic(
+                                    '246', blob_key, blob_value,
+                                    index, link, ',.', ':;/-=')
+                            variant_data['subtitle'] = value_data
                         elif blob_key in ['n', 'p']:
                             value_data = self. \
                                 build_value_with_alternate_graphic(
@@ -1502,19 +1508,16 @@ def build_responsibility_data(responsibility_data):
     for data_std in data_std_items:
         out_data = []
         data_value = remove_trailing_punctuation(
-                        data_std.lstrip(), ',.[]', ':;/-=')
-        if data_value:
-            out_data.append({'value': data_value})
-            if lang:
-                try:
-                    data_lang_value = \
-                        remove_trailing_punctuation(
-                            data_lang_items[index].lstrip(), ',.[]', ':;/-=')
-                    if not data_lang_value:
-                        raise Exception('missing data')
-                except Exception as err:
-                    data_lang_value = '[missing data]'
-                out_data.append({'value': data_lang_value, 'language': lang})
-            index += 1
-            responsibilities.append(out_data)
+                        data_std.lstrip(), ',.', ':;/-=')
+        out_data.append({'value': data_value})
+        if lang:
+            try:
+                data_lang_value = \
+                    remove_trailing_punctuation(
+                        data_lang_items[index].lstrip(), ',.', ':;/-=')
+            except Exception as err:
+                data_lang_value = '[missing data]'
+            out_data.append({'value': data_lang_value, 'language': lang})
+        index += 1
+        responsibilities.append(out_data)
     return responsibilities
