@@ -1,0 +1,84 @@
+[
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "1",
+    "name": "Personnel UCL",
+    "description": "Personnel UCL",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "2",
+    "name": "Etudiant UCL",
+    "description": "Etudiant UCL",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "3",
+    "name": "Extérieur UCL",
+    "description": "Extérieur UCL",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "4",
+    "name": "Personnel UNamur",
+    "description": "Personnel UNamur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "5",
+    "name": "Etudiant UNamur",
+    "description": "Etudiant UNamur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "6",
+    "name": "Extérieur UNamur",
+    "description": "Extérieur UNamur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "7",
+    "name": "Personnel USL-B",
+    "description": "Personnel USL-B",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "8",
+    "name": "Etudiant USL-B",
+    "description": "Etudiant USL-B",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    }
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/patron_types/patron_type-v0.0.1.json",
+    "pid" : "9",
+    "name": "Extérieur USL-B",
+    "description": "Extérieur USL-B",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    }
+  }
+]
+

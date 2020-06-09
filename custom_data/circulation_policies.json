@@ -1,0 +1,988 @@
+[
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "1",
+    "name": "Default UCL",
+    "description": "Default UCL circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 3,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "2",
+    "name": "Default UNamur",
+    "description": "Default UNamur circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 3,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "3",
+    "name": "Default USL-B",
+    "description": "Default USL-B circulation policy.",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 3,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": true
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "4",
+    "name": "Personnel",
+    "description": "Personnel",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 4,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/8"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/13"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "5",
+    "name": "Etudiant",
+    "description": "Etudiant",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+            {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/13"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "13",
+    "name": "Extérieur",
+    "description": "Extérieur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/1"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/4"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/5"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/6"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/9"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/13"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "6",
+    "name": "Personnel",
+    "description": "Personnel",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 4,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "policy_library_level": false,
+    "reminder_fee_amount": 2.0,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/19"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/20"
+        }
+      },      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/21"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "7",
+    "name": "Etudiant",
+    "description": "Etudiant",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "policy_library_level": false,
+    "reminder_fee_amount": 2.0,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/19"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/20"
+        }
+      },      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/21"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "14",
+    "name": "Exterieur",
+    "description": "Exterieur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "policy_library_level": false,
+    "reminder_fee_amount": 2.0,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/17"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/18"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/19"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/20"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/21"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "8",
+    "name": "Personnel",
+    "description": "Personnel",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 4,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/33"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/34"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/35"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/37"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "9",
+    "name": "Etudiant",
+    "description": "Etudiant",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/33"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/34"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/35"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/37"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "15",
+    "name": "Extérieur",
+    "description": "Extérieur",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "allow_checkout": true,
+    "checkout_duration": 2,
+    "allow_requests": true,
+    "number_renewals": 2,
+    "renewal_duration": 7,
+    "number_of_days_before_due_date": 1,
+    "number_of_days_after_due_date": 1,
+    "reminder_fee_amount": 2.0,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/31"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/33"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/34"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/35"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/37"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "10",
+    "name": "Non empruntable",
+    "description": "Non empruntable",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/12"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/9"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/12"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/2"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/3"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/7"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/9"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/10"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/11"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/12"
+        }
+      }
+    ]
+  },
+  {
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "11",
+    "name": "Non empruntable",
+    "description": "Non empruntable",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/23"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/24"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/25"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/26"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/23"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/24"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/25"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/26"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/22"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/23"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/24"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/25"
+        }
+      },
+       {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/26"
+        }
+      }
+    ]
+  },
+{
+    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
+    "pid" : "12",
+    "name": "Non empruntable",
+    "description": "Non empruntable",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "allow_checkout": false,
+    "allow_requests": false,
+    "policy_library_level": false,
+    "is_default": false,
+    "settings": [
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/32"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/32"
+        }
+      },
+      {
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        },
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/32"
+        }
+      }
+    ]
+  }
+]
+

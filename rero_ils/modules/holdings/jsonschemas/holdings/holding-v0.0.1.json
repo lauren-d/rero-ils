@@ -35,7 +35,7 @@
     "call_number": {
       "title": "Call number",
       "type": "string",
-      "minLength": 4
+      "minLength": 1
     },
     "circulation_category": {
       "title": "Circulation type",

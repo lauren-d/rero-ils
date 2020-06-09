@@ -17,6 +17,8 @@
 
 """Signals connector for Document."""
 
+from flask import current_app
+
 from ..documents.api import DocumentsSearch
 from ..holdings.api import Holding, HoldingsSearch
 from ..items.api import ItemsSearch
@@ -84,6 +86,11 @@ def enrich_document_data(sender, json=None, record=None, index=None,
                 person = Person.get_record_by_pid(pid)
                 if person:
                     author = person.dumps_for_document()
+                else:
+                    current_app.logger.error('ERROR get MEF record {pid} return None for record {id}'.format(
+                        pid=pid,
+                        id=document_pid
+                    ))
             authors.append(author)
         # Put authors in JSON
         json['authors'] = authors
