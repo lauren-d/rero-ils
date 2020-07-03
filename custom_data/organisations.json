@@ -1,29 +1,26 @@
 [
-        {
-        "pid": "1",
-		"$schema": "https://ils.rero.ch/schema/organisations/organisation-v0.0.1.json",
-		"address": "Place de l'université 1, 1348 Louvain-la-Neuve",
-		"name": "UCLouvain",
-		"code": "uclouvain",
-        "default_currency": "EUR",
-        "current_budget_pid": "1"
-	},
-	{
-        "pid": "2",
-		"$schema": "https://ils.rero.ch/schema/organisations/organisation-v0.0.1.json",
-		"address": "Rue Grandgagnage 19, 5000 Namur",
-		"name": "UNamur",
-		"code": "unamur",
-        "default_currency": "EUR",
-        "current_budget_pid": "2"
-	},
-	{
-        "pid": "3",
-		"$schema": "https://ils.rero.ch/schema/organisations/organisation-v0.0.1.json",
-		"address": "Boulevard du Jardin Botanique 43, 1000 Bruxelles",
-		"name": "USaint-Louis",
-		"code": "uslb",
-        "default_currency": "EUR",
-        "current_budget_pid": "3"
-	}
+  {
+    "pid": "1",
+    "address": "Place de l'université 1, 1348 Louvain-la-Neuve",
+    "name": "UCLouvain",
+    "code": "uclouvain",
+    "default_currency": "EUR",
+    "current_budget_pid": "1"
+  },
+  {
+    "pid": "2",
+    "address": "Rue Grandgagnage 19, 5000 Namur",
+    "name": "UNamur",
+    "code": "unamur",
+    "default_currency": "EUR",
+    "current_budget_pid": "2"
+  },
+  {
+    "pid": "3",
+    "address": "Boulevard du Jardin Botanique 43, 1000 Bruxelles",
+    "name": "USaint-Louis",
+    "code": "uslb",
+    "default_currency": "EUR",
+    "current_budget_pid": "3"
+  }
 ]

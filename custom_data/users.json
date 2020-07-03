@@ -1,3385 +1,3381 @@
 [
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Gallo",
-      "first_name" : "Zoe",
-      "email" : "zoe.gallo@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2127116",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bricoult",
-      "first_name" : "Geneviève",
-      "email" : "genevieve.bricoult@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519035",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Mertens",
-      "first_name" : "Martine",
-      "email" : "martine.mertens@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518356",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Meurs",
-      "first_name" : "Delphine ",
-      "email" : "delphine.meurs@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2106408",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Gillis",
-      "first_name" : "Alain",
-      "email" : "alain.gillis@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/8"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2272795",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lemaitre",
-      "first_name" : "Nathalie",
-      "email" : "nathalie.lemaitre@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518546",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Plumen",
-      "first_name" : "Nancy",
-      "email" : "nancy.plumen@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2130096",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Chantraine",
-      "first_name" : "Marie-Line",
-      "email" : "marie-line.chantraine@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2268046",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Charpentier",
-      "first_name" : "Lidvine",
-      "email" : "lidvine.charpentier@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519986",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Brodkom",
-      "first_name" : "Frédéric",
-      "email" : "frederic.brodkom@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2513972",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Tinti",
-      "first_name" : "Fabrizzio",
-      "email" : "fabrizio.tinti@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2408714",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Delbushaye",
-      "first_name" : "Thibaut",
-      "email" : "thibaut.delbushaye@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/14"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2344575",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Delsine-Saintenois",
-      "first_name" : "Sabine",
-      "email" : "sabine.delsine@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/14"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2304303",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Kalf",
-      "first_name" : "Ruth",
-      "email" : "ruth.kalf@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2105921",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Deroanne",
-      "first_name" : "Vincent",
-      "email" : "vincent.deroanne@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2523739",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Coppin",
-      "first_name" : "Roxane",
-      "email" : "roxane.coppin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2500982",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bioul",
-      "first_name" : "François-Xavier",
-      "email" : "francois-xavier.bioul@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2100411",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Jamin",
-      "first_name" : "Pascal",
-      "email" : "pascal.jamin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/3"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2483070",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Modave",
-      "first_name" : "Joelle",
-      "email" : "joelle.modave@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2101169",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Van Durme",
-      "first_name" : "Judith",
-      "email" : "judith.vandurme@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "00034710",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Nyns",
-      "first_name" : "Charles-Henri",
-      "email" : "charles-henri.nyns@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/23"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2504323",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Verlé",
-      "first_name" : "Dominique",
-      "email" : "dominique.verle@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518865",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Barthélémi",
-      "first_name" : "Rachel",
-      "email" : "rachel.barthelemi@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518479",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Jacobs",
-      "first_name" : "Anne-Marie",
-      "email" : "anne-marie.jacobs@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2390474",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Deridder",
-      "first_name" : "André",
-      "email" : "andre.deridder@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518414",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Pattyn",
-      "first_name" : "Pascale",
-      "email" : "pascale.pattyn@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2382914",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Toussaint",
-      "first_name" : "Jenny",
-      "email" : "jenny.toussaint@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024222",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Gaziaux",
-      "first_name" : "Martine",
-      "email" : "martine.gaziaux@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023059",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Henin",
-      "first_name" : "Marie-Pierre",
-      "email" : "marie-pierre.henin@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023687",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Posset ",
-      "first_name" : "Sylviane",
-      "email" : "sylviane.polchet@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024201",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Danloy",
-      "first_name" : "Stéphane",
-      "email" : "stephane.danloy@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022631",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Drèze",
-      "first_name" : "Katty",
-      "email" : "katty.dreze@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022747",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Galet",
-      "first_name" : "Marie-Elise",
-      "email" : "marie-elise.galet@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023029",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Libert",
-      "first_name" : "Florence",
-      "email" : "florence.libert@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023463",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Kockerols",
-      "first_name" : "Sara",
-      "email" : "sara.kockerols@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023400",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Boutet",
-      "first_name" : "Anne",
-      "email" : "anne.boutet@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022474",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Arcq",
-      "first_name" : "Vanessa",
-      "email" : "vanessa.arcq@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022392",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Paternotte",
-      "first_name" : "Sandrine",
-      "email" : "sandrine.paternotte@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024165",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Verhasselt",
-      "first_name" : "Jean-Marc",
-      "email" : "jean-marc.verhasselt@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "65032200",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Leleux",
-      "first_name" : "Alliette",
-      "email" : "alliette.leleux@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "66032600",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Josis",
-      "first_name" : "Marielle",
-      "email" : "marielle.josis@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2524173",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lohisse",
-      "first_name" : "Maxime",
-      "email" : "maxime.lohisse@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2494302",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Van Overbeke",
-      "first_name" : "Pierre",
-      "email" : "pierre.vanoverbeke@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2106244",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Mercy",
-      "first_name" : "Elodie",
-      "email" : "elodie.mercy@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023843",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Libioulle",
-      "first_name" : "Angéline",
-      "email" : "angeline.libioulle@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2522826",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Marot",
-      "first_name" : "Virginie",
-      "email" : "virginie.marot@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/16"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023832",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Houbion",
-      "first_name" : "Quentin",
-      "email" : "quentin.houbion@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/16"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023708",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lesuisse",
-      "first_name" : "Muriel",
-      "email" : "muriel.lesuisse@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518529",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Closset",
-      "first_name" : "Caroline",
-      "email" : "caroline.closset@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519680",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Verheu",
-      "first_name" : "Céline",
-      "email" : "celine.verheu@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2415162",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "De Broux-Noel",
-      "first_name" : "Marie-Claire",
-      "email" : "marie-claire.noel@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2520664",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Frisque",
-      "first_name" : "Hélène",
-      "email" : "helene.frisque@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518402",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Collet",
-      "first_name" : "François",
-      "email" : "francois.collet@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/16"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022854",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Patris",
-      "first_name" : "Sophie",
-      "email" : "sophie.patris@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2491202",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Baise",
-      "first_name" : "Ignace",
-      "email" : "fr.ignace@maredsous.com",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/15"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2131376",
-      "city" : "Maredsous",
-      "postal_code" : "5537",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Welschen",
-      "first_name" : "Catherine",
-      "email" : "catherine.welschen@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2199987",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dubois",
-      "first_name" : "Hubert",
-      "email" : "hubert.dubois@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022749",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "André",
-      "first_name" : "Jean-François",
-      "email" : "jean-francois.andre@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2280178",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bonmariage",
-      "first_name" : "Cécile",
-      "email" : "cecile.bonmariage@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/3"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2449814",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Berger",
-      "first_name" : "Eric",
-      "email" : "eric.berger@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2338394",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lacremans",
-      "first_name" : "Delphine ",
-      "email" : "delphine.lacremans@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "84122100",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Schillings",
-      "first_name" : "Sébastien ",
-      "email" : "sebastien.schillings@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518516",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Stevens",
-      "first_name" : "Nathalie",
-      "email" : "nathalie.stevens@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2251816",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Deposson",
-      "first_name" : "Claire ",
-      "email" : "claire.deposson@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2106392",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Daskayeanis",
-      "first_name" : "Teodor ",
-      "email" : "teodor.daskayeanis@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518379",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vermeulen",
-      "first_name" : "Maurille",
-      "email" : "maurille.vermeulen@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2260076",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Charlier",
-      "first_name" : "Raymonde",
-      "email" : "raymonde.charlier@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2524861",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Messina",
-      "first_name" : "Graziella",
-      "email" : "graziella.messina@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2261304",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Wanbecq",
-      "first_name" : "Lara",
-      "email" : "lara.wanbecq@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2530131",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dekeuster",
-      "first_name" : "Nicolas",
-      "email" : "nicolas.dekeuster@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "87050400",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vilcot",
-      "first_name" : "Emilie",
-      "email" : "emilie.vilcot@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/23"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2255695",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Reffers",
-      "first_name" : "Carlos",
-      "email" : "carlos.reffers@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/3"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2274102",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Blondiau",
-      "first_name" : "Geneviève",
-      "email" : "genevieve.blondiau@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2414335",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Sobieski",
-      "first_name" : "Christine",
-      "email" : "krysia.sobieski@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2258061",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Boschmans",
-      "first_name" : "Géraldine",
-      "email" : "geraldine.boschmans@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2290639",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Paulet",
-      "first_name" : "Adeline",
-      "email" : "adeline.paulet@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2277917",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Michel",
-      "first_name" : "Virginie",
-      "email" : "virginie.michel@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2374954",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bergeret",
-      "first_name" : "Julien",
-      "email" : "julien.bergeret@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2311836",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lemoine",
-      "first_name" : "Pénélope",
-      "email" : "penelope.lemoine@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2300986",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Van Cleemput",
-      "first_name" : "Louise",
-      "email" : "louise.vancleemput@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2475448",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Hannoy",
-      "first_name" : "Elodie",
-      "email" : "elodie.hannoy@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2324340",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Verstraeten",
-      "first_name" : "Karine",
-      "email" : "karine.verstraeten@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2522819",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dosimont",
-      "first_name" : "Joëlle",
-      "email" : "joelle.dosimont@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/23"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2344946",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Leprince",
-      "first_name" : "Laurent",
-      "email" : "laurent.leprince@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2495189",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Gilles",
-      "first_name" : "Samantha",
-      "email" : "samantha.gilles@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023205",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Meurant",
-      "first_name" : "Floriane",
-      "email" : "floriane.meurant@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "88070300",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Matthys",
-      "first_name" : "Pierre",
-      "email" : "pierre.matthys@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2374177",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Motte",
-      "first_name" : "Jean-Marc",
-      "email" : "jean-marc.motte@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2502363",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Marie",
-      "first_name" : "Mercier",
-      "email" : "marie.mercier@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "91030100",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "De Raet",
-      "first_name" : "Laurence",
-      "email" : "laurence.deraet@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/22"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2494022",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Tirifahy",
-      "first_name" : "Benedicte",
-      "email" : "benedicte.tirifahy@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024215",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Defossé",
-      "first_name" : "Adelaïde",
-      "email" : "adelaide.defosse@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2377814",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Tomboy",
-      "first_name" : "Sophie",
-      "email" : "sophie.tomboy@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "90091801",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Maons",
-      "first_name" : "Vanessa",
-      "email" : "vanessa.maons@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/11"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519144",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Delieux",
-      "first_name" : "France",
-      "email" : "france.delieux@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519034",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Martin",
-      "first_name" : "Virginie",
-      "email" : "virginie.martin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2416299",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dewit",
-      "first_name" : "Marie-Paule",
-      "email" : "marie-paule.dewit@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2500446",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Ervinckx",
-      "first_name" : "Céline",
-      "email" : "celine.ervinckx@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2350315",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vanhufflen",
-      "first_name" : "Bérénice",
-      "email" : "berenice.vanhufflen@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2443219",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Hourdequin",
-      "first_name" : "Dimitri",
-      "email" : "dimitri.hourdequin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2257975",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Ponsard",
-      "first_name" : "Vincent",
-      "email" : "vincent.ponsard@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024199",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Alavoine",
-      "first_name" : "Virginie",
-      "email" : "virginie.alavoine@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "72081102",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Boland",
-      "first_name" : "Salomé",
-      "email" : "salome.boland@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022453",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Mercier",
-      "first_name" : "Perrine",
-      "email" : "perrine.mercier@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/24"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2451638",
-      "city" : "Tournai",
-      "postal_code" : "7500",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dresselaers",
-      "first_name" : "Carole",
-      "email" : "carole.dresselaers@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2453315",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Mignolet",
-      "first_name" : "Alison",
-      "email" : "alison.mignolet-1@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023853",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Meunier",
-      "first_name" : "Sophie",
-      "email" : "sophie.meunier@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2453631",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Louis",
-      "first_name" : "Nicolas",
-      "email" : "nicolas.louis@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023474",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bouffioulx",
-      "first_name" : "Nadège",
-      "email" : "nadege.bouffioulx@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2445556",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Moreau",
-      "first_name" : "Fabienne",
-      "email" : "fabienne.moreau@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2521145",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Cahay",
-      "first_name" : "Esther",
-      "email" : "esther.cahay@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022566",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Warnier",
-      "first_name" : "Aurore",
-      "email" : "aurore.warnier@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0024282",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Bertrand",
-      "first_name" : "Audrey",
-      "email" : "audrey.bertrand@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022451",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Detienne",
-      "first_name" : "Violaine",
-      "email" : "violaine.detienne@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0022730",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vanoverbeke",
-      "first_name" : "Anne",
-      "email" : "anne-catherine.vanoverbeke@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2470946",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Rossolin",
-      "first_name" : "Emma",
-      "email" : "emma.rossolin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/13"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2497108",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lemielle",
-      "first_name" : "Aurore",
-      "email" : "aurore.lemielle@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023443",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vandevondel ",
-      "first_name" : "Mathieu",
-      "email" : "mathieu.vandevondel@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/3"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2473148",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Thiry",
-      "first_name" : "Charlotte",
-      "email" : "charlotte.thiry@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2477473",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Van Assche",
-      "first_name" : "Alain",
-      "email" : "alain.vanassche@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "63062100",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Lahaut",
-      "first_name" : "Philippe",
-      "email" : "philippe.lahaut@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2488148",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dury",
-      "first_name" : "Sylvie",
-      "email" : "sylvie.dury@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2489352",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Fioroni",
-      "first_name" : "Elea",
-      "email" : "elea.fioroni@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2489711",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "godefroid",
-      "first_name" : "Emelyne",
-      "email" : "emelyne.godefroid@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "00363200",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Froment",
-      "first_name" : "Delphine",
-      "email" : "delphine.froment@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2490329",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Godard",
-      "first_name" : "Mireille",
-      "email" : "mireille.godard@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2531339",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Miège",
-      "first_name" : "Carole",
-      "email" : "carole.miege@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2491271",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Rousseaux",
-      "first_name" : "Christina",
-      "email" : "christina.rousseaux@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023986",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dambrain",
-      "first_name" : "Océane",
-      "email" : "oceane.dambrain@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "90081203",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Roman",
-      "first_name" : "Laura",
-      "email" : "laura.roman-tomas@usaintlouis.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "barcode" : "93041607",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Leblanc",
-      "first_name" : "Valérie",
-      "email" : "valerie.leblanc@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023435",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Romarin",
-      "first_name" : "Amélie",
-      "email" : "amelie.romarin@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2504283",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Folie",
-      "first_name" : "Larissa",
-      "email" : "larissa.folie@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023001",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Hendrickx",
-      "first_name" : "Veronique",
-      "email" : "veronique.hendrickx@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2447295",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Baeijens",
-      "first_name" : "Sophie",
-      "email" : "sophie.baeijens@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2516265",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Longton",
-      "first_name" : "Marie",
-      "email" : "marie.longton@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/5"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2516512",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Laruelle",
-      "first_name" : "Amandine",
-      "email" : "amandine.laruelle@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/1"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2517925",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Al Fihri",
-      "first_name" : "Marwan",
-      "email" : "marwan.alfihri@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2516451",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Herla",
-      "first_name" : "Barbara",
-      "email" : "barbara.herla@unamur.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "barcode" : "BC0023780",
-      "city" : "Namur",
-      "postal_code" : "5000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Roland",
-      "first_name" : "Thierry",
-      "email" : "thierry.roland@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/3"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2199634",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Ghyselinck  ",
-      "first_name" : "Julien",
-      "email" : "julien.ghyselinck@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2529933",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vanderwilt",
-      "first_name" : "Catherine",
-      "email" : "catherine.vanderwilt@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/23"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2248179",
-      "city" : "Bruxelles",
-      "postal_code" : "1000",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Wargnies",
-      "first_name" : "Dylan",
-      "email" : "dylan.wargnies@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2532887",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Seha",
-      "first_name" : "Josiane",
-      "email" : "josiane.seha@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2315795",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "De Brou",
-      "first_name" : "Frédérique",
-      "email" : "frederique.debrou@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2519478",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Frisque",
-      "first_name" : "Muriel",
-      "email" : "muriel.frisque@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2107181",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Vanpuyvelde",
-      "first_name" : "Bernadette",
-      "email" : "bernadette.vanpuyvelde@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2518866",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "UCL",
-      "first_name" : "Staff",
-      "email" : "bibsys@uclouvain.be",
-      "roles": [
-             "system_librarian",
-             "librarian"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Deweerdt",
-      "first_name" : "Mana",
-      "email" : "mana.deweerdt@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/2"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2411785",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Erken",
-      "first_name" : "Benoit",
-      "email" : "benoit.erken@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/7"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2239855",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Dubois",
-      "first_name" : "Laurent",
-      "email" : "laurent.dubois@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/4"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2233230",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "Michotte",
-      "first_name" : "Renaud",
-      "email" : "renaud.michotte@uclouvain.be",
-      "roles": [
-             "librarian","patron"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/6"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/1"
-       },
-      "password" : "123456",
-      "barcode" : "2491404",
-      "city" : "Louvain-la-Neuve",
-      "postal_code" : "1348",
-      "communication_language" : "fre",
-      "communication_channel" : "email"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "UNamur",
-      "first_name" : "Staff",
-      "email" : "staff@unamur.be",
-      "roles": [
-             "system_librarian",
-             "librarian"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/17"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/4"
-       },
-      "password" : "123456",
-      "city" : "Namur",
-      "postal_code" : "5000"
-    },
-    {
-      "$schema": "https://ils.rero.ch/schema/patrons/patron-v0.0.1.json",
-      "birth_date" : "2000-01-01",
-      "last_name" : "USLB",
-      "first_name" : "Staff",
-      "email" : "staff@usaintlouis.be",
-      "roles": [
-             "system_librarian",
-             "librarian"
-       ],
-       "library": {
-           "$ref": "https://ils.rero.ch/api/libraries/18"
-       },
-       "patron_type": {
-           "$ref": "https://ils.rero.ch/api/patron_types/7"
-       },
-      "password" : "123456",
-      "city" : "Bruxelles",
-      "postal_code" : "1000"
-    }
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Gallo",
+    "first_name": "Zoe",
+    "email": "zoe.gallo@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2127116",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bricoult",
+    "first_name": "Geneviève",
+    "email": "genevieve.bricoult@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519035",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Mertens",
+    "first_name": "Martine",
+    "email": "martine.mertens@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518356",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Meurs",
+    "first_name": "Delphine ",
+    "email": "delphine.meurs@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2106408",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Gillis",
+    "first_name": "Alain",
+    "email": "alain.gillis@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/8"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2272795",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lemaitre",
+    "first_name": "Nathalie",
+    "email": "nathalie.lemaitre@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518546",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Plumen",
+    "first_name": "Nancy",
+    "email": "nancy.plumen@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2130096",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Chantraine",
+    "first_name": "Marie-Line",
+    "email": "marie-line.chantraine@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2268046",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Charpentier",
+    "first_name": "Lidvine",
+    "email": "lidvine.charpentier@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519986",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Brodkom",
+    "first_name": "Frédéric",
+    "email": "frederic.brodkom@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2513972",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Tinti",
+    "first_name": "Fabrizzio",
+    "email": "fabrizio.tinti@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2408714",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Delbushaye",
+    "first_name": "Thibaut",
+    "email": "thibaut.delbushaye@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/14"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2344575",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Delsine-Saintenois",
+    "first_name": "Sabine",
+    "email": "sabine.delsine@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/14"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2304303",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Kalf",
+    "first_name": "Ruth",
+    "email": "ruth.kalf@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2105921",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Deroanne",
+    "first_name": "Vincent",
+    "email": "vincent.deroanne@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2523739",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Coppin",
+    "first_name": "Roxane",
+    "email": "roxane.coppin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2500982",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bioul",
+    "first_name": "François-Xavier",
+    "email": "francois-xavier.bioul@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2100411",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Jamin",
+    "first_name": "Pascal",
+    "email": "pascal.jamin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/3"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2483070",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Modave",
+    "first_name": "Joelle",
+    "email": "joelle.modave@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2101169",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Van Durme",
+    "first_name": "Judith",
+    "email": "judith.vandurme@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "00034710",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Nyns",
+    "first_name": "Charles-Henri",
+    "email": "charles-henri.nyns@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/23"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2504323",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Verlé",
+    "first_name": "Dominique",
+    "email": "dominique.verle@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518865",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Barthélémi",
+    "first_name": "Rachel",
+    "email": "rachel.barthelemi@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518479",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Jacobs",
+    "first_name": "Anne-Marie",
+    "email": "anne-marie.jacobs@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2390474",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Deridder",
+    "first_name": "André",
+    "email": "andre.deridder@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518414",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Pattyn",
+    "first_name": "Pascale",
+    "email": "pascale.pattyn@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2382914",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Toussaint",
+    "first_name": "Jenny",
+    "email": "jenny.toussaint@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024222",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Gaziaux",
+    "first_name": "Martine",
+    "email": "martine.gaziaux@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023059",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Henin",
+    "first_name": "Marie-Pierre",
+    "email": "marie-pierre.henin@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023687",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Posset ",
+    "first_name": "Sylviane",
+    "email": "sylviane.polchet@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024201",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Danloy",
+    "first_name": "Stéphane",
+    "email": "stephane.danloy@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022631",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Drèze",
+    "first_name": "Katty",
+    "email": "katty.dreze@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022747",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Galet",
+    "first_name": "Marie-Elise",
+    "email": "marie-elise.galet@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023029",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Libert",
+    "first_name": "Florence",
+    "email": "florence.libert@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023463",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Kockerols",
+    "first_name": "Sara",
+    "email": "sara.kockerols@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023400",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Boutet",
+    "first_name": "Anne",
+    "email": "anne.boutet@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022474",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Arcq",
+    "first_name": "Vanessa",
+    "email": "vanessa.arcq@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022392",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Paternotte",
+    "first_name": "Sandrine",
+    "email": "sandrine.paternotte@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024165",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Verhasselt",
+    "first_name": "Jean-Marc",
+    "email": "jean-marc.verhasselt@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "65032200",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Leleux",
+    "first_name": "Alliette",
+    "email": "alliette.leleux@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "66032600",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Josis",
+    "first_name": "Marielle",
+    "email": "marielle.josis@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2524173",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lohisse",
+    "first_name": "Maxime",
+    "email": "maxime.lohisse@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2494302",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Van Overbeke",
+    "first_name": "Pierre",
+    "email": "pierre.vanoverbeke@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2106244",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Mercy",
+    "first_name": "Elodie",
+    "email": "elodie.mercy@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023843",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Libioulle",
+    "first_name": "Angéline",
+    "email": "angeline.libioulle@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2522826",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Marot",
+    "first_name": "Virginie",
+    "email": "virginie.marot@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/16"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023832",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Houbion",
+    "first_name": "Quentin",
+    "email": "quentin.houbion@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/16"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023708",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lesuisse",
+    "first_name": "Muriel",
+    "email": "muriel.lesuisse@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518529",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Closset",
+    "first_name": "Caroline",
+    "email": "caroline.closset@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519680",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Verheu",
+    "first_name": "Céline",
+    "email": "celine.verheu@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2415162",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "De Broux-Noel",
+    "first_name": "Marie-Claire",
+    "email": "marie-claire.noel@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2520664",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Frisque",
+    "first_name": "Hélène",
+    "email": "helene.frisque@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518402",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Collet",
+    "first_name": "François",
+    "email": "francois.collet@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/16"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022854",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Patris",
+    "first_name": "Sophie",
+    "email": "sophie.patris@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2491202",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Baise",
+    "first_name": "Ignace",
+    "email": "fr.ignace@maredsous.com",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/15"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2131376",
+    "city": "Maredsous",
+    "postal_code": "5537",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Welschen",
+    "first_name": "Catherine",
+    "email": "catherine.welschen@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2199987",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dubois",
+    "first_name": "Hubert",
+    "email": "hubert.dubois@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022749",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "André",
+    "first_name": "Jean-François",
+    "email": "jean-francois.andre@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2280178",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bonmariage",
+    "first_name": "Cécile",
+    "email": "cecile.bonmariage@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/3"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2449814",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Berger",
+    "first_name": "Eric",
+    "email": "eric.berger@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2338394",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lacremans",
+    "first_name": "Delphine ",
+    "email": "delphine.lacremans@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "84122100",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Schillings",
+    "first_name": "Sébastien ",
+    "email": "sebastien.schillings@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518516",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Stevens",
+    "first_name": "Nathalie",
+    "email": "nathalie.stevens@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2251816",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Deposson",
+    "first_name": "Claire ",
+    "email": "claire.deposson@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2106392",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Daskayeanis",
+    "first_name": "Teodor ",
+    "email": "teodor.daskayeanis@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518379",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vermeulen",
+    "first_name": "Maurille",
+    "email": "maurille.vermeulen@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2260076",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Charlier",
+    "first_name": "Raymonde",
+    "email": "raymonde.charlier@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2524861",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Messina",
+    "first_name": "Graziella",
+    "email": "graziella.messina@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2261304",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Wanbecq",
+    "first_name": "Lara",
+    "email": "lara.wanbecq@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2530131",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dekeuster",
+    "first_name": "Nicolas",
+    "email": "nicolas.dekeuster@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "87050400",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vilcot",
+    "first_name": "Emilie",
+    "email": "emilie.vilcot@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/23"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2255695",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Reffers",
+    "first_name": "Carlos",
+    "email": "carlos.reffers@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/3"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2274102",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Blondiau",
+    "first_name": "Geneviève",
+    "email": "genevieve.blondiau@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2414335",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Sobieski",
+    "first_name": "Christine",
+    "email": "krysia.sobieski@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2258061",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Boschmans",
+    "first_name": "Géraldine",
+    "email": "geraldine.boschmans@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2290639",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Paulet",
+    "first_name": "Adeline",
+    "email": "adeline.paulet@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2277917",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Michel",
+    "first_name": "Virginie",
+    "email": "virginie.michel@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2374954",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bergeret",
+    "first_name": "Julien",
+    "email": "julien.bergeret@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2311836",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lemoine",
+    "first_name": "Pénélope",
+    "email": "penelope.lemoine@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2300986",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Van Cleemput",
+    "first_name": "Louise",
+    "email": "louise.vancleemput@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2475448",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Hannoy",
+    "first_name": "Elodie",
+    "email": "elodie.hannoy@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2324340",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Verstraeten",
+    "first_name": "Karine",
+    "email": "karine.verstraeten@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2522819",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dosimont",
+    "first_name": "Joëlle",
+    "email": "joelle.dosimont@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/23"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2344946",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Leprince",
+    "first_name": "Laurent",
+    "email": "laurent.leprince@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2495189",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Gilles",
+    "first_name": "Samantha",
+    "email": "samantha.gilles@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023205",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Meurant",
+    "first_name": "Floriane",
+    "email": "floriane.meurant@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "88070300",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Matthys",
+    "first_name": "Pierre",
+    "email": "pierre.matthys@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2374177",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Motte",
+    "first_name": "Jean-Marc",
+    "email": "jean-marc.motte@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2502363",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Marie",
+    "first_name": "Mercier",
+    "email": "marie.mercier@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "91030100",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "De Raet",
+    "first_name": "Laurence",
+    "email": "laurence.deraet@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/22"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2494022",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Tirifahy",
+    "first_name": "Benedicte",
+    "email": "benedicte.tirifahy@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024215",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Defossé",
+    "first_name": "Adelaïde",
+    "email": "adelaide.defosse@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2377814",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Tomboy",
+    "first_name": "Sophie",
+    "email": "sophie.tomboy@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "90091801",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Maons",
+    "first_name": "Vanessa",
+    "email": "vanessa.maons@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/11"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519144",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Delieux",
+    "first_name": "France",
+    "email": "france.delieux@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519034",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Martin",
+    "first_name": "Virginie",
+    "email": "virginie.martin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2416299",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dewit",
+    "first_name": "Marie-Paule",
+    "email": "marie-paule.dewit@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2500446",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Ervinckx",
+    "first_name": "Céline",
+    "email": "celine.ervinckx@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2350315",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vanhufflen",
+    "first_name": "Bérénice",
+    "email": "berenice.vanhufflen@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2443219",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Hourdequin",
+    "first_name": "Dimitri",
+    "email": "dimitri.hourdequin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2257975",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Ponsard",
+    "first_name": "Vincent",
+    "email": "vincent.ponsard@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024199",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Alavoine",
+    "first_name": "Virginie",
+    "email": "virginie.alavoine@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "72081102",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Boland",
+    "first_name": "Salomé",
+    "email": "salome.boland@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022453",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Mercier",
+    "first_name": "Perrine",
+    "email": "perrine.mercier@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/24"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2451638",
+    "city": "Tournai",
+    "postal_code": "7500",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dresselaers",
+    "first_name": "Carole",
+    "email": "carole.dresselaers@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2453315",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Mignolet",
+    "first_name": "Alison",
+    "email": "alison.mignolet-1@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023853",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Meunier",
+    "first_name": "Sophie",
+    "email": "sophie.meunier@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2453631",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Marie-France",
+    "first_name": "Juchert",
+    "email": "marie-france.juchert@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0026292",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bouffioulx",
+    "first_name": "Nadège",
+    "email": "nadege.bouffioulx@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2445556",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Moreau",
+    "first_name": "Fabienne",
+    "email": "fabienne.moreau@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2521145",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Cahay",
+    "first_name": "Esther",
+    "email": "esther.cahay@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022566",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Warnier",
+    "first_name": "Aurore",
+    "email": "aurore.warnier@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0024282",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Bertrand",
+    "first_name": "Audrey",
+    "email": "audrey.bertrand@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022451",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Detienne",
+    "first_name": "Violaine",
+    "email": "violaine.detienne@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0022730",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vanoverbeke",
+    "first_name": "Anne",
+    "email": "anne-catherine.vanoverbeke@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2470946",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Rossolin",
+    "first_name": "Emma",
+    "email": "emma.rossolin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/13"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2497108",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lemielle",
+    "first_name": "Aurore",
+    "email": "aurore.lemielle@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023443",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vandevondel ",
+    "first_name": "Mathieu",
+    "email": "mathieu.vandevondel@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/3"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2473148",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Thiry",
+    "first_name": "Charlotte",
+    "email": "charlotte.thiry@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2477473",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Van Assche",
+    "first_name": "Alain",
+    "email": "alain.vanassche@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "63062100",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Lahaut",
+    "first_name": "Philippe",
+    "email": "philippe.lahaut@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2488148",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dury",
+    "first_name": "Sylvie",
+    "email": "sylvie.dury@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2489352",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Fioroni",
+    "first_name": "Elea",
+    "email": "elea.fioroni@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2489711",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "godefroid",
+    "first_name": "Emelyne",
+    "email": "emelyne.godefroid@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "00363200",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Froment",
+    "first_name": "Delphine",
+    "email": "delphine.froment@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2490329",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Godard",
+    "first_name": "Mireille",
+    "email": "mireille.godard@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2531339",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Miège",
+    "first_name": "Carole",
+    "email": "carole.miege@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2491271",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Rousseaux",
+    "first_name": "Christina",
+    "email": "christina.rousseaux@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023986",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dambrain",
+    "first_name": "Océane",
+    "email": "oceane.dambrain@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "90081203",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Roman",
+    "first_name": "Laura",
+    "email": "laura.roman-tomas@usaintlouis.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "barcode": "93041607",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Leblanc",
+    "first_name": "Valérie",
+    "email": "valerie.leblanc@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023435",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Romarin",
+    "first_name": "Amélie",
+    "email": "amelie.romarin@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2504283",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Folie",
+    "first_name": "Larissa",
+    "email": "larissa.folie@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023001",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Hendrickx",
+    "first_name": "Veronique",
+    "email": "veronique.hendrickx@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2447295",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Baeijens",
+    "first_name": "Sophie",
+    "email": "sophie.baeijens@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2516265",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Longton",
+    "first_name": "Marie",
+    "email": "marie.longton@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2516512",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Laruelle",
+    "first_name": "Amandine",
+    "email": "amandine.laruelle@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/1"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2517925",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Al Fihri",
+    "first_name": "Marwan",
+    "email": "marwan.alfihri@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2516451",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Herla",
+    "first_name": "Barbara",
+    "email": "barbara.herla@unamur.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "barcode": "BC0023780",
+    "city": "Namur",
+    "postal_code": "5000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Roland",
+    "first_name": "Thierry",
+    "email": "thierry.roland@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/3"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2199634",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Ghyselinck  ",
+    "first_name": "Julien",
+    "email": "julien.ghyselinck@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2529933",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vanderwilt",
+    "first_name": "Catherine",
+    "email": "catherine.vanderwilt@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/23"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2248179",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Wargnies",
+    "first_name": "Dylan",
+    "email": "dylan.wargnies@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2532887",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Seha",
+    "first_name": "Josiane",
+    "email": "josiane.seha@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2315795",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "De Brou",
+    "first_name": "Frédérique",
+    "email": "frederique.debrou@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2519478",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Frisque",
+    "first_name": "Muriel",
+    "email": "muriel.frisque@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2107181",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Vanpuyvelde",
+    "first_name": "Bernadette",
+    "email": "bernadette.vanpuyvelde@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2518866",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "UCL",
+    "first_name": "Staff",
+    "email": "bibsys@uclouvain.be",
+    "roles": [
+      "system_librarian",
+      "librarian"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Deweerdt",
+    "first_name": "Mana",
+    "email": "mana.deweerdt@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2411785",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Erken",
+    "first_name": "Benoit",
+    "email": "benoit.erken@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/7"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2239855",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Dubois",
+    "first_name": "Laurent",
+    "email": "laurent.dubois@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/4"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2233230",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Michotte",
+    "first_name": "Renaud",
+    "email": "renaud.michotte@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/6"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2491404",
+    "city": "Louvain-la-Neuve",
+    "postal_code": "1348",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "UNamur",
+    "first_name": "Staff",
+    "email": "staff@unamur.be",
+    "roles": [
+      "system_librarian",
+      "librarian"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/17"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/4"
+    },
+    "password": "123456",
+    "city": "Namur",
+    "postal_code": "5000"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "USLB",
+    "first_name": "Staff",
+    "email": "staff@usaintlouis.be",
+    "roles": [
+      "system_librarian",
+      "librarian"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/18"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/7"
+    },
+    "password": "123456",
+    "city": "Bruxelles",
+    "postal_code": "1000"
+  }
 ]
-
