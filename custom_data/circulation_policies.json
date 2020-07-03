@@ -1,7 +1,6 @@
 [
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "1",
+    "pid": "1",
     "name": "Default UCL",
     "description": "Default UCL circulation policy.",
     "organisation": {
@@ -14,13 +13,12 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": true
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "2",
+    "pid": "2",
     "name": "Default UNamur",
     "description": "Default UNamur circulation policy.",
     "organisation": {
@@ -33,13 +31,12 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": true
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "3",
+    "pid": "3",
     "name": "Default USL-B",
     "description": "Default USL-B circulation policy.",
     "organisation": {
@@ -52,13 +49,12 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": true
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "4",
+    "pid": "4",
     "name": "Personnel",
     "description": "Personnel",
     "organisation": {
@@ -71,7 +67,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -134,8 +130,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "5",
+    "pid": "5",
     "name": "Etudiant",
     "description": "Etudiant",
     "organisation": {
@@ -148,11 +143,11 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
-            {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -203,8 +198,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "13",
+    "pid": "13",
     "name": "Extérieur",
     "description": "Extérieur",
     "organisation": {
@@ -217,7 +211,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -272,8 +266,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "6",
+    "pid": "6",
     "name": "Personnel",
     "description": "Personnel",
     "organisation": {
@@ -287,7 +280,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "is_default": false,
     "settings": [
       {
@@ -321,7 +314,8 @@
         "item_type": {
           "$ref": "https://ils.rero.ch/api/item_types/20"
         }
-      },      {
+      },
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/4"
         },
@@ -332,8 +326,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "7",
+    "pid": "7",
     "name": "Etudiant",
     "description": "Etudiant",
     "organisation": {
@@ -347,7 +340,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "is_default": false,
     "settings": [
       {
@@ -381,7 +374,8 @@
         "item_type": {
           "$ref": "https://ils.rero.ch/api/item_types/20"
         }
-      },      {
+      },
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/5"
         },
@@ -392,8 +386,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "14",
+    "pid": "14",
     "name": "Exterieur",
     "description": "Exterieur",
     "organisation": {
@@ -407,7 +400,7 @@
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
     "policy_library_level": false,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "is_default": false,
     "settings": [
       {
@@ -453,8 +446,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "8",
+    "pid": "8",
     "name": "Personnel",
     "description": "Personnel",
     "organisation": {
@@ -467,7 +459,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -514,8 +506,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "9",
+    "pid": "9",
     "name": "Etudiant",
     "description": "Etudiant",
     "organisation": {
@@ -528,7 +519,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -575,8 +566,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "15",
+    "pid": "15",
     "name": "Extérieur",
     "description": "Extérieur",
     "organisation": {
@@ -589,7 +579,7 @@
     "renewal_duration": 7,
     "number_of_days_before_due_date": 1,
     "number_of_days_after_due_date": 1,
-    "reminder_fee_amount": 2.0,
+    "reminder_fee_amount": 2,
     "policy_library_level": false,
     "is_default": false,
     "settings": [
@@ -636,8 +626,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "10",
+    "pid": "10",
     "name": "Non empruntable",
     "description": "Non empruntable",
     "organisation": {
@@ -656,7 +645,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/2"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/1"
         },
@@ -664,7 +653,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/3"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/1"
         },
@@ -672,7 +661,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/7"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/1"
         },
@@ -704,7 +693,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/2"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -712,7 +701,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/3"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -720,7 +709,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/7"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -728,7 +717,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/9"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/2"
         },
@@ -760,7 +749,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/2"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/3"
         },
@@ -768,7 +757,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/3"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/3"
         },
@@ -776,7 +765,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/7"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/3"
         },
@@ -784,7 +773,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/9"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/3"
         },
@@ -811,8 +800,7 @@
     ]
   },
   {
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "11",
+    "pid": "11",
     "name": "Non empruntable",
     "description": "Non empruntable",
     "organisation": {
@@ -831,7 +819,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/22"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/4"
         },
@@ -839,7 +827,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/23"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/4"
         },
@@ -847,7 +835,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/24"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/4"
         },
@@ -855,7 +843,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/25"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/4"
         },
@@ -871,7 +859,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/22"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/5"
         },
@@ -879,7 +867,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/23"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/5"
         },
@@ -887,7 +875,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/24"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/5"
         },
@@ -895,7 +883,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/25"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/5"
         },
@@ -911,7 +899,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/22"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/6"
         },
@@ -919,7 +907,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/23"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/6"
         },
@@ -927,7 +915,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/24"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/6"
         },
@@ -935,7 +923,7 @@
           "$ref": "https://ils.rero.ch/api/item_types/25"
         }
       },
-       {
+      {
         "patron_type": {
           "$ref": "https://ils.rero.ch/api/patron_types/6"
         },
@@ -945,9 +933,8 @@
       }
     ]
   },
-{
-    "$schema": "https://ils.rero.ch/schema/circ_policies/circ_policy-v0.0.1.json",
-    "pid" : "12",
+  {
+    "pid": "12",
     "name": "Non empruntable",
     "description": "Non empruntable",
     "organisation": {
@@ -985,4 +972,3 @@
     ]
   }
 ]
-
