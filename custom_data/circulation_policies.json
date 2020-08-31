@@ -970,5 +970,119 @@
         }
       }
     ]
+  },
+  {
+    "pid": "16",
+    "name": "En ligne",
+    "allow_checkout": false,
+    "allow_requests": false,
+    "description": "En ligne",
+    "is_default": false,
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "policy_library_level": false,
+    "settings": [
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/38"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/2"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/38"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/3"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/38"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/1"
+        }
+      }
+    ]
+  },
+  {
+    "pid": "17",
+    "name": "En ligne",
+    "allow_checkout": false,
+    "allow_requests": false,
+    "description": "En ligne",
+    "is_default": false,
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "policy_library_level": false,
+    "settings": [
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/39"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/5"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/39"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/6"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/39"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/4"
+        }
+      }
+    ]
+  },
+  {
+    "pid": "18",
+    "name": "En ligne",
+    "allow_checkout": false,
+    "allow_requests": false,
+    "description": "En ligne",
+    "is_default": false,
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "policy_library_level": false,
+    "settings": [
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/40"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/8"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/40"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/9"
+        }
+      },
+      {
+        "item_type": {
+          "$ref": "https://ils.rero.ch/api/item_types/40"
+        },
+        "patron_type": {
+          "$ref": "https://ils.rero.ch/api/patron_types/7"
+        }
+      }
+    ]
   }
 ]

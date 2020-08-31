@@ -186,6 +186,7 @@ then
     invenio utils dump_es_mappings -o tmp/mapping_before_setup.txt
 fi
 eval ${PREFIX} invenio chamo queue init
+eval ${PREFIX} invenio fedora queue init
 # Create admin role to restrict access
 info_msg "Create admin role to restrict access"
 eval ${PREFIX} invenio roles create admin
@@ -271,9 +272,9 @@ eval ${PREFIX} invenio fixtures create --pid_type budg ${DATA_PATH}/budgets.json
 eval ${PREFIX} invenio utils reindex -t budg --yes-i-know --no-info
 
 # create acquisition accounts
-#info_msg "Acquisition accounts:"
-#eval ${PREFIX} invenio fixtures create --pid_type acac ${DATA_PATH}/acq_accounts.json --append
-#eval ${PREFIX} invenio utils reindex -t acac --yes-i-know --no-info
+info_msg "Acquisition accounts:"
+eval ${PREFIX} invenio fixtures create --pid_type acac ${DATA_PATH}/acq_accounts.json --append
+eval ${PREFIX} invenio utils reindex -t acac --yes-i-know --no-info
 
 eval ${PREFIX} invenio utils runindex --raise-on-error
 
