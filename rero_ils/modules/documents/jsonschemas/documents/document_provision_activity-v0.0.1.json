@@ -214,9 +214,6 @@
           "minimum": -9999,
           "maximum": 2050,
           "form": {
-            "expressionProperties": {
-              "templateOptions.required": "model.type === 'bf:Publication'"
-            },
             "templateOptions": {
               "cssClass": "col-lg-4"
             }

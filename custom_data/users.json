@@ -2055,7 +2055,7 @@
       "patron"
     ],
     "library": {
-      "$ref": "https://ils.rero.ch/api/libraries/11"
+      "$ref": "https://ils.rero.ch/api/libraries/6"
     },
     "patron_type": {
       "$ref": "https://ils.rero.ch/api/patron_types/1"
@@ -3377,5 +3377,93 @@
     "password": "123456",
     "city": "Bruxelles",
     "postal_code": "1000"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Gemen",
+    "first_name": "Mélanie",
+    "email": "melanie.gemen@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2534746",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "EL Kassimi",
+    "first_name": "Hania",
+    "email": "hania.elkassimi@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2535826",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Van den Brande",
+    "first_name": "Thaïs",
+    "email": "thais.vandenbrande@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/5"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2536846",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
+  },
+  {
+    "birth_date": "2000-01-01",
+    "last_name": "Mostaert",
+    "first_name": "Camille",
+    "email": "camille.mostaert@uclouvain.be",
+    "roles": [
+      "librarian",
+      "patron"
+    ],
+    "library": {
+      "$ref": "https://ils.rero.ch/api/libraries/2"
+    },
+    "patron_type": {
+      "$ref": "https://ils.rero.ch/api/patron_types/1"
+    },
+    "password": "123456",
+    "barcode": "2395722",
+    "city": "Bruxelles",
+    "postal_code": "1000",
+    "communication_language": "fre",
+    "communication_channel": "email"
   }
 ]
