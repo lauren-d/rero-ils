@@ -38,7 +38,7 @@ def create_records(records):
         # check if already harvested
         pid = None
         for identifier in record.get('identifiedBy'):
-            if identifier.get('source') == 'cantook':
+            if identifier.get('source') == 'DIAL.ebook':
                 harvested_id = identifier.get('value')
                 query = DocumentsSearch().filter(
                     'term',

@@ -42,7 +42,7 @@ def publish_harvested_records(sender=None, records=[], *args, **kwargs):
         identifiers.append(
             {
                 "type": "bf:Local",
-                "source": "cantook",
+                "source": "DIAL.ebook",
                 "value": record.header.identifier
             }
         )

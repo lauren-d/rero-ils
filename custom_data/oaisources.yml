@@ -17,6 +17,12 @@
 
 
 # OAI-PMH harvester configuration.
+dial:
+    baseurl: https://dial.uclouvain.be/oai2
+    metadataprefix: marcxml
+    comment: ''
+    setspecs: 'testEbooks'
+
 dial-ebooks:
     baseurl: http://vs-vital-prod.sipr-dc.ucl.ac.be/oai2
     metadataprefix: marcxml

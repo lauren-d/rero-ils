@@ -34,6 +34,7 @@ marc21 = ReroIlsMarc21Overdo()
 @utils.ignore_value
 def marc21_to_type(self, key, value):
     """Set the mode of issuance."""
+    self['type'] = 'ebook'
     self['issuance'] = dict(
         main_type='rdami:1001',
         subtype='materialUnit'
@@ -531,27 +532,39 @@ def marc21_to_titles_proper(self, key, value):
 @utils.ignore_value
 def marc21_electronicLocator(self, key, value):
     """Get electronic locator."""
-    indicator2 = key[4]
     electronic_locator = {}
     url = utils.force_list(value.get('u'))[0]
-    subfield_3 = value.get('3')
-    if subfield_3:
-        subfield_3 = utils.force_list(subfield_3)[0]
-    if indicator2 == '2':
-        if subfield_3 and subfield_3 == 'Image de couverture':
-            electronic_locator = {
-                'url': url,
-                'type': 'relatedResource',
-                'content': 'coverImage'
-            }
-    elif indicator2 == '0':
-        subfield_x = value.get('x')
-        if subfield_x:
-            electronic_locator = {
-                'url': url,
-                'type': 'resource',
-                'source': utils.force_list(subfield_x)[0]
-            }
-            # if subfield_3 and subfield_3 == 'Texte intégral':
-            #     electronic_locator['content'] == subfield_3
+    if 'Handle' in value.get('z'):
+        url = value.get('u')
+        electronic_locator = {
+            'url': url,
+            'type': 'resource',
+            'source': 'DIAL.Ebook'
+        }
     return electronic_locator or None
+
+
+@marc21.over('providers', '^904..')
+@utils.for_each_value
+@utils.ignore_value
+def marc21_to_providers(self, key, value):
+    """Test dojson marc21titlesProper.
+
+    location: 904$c
+    provider: 904$x
+    collection: 904$y
+    """
+    provider = {
+        'organisation': map_organisation_by_location(value.get('c')),
+        'provider': value.get('x'),
+        'collection': value.get('y')
+    }
+    return provider
+
+
+def map_organisation_by_location(location):
+    if int(location) < 10000000:
+        return 1
+    if int(location) > 30000000:
+        return 3
+    return 2

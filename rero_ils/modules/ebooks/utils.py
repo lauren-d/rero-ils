@@ -56,33 +56,41 @@ def add_oai_source(name, baseurl, metadataprefix='marc21',
         return 'Not Updated'
 
 
-def get_harvested_sources(record):
-    """Get the harvested sources from electronicLocator."""
-    harvested_sources = []
-    new_electronic_locators = []
-    electronic_locators = record.get('electronicLocator', [])
-    for electronic_locator in electronic_locators:
-        source = electronic_locator.get('source')
-        if source:
-            harvested_sources.append({
-                'source': source,
-                'uri': electronic_locator.get('url')
-            })
-        else:
-            new_electronic_locators.append(electronic_locator)
-    if new_electronic_locators:
-        record['electronicLocator'] = new_electronic_locators
-    return harvested_sources
+# def get_harvested_sources(record):
+#     """Get the harvested sources from electronicLocator."""
+#     harvested_sources = []
+#     new_providers = []
+#
+#     providers = record.get('providers', [])
+#     for provider in providers:
+#         organisation =
+#
+#
+#     electronic_locators = record.get('electronicLocator', [])
+#     for electronic_locator in electronic_locators:
+#         source = electronic_locator.get('source')
+#         if source:
+#             harvested_sources.append({
+#                 'source': source,
+#                 'uri': electronic_locator.get('url')
+#             })
+#         else:
+#             new_electronic_locators.append(electronic_locator)
+#     if new_electronic_locators:
+#         record['electronicLocator'] = new_electronic_locators
+#     return harvested_sources
 
 
 def create_document_holding(record):
     """Create a document and a holding for a harvested ebook."""
-    harvested_sources = get_harvested_sources(record)
+    # harvested_sources = get_harvested_sources(record)
     new_record = None
     doc_created = False
-    for harvested_source in harvested_sources:
-        org = Organisation.get_record_by_online_harvested_source(
-            source=harvested_source['source'])
+    providers = record.get('providers', [])
+    uri = record.get(
+        'electronicLocator')[0].get('url')
+    for provider in providers:
+        org = Organisation.get_record_by_pid(provider['organisation'])
         if org:
             if not doc_created:
                 new_record = Document.create(
@@ -94,59 +102,75 @@ def create_document_holding(record):
                 doc_created = True
                 item_type_pid = org.online_circulation_category()
                 locations = org.get_online_locations()
-                for location in locations:
+                electronic_location = {
+                    'source': '{provider} - {collection}'.format(
+                        provider=provider['provider'],
+                        collection=provider['collection']),
+                    'uri': uri
+                }
+                for location_pid in locations:
 
                     create_holding(
                         document_pid=new_record.pid,
-                        location_pid=location,
+                        location_pid=location_pid,
                         item_type_pid=item_type_pid,
-                        electronic_location=harvested_source,
+                        electronic_location=electronic_location,
                         holdings_type='electronic')
         else:
             current_app.logger.warning(
                 'create document holding no org: {source}'.format(
-                    source=harvested_source['source']
+                    source=provider['provider']
                 )
             )
+    del (new_record['providers'])
+    del (new_record['electronicLocator'])
     return new_record
 
 
 def update_document_holding(record, pid):
     """Update a document and a holding for a harvested ebook."""
-    harvested_sources = get_harvested_sources(record)
+    # harvested_sources = get_harvested_sources(record)
     new_record = None
+    providers = record.get('providers', [])
+    uri = record.get(
+                    'electronicLocator')[0].get('url')
+    del (record['providers'])
+    del (record['electronicLocator'])
     existing_record = Document.get_record_by_pid(pid)
     new_record = existing_record.replace(
         record,
         dbcommit=True,
         reindex=True
     )
-    for harvested_source in harvested_sources:
-        org = Organisation.get_record_by_online_harvested_source(
-            source=harvested_source['source'])
+    for holding_pid in Holding.get_holdings_pid_by_document_pid(pid):
+        holding = Holding.get_record_by_pid(holding_pid)
+        holding.delete(force=False, dbcommit=True, delindex=True)
+
+
+    for provider in providers:
+        org = Organisation.get_record_by_pid(provider['organisation'])
         if org:
             item_type_pid = org.online_circulation_category()
             locations = org.get_online_locations()
+            electronic_location = {
+                'source': '{provider} - {collection}'.format(
+                        provider=provider['provider'],
+                        collection=provider['collection']),
+                'uri': uri
+            }
             for location_pid in locations:
-                if not get_holding_pid_by_doc_location_item_type(
-                    new_record.pid, location_pid, item_type_pid, 'electronic'
-                ):
-                    create_holding(
-                        document_pid=new_record.pid,
-                        location_pid=location_pid,
-                        item_type_pid=item_type_pid,
-                        electronic_location=harvested_source,
-                        holdings_type='electronic'
-                    )
+                create_holding(
+                    document_pid=new_record.pid,
+                    location_pid=location_pid,
+                    item_type_pid=item_type_pid,
+                    electronic_location=electronic_location,
+                    holdings_type='electronic')
 
-    source_uris = [harvested_source.get('uri')
-                   for harvested_source in harvested_sources
-                   if 'source' in harvested_source]
+        else:
+            current_app.logger.warning(
+                'create document holding no org: {source}'.format(
+                    source=provider['provider']
+                )
+            )
 
-    for holding_pid in Holding.get_holdings_pid_by_document_pid(pid):
-        holding = Holding.get_record_by_pid(holding_pid)
-        for electronic_location in holding.get('electronic_location', []):
-            if electronic_location.get('source') and \
-                    electronic_location.get('uri') not in source_uris:
-                holding.delete(force=False, dbcommit=True, delindex=True)
     return new_record
