@@ -794,7 +794,7 @@ class ReroIlsMarc21Overdo(ReroIlsOverdo):
             'book_format': 'c'
         }
         self.extract_series_statement_subfield = {
-            '490': {
+            '440': {
                 'series_title': 'a',
                 'series_enumeration': 'v'
             },
