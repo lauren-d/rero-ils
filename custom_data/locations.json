@@ -295,15 +295,6 @@
     }
   },
   {
-    "pid": "32",
-    "code": "BST-ECRU",
-    "name": "ECRU",
-    "allow_request": true,
-    "library": {
-      "$ref": "https://ils.rero.ch/api/libraries/6"
-    }
-  },
-  {
     "pid": "33",
     "code": "BST-Unités",
     "name": "Bibliothèques locales",
@@ -313,27 +304,9 @@
     }
   },
   {
-    "pid": "34",
-    "code": "BST-BAPA",
-    "name": "BAPA",
-    "allow_request": true,
-    "library": {
-      "$ref": "https://ils.rero.ch/api/libraries/6"
-    }
-  },
-  {
-    "pid": "35",
-    "code": "BST-ELIA-ECAV",
-    "name": "ELIA - ECAV",
-    "allow_request": true,
-    "library": {
-      "$ref": "https://ils.rero.ch/api/libraries/6"
-    }
-  },
-  {
     "pid": "36",
-    "code": "BST-ELIA-POPS",
-    "name": "ELIA - POPS",
+    "code": "BST-ELIA",
+    "name": "ELIA",
     "allow_request": true,
     "library": {
       "$ref": "https://ils.rero.ch/api/libraries/6"
@@ -405,11 +378,11 @@
   },
   {
     "pid": "44",
-    "code": "INGI",
-    "name": "Bibliothèque",
+    "code": "BST-INGI",
+    "name": "INGI",
     "allow_request": true,
     "library": {
-      "$ref": "https://ils.rero.ch/api/libraries/11"
+      "$ref": "https://ils.rero.ch/api/libraries/6"
     }
   },
   {
