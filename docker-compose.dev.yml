@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+#
+# RERO ILS
+# Copyright (C) 2019 RERO
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+version: '2.3'
+services:
+  dev-cache:
+    image: redis
+    restart: "always"
+    read_only: true
+    ports:
+      - "6380:6379"
+  dev-db:
+    image: postgres:9.6
+    restart: "always"
+    environment:
+      - "POSTGRES_USER=rero-ils"
+      - "POSTGRES_PASSWORD=rero-ils"
+      - "POSTGRES_DB=rero-ils"
+    ports:
+      - "5433:5432"
+  dev-mq:
+    image: rabbitmq:3-management
+    restart: "always"
+    ports:
+      - "15673:15672"
+      - "5673:5672"
+  dev-es:
+    build: ./docker/elasticsearch/
+    image: elasticsearch-icu
+    restart: "always"
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 1g
+    ports:
+      - "9201:9200"
+      - "9301:9300"
+  dev-kibana:
+    image: docker.elastic.co/kibana/kibana-oss:6.6.2
+    environment:
+      - "ELASTICSEARCH_URL=http://dev-es:9200"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "5602:5601"
