@@ -1160,14 +1160,7 @@ class ItemCirculation(IlsRecord):
 
     def item_has_active_loan_or_request(self):
         """Return True if active loan or a request found for item."""
-        states = [LoanState.PENDING] + \
-            current_app.config['CIRCULATION_STATES_LOAN_ACTIVE']
-        search = search_by_pid(
-            item_pid=item_pid_to_object(self.pid),
-            filter_states=states,
-        )
-        search_result = search.execute()
-        return search_result.hits.total
+        return has_active_loan_or_request_by_item_pid(self.pid)
 
     def return_missing(self):
         """Return the missing item.
@@ -1358,3 +1351,14 @@ class ItemCirculation(IlsRecord):
                     item_pid not in returned_item_pids:
                 returned_item_pids.append(item_pid)
                 yield item, loan
+
+
+def has_active_loan_or_request_by_item_pid(item_pid):
+    """Return True if active loan or a request found for item."""
+    states = [LoanState.PENDING] + \
+        current_app.config['CIRCULATION_STATES_LOAN_ACTIVE']
+    search = search_by_pid(
+        item_pid=item_pid_to_object(item_pid),
+        filter_states=states,
+    )
+    return search.source().count() > 0

@@ -19,6 +19,7 @@
 
 from .utils import create_authorized_access_point
 from ..documents.api import Document, DocumentsSearch
+from ..documents.utils import title_format_text_head
 from ..holdings.api import Holding, HoldingsSearch
 from ..items.api import ItemsSearch
 from ..persons.api import Person
@@ -36,6 +37,18 @@ def enrich_document_data(sender, json=None, record=None, index=None,
     :param doc_type: The doc_type for the record.
     """
     if index == '-'.join([DocumentsSearch.Meta.index, doc_type]):
+        # TITLE
+        titles = record.get('title', [])
+        text_title = title_format_text_head(titles, with_subtitle=False)
+        if text_title:
+            json['ui_title_text'] = text_title
+
+        responsibility = record.get('responsibilityStatement', [])
+        text_title = title_format_text_head(titles, responsibility,
+                                            with_subtitle=False)
+        if text_title:
+            json['ui_title_text_responsibility'] = text_title
+
         # HOLDINGS
         holdings = []
         document_pid = record['pid']
@@ -61,7 +74,10 @@ def enrich_document_data(sender, json=None, record=None, index=None,
             es_items = list(
                 ItemsSearch().filter('term', holding__pid=holding.pid).scan()
             )
+            availability = False
             for item in es_items:
+                if item.available:
+                    availability = True
                 item_record = {
                     'pid': item.pid,
                     'barcode': item.barcode,
@@ -85,7 +101,7 @@ def enrich_document_data(sender, json=None, record=None, index=None,
                         'date': acq_date
                     }
                 data.setdefault('items', []).append(item_record)
-            data['available'] = Holding.isAvailable(es_items)
+            data['available'] = availability
             holdings.append(data)
 
         if holdings:

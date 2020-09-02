@@ -97,29 +97,17 @@ class DocumentJSONSerializer(JSONSerializer):
             available = Document.get_record_by_pid(
                 metadata.get('pid')).is_available(viewcode)
             metadata['available'] = available
-            titles = metadata.get('title', [])
-            text_title = title_format_text_head(titles, with_subtitle=False)
-            if text_title:
-                metadata['ui_title_text'] = text_title
-            responsibility = metadata.get('responsibilityStatement', [])
-            text_title = title_format_text_head(titles, responsibility,
-                                                with_subtitle=False)
-            if text_title:
-                metadata['ui_title_text_responsibility'] = text_title
 
-        if viewcode != current_app.config.get(
+            if viewcode != current_app.config.get(
                 'RERO_ILS_SEARCH_GLOBAL_VIEW_CODE'
-        ):
-            view_id = Organisation.get_record_by_viewcode(viewcode)['pid']
-            for record in records:
-                metadata = record.get('metadata', {})
+            ):
+                view_id = Organisation.get_record_by_viewcode(viewcode)['pid']
                 items = metadata.get('items', [])
                 if items:
                     output = []
-                    for item in items:
-                        if item.get('organisation')\
-                                .get('organisation_pid') == view_id:
-                            output.append(item)
+                    for i in [x for x in items if x.get('organisation').get(
+                        'organisation_pid') == view_id]:
+                        output.append(i)
                     record['metadata']['items'] = output
 
         # Add organisation name

@@ -17,7 +17,8 @@
 
 """Signals connector for Item."""
 
-from .api import Item, ItemsSearch
+from .api import Item, ItemsSearch, has_active_loan_or_request_by_item_pid
+from ..locations.api import LocationsSearch
 
 
 def enrich_item_data(sender, json=None, record=None, index=None,
@@ -30,15 +31,17 @@ def enrich_item_data(sender, json=None, record=None, index=None,
     :param doc_type: The doc_type for the record.
     """
     if index == '-'.join([ItemsSearch.Meta.index, doc_type]):
-        item = record
-        if not isinstance(record, Item):
-            item = Item.get_record_by_pid(record.get('pid'))
-        org_pid = item.get_library().replace_refs()['organisation']['pid']
+
+        # ES search reduces number of requests for organisation and library.
+        es_loc = next(LocationsSearch().filter(
+            'term', pid=json['location']['pid']
+        ).scan())
         json['organisation'] = {
-            'pid': org_pid
+            'pid': es_loc.organisation.pid
         }
-        lib_pid = item.get_library().replace_refs()['pid']
         json['library'] = {
-            'pid': lib_pid
+            'pid': es_loc.library.pid
         }
-        json['available'] = item.available
+
+        json['available'] = has_active_loan_or_request_by_item_pid(
+            record.get('pid'))

@@ -19,12 +19,13 @@
 
 from .api import Item, ItemsIndexer, ItemsSearch, item_id_fetcher, \
     item_id_minter, search_active_loans_for_item
-from .circulation import ItemCirculation
+from .circulation import ItemCirculation, \
+    has_active_loan_or_request_by_item_pid
 from .issue import ItemIssue
 from .record import ItemRecord
 
 __all__ = (
     'Item', 'ItemRecord', 'ItemCirculation', 'ItemIssue', 'ItemsSearch',
     'ItemsIndexer', 'item_id_fetcher', 'item_id_minter',
-    'search_active_loans_for_item'
+    'search_active_loans_for_item', 'has_active_loan_or_request_by_item_pid'
 )
