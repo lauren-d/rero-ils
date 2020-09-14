@@ -68,7 +68,8 @@ from .documents.dojson.contrib.marc21tojson import marc21
 from .holdings.cli import create_patterns
 from .ill_requests.cli import create_ill_requests
 from .items.cli import create_items, reindex_items
-from .loans.cli import create_loans
+from .loans.cli import create_loans, create_virtua_loans, \
+    create_virtua_requests
 from .patrons.cli import import_users
 from .persons.tasks import create_mef_record_online
 from .tasks import process_bulk_queue
@@ -95,6 +96,8 @@ fixtures.add_command(import_users)
 fixtures.add_command(create_items)
 fixtures.add_command(reindex_items)
 fixtures.add_command(create_loans)
+fixtures.add_command(create_virtua_loans)
+fixtures.add_command(create_virtua_requests)
 fixtures.add_command(create_patterns)
 fixtures.add_command(create_ill_requests)
 fixtures.add_command(create_collections)

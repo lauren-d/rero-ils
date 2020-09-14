@@ -24,6 +24,7 @@ import random
 import traceback
 from datetime import datetime, timedelta, timezone
 
+import ciso8601
 import click
 from flask.cli import with_appcontext
 from invenio_circulation.api import get_loan_for_item
@@ -454,3 +455,162 @@ def create_payment_record(patron_transaction, user_pid, user_library):
     data['amount'] = patron_transaction.get('total_amount')
     data['creation_date'] = datetime.now(timezone.utc).isoformat()
     return data
+
+@click.command('create_virtua_loans')
+@click.option('-v', '--verbose', 'verbose', is_flag=True, default=False)
+@click.option('-d', '--debug', 'debug', is_flag=True, default=False)
+@click.argument('infile', type=click.File('r'))
+@with_appcontext
+def create_virtua_loans(infile, verbose, debug):
+    """Create circulation transactions from Virtua.
+
+    infile: Json transactions file
+    """
+    click.secho('Create Virtua circulation transactions:', fg='green')
+    data = json.load(infile)
+    errors_count = {}
+    to_block = []
+    for patron_data in data.get('items'):
+        patron_barcode   = patron_data.get('patron_barcode')
+        item_barcode     = patron_data.get('item_barcode')
+        user_id          = patron_data.get('user_id')
+        location_id      = patron_data.get('location_id')
+
+        due_date         = ciso8601.parse_datetime(patron_data.get('due_date'))
+        checkout_date    = ciso8601.parse_datetime(patron_data.get('checkout_date'))
+        organisation_pid = patron_data.get('organisation_id')
+
+        if patron_barcode is None:
+            click.secho('Patron barcode is missing!', fg='red')
+        else:
+            click.echo('Patron: {barcode}'.format(barcode=patron_barcode))
+            requests = patron_data.get('requests', {})
+            blocked = patron_data.get('blocked', False)
+
+            create_virtua_loan(patron_barcode, item_barcode, user_id, \
+                    location_id, checkout_date, due_date, organisation_pid, verbose, debug)
+
+
+    for key, val in errors_count.items():
+        click.secho(
+            'Errors {transaction_type}: {count}'.format(
+                transaction_type=key,
+                count=val
+            ),
+            fg='red'
+        )
+    # click.echo(result)
+
+def create_virtua_loan(patron_barcode, item_barcode,
+                user_pid, user_location, transaction_date, due_date,
+                organisation_pid, verbose=False,
+                debug=False):
+    """Create loans transactions."""
+    try:
+        item = Item.get_item_by_barcode(barcode=item_barcode,organisation_pid=organisation_pid)
+        patron = Patron.get_patron_by_barcode(barcode=patron_barcode)
+
+        click.secho("Create loan...")
+        item.checkout(
+            patron_pid=patron.pid,
+            transaction_user_pid=user_pid,
+            transaction_location_pid=user_location,
+            transaction_date=transaction_date,
+            document_pid=item.replace_refs()['document']['pid'],
+            item_pid=item.pid,
+        )
+        click.secho("Update due date")
+
+        loan = get_loan_for_item(item_pid_to_object(item.pid))
+        loan_pid = loan.get('pid')
+        loan = Loan.get_record_by_pid(loan_pid)
+        loan['end_date'] = due_date.isoformat()
+        loan.update(
+            loan,
+            dbcommit=True,
+            reindex=True
+        )
+    except Exception as err:
+        if verbose:
+            click.secho(
+                '\tException loan {err}'.format(
+                        err=err
+                ),
+                fg='red'
+            )
+        if debug:
+            traceback.print_exc()
+        return None
+
+@click.command('create_virtua_requests')
+@click.option('-v', '--verbose', 'verbose', is_flag=True, default=False)
+@click.option('-d', '--debug', 'debug', is_flag=True, default=False)
+@click.argument('infile', type=click.File('r'))
+@with_appcontext
+def create_virtua_requests(infile, verbose, debug):
+    """Create requests from Virtua.
+
+    infile: Json transactions file
+    """
+    click.secho('Create Virtua requests:', fg='green')
+    data = json.load(infile)
+    errors_count = {}
+    to_block = []
+    for patron_data in data.get('items'):
+        patron_barcode   = patron_data.get('patron_barcode')
+        item_barcode     = patron_data.get('item_barcode')
+        location_id      = patron_data.get('location_id')
+        date_placed      = ciso8601.parse_datetime(patron_data.get('date_placed'))
+        organisation_pid = patron_data.get('organisation_id')
+
+        if patron_barcode is None:
+            click.secho('Patron barcode is missing!', fg='red')
+        else:
+            click.echo('Patron: {barcode}'.format(barcode=patron_barcode))
+            create_virtua_request(patron_barcode, item_barcode, \
+                    location_id, date_placed, location_id,
+                    organisation_pid, verbose, debug)
+
+    for key, val in errors_count.items():
+        click.secho(
+            'Errors {transaction_type}: {count}'.format(
+                transaction_type=key,
+                count=val
+            ),
+            fg='red'
+        )
+
+def create_virtua_request(patron_barcode, item_barcode,
+                user_location, transaction_date, pickup_location_pid,
+                organisation_pid, verbose=False,
+                debug=False):
+    """Create Virtua request transactions."""
+    try:
+        item = Item.get_item_by_barcode(barcode=item_barcode,organisation_pid=organisation_pid)
+        patron = Patron.get_patron_by_barcode(patron_barcode)
+
+        circ_policy = CircPolicy.provide_circ_policy(
+            item.holding_library_pid,
+            patron.patron_type_pid,
+            item.holding_circulation_category_pid
+        )
+        if circ_policy.get('allow_requests'):
+            item.request(
+                patron_pid=patron.pid,
+                transaction_location_pid=user_location,
+                transaction_user_pid=patron.pid,
+                transaction_date=transaction_date,
+                pickup_location_pid=pickup_location_pid,
+                document_pid=item.replace_refs()['document']['pid'],
+            )
+    except Exception as err:
+        if verbose:
+            click.secho(
+                '\tException request : {err}'.format(
+                    err=err
+                ),
+                fg='red'
+            )
+        if debug:
+            traceback.print_exc()
+        return None
