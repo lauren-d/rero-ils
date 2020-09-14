@@ -63,7 +63,8 @@ from .api import IlsRecordsIndexer
 from .documents.dojson.contrib.marc21tojson import marc21
 from .holdings.cli import create_patterns
 from .items.cli import create_items, reindex_items
-from .loans.cli import create_loans
+from .loans.cli import create_loans, create_virtua_loans, \
+    create_virtua_requests
 from .patrons.cli import import_users
 from .tasks import process_bulk_queue
 from .utils import get_record_class_from_schema_or_pid_type, read_json_record
@@ -89,6 +90,8 @@ fixtures.add_command(import_users)
 fixtures.add_command(create_items)
 fixtures.add_command(reindex_items)
 fixtures.add_command(create_loans)
+fixtures.add_command(create_virtua_loans)
+fixtures.add_command(create_virtua_requests)
 fixtures.add_command(create_patterns)
 
 
