@@ -72,33 +72,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -175,37 +212,63 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "8 f\\u00e9vrier apr\\u00e8s-midi",
+        "title": "1er mai",
         "is_open": false,
-        "start_date": "2020-02-08",
-        "times": [
-          {
-            "start_time": "12:00",
-            "end_time": "18:00"
-          }
-        ]
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Dimanche du livre",
-        "is_open": true,
-        "start_date": "2020-05-24T10:00:00.000Z",
-        "times": [
-          {
-            "start_time": "10:00",
-            "end_time": "16:00"
-          }
-        ]
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "1er ao\\u00fbt",
+        "title": "15 août",
         "is_open": false,
-        "start_date": "2020-08-01",
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
         "repeat": {
           "interval": 1,
           "period": "yearly",
@@ -289,12 +352,66 @@
     ],
     "exception_dates": [
       {
-        "title": "Inventaire mensuel",
+        "title": "Noël",
         "is_open": false,
-        "start_date": "2020-01-03",
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
         "repeat": {
           "interval": 1,
-          "period": "monthly",
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
           "data": [
             8
           ]
@@ -375,33 +492,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
-        "start_date": "2019-12-22",
-        "end_date": "2020-01-02"
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
+        "title": "1er mai",
         "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Assembl\\u00e9e annuelle",
-        "is_open": true,
-        "start_date": "2020-09-15",
-        "times": [
-          {
-            "start_time": "14:00",
-            "end_time": "16:00"
-          }
-        ]
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "15 août",
         "is_open": false,
-        "start_date": "2020-07-01",
-        "end_date": "2020-08-22"
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -478,33 +632,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -581,33 +772,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -684,33 +912,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -787,33 +1052,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -890,33 +1192,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -991,37 +1330,7 @@
         "times": []
       }
     ],
-    "exception_dates": [
-      {
-        "title": "Vacances de No\\u00ebl",
-        "is_open": false,
-        "start_date": "2020-12-23",
-        "end_date": "2021-01-04"
-      },
-      {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
-        "title": "1er mai",
-        "is_open": false,
-        "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
-      },
-      {
-        "title": "Vacances d'\\u00e9t\\u00e9",
-        "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
-      }
-    ]
+    "exception_dates": []
   },
   {
     "address": "Louvain-la-Neuve",
@@ -1179,33 +1488,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1282,33 +1628,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1383,43 +1766,13 @@
         "times": []
       }
     ],
-    "exception_dates": [
-      {
-        "title": "Vacances de No\\u00ebl",
-        "is_open": false,
-        "start_date": "2020-12-23",
-        "end_date": "2021-01-04"
-      },
-      {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
-        "title": "1er mai",
-        "is_open": false,
-        "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
-      },
-      {
-        "title": "Vacances d'\\u00e9t\\u00e9",
-        "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
-      }
-    ]
+    "exception_dates": []
   },
   {
     "address": "Namur",
     "pid": "16",
     "code": "UNamur-Droit",
-    "email": "bibsys@uclouvain.be",
+    "email": "bibliotheque-droit@unamur.be",
     "name": "UNamur - Droit",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/2"
@@ -1488,33 +1841,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1522,7 +1912,7 @@
     "address": "Namur",
     "pid": "17",
     "code": "UNamur-BUMP",
-    "email": "bibsys@uclouvain.be",
+    "email": "public.bump@unamur.be",
     "name": "UNamur - BUMP",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/2"
@@ -1591,33 +1981,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1625,7 +2052,7 @@
     "address": "Bruxelles",
     "pid": "18",
     "code": "USLB",
-    "email": "bibsys@uclouvain.be",
+    "email": "sophie.tomboy@usaintlouis.be",
     "name": "USLB - Saint-Louis",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/3"
@@ -1694,33 +2121,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1880,33 +2344,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -1983,33 +2484,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -2086,33 +2624,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
-        "start_date": "2019-12-22",
-        "end_date": "2020-01-02"
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
+        "title": "1er mai",
         "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Assembl\\u00e9e annuelle",
-        "is_open": true,
-        "start_date": "2020-09-15",
-        "times": [
-          {
-            "start_time": "14:00",
-            "end_time": "16:00"
-          }
-        ]
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "15 août",
         "is_open": false,
-        "start_date": "2019-07-01",
-        "end_date": "2019-08-22"
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -2189,33 +2764,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
-        "start_date": "2019-12-22",
-        "end_date": "2020-01-02"
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
+        "title": "1er mai",
         "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Assembl\\u00e9e annuelle",
-        "is_open": true,
-        "start_date": "2020-09-15",
-        "times": [
-          {
-            "start_time": "14:00",
-            "end_time": "16:00"
-          }
-        ]
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "15 août",
         "is_open": false,
-        "start_date": "2020-07-01",
-        "end_date": "2020-08-22"
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -2292,33 +2904,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },
@@ -2395,33 +3044,70 @@
     ],
     "exception_dates": [
       {
-        "title": "Vacances de No\\u00ebl",
+        "title": "Noël",
         "is_open": false,
         "start_date": "2020-12-23",
         "end_date": "2021-01-04"
       },
       {
-        "title": "Vacances de Carnaval",
-        "is_open": false,
-        "start_date": "2020-02-24",
-        "end_date": "2020-02-28"
-      },
-      {
         "title": "1er mai",
         "is_open": false,
         "start_date": "2020-05-01",
-        "times": [
-          {
-            "start_time": "07:00",
-            "end_time": "19:00"
-          }
-        ]
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       },
       {
-        "title": "Vacances d'\\u00e9t\\u00e9",
+        "title": "21 juillet",
         "is_open": false,
-        "start_date": "2020-07-15",
-        "end_date": "2020-08-15"
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
       }
     ]
   },

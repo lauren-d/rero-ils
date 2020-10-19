@@ -584,9 +584,11 @@
     "library": {
       "$ref": "https://ils.rero.ch/api/libraries/17"
     },
+    "is_pickup": true,
+    "pickup_name": "BUMP-Comptoir des consultations",
     "restrict_pickup_to": [
       {
-        "$ref": "https://ils.rero.ch/api/locations/59"
+        "$ref": "https://ils.rero.ch/api/locations/60"
       }
     ],
     "send_notification": true,
@@ -611,7 +613,7 @@
     },
     "restrict_pickup_to": [
       {
-        "$ref": "https://ils.rero.ch/api/locations/59"
+        "$ref": "https://ils.rero.ch/api/locations/60"
       }
     ]
   },
@@ -625,7 +627,7 @@
     },
     "restrict_pickup_to": [
       {
-        "$ref": "https://ils.rero.ch/api/locations/59"
+        "$ref": "https://ils.rero.ch/api/locations/60"
       }
     ],
     "send_notification": true,
@@ -635,15 +637,10 @@
     "pid": "64",
     "code": "Département",
     "name": "Département",
-    "allow_request": true,
+    "allow_request": false,
     "library": {
       "$ref": "https://ils.rero.ch/api/libraries/17"
-    },
-    "restrict_pickup_to": [
-      {
-        "$ref": "https://ils.rero.ch/api/locations/59"
-      }
-    ]
+    }
   },
   {
     "pid": "65",

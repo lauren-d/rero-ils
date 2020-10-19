@@ -5,7 +5,8 @@
     "name": "UCLouvain",
     "code": "uclouvain",
     "default_currency": "EUR",
-    "current_budget_pid": "1"
+    "current_budget_pid": "1",
+    "collection_enabled_on_public_view": true
   },
   {
     "pid": "2",
@@ -13,7 +14,8 @@
     "name": "UNamur",
     "code": "unamur",
     "default_currency": "EUR",
-    "current_budget_pid": "2"
+    "current_budget_pid": "2",
+    "collection_enabled_on_public_view": true
   },
   {
     "pid": "3",
@@ -21,6 +23,7 @@
     "name": "USaint-Louis",
     "code": "uslb",
     "default_currency": "EUR",
-    "current_budget_pid": "3"
+    "current_budget_pid": "3",
+    "collection_enabled_on_public_view": true
   }
 ]

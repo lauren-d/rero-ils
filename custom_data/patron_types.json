@@ -1,24 +1,24 @@
 [
   {
     "pid": "1",
-    "name": "Personnel UCL",
-    "description": "Personnel UCL",
+    "name": "Personnel PATO",
+    "description": "Membre du personnel : PATO",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     }
   },
   {
     "pid": "2",
-    "name": "Etudiant UCL",
-    "description": "Etudiant UCL",
+    "name": "Etudiant Baccalauréat",
+    "description": "Etudiant Baccalauréat",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     }
   },
   {
     "pid": "3",
-    "name": "Extérieur UCL",
-    "description": "Extérieur UCL",
+    "name": "Extérieur",
+    "description": "Lecteur extérieur",
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/1"
     }
@@ -70,5 +70,86 @@
     "organisation": {
       "$ref": "https://ils.rero.ch/api/organisations/3"
     }
+  },
+  {
+    "pid": "10",
+    "name": "Personnel PACS",
+    "description": "Membre du personnel : PACS",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "11",
+    "name": "Personnel Autre",
+    "description": "Membre du personnel : Autre",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "12",
+    "name": "Etudiant Master",
+    "description": "Etudiant Master",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "13",
+    "name": "Etudiant Autre",
+    "description": "Etudiant Autre",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "14",
+    "name": "Etudiant Doctorand",
+    "description": "Etudiant Doctorand",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "15",
+    "name": "Assimilé",
+    "description": "Assimilé",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    }
+  },
+  {
+    "pid": "16",
+    "name": "Etudiant Mémorand",
+    "description": "Etudiant Mémorand",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    }
+  },
+  {
+    "pid": "17",
+    "name": "Assimilé",
+    "description": "Assimilé",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    }
+  },
+  {
+    "pid": "18",
+    "name": "Assimilé",
+    "description": "Assimilé",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    }
+  },
+  {
+    "pid": "19",
+    "name": "Membre ARES",
+    "description": "Membre ARES",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    }
   }
+
 ]
