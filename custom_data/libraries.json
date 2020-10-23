@@ -1,0 +1,3197 @@
+[
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "1",
+    "code": "BDRT",
+    "email": "bibsys@uclouvain.be",
+    "name": "BDRT - Droit",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "2",
+    "code": "BFLT",
+    "email": "bibsys@uclouvain.be",
+    "name": "BFLT - Arts, lettres et théologie ",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "3",
+    "code": "BISP",
+    "email": "bibsys@uclouvain.be",
+    "name": "BISP - Philosophie",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "4",
+    "code": "BPEM",
+    "email": "bibsys@uclouvain.be",
+    "name": "BPEM - Psychologie, sciences de l'éducation et de la motricité",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Woluwé",
+    "pid": "5",
+    "code": "BSS",
+    "email": "bibsys@uclouvain.be",
+    "name": "BSS - Sciences de la Santé",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "6",
+    "code": "BST",
+    "email": "bibsys@uclouvain.be",
+    "name": "BST - Sciences et technologies",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "7",
+    "code": "BSPO",
+    "email": "bibsys@uclouvain.be",
+    "name": "BSPO - Sciences économiques, sociales et politiques",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "8",
+    "code": "CORE",
+    "email": "bibsys@uclouvain.be",
+    "name": "LIDAM - Operations Research and Econometrics",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Mont-Godinne",
+    "pid": "9",
+    "code": "MGD",
+    "email": "bibsys@uclouvain.be",
+    "name": "MG - Mont-Godinne",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "10",
+    "code": "SB",
+    "email": "bibsys@uclouvain.be",
+    "name": "Société des Bollandistes",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": []
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "12",
+    "code": "BIUL-Electronique",
+    "email": "bibsys@uclouvain.be",
+    "name": "BIUL - Electronique",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "sunday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      }
+    ],
+    "exception_dates": []
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "13",
+    "code": "BAIU-BXL",
+    "email": "bibsys@uclouvain.be",
+    "name": "BAIU - Arts et Architecture (Bruxelles)",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Mons",
+    "pid": "14",
+    "code": "BIMS",
+    "email": "bibsys@uclouvain.be",
+    "name": "BIMS - Mons",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Maredsous",
+    "pid": "15",
+    "code": "MARE",
+    "email": "bibsys@uclouvain.be",
+    "name": "MARE - Abbaye de Maredsous",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": []
+  },
+  {
+    "address": "Namur",
+    "pid": "16",
+    "code": "UNamur-Droit",
+    "email": "bibliotheque-droit@unamur.be",
+    "name": "UNamur - Droit",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Namur",
+    "pid": "17",
+    "code": "UNamur-BUMP",
+    "email": "public.bump@unamur.be",
+    "name": "UNamur - BUMP",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "18",
+    "code": "USLB",
+    "email": "sophie.tomboy@usaintlouis.be",
+    "name": "USLB - Saint-Louis",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "19",
+    "code": "USLB-Electronique",
+    "email": "bibsys@uclouvain.be",
+    "name": "USLB - Electronique",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "sunday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      }
+    ],
+    "exception_dates": []
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "20",
+    "code": "CDE",
+    "email": "bibsys@uclouvain.be",
+    "name": "USLB - Centre d'études européennes",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Bruxelles",
+    "pid": "21",
+    "code": "MH",
+    "email": "bibsys@uclouvain.be",
+    "name": "USLB - Marie Haps",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "22",
+    "code": "Testothèque",
+    "email": "bibsys@uclouvain.be",
+    "name": "Testothèque",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "23",
+    "code": "BMAG",
+    "email": "bibsys@uclouvain.be",
+    "name": "BMAG - Réserve",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "18:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Tournai",
+    "pid": "24",
+    "code": "BAIU-TOURNAI",
+    "email": "bibsys@uclouvain.be",
+    "name": "BAIU - Arts & Architecture (Tournai)",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Louvain-la-Neuve",
+    "pid": "25",
+    "code": "BAIU-LLN",
+    "email": "bibsys@uclouvain.be",
+    "name": "BAIU - Arts & Architecture (Louvain-la-Neuve)",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "08:00",
+            "end_time": "20:00"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": false,
+        "times": []
+      },
+      {
+        "day": "sunday",
+        "is_open": false,
+        "times": []
+      }
+    ],
+    "exception_dates": [
+      {
+        "title": "Noël",
+        "is_open": false,
+        "start_date": "2020-12-23",
+        "end_date": "2021-01-04"
+      },
+      {
+        "title": "1er mai",
+        "is_open": false,
+        "start_date": "2020-05-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "21 juillet",
+        "is_open": false,
+        "start_date": "2020-07-21",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "15 août",
+        "is_open": false,
+        "start_date": "2020-08-15",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "1er novembre",
+        "is_open": false,
+        "start_date": "2020-11-01",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      },
+      {
+        "title": "11 novembre",
+        "is_open": false,
+        "start_date": "2020-11-11",
+        "repeat": {
+          "interval": 1,
+          "period": "yearly",
+          "data": [
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "address": "Namur",
+    "pid": "26",
+    "code": "UNamur-Electronique",
+    "email": "bibsys@uclouvain.be",
+    "name": "UNamur - Electronique",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "opening_hours": [
+      {
+        "day": "monday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "tuesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "wednesday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "thursday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "friday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "saturday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      },
+      {
+        "day": "sunday",
+        "is_open": true,
+        "times": [
+          {
+            "start_time": "00:01",
+            "end_time": "23:59"
+          }
+        ]
+      }
+    ],
+    "exception_dates": []
+  }
+]

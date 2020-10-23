@@ -1,0 +1,1178 @@
+[
+  {
+    "collection_id": "BDRT CD",
+    "teachers": [
+      {
+        "name": "Zweifel, Carole"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "collection_type": "course",
+    "description": "BDRT CD",
+    "title": "BDRT CD",
+    "start_date": "1997-12-12",
+    "end_date": "2020-12-12",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1372223"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2375923"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2384022"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2461621"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464568"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464711"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464713"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464720"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464732"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2464737"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2477142"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2477148"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2477531"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2488759"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2516584"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2551868"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2553028"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2629925"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2629927"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2632761"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2647952"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2647953"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2648210"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2661103"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2666052"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2766750"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2797502"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2906391"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2957630"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2964916"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3003101"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3094710"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3104711"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3114045"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3114046"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3114047"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3114048"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3159056"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3190586"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3293295"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "BDRT GENERAL",
+    "teachers": [
+      {
+        "name": "Miege, Carole"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "collection_type": "course",
+    "description": "BDRT GENERAL",
+    "title": "BDRT GENERAL",
+    "start_date": "1997-12-12",
+    "end_date": "2025-11-12",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1054426"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1114021"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1130127"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1301244"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1386164"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2267018"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2280721"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2283059"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2299437"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2343960"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2403760"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2447410"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2455579"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2480467"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2509665"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2521591"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2547672"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2554853"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/257307"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2586138"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2608086"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2608128"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2639065"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2640882"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2648204"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2902461"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2972264"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2972408"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2982304"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2982305"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3007194"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033077"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033079"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033080"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033084"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033116"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033118"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3033157"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3070359"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3118634"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3163301"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3171117"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3213357"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3213358"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3217529"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3220600"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3228796"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3230778"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3235169"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3280843"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3291764"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3357538"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3361389"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3413906"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3413908"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3413910"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3413911"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/527992"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "BDRT TEMP",
+    "teachers": [
+      {
+        "name": "Miege, Carole"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "collection_type": "course",
+    "description": "BDRT TEMP",
+    "title": "BDRT TEMP",
+    "start_date": "2020-09-18",
+    "end_date": "2021-10-29",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1989425"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2728319"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2728489"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2776690"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3100423"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3163163"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "Pôle Public",
+    "teachers": [
+      {
+        "name": "Gilles, Samantha"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "collection_type": "course",
+    "description": "Pôle Public",
+    "title": "Pôle Public",
+    "start_date": "2018-02-15",
+    "end_date": "2021-06-30",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/3301962"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3301969"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/17"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LDROI1300G",
+    "teachers": [
+      {
+        "name": "Vanderschuren, Justin"
+      },
+      {
+        "name": "Dejollier, Alice"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "collection_type": "course",
+    "description": "Liste des ouvrages pour le TD droit judiciaire",
+    "title": "TD droit judiciaire",
+    "start_date": "1997-12-12",
+    "end_date": "2021-10-29",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/2634706"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2839401"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3100404"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3171222"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3189650"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3200171"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3240563"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3356453"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3357197"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LDROI1300E_1",
+    "teachers": [
+      {
+        "name": "Born, Raphaël"
+      }
+    ],
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "collection_type": "course",
+    "description": "Liste des ouvrages pour le TD Droit administratif",
+    "title": "TD Droit administratif",
+    "start_date": "1997-12-12",
+    "end_date": "2021-06-28",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1046978"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1102088"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1109777"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1370350"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2373953"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2404378"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2404390"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2474641"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2756811"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2781786"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2804107"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2866674"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2969722"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2974318"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3048176"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3052494"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3053618"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3070375"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3078342"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3079733"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3100482"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3105672"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3113978"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3145492"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3197166"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/355901"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/526488"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LDROI1053",
+    "teachers": [
+      {
+        "name": "Flamand, Christine"
+      },
+      {
+        "name": "Francq, Stéphanie"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le TP d’introduction aux principes et méthodes du droit belge",
+    "title": "TP d’introduction aux principes et méthodes du droit belge",
+    "start_date": "2019-10-03",
+    "end_date": "2021-06-30",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1130126"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3164611"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3210586"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3241617"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LHIS",
+    "teachers": [
+      {
+        "name": "Roekens, Anne"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "description": "Liste des ouvrages pour le cours LHIS",
+    "title": "Education",
+    "start_date": "2020-10-07",
+    "end_date": "2020-12-31",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/3015805"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3357512"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3382007"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3428588"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/17"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LDROI1223A",
+    "teachers": [
+      {
+        "name": "Laruelle, Amandine"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le TP Droit des obligations",
+    "title": "TP Droit des obligations - responsabilité civile",
+    "start_date": "2019-10-04",
+    "end_date": "2020-10-30",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1177975"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2107226"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2449952"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2692525"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2921222"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3038568"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3100152"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3102959"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3191046"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3269862"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3320289"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3327083"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3357514"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/1"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LHIS B 214",
+    "teachers": [
+      {
+        "name": "Delleaux, Fulgence"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "description": "Liste des ouvrages pour le préséminaire de recherche",
+    "title": "Préséminaire de recherche : Temps Modernes",
+    "start_date": "2020-09-16",
+    "end_date": "2021-04-30",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1535231"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1558520"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1581380"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1601796"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1606883"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1654794"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2196188"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3241829"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3263634"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3263640"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3263645"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3263653"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3457492"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/17"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LARKE1320",
+    "teachers": [
+      {
+        "name": "Peeters, Anthony"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le Séminaire d'archéologie",
+    "title": "Séminaire d'archéologie",
+    "start_date": "2020-09-21",
+    "end_date": "2020-12-18",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1141287"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2899468"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2899470"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/476613"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LGERM2732",
+    "teachers": [
+      {
+        "name": "Vanasten, Stéphanie"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le cours Nederlandse literatuur",
+    "title": "Nederlandse literatuur : Hedendaagse Nederlandstalige literatuur",
+    "start_date": "2020-09-15",
+    "end_date": "2021-01-29",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/3362563"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3373445"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3405705"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LCLIB2002",
+    "teachers": [
+      {
+        "name": "Glaude, Benoît"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le cours 'Le métier de libraire et ses techniques'",
+    "title": "Le métier de libraire et ses techniques",
+    "start_date": "2020-09-26",
+    "end_date": "2021-01-31",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/2260113"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3199847"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LLETB 102",
+    "teachers": [
+      {
+        "name": "Latteur, Olivier"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "description": "Liste des ouvrages pour le cours 'Méthodes bibliographiques'",
+    "title": "Méthodes bibliographiques",
+    "start_date": "2020-09-29",
+    "end_date": "2020-10-31",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1471802"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1588603"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2543067"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2543068"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2578088"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/17"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LHIST1394",
+    "teachers": [
+      {
+        "name": "Van Ypersele, Laurence"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le séminaire d'histoire contemporaine",
+    "title": "Séminaire d'histoire contemporaine",
+    "start_date": "2020-09-29",
+    "end_date": "2021-03-01",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1269670"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1331119"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2505581"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3094678"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LHIST2270",
+    "teachers": [
+      {
+        "name": "Mostaccio, Silvia"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le séminaire d'histoire moderne",
+    "title": "Séminaire d'histoire moderne",
+    "start_date": "2020-09-29",
+    "end_date": "2021-03-01",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1169783"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1339516"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2517275"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2718934"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3006033"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3174759"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3186587"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3198754"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/977757"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/977758"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LTHEA2241",
+    "teachers": [
+      {
+        "name": "Piret, Pierre"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le cours 'Étude du théâtre français I'",
+    "title": "Étude du théâtre français I",
+    "start_date": "2020-10-02",
+    "end_date": "2021-01-31",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/2367761"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3097025"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3205236"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3207963"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3216444"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3221076"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "HIST1228",
+    "teachers": [
+      {
+        "name": "Piret, Bérengère"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/3"
+    },
+    "description": "Liste des ouvrages pour le séminaire d'Histoire contemporaine",
+    "title": "Séminaire d'Histoire contemporaine",
+    "start_date": "2020-10-02",
+    "end_date": "2021-05-15",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1799173"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2523821"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3249097"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/18"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LHIST2160",
+    "teachers": [
+      {
+        "name": "Van Haeperen, Françoise"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/1"
+    },
+    "description": "Liste des ouvrages pour le séminaire d'histoire de l'Antiquité [MA2]",
+    "title": "Séminaire d'histoire de l'Antiquité [MA2]",
+    "start_date": "2020-10-06",
+    "end_date": "2021-03-01",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/3453227"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/2"
+      }
+    ],
+    "published": true
+  },
+  {
+    "collection_id": "LARTB026",
+    "teachers": [
+      {
+        "name": "Lefftz, Michel"
+      }
+    ],
+    "collection_type": "course",
+    "organisation": {
+      "$ref": "https://ils.rero.ch/api/organisations/2"
+    },
+    "description": "Liste des ouvrages pour le cours 'Peinture et sculpture des Temps Modernes'",
+    "title": "Peinture et sculpture des Temps Modernes ",
+    "start_date": "2020-10-08",
+    "end_date": "2020-10-31",
+    "items": [
+      {
+        "$ref": "https://ils.rero.ch/api/items/1498729"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/1595838"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2017068"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2029651"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2577401"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2782531"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2782533"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2905576"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/2918626"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458510"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458523"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458524"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458649"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458661"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458667"
+      },
+      {
+        "$ref": "https://ils.rero.ch/api/items/3458669"
+      }
+    ],
+    "libraries": [
+      {
+        "$ref": "https://ils.rero.ch/api/libraries/17"
+      }
+    ],
+    "published": true
+  }
+]

@@ -113,7 +113,13 @@
           {%- include "rero_ils/_info_pilot.html" %}
         {% else %}
           <!-- TEST VERSION -->
-          {%- include "rero_ils/_info_test.html" %}
+          {% if 'uclouvain' in request.host %}
+            <!-- UCLOUVAIN VERSION -->
+            {%- include "rero_ils/_info_uclouvain.html" %}
+            {% else %}
+              <!-- TEST VERSION -->
+              {%- include "rero_ils/_info_test.html" %}
+          {% endif %}
         {% endif %}
 
         <!-- HELP -->

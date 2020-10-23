@@ -69,6 +69,8 @@
       "enum": [
         "fre",
         "eng",
+        "esp",
+        "dut",
         "ita",
         "ger",
         "spa"
@@ -83,6 +85,14 @@
           {
             "value": "eng",
             "label": "lang_eng"
+          },
+          {
+            "value": "esp",
+            "label": "lang_esp"
+          },
+          {
+            "value": "dut",
+            "label": "lang_dut"
           },
           {
             "value": "ita",
