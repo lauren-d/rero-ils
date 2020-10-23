@@ -1,0 +1,224 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+#
+# RERO ILS
+# Copyright (C) 2019 RERO
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+DATA_PATH=$(pipenv --where)/data
+
+# Parameters description:
+#  --create_items_holdings_small:
+#       used for create only the items and holdings files for the 'small' documents file
+#  --create_items_holdings_big:
+#       used for create only the items and holdings files for the 'big' documents file
+#  --deployment:
+#       used for deploy the 'big' files
+#  --dont_stop:
+#       used for continue script on error
+#  --time:
+#       used for checking time for each command
+
+# COLORS for messages
+NC='\033[0m'                    # Default color
+INFO_COLOR='\033[1;97;44m'      # Bold + white + blue background
+SUCCESS_COLOR='\033[1;97;42m'   # Bold + white + green background
+ERROR_COLOR='\033[1;97;41m'     # Bold + white + red background
+
+PROGRAM=`basename $0`
+
+# MESSAGES
+msg() {
+  echo -e "${1}" 1>&2
+}
+# Display a colored message
+# More info: https://misc.flogisoft.com/bash/tip_colors_and_formatting
+# $1: choosen color
+# $2: title
+# $3: the message
+colored_msg() {
+  msg "${1}[${2}]: ${3}${NC}"
+}
+
+info_msg() {
+  colored_msg "${INFO_COLOR}" "INFO" "${1}"
+}
+
+error_msg() {
+  colored_msg "${ERROR_COLOR}" "ERROR" "${1}"
+}
+
+error_msg+exit() {
+    error_msg "${1}" && exit 1
+}
+
+success_msg() {
+  colored_msg "${SUCCESS_COLOR}" "SUCCESS" "${1}"
+}
+
+invert_warning_option() {
+  if ${ENABLE_WARNINGS}
+  then
+    ENABLE_WARNINGS=false
+  else
+    ENABLE_WARNINGS=true
+  fi
+}
+
+
+DEPLOYMENT=false
+LOADPERSONS=false
+CREATE_ITEMS_HOLDINGS_SMALL=false
+CREATE_ITEMS_HOLDINGS_BIG=false
+STOP_EXECUTION=true
+CREATE_LAZY=""
+DONT_STOP=""
+PREFIX=""
+ES_MAPPING=false
+# Permit user to set it with system var. Default is true.
+ENABLE_WARNINGS=${ENABLE_WARNINGS:=true}
+
+# Displays program name
+msg "PROGRAM: ${PROGRAM}"
+
+# PIPENV is a mandatory condition to launch this program!
+IS_VIRTUALENV=`python -c "import sys; print(1) if hasattr(sys, 'real_prefix') else print(0)"`
+if [ "${IS_VIRTUALENV}" != 1 ]; then
+  error_msg+exit "Error - Launch this script via pipenv command:\n\tpipenv run setup"
+fi
+
+# options may be followed by one colon to indicate they have a required argument
+if ! options=$(getopt -o dPsbclptmwD: -l deployment,persons,create_items_holdings_small,create_items_holdings_big,lazy,pursue,time,es-mapping,warnings,data_path: -- "$@")
+then
+    # something went wrong, getopt will put out an error message for us
+    exit 1
+fi
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+    -d|--deployment) DEPLOYMENT=true ;;
+    -P|--persons) LOADPERSONS=true ;;
+    -s|--create_items_holdings_small) CREATE_ITEMS_HOLDINGS_SMALL=true ;;
+    -b|--create_items_holdings_big) CREATE_ITEMS_HOLDINGS_BIG=true ;;
+    -c|--continue) STOP_EXECUTION=false ;;
+    -l|--lazy) CREATE_LAZY="--lazy" ;;
+    -p|--pursue) DONT_STOP="--dont-stop" ;;
+    -t|--time) PREFIX="time" ;;  # Get time for all commands
+    -m|--es-mapping) ES_MAPPING=true ;;
+    -w|--warnings) invert_warning_option ;;
+    -D|--data_path) DATA_PATH=$2 ;;
+    (--) shift; break;;
+    (-*) error_msg+exit "$0: Unrecognized option $1";;
+    (*) break;;
+    esac
+    shift
+done
+
+if [ ! -d ${DATA_PATH} ]; then
+    error_msg+exit "Error - data path does not exist: ${DATA_PATH}"
+fi
+
+if ${CREATE_ITEMS_HOLDINGS_SMALL} && ${CREATE_ITEMS_HOLDINGS_BIG}
+then
+    error_msg+exit "Choose option for 'small' or 'big' documents generation"
+fi
+
+if ${CREATE_ITEMS_HOLDINGS_SMALL} || ${CREATE_ITEMS_HOLDINGS_BIG}
+then
+    if ${DEPLOYMENT}
+    then
+        error_msg+exit "Choose deployment option only"
+    fi
+fi
+
+if ${CREATE_ITEMS_HOLDINGS_BIG}
+then
+    # set DEPLOYMENT to true in order to use big documents file
+    DEPLOYMENT=true
+fi
+
+if ! ${ENABLE_WARNINGS}
+then
+    # Disables different warnings from used applications
+    # --------------------------------------------------
+    # avoid 'There are .env of .flaskenv' messages
+    export FLASK_SKIP_DOTENV=1
+    # avoid Python deprecation warnings
+    export PYTHONWARNINGS="ignore::DeprecationWarning"
+fi
+
+# Purge celery
+info_msg "Purge celery"
+celery purge -A invenio_app.celery -f
+# Clean redis
+info_msg "Clean redis"
+eval "${PREFIX} invenio shell --no-term-title -c \"import redis; redis.StrictRedis.from_url(app.config['CACHE_REDIS_URL']).flushall(); print('Cache cleared')\""
+eval ${PREFIX} invenio db destroy --yes-i-know
+eval ${PREFIX} invenio db init create
+eval ${PREFIX} invenio index queue purge delete
+set -e
+eval ${PREFIX} invenio index destroy --force --yes-i-know
+# Override index init to load templates before mapping
+info_msg "Override index init to load templates before mapping"
+eval ${PREFIX} invenio utils init --force
+# eval ${PREFIX} invenio index init --force
+eval ${PREFIX} invenio index queue init
+# Delete invenio_circulations index
+info_msg "Delete invenio_circulations index"
+eval ${PREFIX} invenio index delete loans-loan-v1.0.0 --force --yes-i-know
+
+if ${ES_MAPPING}
+then
+    info_msg "ES mappings:"
+    mkdir -p tmp
+    invenio utils dump_es_mappings -o tmp/mapping_before_setup.txt
+fi
+
+# Create admin role to restrict access
+info_msg "Create admin role to restrict access"
+eval ${PREFIX} invenio roles create admin
+eval ${PREFIX} invenio access allow superuser-access role admin
+
+# create new user
+info_msg "Create new admin user"
+eval ${PREFIX} invenio users create -a admin@rero.ch --password administrator
+
+# confirm users
+info_msg "Confirm admin creation"
+eval ${PREFIX} invenio users confirm admin@rero.ch
+
+# create roles
+info_msg "Create roles: admin, patron, librarian and system librarian"
+eval "${PREFIX} invenio roles create -d 'Admins Group' admins"
+eval "${PREFIX} invenio roles create -d 'Super Users Group' superusers"
+# create a role for users qualified as a patron
+eval "${PREFIX} invenio roles create -d 'Patron' patron"
+
+# create a role for users qualified as a staff library
+eval "${PREFIX} invenio roles create -d 'Librarian' librarian"
+
+# create a role for users qualified as a System librarian
+eval "${PREFIX} invenio roles create -d 'System Librarian' system_librarian"
+
+# grant accesses to action roles
+info_msg "Grant access to action roles (admins, superusers)"
+eval ${PREFIX} invenio access allow admin-access role admins
+eval ${PREFIX} invenio access allow superuser-access role superusers
+
+# grant roles to users
+info_msg "Grant roles to users"
+eval ${PREFIX} invenio roles add admin@rero.ch admins
+eval ${PREFIX} invenio roles add admin@rero.ch superusers
+
