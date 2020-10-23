@@ -84,6 +84,7 @@ class PatronTransaction(IlsRecord):
         """Create patron transaction record."""
         record = super(PatronTransaction, cls).create(
             data, id_, delete_pid, dbcommit, reindex, **kwargs)
+        PatronTransactionSearch.flush()
         PatronTransactionEvent.create_event_from_patron_transaction(
             patron_transaction=record, dbcommit=dbcommit, reindex=reindex,
             delete_pid=delete_pid, update_parent=False)
