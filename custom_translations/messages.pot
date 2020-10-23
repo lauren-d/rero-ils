@@ -1,0 +1,12 @@
+
+###
+# UCLOUVAIN
+###
+
+#: rero_ils/manual_translations.txt
+msgid "ui_language_nl"
+msgstr "Nederlands"
+
+#: rero_ils/manual_translations.txt
+msgid "ui_language_es"
+msgstr "Español"
