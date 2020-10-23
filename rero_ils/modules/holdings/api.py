@@ -229,6 +229,16 @@ class Holding(IlsRecord):
         items = []
         for item_pid in Item.get_items_pid_by_holding_pid(self.pid):
             items.append(Item.get_record_by_pid(item_pid))
+
+        # START HACK UCLouvain
+        if self.holdings_type == 'serial' and len(items) == 0:
+            """
+            If holding_type is 'serial' and there is no item,
+            it's always available.
+            """
+            return True
+        # END HACK UCLouvain
+
         return Holding.isAvailable(items)
 
     @property
