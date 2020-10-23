@@ -1,0 +1,8 @@
+
+###
+# UCLOUVAIN
+###
+
+# Menu language
+_('ui_language_nl')
+_('ui_language_es')

@@ -511,7 +511,8 @@ def get_remote_cover(isbn):
     url = cover_service + '?height=60px&jsonpCallbackParam=callback'\
                           '&type=isbn&width=60px&callback=thumb&value=' + isbn
     response = requests.get(
-        url, headers={'referer': flask_request.host_url})
+        # url, headers={'referer': flask_request.host_url})
+        url, headers={'referer': 'https://localhost:5000/'})
 
     if response.status_code != 200:
         current_app.logger.debug(
