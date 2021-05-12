@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "https://ils.rero.ch/schemas/budgets/budget-v0.0.1.json",
+  "type": "object",
+  "title": "Budget",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Identifier",
+      "type": "string",
+      "minLength": 1
+    },
+    "$schema": {
+      "title": "Schema",
+      "type": "string",
+      "minLength": 9
+    },
+    "pid": {
+      "title": "Persistent identifier",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "obj_type": {
+          "title": "Object type",
+          "type": "string",
+          "minLength": 1
+        },
+        "pid_type": {
+          "title": "PID type",
+          "type": "string",
+          "minLength": 1
+        },
+        "pk": {
+          "title": "Primary key",
+          "type": "integer",
+          "minLength": 1
+        },
+        "status": {
+          "title": "Status",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "propertiesOrder": [
+        "name",
+        "start_date",
+        "end_date",
+        "is_active"
+      ],
+      "required": [
+        "name",
+        "start_date",
+        "end_date"
+      ],
+      "properties": {
+        "name": {
+          "title": "Budget name",
+          "type": "string",
+          "minLength": 1,
+          "form": {
+            "focus": true,
+            "validation": {
+              "validators": {
+                "valueAlreadyExists": {
+                  "term": "name"
+                }
+              },
+              "messages": {
+                "alreadyTakenMessage": "The budget name is already taken."
+              }
+            }
+          }
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date",
+          "title": "Start date",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+          "form": {
+            "type": "datepicker",
+            "validation": {
+              "messages": {
+                "patternMessage": "Should be in the following format: 2022-12-31 (YYYY-MM-DD)."
+              }
+            }
+          }
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date",
+          "title": "End date",
+          "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$",
+          "form": {
+            "type": "datepicker",
+            "validation": {
+              "messages": {
+                "patternMessage": "Should be in the following format: 2022-12-31 (YYYY-MM-DD)."
+              }
+            }
+          }
+        },
+        "is_active": {
+          "type": "boolean",
+          "title": "Active",
+          "default": false
+        },
+        "organisation": {
+          "title": "Organisation",
+          "type": "object",
+          "required": [
+            "$ref"
+          ],
+          "properties": {
+            "$ref": {
+              "title": "Organisation URI",
+              "type": "string",
+              "pattern": "^https://ils.rero.ch/api/organisations/.*?$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

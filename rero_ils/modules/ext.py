@@ -20,7 +20,7 @@
 from __future__ import absolute_import, print_function
 
 import jinja2
-from flask import Blueprint
+from flask import Blueprint, current_app
 from flask_bootstrap import Bootstrap
 from flask_wiki import Wiki
 from invenio_circulation.signals import loan_state_changed
@@ -31,7 +31,9 @@ from invenio_records.signals import after_record_insert, after_record_update, \
 from invenio_records_rest.errors import JSONSchemaValidationError
 from invenio_userprofiles.signals import after_profile_update
 from jsonschema.exceptions import ValidationError
+from werkzeug.utils import cached_property
 
+from .acq_accounts.api import ACQ_ACCOUNT_PID_TYPE
 from .apiharvester.signals import apiharvest_part
 from .collections.listener import enrich_collection_data
 from .contributions.listener import enrich_contributions_data
@@ -59,8 +61,40 @@ from ..filter import empty_data, format_date_filter, jsondumps, node_assets, \
     text_to_id, to_pretty_json
 
 
+class _ReroIlsAppState:
+    """RERO ILS app state machine."""
+
+    def __init__(self, app):
+        """Initialize state."""
+        self.app = app
+
+    def record_class_by_pid_type(self, pid_type):
+        endpoints = current_app.config.get("RECORDS_REST_ENDPOINTS", {})
+        return endpoints[pid_type]["record_class"]
+
+    def indexer_by_pid_type(self, pid_type):
+        endpoints = current_app.config.get("RECORDS_REST_ENDPOINTS", {})
+        _cls = endpoints[pid_type]["indexer_class"]
+        return _cls()
+
+    def search_by_pid_type(self, pid_type):
+        endpoints = current_app.config.get("RECORDS_REST_ENDPOINTS", {})
+        _cls = endpoints[pid_type]["search_class"]
+        return _cls()
+
+    @cached_property
+    def acq_account_search_cls(self):
+        """Return the acquisition account search cls."""
+        return self.search_by_pid_type(ACQ_ACCOUNT_PID_TYPE)
+
+    @cached_property
+    def acq_account_indexer_cls(self):
+        """Return the acquisition account search cls."""
+        return self.indexer_by_pid_type(ACQ_ACCOUNT_PID_TYPE)
+
+
 class REROILSAPP(object):
-    """rero-ils extension."""
+    """RERO ILS extension."""
 
     def __init__(self, app=None):
         """RERO ILS App module."""
@@ -90,7 +124,7 @@ class REROILSAPP(object):
         Bootstrap(app)
         Wiki(app)
         self.init_config(app)
-        app.extensions['rero-ils'] = self
+        app.extensions['rero-ils'] = _ReroIlsAppState(app)
         self.register_import_api_blueprint(app)
         self.register_users_api_blueprint(app)
         # import logging

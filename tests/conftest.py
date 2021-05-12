@@ -31,7 +31,8 @@ pytest_plugins = (
     'fixtures.circulation',
     'fixtures.metadata',
     'fixtures.organisations',
-    'fixtures.acquisition',
+    'fixtures.legacy_acquisitions',
+    'acquisition.fixtures.budgets',
     'fixtures.sip2',
     'fixtures.basics'
 )
@@ -79,11 +80,19 @@ def data():
 
 
 @pytest.fixture(scope="module")
-def acquisition():
+def acquisition_legacy():
     """Load fixture acquisition file."""
     with open(join(dirname(__file__), 'data/acquisition.json')) as f:
         data = json.load(f)
         return data
+
+
+@pytest.fixture(scope='module')
+def acquisition_data():
+    """Load fixture acquisition file."""
+    with open(join(
+            dirname(__file__), 'acquisition/data/acquisitions.json')) as f:
+        return json.load(f)
 
 
 @pytest.fixture(scope="module")

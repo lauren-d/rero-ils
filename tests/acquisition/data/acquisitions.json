@@ -1,0 +1,38 @@
+{
+  "budg1": {
+    "id": "budg1",
+    "metadata": {
+      "name": "toto",
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/org1"
+      }
+    }
+  },
+  "budg2": {
+    "id": "budg2",
+    "metadata": {
+      "name": "2020",
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/org2"
+      }
+    }
+  },
+  "budg3": {
+    "id": "budg3",
+    "metadata": {
+      "name": "2019",
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/org1"
+      }
+    }
+  }
+}

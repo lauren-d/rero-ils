@@ -43,6 +43,8 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
+from .errors import RecordEndpointNotFound
+
 
 def cached(timeout=50, key_prefix='default', query_string=False):
     """Cache traffic.
@@ -235,6 +237,7 @@ def get_record_class_and_permissions_from_route(route_name):
                     record.get('delete_permission_factory_imp'))
             )
             return record_class, permissions
+    raise RecordEndpointNotFound()
 
 
 def get_endpoint_configuration(module):

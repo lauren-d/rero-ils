@@ -1,0 +1,48 @@
+{
+  "mappings": {
+    "date_detection": false,
+    "numeric_detection": false,
+    "properties": {
+      "$schema": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "keyword"
+          },
+          "start_date": {
+            "type": "date"
+          },
+          "end_date": {
+            "type": "date"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "organisation": {
+            "type": "object",
+            "properties": {
+              "pid": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "created": {
+        "type": "date"
+      },
+      "updated": {
+        "type": "date"
+      },
+      "uuid": {
+        "type": "keyword"
+      }
+    }
+  }
+}

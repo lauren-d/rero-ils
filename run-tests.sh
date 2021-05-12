@@ -131,6 +131,11 @@ function tests_other () {
   export PYTEST_ADDOPTS="--color=yes"
   poetry run pytest ./tests/conftest.py ./tests/test_version.py ./tests/utils.py
 }
+function tests_acquisition () {
+  info_msg "Tests Acquisition:"
+  export PYTEST_ADDOPTS="--color=yes"
+  poetry run pytest ./tests/acquisition
+}
 
 if [ $# -eq 0 ]
   then

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "metadata": {
+      "name": "2020",
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/1"
+      }
+    }
+  },
+  {
+    "id": "2",
+    "metadata": {
+      "name": "2019",
+      "start_date": "2019-01-01",
+      "end_date": "2019-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/1"
+      }
+    }
+  },
+  {
+    "id": "3",
+    "metadata": {
+      "name": "2018",
+      "start_date": "2018-01-01",
+      "end_date": "2018-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/1"
+      }
+    }
+  },
+  {
+    "id": "4",
+    "metadata": {
+      "name": "2020",
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/2"
+      }
+    }
+  },
+  {
+    "id": "5",
+    "metadata": {
+      "name": "2020",
+      "start_date": "2020-01-01",
+      "end_date": "2020-12-31",
+      "is_active": true,
+      "organisation": {
+        "$ref": "https://ils.rero.ch/api/organisations/3"
+      }
+    }
+  }
+]

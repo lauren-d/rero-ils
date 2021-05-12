@@ -40,7 +40,8 @@ from invenio_circulation.transitions.transitions import CreatedToPending, \
     PendingToItemInTransitPickup, ToCancelled, ToItemOnLoan
 from invenio_records_rest.facets import terms_filter
 
-from .modules.acq_accounts.api import AcqAccount
+from .modules.acq_accounts.api import AcqAccount, AcqAccountsIndexer, \
+    AcqAccountsSearch
 from .modules.acq_accounts.permissions import AcqAccountPermission
 from .modules.acq_invoices.api import AcquisitionInvoice
 from .modules.acq_invoices.permissions import AcqInvoicePermission
@@ -48,8 +49,6 @@ from .modules.acq_order_lines.api import AcqOrderLine
 from .modules.acq_order_lines.permissions import AcqOrderLinePermission
 from .modules.acq_orders.api import AcqOrder
 from .modules.acq_orders.permissions import AcqOrderPermission
-from .modules.budgets.api import Budget
-from .modules.budgets.permissions import BudgetPermission
 from .modules.circ_policies.api import CircPolicy
 from .modules.circ_policies.permissions import CirculationPolicyPermission
 from .modules.collections.api import Collection
@@ -1345,10 +1344,10 @@ RECORDS_REST_ENDPOINTS = dict(
         pid_type='acac',
         pid_minter='acq_account_id',
         pid_fetcher='acq_account_id',
-        search_class='rero_ils.modules.acq_accounts.api:AcqAccountsSearch',
+        search_class=AcqAccountsSearch,
         search_index='acq_accounts',
         search_type=None,
-        indexer_class='rero_ils.modules.acq_accounts.api:AcqAccountsIndexer',
+        indexer_class=AcqAccountsIndexer,
         record_serializers={
             'application/json': (
                 'rero_ils.modules.serializers:json_v1_response'
@@ -1387,48 +1386,6 @@ RECORDS_REST_ENDPOINTS = dict(
             action='update', record=record, cls=AcqAccountPermission),
         delete_permission_factory_imp=lambda record: record_permission_factory(
             action='delete', record=record, cls=AcqAccountPermission)
-    ),
-    budg=dict(
-        pid_type='budg',
-        pid_minter='budget_id',
-        pid_fetcher='budget_id',
-        search_class='rero_ils.modules.budgets.api:BudgetsSearch',
-        search_index='budgets',
-        search_type=None,
-        indexer_class='rero_ils.modules.budgets.api:BudgetsIndexer',
-        record_serializers={
-            'application/json': (
-                'rero_ils.modules.serializers:json_v1_response'
-            )
-        },
-        record_serializers_aliases={
-            'json': 'application/json',
-        },
-        search_serializers={
-            'application/json': (
-                'rero_ils.modules.serializers:json_v1_search'
-            )
-        },
-        record_loaders={
-            'application/json': lambda: Budget(request.get_json()),
-        },
-        record_class='rero_ils.modules.budgets.api:Budget',
-        list_route='/budgets/',
-        item_route=('/budgets/<pid(budg, record_class='
-                    '"rero_ils.modules.budgets.api:Budget"):pid_value>'),
-        default_media_type='application/json',
-        max_result_window=MAX_RESULT_WINDOW,
-        search_factory_imp='rero_ils.query:organisation_search_factory',
-        list_permission_factory_imp=lambda record: record_permission_factory(
-            action='list', record=record, cls=BudgetPermission),
-        read_permission_factory_imp=lambda record: record_permission_factory(
-            action='read', record=record, cls=BudgetPermission),
-        create_permission_factory_imp=lambda record: record_permission_factory(
-            action='create', record=record, cls=BudgetPermission),
-        update_permission_factory_imp=lambda record: record_permission_factory(
-            action='update', record=record, cls=BudgetPermission),
-        delete_permission_factory_imp=lambda record: record_permission_factory(
-            action='delete', record=record, cls=BudgetPermission)
     ),
     acor=dict(
         pid_type='acor',
@@ -2073,7 +2030,6 @@ RERO_ILS_QUERY_BOOSTING = {
 # sort options
 indexes = [
     'acq_accounts',
-    'budgets',
     'circ_policies',
     'collections',
     'contributions',
@@ -2136,14 +2092,6 @@ RECORDS_REST_SORT_OPTIONS['acq_order_lines'] = dict(
         default_order='asc'
     )
 )
-
-# ------ BUDGETS SORT
-RECORDS_REST_SORT_OPTIONS['budgets']['name'] = dict(
-    fields=['budget_name'], title='Budget name',
-    default_order='asc'
-)
-RECORDS_REST_DEFAULT_SORT['budgets'] = dict(
-    query='bestmatch', noquery='name')
 
 # ------ CIRCULATION POLICIES SORT
 RECORDS_REST_SORT_OPTIONS['circ_policies']['name'] = dict(
@@ -2307,7 +2255,7 @@ RECORDS_JSON_SCHEMA = {
     'acol': '/acq_order_lines/acq_order_line-v0.0.1.json',
     'acor': '/acq_orders/acq_order-v0.0.1.json',
     'acin': '/acq_invoices/acq_invoice-v0.0.1.json',
-    'budg': '/budgets/budget-v0.0.1.json',
+    # 'budg': '/budgets/budget-v0.0.1.json',
     'cipo': '/circ_policies/circ_policy-v0.0.1.json',
     'coll': '/collections/collection-v0.0.1.json',
     'cont': '/contributions/contribution-v0.0.1.json',

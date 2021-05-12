@@ -27,7 +27,6 @@ from rero_ils.modules.acq_accounts.permissions import AcqAccountPermission
 def test_acq_accounts_permissions_api(client, patron_martigny,
                                       system_librarian_martigny,
                                       librarian_martigny,
-                                      budget_2020_sion,
                                       lib_sion,
                                       acq_account_fiction_martigny,
                                       acq_account_books_saxon,

@@ -28,11 +28,13 @@ from ..minters import id_minter
 from ..providers import Provider
 from ..utils import extracted_data_from_ref
 
+ACQ_ACCOUNT_PID_TYPE = "acac"
+
 # provider
 AcqAccountProvider = type(
     'AcqAccountProvider',
     (Provider,),
-    dict(identifier=AcqAccountIdentifier, pid_type='acac')
+    dict(identifier=AcqAccountIdentifier, pid_type=ACQ_ACCOUNT_PID_TYPE)
 )
 # minter
 acq_account_id_minter = partial(id_minter, provider=AcqAccountProvider)
@@ -64,7 +66,7 @@ class AcqAccount(IlsRecord):
     pids_exist_check = {
         'required': {
             'lib': 'library',
-            'budg': 'budget'
+            # 'budg': 'budget' # disable for invenio-records-resources
         },
         'not_required': {
             'org': 'organisation'
@@ -109,4 +111,4 @@ class AcqAccountsIndexer(IlsRecordsIndexer):
 
         :param record_id_iterator: Iterator yielding record UUIDs.
         """
-        super().bulk_index(record_id_iterator, doc_type='acac')
+        super().bulk_index(record_id_iterator, doc_type=ACQ_ACCOUNT_PID_TYPE)

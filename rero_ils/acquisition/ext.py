@@ -18,7 +18,6 @@
 
 """Invenio module declaration for RERO ILS acquisitions."""
 
-
 from . import config
 
 

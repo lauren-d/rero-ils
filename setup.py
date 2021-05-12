@@ -81,12 +81,16 @@ setup(
         ],
         'invenio_base.apps': [
             # 'flask_debugtoolbar = flask_debugtoolbar:DebugToolbarExtension',
+            'rero_ils_core = \
+                rero_ils.resources.core.ext:ReroIlsCore',
             'rero_ils_acquisition = \
                 rero_ils.acquisition.ext:ReroIlsAcquisition',
             'rero_ils = rero_ils.modules.ext:REROILSAPP'
         ],
         'invenio_base.api_apps': [
             'rero_ils = rero_ils.modules.ext:REROILSAPP',
+            'rero_ils_core = \
+                rero_ils.resources.core.ext:ReroIlsCore',
             'rero_ils_acquisition = \
                 rero_ils.acquisition.ext:ReroIlsAcquisition',
             'invenio_i18n = invenio_i18n:InvenioI18N'
@@ -151,6 +155,7 @@ setup(
             'oaiharvester = rero_ils.modules.ebooks.cli:oaiharvester',
             'scheduler = rero_ils.schedulers:scheduler',
             'utils = rero_ils.modules.cli:utils',
+            'acquisition = rero_ils.acquisition.cli:acquisition',
         ],
         'invenio_db.models': [
             'acq_accounts = rero_ils.modules.acq_accounts.models',
@@ -158,7 +163,7 @@ setup(
             'acq_order_lines = rero_ils.modules.acq_order_lines.models',
             'acq_orders = rero_ils.modules.acq_orders.models',
             'apiharvester = rero_ils.modules.apiharvester.models',
-            'budgets = rero_ils.modules.budgets.models',
+            'budgets = rero_ils.acquisition.budgets.records.models',
             'circ_policies = rero_ils.modules.circ_policies.models',
             'collections = rero_ils.modules.collections.models',
             'documents = rero_ils.modules.documents.models',
@@ -185,7 +190,6 @@ setup(
             'acq_invoice_id = rero_ils.modules.acq_invoices.api:acq_invoice_id_minter',
             'acq_order_id = rero_ils.modules.acq_orders.api:acq_order_id_minter',
             'acq_order_line_id = rero_ils.modules.acq_order_lines.api:acq_order_line_id_minter',
-            'budget_id = rero_ils.modules.budgets.api:budget_id_minter',
             'circ_policy_id = rero_ils.modules.circ_policies.api:circ_policy_id_minter',
             'collection_id = rero_ils.modules.collections.api:collection_id_minter',
             'contribution_id = rero_ils.modules.contributions.api:contribution_id_minter',
@@ -211,7 +215,6 @@ setup(
             'acq_invoice_id = rero_ils.modules.acq_invoices.api:acq_invoice_id_fetcher',
             'acq_order_id = rero_ils.modules.acq_orders.api:acq_order_id_fetcher',
             'acq_order_line_id = rero_ils.modules.acq_order_lines.api:acq_order_line_id_fetcher',
-            'budget_id = rero_ils.modules.budgets.api:budget_id_fetcher',
             'circ_policy_id = rero_ils.modules.circ_policies.api:circ_policy_id_fetcher',
             'collection_id = rero_ils.modules.collections.api:collection_id_fetcher',
             'document_id = rero_ils.modules.documents.api:document_id_fetcher',
@@ -238,7 +241,7 @@ setup(
             'acq_invoices = rero_ils.modules.acq_invoices.jsonschemas',
             'acq_order_lines = rero_ils.modules.acq_order_lines.jsonschemas',
             'acq_orders = rero_ils.modules.acq_orders.jsonschemas',
-            'budgets = rero_ils.modules.budgets.jsonschemas',
+            'budgets = rero_ils.acquisition.budgets.records.jsonschemas',
             'circ_policies = rero_ils.modules.circ_policies.jsonschemas',
             'collections = rero_ils.modules.collections.jsonschemas',
             'common = rero_ils.jsonschemas',
@@ -268,7 +271,7 @@ setup(
             'acq_invoices = rero_ils.modules.acq_invoices.mappings',
             'acq_order_lines = rero_ils.modules.acq_order_lines.mappings',
             'acq_orders = rero_ils.modules.acq_orders.mappings',
-            'budgets = rero_ils.modules.budgets.mappings',
+            'budgets = rero_ils.acquisition.budgets.records.mappings',
             'circ_policies = rero_ils.modules.circ_policies.mappings',
             'collections = rero_ils.modules.collections.mappings',
             'contributions = rero_ils.modules.contributions.mappings',
@@ -310,7 +313,7 @@ setup(
             'acq_invoices = rero_ils.modules.acq_invoices.jsonresolver',
             'acq_order_lines = rero_ils.modules.acq_order_lines.jsonresolver',
             'acq_orders = rero_ils.modules.acq_orders.jsonresolver',
-            'budgets = rero_ils.modules.budgets.jsonresolver',
+            'budgets = rero_ils.acquisition.budgets.jsonresolver',
             'collections = rero_ils.modules.collections.jsonresolver',
             'contributions = rero_ils.modules.contributions.jsonresolver',
             'documents = rero_ils.modules.documents.jsonresolver',

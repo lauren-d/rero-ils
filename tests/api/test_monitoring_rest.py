@@ -41,7 +41,7 @@ def test_monitoring_es_db_counts(client):
             'acin': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'acq_invoices'},
             'acol': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'acq_order_lines'},
             'acor': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'acq_orders'},
-            'budg': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'budgets'},
+            # 'budg': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'budgets'},
             'cipo': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'circ_policies'},
             'coll': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'collections'},
             'cont': {'db': 0, 'db-es': 0, 'es': 0, 'index': 'contributions'},

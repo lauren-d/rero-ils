@@ -17,9 +17,12 @@
 
 """Permissions for all modules."""
 
-from flask import current_app, jsonify
+from flask import current_app, jsonify, g
 from flask_login import current_user
 
+from rero_ils.acquisition.proxies import current_acquisition
+
+from .errors import RecordEndpointNotFound
 from .utils import get_record_class_and_permissions_from_route
 
 # Basics access without permission check
@@ -33,12 +36,27 @@ def record_permissions(record_pid=None, route_name=None):
     This function allow to return all permissions for a specific record.
     :param record_pid: the record PID to check. If None, only 'create'
                        permission should be available.
-    :param route_name: the 'list' route nome of the resource.
+    :param route_name: the 'list' route name of the resource.
     :return: a JSON object containing permissions for the requested resource.
     """
     try:
-        rec_class, record_permissions_factory = \
-            get_record_class_and_permissions_from_route(route_name)
+        try:
+            rec_class, record_permissions_factory = \
+                get_record_class_and_permissions_from_route(route_name)
+        except RecordEndpointNotFound as e:
+            # The acquisition module is being migrated to
+            # invenio-records-resources. In order to access new resources,
+            # we must do that through the services
+            service = current_acquisition.get_service(route_name)
+            permissions = service.permissions(g.identity)
+            if record_pid:
+                # call the service return a RecordItem instance
+                record = service.read(
+                    record_pid,
+                    g.identity,
+                )
+                permissions.update(record.permissions)
+            return jsonify(permissions)
 
         permissions = {
             'list': {'can': True},
@@ -86,7 +104,8 @@ def record_permissions(record_pid=None, route_name=None):
                 reasons = {'others': {'permission': 'permission denied'}}
             permissions['delete']['reasons'] = reasons
         return jsonify(permissions)
-    except Exception:
+    except Exception as e:
+        raise e
         return jsonify({'status': 'error: Bad request'}), 400
 
 

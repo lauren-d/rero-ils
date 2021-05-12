@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+#
+# RERO ILS
+# Copyright (C) 2021 RERO
+# Copyright (C) 2021 UCLouvain
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, version 3 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+"""Budgets model."""
+
+from invenio_db import db
+from invenio_pidstore.models import RecordIdentifier
+from invenio_records.models import RecordMetadataBase
+
+
+class BudgetRecordIdentifier(RecordIdentifier):
+    """Sequence generator for Budget identifiers."""
+
+    __tablename__ = 'budget_id'
+    __mapper_args__ = {'concrete': True}
+    recid = db.Column(
+        db.BigInteger().with_variant(db.Integer, 'sqlite'),
+        primary_key=True,
+        autoincrement=True
+    )
+
+
+class BudgetRecordMetadata(db.Model, RecordMetadataBase):
+    """Budgets record metadata model."""
+
+    __tablename__ = 'budget_metadata'

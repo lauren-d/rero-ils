@@ -18,7 +18,22 @@
 
 """Default configuration for RERO ILS acquisitions."""
 
-ACQ_RECORDS_RESOURCES = dict()
+from invenio_records_resources.resources.records import RecordResource
+
+from rero_ils.acquisition.budgets.resources.resource import \
+    BudgetRecordResource
+from rero_ils.acquisition.budgets.services.service import BudgetRecordService
+from rero_ils.resources.core import IlsBaseRecordService
+
+from rero_ils.acquisition.budgets.services.config import BudgetServiceConfig
+from rero_ils.acquisition.budgets.resources import BudgetRecordResourceConfig
+
+ACQ_RECORDS_RESOURCES = dict(
+    budgets=BudgetRecordResource(
+        config=BudgetRecordResourceConfig,
+        service=BudgetRecordService(BudgetServiceConfig)
+    )
+)
 """Default Records resources loaded.
 
 This option can be overwritten to describe the resource of different
