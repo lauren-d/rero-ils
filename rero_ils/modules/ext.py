@@ -118,7 +118,6 @@ class REROILSAPP(object):
                 f'/import_{endpoint}/',
                 view_func=imports_search
             )
-
             imports_record = ImportsResource.as_view(
                 f'import_{endpoint}_record',
                 import_class=options.get('import_class')

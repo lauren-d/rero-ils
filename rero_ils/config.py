@@ -2746,7 +2746,23 @@ WIKI_MARKDOWN_EXTENSIONS = set((
 RERO_IMPORT_REST_ENDPOINTS = dict(
     bnf=dict(
         import_class='rero_ils.modules.imports.api:BnfImport',
-        import_size=50
+        import_size=50,
+    ),
+    loc=dict(
+        import_class='rero_ils.modules.imports.api:LoCImport',
+        import_size=50,
+    ),
+    dnb=dict(
+        import_class='rero_ils.modules.imports.api:DNBImport',
+        import_size=50,
+    ),
+    slsp=dict(
+        import_class='rero_ils.modules.imports.api:SLSPImport',
+        import_size=50,
+    ),
+    unicat=dict(
+        import_class='rero_ils.modules.imports.api:UnicatImport',
+        import_size=50,
     )
 )
 

@@ -24,8 +24,9 @@ from invenio_records_rest.utils import obj_or_import_string
 from invenio_rest import ContentNegotiatedMethodView
 from invenio_rest.errors import RESTException
 
-from .serializers import json_v1_import_record, json_v1_import_record_marc, \
-    json_v1_import_search, json_v1_import_uirecord, json_v1_import_uisearch
+from .serializers import json_record_serializer_factory, \
+    json_v1_import_record_marc, json_v1_import_search, \
+    json_v1_import_uisearch
 
 
 class ResultNotFoundOnTheRemoteServer(RESTException):
@@ -40,7 +41,7 @@ class ImportsListResource(ContentNegotiatedMethodView):
 
     def __init__(self, **kwargs):
         """Init."""
-        self.import_class = kwargs.pop('import_class')
+        self.import_class = obj_or_import_string(kwargs.pop('import_class'))
         self.import_size = kwargs.pop('import_size', 50)
         super().__init__(
             method_serializers={
@@ -74,7 +75,7 @@ class ImportsListResource(ContentNegotiatedMethodView):
             relation = 'all'
             what = query
         size = flask_request.args.get('size', self.import_size)
-        do_import = obj_or_import_string(self.import_class)()
+        do_import = self.import_class()
         do_import.search_records(
             what=what,
             relation=relation,
@@ -133,12 +134,17 @@ class ImportsResource(ContentNegotiatedMethodView):
 
     def __init__(self, **kwargs):
         """Init."""
-        self.import_class = kwargs.pop('import_class')
+        self.import_class = obj_or_import_string(kwargs.pop('import_class'))
+        self.import_size = kwargs.pop('import_size', 50)
         super().__init__(
             method_serializers={
                 'GET': {
-                    'application/json': json_v1_import_record,
-                    'application/rero+json': json_v1_import_uirecord,
+                    'application/json': json_record_serializer_factory(
+                        self.import_class
+                    ),
+                    'application/rero+json': json_record_serializer_factory(
+                        self.import_class, serializer_type='uirecord'
+                    ),
                     'application/marc+json': json_v1_import_record_marc
                 }
             },
@@ -157,12 +163,13 @@ class ImportsResource(ContentNegotiatedMethodView):
     def get(self, id, **kwargs):
         """Implement the GET."""
         no_cache = True if flask_request.args.get('no_cache') else False
-        do_import = obj_or_import_string(self.import_class)()
+        size = flask_request.args.get('size', self.import_size)
+        do_import = self.import_class()
         do_import.search_records(
             what=id,
             relation='all',
             where='recordid',
-            max=1,
+            max=size,
             no_cache=no_cache
         )
         if not do_import.data:

@@ -2,6 +2,7 @@
 #
 # RERO ILS
 # Copyright (C) 2019 RERO
+# Copyright (C) 2021 UCLOUVAIN
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -1276,13 +1277,18 @@ def marc21_to_identifiedBy_from_field_035(self, key, value):
     """Get identifier from field 035."""
     subfield_a = not_repetitive(marc21.bib_id, marc21.rero_id,
                                 key, value, 'a', default='').strip()
+    identifiedBy = self.get('identifiedBy', [])
     if subfield_a:
+        source = 'RERO'
+        # search source between parenthesis
+        match = re.search(r'\(([^()]+)\)', subfield_a)
+        if match:
+            source = match.group(1)
         identifier = {
             'value': subfield_a,
             'type': 'bf:Local',
-            'source': 'RERO'
+            'source': source,
         }
-        identifiedBy = self.get('identifiedBy', [])
         identifiedBy.append(identifier)
     return identifiedBy or None
 

@@ -23,8 +23,9 @@ from dojson.utils import GroupableOrderedDict
 from pkg_resources import resource_string
 
 from rero_ils.dojson.utils import ReroIlsUnimarcOverdo, TitlePartList, \
-    add_note, get_field_items, get_field_link_data, make_year, \
-    not_repetitive, remove_trailing_punctuation
+    add_note, build_string_from_subfields, get_field_items, \
+    get_field_link_data, make_year, not_repetitive, \
+    remove_trailing_punctuation
 from rero_ils.modules.documents.api import Document
 
 _ISSUANCE_MAIN_TYPE_PER_BIB_LEVEL = {
@@ -484,6 +485,18 @@ def marc21_to_part_of(self, key, value):
             part_of['numbering'] = subfield_v
         self['partOf'] = self.get('partOf', [])
         self['partOf'].append(part_of)
+
+
+@unimarc.over('tableOfContents', '^464..')
+@utils.for_each_value
+@utils.ignore_value
+def marc21_to_summary(self, key, value):
+    """Get tableOfContents from repetitive field 464."""
+    table_of_contents = build_string_from_subfields(value, 't')
+    if table_of_contents:
+        table_of_contents_list = self.get('tableOfContents', [])
+        table_of_contents_list.append(table_of_contents)
+        self['tableOfContents'] = table_of_contents_list
 
 
 @unimarc.over('language', '^101')
