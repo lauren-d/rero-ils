@@ -128,8 +128,10 @@ RERO_ILS_STATE_MESSAGE=_('Test version')
 # Personalized homepage
 RERO_ILS_PERSONALIZED_CSS_BY_VIEW = True
 RERO_ILS_PERSONALIZED_HOMEPAGE_BY_VIEW = False
-RERO_ILS_HOMEPAGE_GENERAL_BLOCK = 'rero_ils/_frontpage_block_test.html'
-RERO_ILS_HOMEPAGE_GENERAL_SLOGAN = 'rero_ils/_frontpage_slogan_test.html'
+RERO_ILS_HOMEPAGE_GENERAL_BLOCK = 'rero_ils/projects/test/' \
+                                  '_frontpage_block.html'
+RERO_ILS_HOMEPAGE_GENERAL_SLOGAN = 'rero_ils/projects/test/' \
+                                   '_frontpage_slogan.html'
 
 # Rate limiting
 # =============

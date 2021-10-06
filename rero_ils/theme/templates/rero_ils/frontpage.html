@@ -31,7 +31,7 @@
     {% if not config.RERO_ILS_PERSONALIZED_HOMEPAGE_BY_VIEW %}
       {%- include config.RERO_ILS_HOMEPAGE_GENERAL_SLOGAN %}
     {% else %}
-      {%- include "rero_ils/_frontpage_slogan_" + viewcode + ".html" %}
+      {%- include "rero_ils/projects/" + viewcode + "/_frontpage_slogan.html" %}
     {% endif %}
 
     <!-- Search bar -->
@@ -73,7 +73,7 @@
       {% if not config.RERO_ILS_PERSONALIZED_HOMEPAGE_BY_VIEW %}
         {%- include config.RERO_ILS_HOMEPAGE_GENERAL_BLOCK %}
       {% else %}
-        {%- include "rero_ils/_frontpage_block_" + viewcode + ".html" %}
+        {%- include "rero_ils/projects/" + viewcode + "/_frontpage_block.html" %}
       {% endif %}
     </article>
   </div>
