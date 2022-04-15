@@ -18,6 +18,10 @@
 
 """Mixin helper class."""
 
+from invenio_records_rest.serializers.base import PreprocessorMixin, \
+    SerializerMixinInterface
+from invenio_records_rest.serializers.marshmallow import MarshmallowMixin
+
 from rero_ils.modules.contributions.utils import \
     get_contribution_localized_value
 
@@ -26,6 +30,15 @@ CREATOR_ROLES = [
     'chr', 'cll', 'com', 'drt', 'dsr', 'enj', 'fmk', 'inv', 'ive', 'ivr',
     'lbt', 'lsa', 'lyr', 'pra', 'prg', 'rsp', 'scl'
 ]
+
+
+class DocumentSerializerMixin(SerializerMixinInterface, MarshmallowMixin,
+                              PreprocessorMixin):
+    """Mixin serializing documents."""
+
+    def dump(self, obj, context=None):
+        """Serialize object with schema."""
+        return self.schema_class(context=context).dump(obj)
 
 
 class BaseDocumentFormatterMixin:
@@ -227,8 +240,8 @@ class BaseDocumentFormatterMixin:
 
     def _get_edition(self):
         """Return edition."""
-        if 'editionStatement' in self.record:
-            return [v.get('_text') for v in self.record['editionStatement']]
+        return [v.get('_text')
+                for v in self.record.get('editionStatement', [])]
 
     def _get_doi(self):
         """Return DOI."""

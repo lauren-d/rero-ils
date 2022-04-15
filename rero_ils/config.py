@@ -611,6 +611,9 @@ RECORDS_REST_ENDPOINTS = dict(
             ),
             'application/x-research-info-systems': (
                 'rero_ils.modules.documents.serializers:ris_doc_response'
+            ),
+            'text/x-bibliography': (
+                'rero_ils.modules.documents.serializers:citeproc_v1_response'
             )
         },
         record_serializers_aliases={
@@ -3306,5 +3309,18 @@ RERO_ILS_EXPORT_MAPPER = {
             'JFULL': lambda m, s: m == 'docmaintype_serial',
             'SER': lambda m, s: m == 'docmaintype_series',
         },
+    },
+    'csl': {
+        'doctype': {
+            'book': lambda m, s: (m == 'docmaintype_book'
+                                  and s not in ['docsubtype_manuscript',
+                                                'docsubtype_thesis',
+                                                'docsubtype_e-book']
+                                  ) or m in ['docmaintype_children',
+                                             'docmaintype_comic',
+                                             'docmaintype_leaf'],
+            'graphic': lambda m, s: m == 'docmaintype_image'
+                                    or s == 'docsubtype_kamishibai',
+        }
     }
 }

@@ -18,6 +18,8 @@
 
 """Tests Serializers."""
 
+from rero_ils.modules.documents.api import Document
+from rero_ils.modules.documents.serializers import csl_v1, ris_v1, json_doc
 from rero_ils.modules.documents.serializers.ris import RISFormatter
 
 es_record = {
@@ -375,3 +377,51 @@ def test_ris_formatter(client):
     ris_data = formatter.format()
 
     assert all(tag in ris_data for tag in ris_tag)
+
+
+def test_ris(client, document):
+    """."""
+    # print(document)
+    print(type(document))
+    obj = ris_v1.transform_record('doc1', Document(document))
+    from pprint import pprint
+    pprint(obj)
+    # d = datetime.utcnow().date()
+    # assert obj == {
+    #     'id': '123',
+    #     'DOI': '10.5072/zenodo.123',
+    #     'type': 'article',
+    #     'title': 'Test',
+    #     'abstract': 'My description',
+    #     'author': [
+    #         {'family': 'Test'},
+    #     ],
+    #     'issued': {
+    #         'date-parts': [[d.year, d.month, d.day]]
+    #     }
+    # }
+
+
+def test_csl(client, document):
+    """."""
+    # print(document)
+    from pprint import pprint
+    print(type(document))
+    obj = json_doc.transform_record('doc1', Document(document))
+    pprint(obj)
+    obj = csl_v1.transform_record('doc1', Document(document))
+    pprint(obj)
+    # d = datetime.utcnow().date()
+    # assert obj == {
+    #     'id': '123',
+    #     'DOI': '10.5072/zenodo.123',
+    #     'type': 'article',
+    #     'title': 'Test',
+    #     'abstract': 'My description',
+    #     'author': [
+    #         {'family': 'Test'},
+    #     ],
+    #     'issued': {
+    #         'date-parts': [[d.year, d.month, d.day]]
+    #     }
+    # }
