@@ -1382,7 +1382,12 @@ RECORDS_REST_ENDPOINTS = dict(
         },
         search_serializers={
             'application/json': 'rero_ils.modules.serializers:json_v1_search',
-            'application/rero+json': 'rero_ils.modules.acq_accounts.serializers:json_acq_account_search'
+            'application/rero+json': 'rero_ils.modules.acq_accounts.serializers:json_acq_account_search',
+            'text/csv': 'rero_ils.modules.acq_accounts.serializers:csv_acq_account_search'
+        },
+        search_serializers_aliases={
+            'json': 'application/json',
+            'csv': 'text/csv'
         },
         record_loaders={
             'application/json': lambda: AcqAccount(request.get_json()),
