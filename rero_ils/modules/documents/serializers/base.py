@@ -26,7 +26,7 @@ from rero_ils.modules.commons.identifiers import IdentifierFactory, \
     IdentifierStatus, IdentifierType
 from rero_ils.modules.utils import get_base_url
 
-from ..api import search_document_by_pid
+from ..api import DocumentsSearch
 from ..commons.subjects import SubjectFactory
 
 CREATOR_ROLES = [
@@ -95,7 +95,7 @@ class BaseDocumentFormatterMixin(ABC):
         def _extract_part_of_title_callback(part_of):
             """Extract title for the partOf document."""
             pid = part_of.get('document', {}).get('pid')
-            if es_doc := search_document_by_pid(pid):
+            if es_doc := DocumentsSearch().get_record_by_pid(pid):
                 title = es_doc.to_dict().get('title', [])
                 return next(
                     filter(lambda x: x.get('type') == 'bf:Title',

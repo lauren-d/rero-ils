@@ -29,7 +29,7 @@ class UniqueFieldsExtension(RecordExtension):
 
     CONCEPT:
         For some resources, we would to ensure that some values are unique.
-        By example, two libraries can't have the same name into the same
+        For example, two libraries can't have the same name into the same
         organisation.
 
         To allow to check, we will check into an ElasticSearch index based
