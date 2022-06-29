@@ -80,7 +80,7 @@ class ItemCSVSerializer(CSVSerializer):
         if not language or language not in get_i18n_supported_languages():
             language = current_app.config.get('BABEL_DEFAULT_LANGUAGE', 'en')
 
-        # prepare mapping dictionnaries
+        # prepare mapping dictionaries
         item_types_map = {}
         for item_type in ItemTypesSearch().scan():
             item_types_map[item_type.pid] = item_type.name
