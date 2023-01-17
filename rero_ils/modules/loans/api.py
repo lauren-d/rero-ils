@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 #
 # RERO ILS
-# Copyright (C) 2022 RERO
-# Copyright (C) 2022 UCLouvain
+# Copyright (C) 2018-2023 RERO
+# Copyright (C) 2018-2023 UCLouvain
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -448,8 +448,8 @@ class Loan(IlsRecord):
                                                 patrons)
                     loan_data['patron'] = {
                         'barcode': patron_data['patron']['barcode'],
-                        'name': f'{patron_data["last_name"]}, '
-                                f'{patron_data["first_name"]}'
+                        'name': f'{patron_data.get("last_name", "")}, '
+                                f'{patron_data.get("first_name", "")}'
                     }
                     loan_data['pickup_location'] = location_by_pid(
                         loan_data['pickup_location_pid'], locations)
@@ -759,7 +759,7 @@ class Loan(IlsRecord):
         data['patron'] = {}
         data['patron']['barcode'] = ptrn_data['patron']['barcode']
         data['patron']['name'] = ', '.join((
-            ptrn_data['last_name'], ptrn_data['first_name']))
+            ptrn_data.get('last_name', ''), ptrn_data.get('first_name', '')))
         if loan.get('pickup_location_pid'):
             location = Location.get_record_by_pid(loan['pickup_location_pid'])
             data['pickup_location'] = {
