@@ -47,6 +47,7 @@ from rero_ils.modules.patrons.api import Patron, current_librarian
 from rero_ils.permissions import request_item_permission
 
 from ..api import Item
+from ..decorators import add_rfid_action
 from ..models import ItemCirculationAction
 from ..utils import item_pid_to_object
 
@@ -126,6 +127,7 @@ def do_item_jsonify_action(func):
     @wraps(func)
     def decorated_view(*args, **kwargs):
         try:
+            print('[ENTRY] do_item_jsonify_action')
             data = deepcopy(flask_request.get_json())
             item = Item.get_item_record_for_ui(**data)
             data.pop('item_barcode', None)
@@ -134,10 +136,13 @@ def do_item_jsonify_action(func):
                 abort(404)
             item_data, action_applied = \
                 func(item, data, *args, **kwargs)
+            # from pprint import pprint
+            # print(f'++++++++ {func.__name__} +++++++++')
+            # pprint(action_applied)
             for action, loan in action_applied.items():
                 if loan:
                     action_applied[action] = loan.dumps_for_circulation()
-
+            print('[EXIT] do_item_jsonify_action')
             return jsonify({
                 'metadata': item_data.dumps_for_circulation(),
                 'action_applied': action_applied
@@ -159,7 +164,7 @@ def do_item_jsonify_action(func):
             return jsonify({'status': f'error: {error}'}), 400
         except Exception as error:
             # TODO: need to know what type of exception and document there.
-            # raise error
+            # qraise error
             current_app.logger.error(f'{func.__name__}: {str(error)}')
             return jsonify({'status': f'error: {error}'}), 400
     return decorated_view
@@ -217,6 +222,7 @@ def cancel_item_request(item, data):
 @api_blueprint.route('/checkout', methods=['POST'])
 # @profile(sort_by='cumulative', lines_to_print=100)
 @check_authentication
+@add_rfid_action
 @do_item_jsonify_action
 def checkout(item, data):
     """HTTP request for Item checkout action.
@@ -229,12 +235,17 @@ def checkout(item, data):
     """
     data['override_blocking'] = flask_request.args.get(
         'override_blocking', False)
-    return item.checkout(**data)
+    print('[ENTRY] - CHECKOUT')
+    res = item.checkout(**data)
+    print('[EXIT] - CHECKOUT')
+    return res
+    # return item.checkout(**data)
 
 
 @api_blueprint.route("/checkin", methods=['POST'])
 # @profile(sort_by='cumulative', lines_to_print=100)
 @check_authentication
+@add_rfid_action
 @do_item_jsonify_action
 def checkin(item, data):
     """HTTP GET request for item return action.
@@ -244,7 +255,11 @@ def checkin(item, data):
         transaction_location_pid or transaction_library_pid,
         transaction_user_pid
     """
-    return item.checkin(**data)
+    print('[ENTRY] - CHECKIN')
+    res = item.checkin(**data)
+    print('[EXIT] - CHECKIN')
+    return res
+    #return item.checkin(**data)
 
 
 @api_blueprint.route("/update_loan_pickup_location", methods=['POST'])

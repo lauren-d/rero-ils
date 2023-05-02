@@ -542,6 +542,39 @@
           }
         }
       }
+    },
+    "rfid_settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "provider": {
+          "title": "Provider",
+          "description": "RFID Provider.",
+          "type": "string",
+          "enum": [
+            "bibliotheca"
+          ],
+          "form": {
+            "type": "selectWithSort",
+            "options": [
+              {
+                "label": "bibliotheca",
+                "value": "bibliotheca"
+              },
+              {
+                "label": "other",
+                "value": "other"
+              }
+            ]
+          }
+        },
+        "service_uri": {
+          "title": "RFID base service url",
+          "description": "Defines provider service URI to activate or deactivate RFID tag on circulation operation.",
+          "type": "string",
+          "format": "url"
+        }
+      }
     }
   }
 }

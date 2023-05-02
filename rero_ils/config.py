@@ -89,7 +89,7 @@ from .modules.items.utils import item_location_retriever, \
 from .modules.libraries.api import Library
 from .modules.libraries.permissions import LibraryPermissionPolicy
 from .modules.loans.api import Loan
-from .modules.loans.models import LoanState
+from .modules.loans.models import LoanState, LoanAction
 from .modules.loans.permissions import LoanPermissionPolicy
 from .modules.loans.query import misc_status_filter
 from .modules.loans.utils import can_be_requested, get_default_loan_duration, \
@@ -3484,6 +3484,18 @@ SIP2_SUMMARY_FIELDS = {
     LoanState.ITEM_IN_TRANSIT_FOR_PICKUP: 'unavailable_hold_items',
     LoanState.ITEM_ON_LOAN: 'charged_items'
 }
+
+# RFID provider
+#
+RERO_ILS_RFID_PROVIDER = {
+    'bibliotheca': {
+        'tags_status_trigger': {
+            LoanAction.CHECKIN: True,
+            LoanAction.CHECKOUT: False
+        }
+    }
+}
+
 
 # OAuth base template
 OAUTH2SERVER_COVER_TEMPLATE = 'rero_ils/oauth/base.html'

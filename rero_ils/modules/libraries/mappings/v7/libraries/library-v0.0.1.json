@@ -213,6 +213,16 @@
           }
         }
       },
+      "rfid_settings": {
+        "properties": {
+          "provider": {
+            "type": "keyword"
+          },
+          "service_uri": {
+            "type": "keyword"
+          }
+        }
+      },
       "_created": {
         "type": "date"
       },

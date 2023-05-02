@@ -37,7 +37,7 @@ from rero_ils.modules.patron_transactions.api import PatronTransactionsSearch
 
 from .record import ItemRecord
 from ..decorators import add_action_parameters_and_flush_indexes, \
-    check_operation_allowed
+    check_operation_allowed, add_rfid_action
 from ..models import ItemCirculationAction, ItemIssueStatus, ItemStatus
 from ..utils import item_pid_to_object
 from ...circ_policies.api import CircPolicy
@@ -400,6 +400,15 @@ class ItemCirculation(ItemRecord):
     @add_action_parameters_and_flush_indexes
     def checkout(self, current_loan, **kwargs):
         """Checkout item to the user."""
+        # print('=========== CHECKOUT ==============')
+        # from pprint import pprint
+        # pprint(current_loan)
+        # print('------------')
+        # pprint(kwargs)
+        # print('transaction_location_pid: ' + kwargs.get(
+        #     'transaction_location_pid'))
+        # print('OKKKKAYYYYYY')
+        # #return
         action_params, actions = self.prior_checkout_actions(kwargs)
         loan = Loan.get_record_by_pid(action_params.get('pid'))
         current_loan = loan or Loan.create(
