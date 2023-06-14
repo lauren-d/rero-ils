@@ -18,25 +18,27 @@
 
 """Document record extension to add the MEF pid in the database."""
 
-
 from invenio_records.extensions import RecordExtension
 
 
 class AuthorizedAccessPointExtension(RecordExtension):
     """Adds the authorized access point."""
 
-    def _generate_authorized_access_point(self, record, data):
-        """Generate authorized access point.
+    def pre_create(self, record):
+        """Called before a record is created.
 
-        :params record: dict - a document record.
+        :param record: the record metadata.
         """
-        data.update({'authorized_access_point': record.get('preferred_name')})
+        record['authorized_access_point'] = \
+            record.get_authorized_access_point()
+        # required for validation
+        if record.model:
+            record.model.data = record
 
-    def pre_dump(self, record, data, dumper=None):
-        """Called before a record is dumped.
+    def pre_commit(self, record):
+        """Called before a record is committed.
 
-        :param record: the record to dump
-        :param data: the data to dump.
-        :param dumper: the dumper class used to dump the record.
+        :param record: the record metadata.
         """
-        return self._generate_authorized_access_point(record, data)
+        record['authorized_access_point'] = \
+            record.get_authorized_access_point()

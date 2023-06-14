@@ -18,6 +18,7 @@
 
 """API for manipulating local entities."""
 
+from abc import ABC, abstractmethod
 from functools import partial
 
 from rero_ils.modules.api import IlsRecord, IlsRecordsIndexer, IlsRecordsSearch
@@ -27,8 +28,9 @@ from rero_ils.modules.fetchers import id_fetcher
 from rero_ils.modules.minters import id_minter
 from rero_ils.modules.providers import Provider
 
-from .dumpers import replace_refs_dumper
-from .extensions import AuthorizedAccessPointExtension
+from .dumpers import indexer_dumper, replace_refs_dumper
+from .extensions import AuthorizedAccessPointExtension, \
+    LocalEntityFactoryExtension
 from .models import LocalEntityIdentifier, LocalEntityMetadata
 
 # provider
@@ -57,7 +59,7 @@ class LocalEntitiesSearch(IlsRecordsSearch):
         default_filter = None
 
 
-class LocalEntity(IlsRecord):
+class LocalEntity(IlsRecord, ABC):
     """Local entity class."""
 
     minter = local_entity_id_minter
@@ -68,8 +70,22 @@ class LocalEntity(IlsRecord):
     enable_jsonref = False
 
     _extensions = [
+        LocalEntityFactoryExtension(),
         AuthorizedAccessPointExtension()
     ]
+
+    @property
+    def type(self):
+        """Shortcut for local entity type."""
+        return self.get('type')
+
+    @abstractmethod
+    def get_authorized_access_point(self):
+        """Get the authorized access point this local entity.
+
+        :return return the authorized access point to use.
+        """
+        raise NotImplementedError()
 
     def resolve(self):
         """Resolve references data.
@@ -108,6 +124,8 @@ class LocalEntitiesIndexer(IlsRecordsIndexer):
     """Local entity indexing class."""
 
     record_cls = LocalEntity
+    # data dumper for indexing
+    record_dumper = indexer_dumper
 
     def bulk_index(self, record_id_iterator):
         """Bulk index records.

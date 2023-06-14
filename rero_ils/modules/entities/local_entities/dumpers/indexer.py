@@ -30,4 +30,7 @@ class LocalEntityIndexerDumper(Dumper):
         :param record: The record to dump.
         :param data: The initial dump data passed in by ``record.dumps()``.
         """
+        data.update({
+            'resource_type': 'local'
+        })
         return data

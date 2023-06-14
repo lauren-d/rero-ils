@@ -2089,9 +2089,71 @@ RECORDS_REST_FACETS = dict(
     ),
     entities=dict(
         aggs=dict(
+            resource_type=dict(
+                terms=dict(
+                    field='resource_type',
+                    # This does not take into account
+                    # env variable or instance config file
+                    size=RERO_ILS_AGGREGATION_SIZE.get(
+                        'entity', RERO_ILS_DEFAULT_AGGREGATION_SIZE)
+                )
+            ),
+            type=dict(
+                terms=dict(
+                    field='type',
+                    # This does not take into account
+                    # env variable or instance config file
+                    size=RERO_ILS_AGGREGATION_SIZE.get(
+                        'entity', RERO_ILS_DEFAULT_AGGREGATION_SIZE)
+                )
+            ),
+            source_catalog=dict(
+                terms=dict(
+                    field='source_catalog',
+                    # This does not take into account
+                    # env variable or instance config file
+                    size=RERO_ILS_AGGREGATION_SIZE.get(
+                        'entity', RERO_ILS_DEFAULT_AGGREGATION_SIZE)
+                )
+            ),
+        ),
+        filters={
+            _('resource_type'): and_term_filter('resource_type'),
+            _('type'): and_term_filter('type'),
+            _('source_catalog'): and_term_filter('source_catalog'),
+        }
+    ),
+    remote_entities=dict(
+        aggs=dict(
             sources=dict(
                 terms=dict(
                     field='sources',
+                    # This does not take into account
+                    # env variable or instance config file
+                    size=RERO_ILS_AGGREGATION_SIZE.get(
+                        'entity', RERO_ILS_DEFAULT_AGGREGATION_SIZE)
+                )
+            ),
+            type=dict(
+                terms=dict(
+                    field='type',
+                    # This does not take into account
+                    # env variable or instance config file
+                    size=RERO_ILS_AGGREGATION_SIZE.get(
+                        'entity', RERO_ILS_DEFAULT_AGGREGATION_SIZE)
+                )
+            )
+        ),
+        filters={
+            _('sources'): and_term_filter('sources'),
+            _('type'): and_term_filter('type')
+        }
+    ),
+    local_entities=dict(
+        aggs=dict(
+            source_catalog=dict(
+                terms=dict(
+                    field='source_catalog',
                     # This does not take into account
                     # env variable or instance config file
                     size=RERO_ILS_AGGREGATION_SIZE.get(

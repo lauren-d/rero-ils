@@ -33,11 +33,14 @@ from rero_ils.modules.minters import id_minter
 from rero_ils.modules.providers import Provider
 from rero_ils.utils import get_i18n_supported_languages
 
+from .dumpers import indexer_dumper
 from .models import RemoteEntityIdentifier, RemoteEntityMetadata, \
     EntityUpdateAction
 from .utils import extract_data_from_mef_uri, get_mef_data_by_type
 
 # provider
+from ..local_entities.dumpers import replace_refs_dumper
+
 RemoteEntityProvider = type(
     'EntityProvider',
     (Provider,),
@@ -70,6 +73,18 @@ class RemoteEntity(IlsRecord):
     fetcher = remote_entity_id_fetcher
     provider = RemoteEntityProvider
     model_cls = RemoteEntityMetadata
+    # disable legacy replace refs
+    enable_jsonref = False
+
+    def resolve(self):
+        """Resolve references data.
+
+        Uses the dumper to do the job.
+        Mainly used by the `resolve=1` URL parameter.
+
+        :returns: a fresh copy of the resolved data.
+        """
+        return self.dumps(replace_refs_dumper)
 
     @classmethod
     def get_entity(cls, ref_type, ref_pid):
@@ -295,6 +310,8 @@ class RemoteEntitiesIndexer(IlsRecordsIndexer):
     """Entity indexing class."""
 
     record_cls = RemoteEntity
+    # data dumper for indexing
+    record_dumper = indexer_dumper
 
     def bulk_index(self, record_id_iterator):
         """Bulk index records.

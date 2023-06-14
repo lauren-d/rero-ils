@@ -54,6 +54,9 @@
       "pid": {
         "type": "keyword"
       },
+      "resource_type": {
+        "type": "keyword"
+      },
       "type": {
         "type": "keyword"
       },

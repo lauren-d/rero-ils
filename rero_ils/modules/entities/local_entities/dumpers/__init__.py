@@ -21,6 +21,7 @@
 from invenio_records.dumpers import Dumper
 
 from rero_ils.modules.commons.dumpers import MultiDumper, ReplaceRefsDumper
+from .authorized_acces_point import LocalizedAuthorizedAccessPointDumper
 
 from .indexer import LocalEntityIndexerDumper
 
@@ -37,4 +38,10 @@ indexer_dumper = MultiDumper(dumpers=[
     Dumper(),
     ReplaceRefsDumper(),
     LocalEntityIndexerDumper()
+])
+
+document_dumper = MultiDumper(dumpers=[
+    # make a fresh copy
+    Dumper(),
+    LocalizedAuthorizedAccessPointDumper(),
 ])
