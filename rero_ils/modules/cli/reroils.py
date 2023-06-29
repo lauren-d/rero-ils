@@ -35,6 +35,7 @@ from .fixtures import fixtures
 from .index import index
 from .users import users
 from .utils import utils
+from ..migration.cli import migrate
 
 
 @click.group()
@@ -54,3 +55,4 @@ reroils.add_command(scheduler)
 reroils.add_command(stats)
 reroils.add_command(users)
 reroils.add_command(utils)
+reroils.add_command(migrate)
